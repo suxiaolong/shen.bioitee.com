@@ -1,4 +1,4 @@
-{{ if and .Section (not (eq .URL "/topic/latest/" )) }}
+{{ if and .Section (and (not (eq .URL "/topic/latest/" )) (not (eq .URL "/topic/archives/" ))) }}
 <nav class="post-nav">
   <span class="nav-prev">
       {{ with .PrevInSection }}
