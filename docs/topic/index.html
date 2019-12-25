@@ -15,8 +15,8 @@
     
     
     
-    <title>专栏文章 - Steven Shen | 沈维燕</title> 
-    <meta property="og:title" content="专栏文章 - Steven Shen | 沈维燕">
+    <title>Topics - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="Topics - Steven Shen | 沈维燕">
     
 
     
@@ -26,12 +26,23 @@
     
 
     
-    <link href="../topic/index.xml" rel="alternate" type="application/rss+xml" title="专栏文章" />
+    <link href="../topic/index.xml" rel="alternate" type="application/rss+xml" title="Topics" />
     
   
     <link rel="stylesheet" href="https://shen.bioitee.com/css/style.css"/>
     <link rel="stylesheet" href="https://shen.bioitee.com/css/fonts.css"/>
     
+
+<script>
+(function(u, c) {
+  var d = document, t = 'script', o = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  o.src = u;
+  if (c) { o.addEventListener('load', function (e) { c(e); }); }
+  s.parentNode.insertBefore(o, s);
+})('//cdn.bootcss.com/pangu/3.3.0/pangu.min.js', function() {
+  pangu.spacingPage();
+});
+</script>
 
 <link rel="stylesheet" href="https://shen.bioitee.com/css/custom.css" />
 
@@ -106,26 +117,6 @@
           
           
           
-            <a href="https://www.yuque.com/shenweiyan" >
-              
-              语雀
-            </a>
-          </li>
-          
-          <li class="pattern">
-          
-          
-          
-            <a href="https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioinit/qrcode-bioinit.png" >
-              
-              微信
-            </a>
-          </li>
-          
-          <li class="pattern">
-          
-          
-          
             <a href="../topic/tags/" >
               
               标签
@@ -144,18 +135,6 @@
           
           
 
-<li class="pattern">&nbsp;&nbsp;</li>
-
-
-
-<li class="pattern"><a href="https://github.com/shenweiyan/shen.bioitee.com/edit/master/content/topic/_index.md" target="_blank">编辑</a></li>
-
-
-<li class="pattern"><a href="../topic/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
-
-<li class="pattern"><a href="../declare/" title="声明">声明</a></li>
-
-
         </ul>
       </nav>
     </div>
@@ -168,7 +147,7 @@
 
 
 
-<h1>专栏文章</h1>
+<h1>Topics</h1>
 
 
 
@@ -186,12 +165,30 @@
 
 
 
-<p>网站的专栏文章包含了生物信息学、互联网 IT、读书笔记以及生活杂谈相关的分类文章。更多详细的分类文章请移步 <a href="https://shen.bioinit.com/tags/">TAGs</a> 页面进行阅读 。</p>
 
-<hr />
 
-<p>网站所有网页的源文件均用 markdown 或 R markdown 撰写。如果您在网站发现了任何错误，恳请点击菜单栏上的 “编辑” 按钮，并在 Github 上向我提交合并请求。</p>
-
+<div class="archive">
+  
+  <h2 class="archive-title">0001</h2>
+  
+  
+  <ul>
+    <li>
+      <span>0001/01/01</span>
+      <a href="../topic/latest/">博客文章</a>
+    </li>
+  </ul>
+  
+  <ul>
+    <li>
+      <span>0001/01/01</span>
+      <a href="../topic/archives/">归档</a>
+    </li>
+  </ul>
+  
+  
+  
+</div>
 
 
 
@@ -219,16 +216,6 @@ document.addEventListener('keyup', function(e) {
 </script>
 
 
-
-<section class="comments">
-<script src="https://utteranc.es/client.js"
-        repo="shenweiyan/issues"
-        issue-term="title"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-</section>
 
 
 

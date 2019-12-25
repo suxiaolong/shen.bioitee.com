@@ -43,3 +43,14 @@ disable_comments: true
 
 本个人网站是参考 [ivy-hugo-theme](https://github.com/shenweiyan/ivy-hugo-theme) 和 [cupper-hugo-theme](https://github.com/shenweiyan/cupper-hugo-theme) 构建的，如果读者想搭建一样主题的网站，请移步[GitHub](https://github.com/shenweiyan/ivc-hugo-theme)下载并参考 Hugo 与 Blogdown 的使用方法，然后删改关于我的信息。
 
+<br/>
+
+**本博客更新历史：**
+
+- **2019.12.25：**
+    1. 更新 topic/latest 页面, 禁用该页面 nav-next、nav-prev。调整部分导航与页面内容。
+    2. 所有文章图片增加 [fancybox@3.5.7](http://fancyapps.com/fancybox/3/) 鼠标点击进行缩放预览效果。
+    3. 使用 [Utterances](https://utteranc.es/) 替换原来的 [Disqus](https://disqus.com/) 评论系统。
+
+- **2019.12.24：**
+    1. 把原 shen.bioinit.com 博客迁移至 shen.bioitee.com 新仓库，更新新备案 bioitee.com 域名。

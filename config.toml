@@ -25,8 +25,8 @@ publishDir = "docs"
     url = "/about/"
     weight = 2
 [[menu.main]]
-    name = "博客"
-    url = "/topic/"
+    name = "博文"
+    url = "/topic/latest/"
     weight = 3
 [[menu.main]]
     name = "彩蛋"
@@ -53,14 +53,6 @@ publishDir = "docs"
     name = "读书"
     url = "/topic/read/"
     weight = 5
-[[menu.topic]]
-    name = "语雀"
-    url = "https://www.yuque.com/shenweiyan"
-    weight = 6
-[[menu.topic]]
-    name = "微信"
-    url = "https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioinit/qrcode-bioinit.png"
-    weight = 7
 [[menu.topic]]
     name = "标签"
     url = "/topic/tags/"

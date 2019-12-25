@@ -16,4 +16,4 @@ disable_comments: true
 
 **关于评论：**
 
-本站所有文章已经开启 Disiqus 评论模块，如果你有任何建议，欢迎留言。由于 Disqus 可能需要翻墙，而导致无法评论的可移步 "[语雀](https://www.yuque.com/shenweiyan)" 写下你的建议，感谢！
+本站所有文章已经开启 utterances 评论模块，如果你有任何建议，欢迎留言。相关文章的更多详细信息，请移步本博客的 "[语雀专栏](https://www.yuque.com/shenweiyan)" 进行查看，感谢你的一路支持！

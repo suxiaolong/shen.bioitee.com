@@ -912,15 +912,6 @@
     </item>
     
     <item>
-      <title>简历</title>
-      <link>https://shen.bioitee.com/topic/resume/shenweiyan/</link>
-      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/resume/shenweiyan/</guid>
-      <description>沈维燕 联系方式 地址：广州市黄埔区科学城科学大道182号创新大厦 邮箱：ishenwieyan@qq.com 网站：https://blog.bi</description>
-    </item>
-    
-    <item>
       <title>生物信息学博客与论坛</title>
       <link>https://shen.bioitee.com/topic/tech/2019-05-29-bio-blogs-forums/</link>
       <pubDate>Wed, 29 May 2019 06:12:49 +0000</pubDate>
@@ -1137,12 +1128,12 @@
     </item>
     
     <item>
-      <title></title>
-      <link>https://shen.bioitee.com/topic/tags/</link>
+      <title>博客文章</title>
+      <link>https://shen.bioitee.com/topic/latest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://shen.bioitee.com/topic/tags/</guid>
-      <description></description>
+      <guid>https://shen.bioitee.com/topic/latest/</guid>
+      <description>网站的专栏文章包含了生物信息学、互联网 IT、读书笔记以及生活杂谈相关的分类文章。更多详细的分类文章请移步 TAGs 页面进行阅读 。 网站所有网页的源文件</description>
     </item>
     
     <item>
