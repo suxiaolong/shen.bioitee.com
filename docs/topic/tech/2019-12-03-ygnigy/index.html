@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="../../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="icon" type="image/png" sizes="32x32" href="../../../img/logo.png"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -196,7 +197,7 @@
 
 <p>用过网页版本 BLAST 的童鞋都会发现，提交的序列比对往往在几分钟，甚至几十秒就可以得到比对的结果；而通过调用 API 却要花费几十分钟或者更长的时间！这到底是为什么呢？</p>
 
-<p><a href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571982834782-2310907f-aa48-47df-9d12-f60b21d30c23.png#align=left&amp;display=inline&amp;height=606&amp;name=ncbi_blast.png&amp;originHeight=606&amp;originWidth=1352&amp;size=156697&amp;status=done&amp;width=1352"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571982834782-2310907f-aa48-47df-9d12-f60b21d30c23.png#align=left&amp;display=inline&amp;height=606&amp;name=ncbi_blast.png&amp;originHeight=606&amp;originWidth=1352&amp;size=156697&amp;status=done&amp;width=1352" alt="ncbi_blast.png"></a></p>
+<p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571982834782-2310907f-aa48-47df-9d12-f60b21d30c23.png#align=left&amp;display=inline&amp;height=606&amp;name=ncbi_blast.png&amp;originHeight=606&amp;originWidth=1352&amp;size=156697&amp;status=done&amp;width=1352"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571982834782-2310907f-aa48-47df-9d12-f60b21d30c23.png#align=left&amp;display=inline&amp;height=606&amp;name=ncbi_blast.png&amp;originHeight=606&amp;originWidth=1352&amp;size=156697&amp;status=done&amp;width=1352" alt="ncbi_blast.png"></a></p>
 
 <h2 id="ncbiwww-基本用法">NCBIWWW 基本用法</h2>
 
@@ -278,7 +279,7 @@
 
 <p>在了解 NCBIWWW 的实现前，我们先来看一下 NCBI BLAST 对于 API 使用的一些说明：</p>
 
-<p><a href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571971734045-e5121e8c-cb07-466e-9447-4b1b5f7b2c69.png#align=left&amp;display=inline&amp;height=443&amp;name=image.png&amp;originHeight=443&amp;originWidth=572&amp;size=56705&amp;status=done&amp;width=572"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571971734045-e5121e8c-cb07-466e-9447-4b1b5f7b2c69.png#align=left&amp;display=inline&amp;height=443&amp;name=image.png&amp;originHeight=443&amp;originWidth=572&amp;size=56705&amp;status=done&amp;width=572" alt=""></a></p>
+<p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571971734045-e5121e8c-cb07-466e-9447-4b1b5f7b2c69.png#align=left&amp;display=inline&amp;height=443&amp;name=image.png&amp;originHeight=443&amp;originWidth=572&amp;size=56705&amp;status=done&amp;width=572"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571971734045-e5121e8c-cb07-466e-9447-4b1b5f7b2c69.png#align=left&amp;display=inline&amp;height=443&amp;name=image.png&amp;originHeight=443&amp;originWidth=572&amp;size=56705&amp;status=done&amp;width=572" alt=""></a></p>
 
 <ul>
 <li>NCBI BLAST 服务器是共享资源。为了确保整个社区都能使用该服务，他们可能会限制某些高流量用户的搜索。</li>
@@ -297,7 +298,7 @@
 
 <p>我们再来看一下 NCBIWWW 在源码层面的处理：</p>
 
-<p><a href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571972889901-35018157-a1a4-4b9c-90bb-dd56a7936dfe.png#align=left&amp;display=inline&amp;height=534&amp;name=image.png&amp;originHeight=534&amp;originWidth=846&amp;size=46171&amp;status=done&amp;width=846"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571972889901-35018157-a1a4-4b9c-90bb-dd56a7936dfe.png#align=left&amp;display=inline&amp;height=534&amp;name=image.png&amp;originHeight=534&amp;originWidth=846&amp;size=46171&amp;status=done&amp;width=846" alt=""></a></p>
+<p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571972889901-35018157-a1a4-4b9c-90bb-dd56a7936dfe.png#align=left&amp;display=inline&amp;height=534&amp;name=image.png&amp;originHeight=534&amp;originWidth=846&amp;size=46171&amp;status=done&amp;width=846"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571972889901-35018157-a1a4-4b9c-90bb-dd56a7936dfe.png#align=left&amp;display=inline&amp;height=534&amp;name=image.png&amp;originHeight=534&amp;originWidth=846&amp;size=46171&amp;status=done&amp;width=846" alt=""></a></p>
 
 <p>可以看到 NCBIWWW 从 20秒的延迟开始，然后开始每隔一分钟执行一次 request 轮询，直至任务完成或者任务出现异常。</p>
 
@@ -388,6 +389,8 @@ document.addEventListener('keyup', function(e) {
   </footer>
   </article>
   
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   </body>
 </html>
 
