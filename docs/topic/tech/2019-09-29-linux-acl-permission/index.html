@@ -184,7 +184,15 @@
       </header>
 
 
-<p>在 Linux 上指定目录的读写权限赋予用户，有两种方法可以实现这个目标：第一种是使用 ACL (访问控制列表)，第二种是创建用户组来管理文件权限，下面会一一介绍。为了完成这个教程，我们将使用以下设置：</p>
+  
+  
+  
+
+  
+  
+  
+
+  <p>在 Linux 上指定目录的读写权限赋予用户，有两种方法可以实现这个目标：第一种是使用 ACL (访问控制列表)，第二种是创建用户组来管理文件权限，下面会一一介绍。为了完成这个教程，我们将使用以下设置：</p>
 
 <ul>
 <li>操作系统：CentOS 7</li>
@@ -210,14 +218,14 @@ $ grep -i acl /boot/config*
 
 <p>从下方的截屏可以看到，文件系统类型是 ext4，并且从 CONFIG_EXT4_FS_POSIX_ACL=y 选项可以发现内核是支持 POSIX ACL 的。</p>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569745829455-a573f66d-20b2-41f4-bd8e-d0d9a3d8f16e.png#align=left&amp;display=inline&amp;height=307&amp;originHeight=307&amp;originWidth=604&amp;size=0&amp;status=done&amp;width=604" alt="" /></p>
+<p><a href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569745829455-a573f66d-20b2-41f4-bd8e-d0d9a3d8f16e.png#align=left&amp;display=inline&amp;height=307&amp;originHeight=307&amp;originWidth=604&amp;size=0&amp;status=done&amp;width=604"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569745829455-a573f66d-20b2-41f4-bd8e-d0d9a3d8f16e.png#align=left&amp;display=inline&amp;height=307&amp;originHeight=307&amp;originWidth=604&amp;size=0&amp;status=done&amp;width=604" alt=""></a></p>
 
 <p><strong>1.2. 查看文件系统（分区）挂载时是否使用了 ACL 选项。</strong></p>
 
 <pre><code class="language-bash">$ tune2fs -l /dev/vda1 | grep acl
 </code></pre>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569745829438-43deb4f6-8bc6-44a3-8e31-8733a247c5a7.png#align=left&amp;display=inline&amp;height=51&amp;originHeight=51&amp;originWidth=603&amp;size=0&amp;status=done&amp;width=603" alt="" /></p>
+<p><a href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569745829438-43deb4f6-8bc6-44a3-8e31-8733a247c5a7.png#align=left&amp;display=inline&amp;height=51&amp;originHeight=51&amp;originWidth=603&amp;size=0&amp;status=done&amp;width=603"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569745829438-43deb4f6-8bc6-44a3-8e31-8733a247c5a7.png#align=left&amp;display=inline&amp;height=51&amp;originHeight=51&amp;originWidth=603&amp;size=0&amp;status=done&amp;width=603" alt=""></a></p>
 
 <p>通过上边的输出可以发现，默认的挂载项目中已经对 ACL 进行了支持。如果发现结果不如所愿，你可以通过以下命令对指定分区（此例中使用 /dev/sda3）开启 ACL 的支持）。</p>
 
@@ -238,7 +246,7 @@ $ setfacl -m user:shenweiyan:rwx /data/share
 $ getfacl /data/share
 </code></pre>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569745829441-d24feecd-ed3f-4b11-a4c9-e59ccd56bf35.png#align=left&amp;display=inline&amp;height=407&amp;originHeight=407&amp;originWidth=604&amp;size=0&amp;status=done&amp;width=604" alt="" /></p>
+<p><a href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569745829441-d24feecd-ed3f-4b11-a4c9-e59ccd56bf35.png#align=left&amp;display=inline&amp;height=407&amp;originHeight=407&amp;originWidth=604&amp;size=0&amp;status=done&amp;width=604"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569745829441-d24feecd-ed3f-4b11-a4c9-e59ccd56bf35.png#align=left&amp;display=inline&amp;height=407&amp;originHeight=407&amp;originWidth=604&amp;size=0&amp;status=done&amp;width=604" alt=""></a></p>
 
 <p>在上方的截屏中，通过输出结果的第二行 getfacl 命令可以发现，用户 shenweiyan 已经成功的被赋予了 /data/share 目录的读写权限。</p>
 

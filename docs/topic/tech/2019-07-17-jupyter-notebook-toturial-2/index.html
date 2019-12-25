@@ -184,7 +184,15 @@
       </header>
 
 
+  
+  
+  
 
+  
+  
+  
+
+  
 
 <p>今天我们介绍一下 Python3+Nginx+SSL 下的 Jupyter Notebook 服务部署，也就是 Jupyter 服务器的搭建与配置。</p>
 
@@ -255,7 +263,7 @@ c.NotebookApp.port = 8888
 
 <p>如果在启动过程中出现：OSError: [Errno 99] Cannot assign requested address，请参考下面的方法解决。</p>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563351248558-4c343f89-968f-4a50-aade-c227b3f70b77.png#align=left&amp;display=inline&amp;height=322&amp;originHeight=322&amp;originWidth=937&amp;size=0&amp;status=done&amp;width=937" alt="" /></p>
+<p><a href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563351248558-4c343f89-968f-4a50-aade-c227b3f70b77.png#align=left&amp;display=inline&amp;height=322&amp;originHeight=322&amp;originWidth=937&amp;size=0&amp;status=done&amp;width=937"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563351248558-4c343f89-968f-4a50-aade-c227b3f70b77.png#align=left&amp;display=inline&amp;height=322&amp;originHeight=322&amp;originWidth=937&amp;size=0&amp;status=done&amp;width=937" alt=""></a></p>
 
 <p><strong>解决：</strong>运行 Jupyter 时增加 <code>--ip=0.0.0.0</code> 参数。</p>
 
@@ -266,7 +274,7 @@ c.NotebookApp.port = 8888
 
 <p>配置 nginx 前需要把你已经申请的域名跟 Jupyter Notebook 的服务器 ip 进行绑定解析。打开阿里云域名管理，增加 A 记录解析：</p>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563334760254-00323543-edb8-4b95-8d6a-fb88595aef5a.png#align=left&amp;display=inline&amp;height=398&amp;originHeight=398&amp;originWidth=736&amp;size=0&amp;status=done&amp;width=736" alt="" /></p>
+<p><a href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563334760254-00323543-edb8-4b95-8d6a-fb88595aef5a.png#align=left&amp;display=inline&amp;height=398&amp;originHeight=398&amp;originWidth=736&amp;size=0&amp;status=done&amp;width=736"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563334760254-00323543-edb8-4b95-8d6a-fb88595aef5a.png#align=left&amp;display=inline&amp;height=398&amp;originHeight=398&amp;originWidth=736&amp;size=0&amp;status=done&amp;width=736" alt=""></a></p>
 
 <h2 id="5-配置-nginx">5. 配置 nginx</h2>
 
@@ -323,7 +331,7 @@ server{
 
 <p>至此，大功告成，打开你的网址 <strong>xxx.xxx.com</strong> 是不是可以看到熟悉的 jupyter 了呢？如有疑问，欢迎留言讨论。</p>
 
-<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563341527122-326cddb2-b2b2-4ccf-8b01-f2c03cca27e2.png#align=left&amp;display=inline&amp;height=577&amp;name=jupyter_server.png&amp;originHeight=577&amp;originWidth=829&amp;size=27393&amp;status=done&amp;width=829" alt="jupyter_server.png" /></p>
+<p><a href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563341527122-326cddb2-b2b2-4ccf-8b01-f2c03cca27e2.png#align=left&amp;display=inline&amp;height=577&amp;name=jupyter_server.png&amp;originHeight=577&amp;originWidth=829&amp;size=27393&amp;status=done&amp;width=829"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563341527122-326cddb2-b2b2-4ccf-8b01-f2c03cca27e2.png#align=left&amp;display=inline&amp;height=577&amp;name=jupyter_server.png&amp;originHeight=577&amp;originWidth=829&amp;size=27393&amp;status=done&amp;width=829" alt="jupyter_server.png"></a></p>
 
 <p>以上就是远程 Jupter Notebook 服务安装与配置的全部内容，下一篇我们介绍一下如何在  Jupyter Notebook  中使用不同内核（Kernel）实现支持包括 python2、python3、R 在的多种不同编程环境。</p>
 
