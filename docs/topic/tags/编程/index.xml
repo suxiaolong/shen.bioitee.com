@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编程 on Steven Shen | 沈维燕</title>
+    <link>https://shen.bioitee.com/topic/tags/%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in 编程 on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    <lastBuildDate>Thu, 05 Dec 2019 08:58:14 +0000</lastBuildDate>
+    
+	<atom:link href="https://shen.bioitee.com/topic/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R 常用函数汇总</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-12-05-lwsgg0/</link>
+      <pubDate>Thu, 05 Dec 2019 08:58:14 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-12-05-lwsgg0/</guid>
+      <description>怎样显示R软件中某个包中包含的全部数据集？ &amp;gt; library(MASS) &amp;gt; data() &amp;gt; data(package=&amp;quot;MASS&amp;quot;) 查看包加载的路径 system.file(package = &#39;ggplot2&#39;) find.package(&amp;quot;ggplot2&amp;quot;) 查看包的安装目录： .libPaths() 查看该包里面所有的函数： ls(&#39;package:ggplot2&#39;) 查看已经安装的包</description>
+    </item>
+    
+    <item>
+      <title>R 语言中的高级图像处理包</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-10-19-uoepud/</link>
+      <pubDate>Sat, 19 Oct 2019 02:39:42 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-10-19-uoepud/</guid>
+      <description>最新的 magick 包是为能够在 R 中更现代化、简单化高质量图像处理而进行的一次努力。该包封装了目前最强大的开源图片处理库 ImageMagick STL 。 ImageMagick 库具有大量功能。当前版本</description>
+    </item>
+    
+    <item>
+      <title>Cool New Features in Python 3.8</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-10-16-pcfnsd/</link>
+      <pubDate>Wed, 16 Oct 2019 02:26:33 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-10-16-pcfnsd/</guid>
+      <description>原文：https://realpython.com/python38-new-features/</description>
+    </item>
+    
+    <item>
+      <title>Python 日期和时间函数使用指南</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-09-20-how-to-use-datetime-in-python/</link>
+      <pubDate>Fri, 20 Sep 2019 23:20:19 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-09-20-how-to-use-datetime-in-python/</guid>
+      <description>作者： Deepanshu Bhalla 编译： Steven Shen 标题： A Complete Guide to Date and Time Functions 在本教程中，我们将介绍 python 的 datetime 模块以及如何使用它来处理日期、时间，以及日期时间的格式化处理。 它包含各</description>
+    </item>
+    
+    <item>
+      <title>Python 文件下载并显示下载进度条</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-09-19-xu2eg5/</link>
+      <pubDate>Thu, 19 Sep 2019 08:03:19 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-09-19-xu2eg5/</guid>
+      <description>先上代码，后面有空再整理细节： # -*- coding:utf-8 -*- # vim:et:ts=4:sw=4: #!/usr/bin/env python ###################################################################### __author__ = &#39;ishenweiyan@qq.com&#39; __create__ = &#39;2019-09-19&#39; __file__ = &#39;download_demo.py&#39; __license__ = &#39;2019 All rights reserved.&#39; __doc__ = &#39;The test script.&#39; ##################################################################### import os from urllib.request import urlopen import requests from tqdm import tqdm from contextlib import closing class ProgressBar(object): def __init__(self, title, count=0.0, run_status=None, fin_status=None, total=100.0,</description>
+    </item>
+    
+    <item>
+      <title>GO 学习资料</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-09-18-ygzmzn/</link>
+      <pubDate>Wed, 18 Sep 2019 01:12:39 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-09-18-ygzmzn/</guid>
+      <description>Python 程序员的 Golang 学习指南（I）: Go 之初体验 Go 零基础编程入门教程 跟煎鱼学 Go</description>
+    </item>
+    
+    <item>
+      <title>Python 文件与目录操作方法总结</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-07-01-python-file-directory-toturial/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-07-01-python-file-directory-toturial/</guid>
+      <description>Python 有很多内置的模块和函数可用于文件的操作处理，这些函数都分布在几个模块上：如 os，os.path，shutil 和pathlib 等等。本文收集</description>
+    </item>
+    
+    <item>
+      <title>R 包初学者指南</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-07-01-r-packages-guide/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-07-01-r-packages-guide/</guid>
+      <description>基于 11 个最常见的用户问题介绍 R 软件包。 R 包是由社区开发（developed by the community）的功能（functions）和数据集（da</description>
+    </item>
+    
+    <item>
+      <title>数据科学工具 Jupyter Notebook 教程</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-07-01-jupyter-notebook-tutorial/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-07-01-jupyter-notebook-tutorial/</guid>
+      <description>一、简介 ipython notebook 是一个基于浏览器的 python 数据分析工具，使用起来非常方便，具有极强的交互方式和富文本的展示效果。jupyter 是它的升级版，它的安装也</description>
+    </item>
+    
+    <item>
+      <title>Python 读取大文件</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-06-11-iddn10/</link>
+      <pubDate>Tue, 11 Jun 2019 09:24:24 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-06-11-iddn10/</guid>
+      <description>https://www.jianshu.com/p/560ff3adfee3 Python 读取文件一般可以使用 read()，readlines()，但这两种方法在读取大文件时都会存储内存缺陷。 1. read() 接口的问题 f = open(filename, &#39;rb&#39;) f.read() 我们来读取</description>
+    </item>
+    
+    <item>
+      <title>Python 执行 shell 命令</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-05-21-kzicg7/</link>
+      <pubDate>Tue, 21 May 2019 03:48:13 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-05-21-kzicg7/</guid>
+      <description>subprocess python import subprocess transid = str(subprocess.check_output([&#39;grep&#39; , &#39;-w&#39;, geneid, trans2gene])).strip()</description>
+    </item>
+    
+    <item>
+      <title>利用 python 的 sorted 函数对字典按 key 排序和按 value 排序</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-05-18-python-sorted/</link>
+      <pubDate>Sat, 18 May 2019 12:50:51 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-05-18-python-sorted/</guid>
+      <description>我们知道 Python 的内置 dictionary 数据类型是无序的，通过 key 来获取对应的 value。可是有时我们需要对 dictionary 中的 item 进行排序输出，可能根据 key，也可能根据 value 来排。</description>
+    </item>
+    
+    <item>
+      <title>Python 正则匹配总结</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-05-18-python-match/</link>
+      <pubDate>Sat, 18 May 2019 12:48:56 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-05-18-python-match/</guid>
+      <description>正则表达式是用于处理字符串的强大工具，拥有自己独特的语法以及一个独立的处理引擎，效率上可能不如 str 自带的方法，但功能十分强大。本文介绍了 Python 对于</description>
+    </item>
+    
+    <item>
+      <title>python3 中 os.path 模块常用用法总结</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-05-18-python-os-path/</link>
+      <pubDate>Sat, 18 May 2019 12:44:59 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-05-18-python-os-path/</guid>
+      <description>os.path：常见的路径名操作模块。原文文档链接：https://docs.python.org/3.6/library/os.path.</description>
+    </item>
+    
+    <item>
+      <title>shell 命令实战合集</title>
+      <link>https://shen.bioitee.com/topic/tech/2018-12-29-shell-practice/</link>
+      <pubDate>Sat, 29 Dec 2018 09:21:11 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2018-12-29-shell-practice/</guid>
+      <description>shell 示例脚本 #!/bin/sh START=$(date +&#39;%Y-%m-%d %H:%M:%S&#39;);echo &amp;quot;Start: $START&amp;quot; &amp;gt;/data/database/onekp/nucl-v2/memo/log for i in `find /data/database/onekp/nucl-v2/samples/ -name &amp;quot;*.fa&amp;quot;`; do dir=`dirname $i`; fa=`basename $i`; cd $dir; makeblastdb -in $fa -dbtype nucl; echo $i &amp;gt;&amp;gt;/data/database/onekp/nucl-v2/memo/log; done END=$(date);echo &amp;quot;End: $END&amp;quot; &amp;gt;&amp;gt;/data/database/onekp/nucl-v2/memo/log linux 下使用命令排除当前行及下一行的内容 sed &#39;/关键字/,+1d&#39; file</description>
+    </item>
+    
+  </channel>
+</rss>

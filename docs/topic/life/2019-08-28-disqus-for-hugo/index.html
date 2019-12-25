@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    
+    
+    <title>hugo 博客添加 disqus 评论系统 - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="hugo 博客添加 disqus 评论系统 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://shen.bioitee.com/css/style.css"/>
+    <link rel="stylesheet" href="https://shen.bioitee.com/css/fonts.css"/>
+    
+
+<link rel="stylesheet" href="https://shen.bioitee.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="topic">
+    
+    
+    <header class="intro-and-nav" role="banner">
+    <div>
+      <div class="intro">
+        <a class="logo" href="../../../" aria-label="Steven Shen | 沈维燕 home page">
+          <img src="https://shen.bioitee.com/img/logo.png" alt="">
+        </a>
+        <p class="library-desc">
+          
+            Welcome to the blog site of Steven Shen.
+          
+        </p>
+      </div>
+      <nav id="patterns-nav" class="patterns" role="navigation">
+        <h2 class="vh">Main navigation</h2>
+        <button id="menu-button" aria-expanded="false">
+          
+          Menu
+        </button>
+        
+        <ul id="patterns-list">
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../" >
+              
+              首页
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/tech/" >
+              
+              技术
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/life/" >
+              
+              生活
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/read/" >
+              
+              读书
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="https://www.yuque.com/shenweiyan" >
+              
+              语雀
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioinit/qrcode-bioinit.png" >
+              
+              微信
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/tags/" >
+              
+              标签
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/archives/" >
+              
+              归档
+            </a>
+          </li>
+          
+          
+
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/shen.bioitee.com/edit/master/content/topic/life/2019-08-28-disqus-for-hugo.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../../topic/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="../../../declare/" title="声明">声明</a></li>
+
+
+        </ul>
+      </nav>
+    </div>
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+  
+
+
+
+<h1>hugo 博客添加 disqus 评论系统</h1>
+
+
+
+
+
+
+<h3>
+2019-08-28</h3> 
+
+
+   
+  
+
+
+
+      </header>
+
+
+<p>打开 diqus 官网：<a href="http://disqus.com/">http://disqus.com</a>，点击 &ldquo;GET STARTED&rdquo; 进入注册页面：</p>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1567129486337-5a6bb0e9-7ad0-400d-9bbb-6362a44d8bba.png#align=left&amp;display=inline&amp;height=544&amp;name=image.png&amp;originHeight=544&amp;originWidth=773&amp;size=87116&amp;status=done&amp;width=773" alt="" /></p>
+
+<p>选择 &ldquo;I want to install Disqus on my site&rdquo;，进入&rdquo;Create&rdquo; 创建页面：</p>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1567129711741-33a8fb63-56ca-42b3-80ee-a10626e2e344.png#align=left&amp;display=inline&amp;height=544&amp;name=image.png&amp;originHeight=544&amp;originWidth=768&amp;size=174049&amp;status=done&amp;width=768" alt="" /></p>
+
+<p>在创建页面填写网站信息：</p>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1567131538176-6f483e24-15d8-4be0-b102-4a22f5ca758d.png#align=left&amp;display=inline&amp;height=544&amp;name=image.png&amp;originHeight=544&amp;originWidth=768&amp;size=72813&amp;status=done&amp;width=768" alt="" /></p>
+
+<p>在 &ldquo;Choose a plan&rdquo; 页面，拉到最下面，选择免费的 &ldquo;Basic&rdquo; 版本，点击 &ldquo;Subscribe Now&rdquo;：</p>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1567131764891-262017a4-54f7-44c7-9844-38815debc193.png#align=left&amp;display=inline&amp;height=436&amp;name=image.png&amp;originHeight=436&amp;originWidth=768&amp;size=45567&amp;status=done&amp;width=768" alt="" /></p>
+
+<p>在 &ldquo;Choose a platform&rdquo; 选择博客的平台类型，对于 hugo 我们选择页面最下面的 &ldquo;Universal Code&rdquo;：</p>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1567132017554-2c392abb-bce4-49aa-9ee3-aede20e7e4f3.png#align=left&amp;display=inline&amp;height=436&amp;name=image.png&amp;originHeight=436&amp;originWidth=768&amp;size=56672&amp;status=done&amp;width=768" alt="" /></p>
+
+<p>把 &ldquo;Install instructions for Universal Code - Disqus Admin&rdquo; 页面的代码拷贝到 hugo 博客的 layouts/partials/disqus.html 文件：</p>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1567132211441-46b9fe46-e2dc-4d89-8f2b-9f729fc8a6e6.png#align=left&amp;display=inline&amp;height=436&amp;name=image.png&amp;originHeight=436&amp;originWidth=768&amp;size=56370&amp;status=done&amp;width=768" alt="" /></p>
+
+<pre><code class="language-html">&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = &quot;{{ .Permalink }}&quot;;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = &quot;{{ .Permalink }}&quot;; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://shen-hugo-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;https://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+</code></pre>
+
+<p>最后，在 &ldquo;Install instructions for Universal Code - Disqus Admin&rdquo; 页面拉到最下面，点击 &ldquo;Configure&rdquo;：</p>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1567133311537-3eac4d8f-8810-4a05-a60e-3137f528a29a.png#align=left&amp;display=inline&amp;height=436&amp;name=image.png&amp;originHeight=436&amp;originWidth=768&amp;size=52227&amp;status=done&amp;width=768" alt="" /></p>
+
+<p>在 &ldquo;Configure&rdquo; 页面填写完善网站的相关信息，点击 &ldquo;Complete Setup&rdquo; 完成设置。</p>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1567133500623-f9a94853-b118-4afb-b061-0c03b622722c.png#align=left&amp;display=inline&amp;height=728&amp;name=image.png&amp;originHeight=728&amp;originWidth=768&amp;size=86458&amp;status=done&amp;width=768" alt="" /></p>
+
+<p>在 hugo 博客的 config.toml 配置文件中增加 <code>disqusShortname</code> 参数：</p>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1567133698291-e3f12bf1-5bb9-4dfd-ab81-2702d843e5b6.png#align=left&amp;display=inline&amp;height=307&amp;name=image.png&amp;originHeight=307&amp;originWidth=851&amp;size=36383&amp;status=done&amp;width=851" alt="" /></p>
+
+<p>在 hugo 博客 layouts 目录下的模板中引入 <code>disqus.html</code> 模板：</p>
+
+<pre><code class="language-go">{{ partial &quot;disqus.html&quot; . }}
+</code></pre>
+
+<p>最后，执行 hugo，重新渲染生成所有的静态博客文件，push 到 github pages，完成所有操作。</p>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1567134788302-d07a70d3-dc3a-4102-a408-f88e2cffff08.png#align=left&amp;display=inline&amp;height=379&amp;name=image.png&amp;originHeight=379&amp;originWidth=682&amp;size=30797&amp;status=done&amp;width=682" alt="" /></p>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev">
+      
+      <a href="../../../topic/life/2019-08-26-a-real-man/">一个纯粹的人</a>
+      <br/>&larr;&nbsp;
+      
+  </span>
+  <span class="nav-next">
+      
+      <a href="../../../topic/life/2019-09-04-marriage-art/">修养</a>
+      <br/>&nbsp;&rarr;
+      
+  </span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/topic\/life\/2019-08-26-a-real-man\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/topic\/life\/2019-09-04-marriage-art\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
+
+
+
+
+<script async src="../../../js/fix-toc.js"></script>
+
+<script async src="../../../js/center-img.js"></script>
+
+<script async src="../../../js/right-quote.js"></script>
+
+<script async src="../../../js/no-highlight.js"></script>
+
+<script async src="../../../js/fix-footnote.js"></script>
+
+<script async src="../../../js/math-code.js"></script>
+
+<script async src="../../../js/external-link.js"></script>
+
+<script async src="../../../js/alt-title.js"></script>
+
+<script async src="../../../js/header-link.js"></script>
+
+<script async src="../../../js/dom-scripts.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

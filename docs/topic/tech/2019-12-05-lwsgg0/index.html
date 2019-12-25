@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    
+    
+    <title>R 常用函数汇总 - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="R 常用函数汇总 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://shen.bioitee.com/css/style.css"/>
+    <link rel="stylesheet" href="https://shen.bioitee.com/css/fonts.css"/>
+    
+
+<link rel="stylesheet" href="https://shen.bioitee.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="topic">
+    
+    
+    <header class="intro-and-nav" role="banner">
+    <div>
+      <div class="intro">
+        <a class="logo" href="../../../" aria-label="Steven Shen | 沈维燕 home page">
+          <img src="https://shen.bioitee.com/img/logo.png" alt="">
+        </a>
+        <p class="library-desc">
+          
+            Welcome to the blog site of Steven Shen.
+          
+        </p>
+      </div>
+      <nav id="patterns-nav" class="patterns" role="navigation">
+        <h2 class="vh">Main navigation</h2>
+        <button id="menu-button" aria-expanded="false">
+          
+          Menu
+        </button>
+        
+        <ul id="patterns-list">
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../" >
+              
+              首页
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/tech/" >
+              
+              技术
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/life/" >
+              
+              生活
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/read/" >
+              
+              读书
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="https://www.yuque.com/shenweiyan" >
+              
+              语雀
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioinit/qrcode-bioinit.png" >
+              
+              微信
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/tags/" >
+              
+              标签
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/archives/" >
+              
+              归档
+            </a>
+          </li>
+          
+          
+
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/shen.bioitee.com/edit/master/content/topic/tech/2019-12-05-lwsgg0.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../../topic/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="../../../declare/" title="声明">声明</a></li>
+
+
+        </ul>
+      </nav>
+    </div>
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+  
+
+
+
+<h1>R 常用函数汇总</h1>
+
+
+
+
+
+
+<h3>
+2019-12-05</h3> 
+
+
+   
+  
+
+
+
+      </header>
+
+
+<ul>
+<li>怎样显示R软件中某个包中包含的全部数据集？</li>
+</ul>
+
+<pre><code>&gt; library(MASS)
+&gt; data()
+
+&gt; data(package=&quot;MASS&quot;)
+</code></pre>
+
+<ul>
+<li>查看包加载的路径</li>
+</ul>
+
+<pre><code>system.file(package = 'ggplot2')
+find.package(&quot;ggplot2&quot;)
+</code></pre>
+
+<ul>
+<li>查看包的安装目录： <code>.libPaths()</code> </li>
+<li>查看该包里面所有的函数： <code>ls('package:ggplot2')</code> </li>
+<li>查看已经安装的包目录： <code>library()</code> </li>
+<li>载入mypackage 包： <code>library(mypackage)</code> </li>
+<li>查看启动 R 时自动载入的包： <code>getOption(&quot;defaultPackages&quot;)</code> </li>
+<li>查看 &lsquo;mypackage&rsquo; 的帮助信息： <code>help(package = 'mypackage')</code> </li>
+<li>查看函数的参数： <code>args(function)</code> </li>
+<li>自动运行该函数帮助文档中的例子： <code>example(function)</code> </li>
+<li>展示一些包中 demostration： <code>demo(&quot;package&quot;)</code> </li>
+<li>有的包，特别是 bioconductor 的包有 vignette，用函数查看： <code>vignette('mypackage')</code> </li>
+<li>查看 vignette： <code>openVignette('mypackage')</code> </li>
+<li>搜索 R 网站上的 &ldquo;helpinfor&rdquo; 相关信息： <code>RSiteSearch(&quot;helpinfor&quot;)</code> </li>
+<li>查看已经安装包的详细 HTML 文档： <code>help.start()</code> </li>
+<li>查看当前载入的包： <code>search()</code> </li>
+<li>查看 R 中载入的包： <code>sessionInfo()</code> </li>
+<li>查看 S4 类的方法： <code>showMethods(class = &quot;myClass&quot;)</code> </li>
+<li>查看 method 的代码： <code>findMethods(&quot;myMethods&quot;)</code> </li>
+<li>查看某个对象的类： <code>class(myObject)</code> </li>
+<li>查看某个 class 或者包的具体内容： <code>getClass(&quot;class/package&quot;)</code> </li>
+<li>查看某个 class 的 slot： <code>getSlots(&quot;class&quot;)</code> </li>
+<li>查看某个对象的 slot： <code>slotNames(MyObject)</code> </li>
+<li>卸除已加载的包</li>
+</ul>
+
+<pre><code class="language-bash">&gt; detach(&quot;package:RMySQL&quot;)
+
+# 注意是卸除，不是卸载，也就是说不是把包从 R 运行环境中彻底删除，只是不希望该包被加载使用。
+# 该命令在包使用函数冲突，检验函数依赖时比较有用。
+</code></pre>
+
+<ul>
+<li>查看已安装的包</li>
+</ul>
+
+<pre><code class="language-bash">&gt; installed.packages()[,c('Package','Version','LibPath')]
+&gt; installed.packages()[&quot;ggplot2&quot;,c('Package','Version','LibPath')]
+
+# 其中 c('Package','Version','LibPath') 表示显示包名、版本、库路径信息，若无[,c('Package','Version','LibPath')]参数，则显示所有信息。
+</code></pre>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev">
+      
+      <a href="../../../topic/tech/2019-12-04-coding-pages/">CODING 静态网站</a>
+      <br/>&larr;&nbsp;
+      
+  </span>
+  <span class="nav-next">
+      
+      <a href="../../../topic/tech/2019-12-05-uhunvv/">富集分析的几个区别</a>
+      <br/>&nbsp;&rarr;
+      
+  </span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/topic\/tech\/2019-12-04-coding-pages\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/topic\/tech\/2019-12-05-uhunvv\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
+
+
+
+
+<script async src="../../../js/fix-toc.js"></script>
+
+<script async src="../../../js/center-img.js"></script>
+
+<script async src="../../../js/right-quote.js"></script>
+
+<script async src="../../../js/no-highlight.js"></script>
+
+<script async src="../../../js/fix-footnote.js"></script>
+
+<script async src="../../../js/math-code.js"></script>
+
+<script async src="../../../js/external-link.js"></script>
+
+<script async src="../../../js/alt-title.js"></script>
+
+<script async src="../../../js/header-link.js"></script>
+
+<script async src="../../../js/dom-scripts.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

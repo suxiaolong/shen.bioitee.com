@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    
+    
+    <title>Hugo 博客添加 utterances 评论 - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="Hugo 博客添加 utterances 评论 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://shen.bioitee.com/css/style.css"/>
+    <link rel="stylesheet" href="https://shen.bioitee.com/css/fonts.css"/>
+    
+
+<link rel="stylesheet" href="https://shen.bioitee.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="topic">
+    
+    
+    <header class="intro-and-nav" role="banner">
+    <div>
+      <div class="intro">
+        <a class="logo" href="../../../" aria-label="Steven Shen | 沈维燕 home page">
+          <img src="https://shen.bioitee.com/img/logo.png" alt="">
+        </a>
+        <p class="library-desc">
+          
+            Welcome to the blog site of Steven Shen.
+          
+        </p>
+      </div>
+      <nav id="patterns-nav" class="patterns" role="navigation">
+        <h2 class="vh">Main navigation</h2>
+        <button id="menu-button" aria-expanded="false">
+          
+          Menu
+        </button>
+        
+        <ul id="patterns-list">
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../" >
+              
+              首页
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/tech/" >
+              
+              技术
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/life/" >
+              
+              生活
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/read/" >
+              
+              读书
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="https://www.yuque.com/shenweiyan" >
+              
+              语雀
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioinit/qrcode-bioinit.png" >
+              
+              微信
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/tags/" >
+              
+              标签
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/archives/" >
+              
+              归档
+            </a>
+          </li>
+          
+          
+
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/shen.bioitee.com/edit/master/content/topic/life/2019-12-24-fl1z7t.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../../topic/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="../../../declare/" title="声明">声明</a></li>
+
+
+        </ul>
+      </nav>
+    </div>
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+  
+
+
+
+<h1>Hugo 博客添加 utterances 评论</h1>
+
+
+
+
+
+
+<h3>
+2019-12-24</h3> 
+
+
+   
+  
+
+
+
+      </header>
+
+
+
+
+<p>因为是用 Hugo 搭建的博客，所以只看中了三个评论系统：1、<code>Disqus</code> 2、<code>Valine</code> 3、<code>Utterances</code> 。</p>
+
+<p>说下三者区别：</p>
+
+<ul>
+<li><strong>Disqus</strong>
+
+<ul>
+<li>优点：漂亮，hugo 自带，<a href="https://gohugo.io/templates/internal/#configure-disqus">官方文档</a>中有写如何启动，直接在 <code>config.toml</code> 文件中启用就可以用。</li>
+<li>缺点：广告多，国外的，容易被墙。</li>
+</ul></li>
+<li><strong>Valine</strong>
+
+<ul>
+<li>官方的介绍说，是一款快速、简洁且高效的无后端评论系统。对于第三方评论系统，经历了多说关闭的影响，不太敢用。具体如何本人的确也没用过，暂不评论。</li>
+</ul></li>
+<li><strong>Utterances</strong>
+
+<ul>
+<li>优点：基于 GitHub issues 的评论工具，开源免费，加载快，配置较简单，没有广告，没有追踪（很多评论系统有追踪，感觉不是很尊重访客隐私）。</li>
+<li>缺点：貌似不能在已经发表的评论中追加评论。</li>
+</ul></li>
+</ul>
+
+<p>好像三个都支持 <code>Markdown</code> 。</p>
+
+<h2 id="1-创建公开的仓库">1. 创建公开的仓库</h2>
+
+<p>在 github 创建一个公开的仓库。</p>
+
+<h2 id="2-安装-utterances-app">2. 安装 utterances app</h2>
+
+<p>通过 <a href="https://utteranc.es/">https://utteranc.es/</a> 主页的 <strong>configuration</strong> → <strong>Repositor</strong>y 进入 <a href="https://github.com/apps/utterances">utterances app</a> 主页（或者直接在浏览器输入 <a href="https://github.com/apps/utterances">https://github.com/apps/utterances</a> 进入）。</p>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1577169948539-ffd75dca-566a-420b-985c-ce9991ecb567.png#align=left&amp;display=inline&amp;height=558&amp;name=image.png&amp;originHeight=558&amp;originWidth=741&amp;size=68599&amp;status=done&amp;style=none&amp;width=741" alt="" /></p>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1577170392481-e34a6e41-7e69-455b-b3a4-2cb04a7b99b7.png#align=left&amp;display=inline&amp;height=582&amp;name=image.png&amp;originHeight=582&amp;originWidth=741&amp;size=102405&amp;status=done&amp;style=none&amp;width=741" alt="" /></p>
+
+<h2 id="3-配置-utterances">3. 配置 utterances</h2>
+
+<p><a href="https://github.com/apps/utterances">utterances app</a> 安装完成后，回到 <a href="https://utteranc.es/">https://utteranc.es/</a> 页面，设置 <strong>Repository</strong>、<strong>Blog Post</strong> ↔️ <strong>Issue Mapping</strong>、<strong>Theme</strong> 的信息，完成后把生成的 Enable Utterances js 代码添加到博客的评论系统。有两种方式添加，具体情况看个人（推荐第二种）。</p>
+
+<ul>
+<li><strong>最简单但是不能够随意开启，不能个性化设置。</strong></li>
+</ul>
+
+<p>直接从<a href="https://utteranc.es/">官方</a>或者从下方复制代码片段粘贴到相应的评论的 html 模板文件的相应位置即可。其中 <code>[ENTER REPO HERE</code> 填写格式为 <code>owner/repo</code> ，比如我的就是 <code>shenweiyan/issues</code> 。</p>
+
+<pre><code class="language-javascript">&lt;script src=&quot;https://utteranc.es/client.js&quot;
+        repo=&quot;[ENTER REPO HERE]&quot;
+        issue-term=&quot;pathname&quot;
+        theme=&quot;github-light&quot;
+        crossorigin=&quot;anonymous&quot;
+        async&gt;
+&lt;/script&gt;
+</code></pre>
+
+<ul>
+<li><strong>模块化，可设置开启关闭，便于管理。</strong></li>
+</ul>
+
+<p>首先，在 <code>themes/your-theme/layouts/partials/</code>，或者 <code>myblog/layouts/partials/</code> 下创建个 <code>utterances.html</code> 文件，以我的为例就是 <code>shen.bioinit.com/layouts/partials/utterances.html</code> ，然后复制下面的代码 copy 进去，保存。</p>
+
+<pre><code class="language-html">{{ if and ( .Site.Params.utteranc.enable ) (and (not .Params.disable_comments) (or (eq .Kind &quot;404&quot;) (and (not .IsHome) .Content))) }}
+&lt;section class=&quot;comments&quot;&gt;
+&lt;script src=&quot;https://utteranc.es/client.js&quot;
+        repo=&quot;{{ .Site.Params.utteranc.repo }}&quot;
+        issue-term=&quot;{{ .Site.Params.utteranc.issueTerm }}&quot;
+        theme=&quot;{{ .Site.Params.utteranc.theme }}&quot;
+        crossorigin=&quot;anonymous&quot;
+        async&gt;
+&lt;/script&gt;
+&lt;/section&gt;
+{{ end }}
+</code></pre>
+
+<p>其中 <code>section</code> 标签的 <code>class</code> 属性可以选择你已有的 <code>class</code>，没有的话请置空。或者你也可以把 <code>section</code> 标签换成 <code>&lt;div&gt;</code> 。</p>
+
+<p>然后，在 <code>config.toml</code> 文件中添加相关的参数：</p>
+
+<pre><code>[params.utteranc]
+enable = true
+repo = &quot;shenweiyan/issues&quot;    # 存储评论的Repo，格式为 owner/repo
+issueTerm = &quot;title&quot;           # 表示你选择以那种方式让github issue的评论和你的文章关联可以选择默认的pathname。
+theme = &quot;github-light&quot;        # 样式主题
+</code></pre>
+
+<p>第三，在相关的模板文件中添加一段代码 <code>{{ partial &quot;utterances.html&quot; . }}</code> ，即可完成 utterances 设置。以我的博客为例，即 <code>shen.bioinit.com/layouts/partials/foot_custom.html</code> 文件。</p>
+
+<p>第四，执行 <code>hugo</code>，重新生成静态博客文件，push 到 github，就可以看到 utterances 评论的的效果。如果在某些页面（如首页），你想要禁用评论功能，可以在 md 文件的头部加入 <code>disable_comments: true</code> 即可；不加，默认开启评论。</p>
+
+<pre><code class="language-markdown">---
+title: &quot;简介&quot;
+date: &quot;2019-08-12&quot;
+disable_comments: true
+---
+</code></pre>
+
+<h2 id="4-utterances-相关参数配置">4. Utterances 相关参数配置</h2>
+
+<ul>
+<li><p><code>repo</code> : 格式为 <code>owner/repo</code> 即 <code>用户名/仓库名</code>，千万不要填错了。</p></li>
+
+<li><p><code>issue-term</code>：映射配置，有以下几种设置可供使用(个人使用的 title)。</p>
+
+<ul>
+<li>pathname</li>
+<li>url</li>
+<li>title</li>
+<li>og:title</li>
+<li>issue-number</li>
+<li>specific-term</li>
+</ul></li>
+</ul>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1577176316385-aca8cf0d-9b73-4c03-b51e-07a5429f821d.png#align=left&amp;display=inline&amp;height=327&amp;name=image.png&amp;originHeight=327&amp;originWidth=902&amp;size=43212&amp;status=done&amp;style=none&amp;width=902" alt="" /></p>
+
+<p>测试了一下前面三个的样式，区别如截图，issue-number 和 specific-term 没用过，喜欢的可以去尝试一下。</p>
+
+<ul>
+<li><code>theme</code>：也就是主题，一白五黑，我白色主题没得选。
+
+<ul>
+<li>github-light</li>
+<li>github-dark</li>
+<li>github-dark-orange</li>
+<li>icy-dark</li>
+<li>dark-blue</li>
+<li>photon-dark</li>
+</ul></li>
+</ul>
+
+<p>最后，今天是 2019 年 12 月 24 日，西方平安夜，祝大家平平安安！</p>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev">
+      
+      <a href="../../../topic/life/2019-12-13-kblu4x/">动了谁的奶酪</a>
+      <br/>&larr;&nbsp;
+      
+  </span>
+  <span class="nav-next">
+      
+  </span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/topic\/life\/2019-12-13-kblu4x\/';
+    
+  } else if (e.which == 39) {  
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
+
+
+
+
+<script async src="../../../js/fix-toc.js"></script>
+
+<script async src="../../../js/center-img.js"></script>
+
+<script async src="../../../js/right-quote.js"></script>
+
+<script async src="../../../js/no-highlight.js"></script>
+
+<script async src="../../../js/fix-footnote.js"></script>
+
+<script async src="../../../js/math-code.js"></script>
+
+<script async src="../../../js/external-link.js"></script>
+
+<script async src="../../../js/alt-title.js"></script>
+
+<script async src="../../../js/header-link.js"></script>
+
+<script async src="../../../js/dom-scripts.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    
+    
+    <title>vim 使用的一些小技巧 - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="vim 使用的一些小技巧 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://shen.bioitee.com/css/style.css"/>
+    <link rel="stylesheet" href="https://shen.bioitee.com/css/fonts.css"/>
+    
+
+<link rel="stylesheet" href="https://shen.bioitee.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="topic">
+    
+    
+    <header class="intro-and-nav" role="banner">
+    <div>
+      <div class="intro">
+        <a class="logo" href="../../../" aria-label="Steven Shen | 沈维燕 home page">
+          <img src="https://shen.bioitee.com/img/logo.png" alt="">
+        </a>
+        <p class="library-desc">
+          
+            Welcome to the blog site of Steven Shen.
+          
+        </p>
+      </div>
+      <nav id="patterns-nav" class="patterns" role="navigation">
+        <h2 class="vh">Main navigation</h2>
+        <button id="menu-button" aria-expanded="false">
+          
+          Menu
+        </button>
+        
+        <ul id="patterns-list">
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../" >
+              
+              首页
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/tech/" >
+              
+              技术
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/life/" >
+              
+              生活
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/read/" >
+              
+              读书
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="https://www.yuque.com/shenweiyan" >
+              
+              语雀
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioinit/qrcode-bioinit.png" >
+              
+              微信
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/tags/" >
+              
+              标签
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/archives/" >
+              
+              归档
+            </a>
+          </li>
+          
+          
+
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/shen.bioitee.com/edit/master/content/topic/tech/2019-05-18-how-to-use-vim.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../../topic/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="../../../declare/" title="声明">声明</a></li>
+
+
+        </ul>
+      </nav>
+    </div>
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+  
+
+
+
+<h1>vim 使用的一些小技巧</h1>
+
+
+
+
+
+
+<h3>
+2019-05-18</h3> 
+
+
+   
+  
+
+
+
+      </header>
+
+
+<ul>
+<li>tab 分隔文件列对齐</li>
+</ul>
+
+<pre><code class="language-bash">:%!column -t
+</code></pre>
+
+<ul>
+<li>vim 字体颜色看不清</li>
+</ul>
+
+<pre><code class="language-bash"># Ubuntu 中设置(在 /etc/vim/vimrc 中加入）
+set background=dark
+
+# CentOS 中设置(在 /etc/vimrc 最后一行加入)
+hi Comment ctermfg = blue  //更改vi中注释内容字体颜色，可修改为：white、darkyellow、blue 等
+</code></pre>
+
+<p>修改前：</p>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559372667519-27fbd607-668a-423d-8fd4-42e8d427976e.png#align=left&amp;display=inline&amp;height=292&amp;name=ubuntu_vim_1.png&amp;originHeight=292&amp;originWidth=554&amp;size=14789&amp;status=done&amp;width=554" alt="ubuntu_vim_1.png" /></p>
+
+<p>修改后：</p>
+
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559372686477-e552f700-3a76-483c-8b50-b12ff5d57127.png#align=left&amp;display=inline&amp;height=290&amp;name=ubuntu_vim_2.png&amp;originHeight=290&amp;originWidth=559&amp;size=14858&amp;status=done&amp;width=559" alt="ubuntu_vim_2.png" /></p>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev">
+      
+      <a href="../../../topic/tech/2019-05-18-python-os-path/">python3 中 os.path 模块常用用法总结</a>
+      <br/>&larr;&nbsp;
+      
+  </span>
+  <span class="nav-next">
+      
+      <a href="../../../topic/tech/2019-05-18-python-match/">Python 正则匹配总结</a>
+      <br/>&nbsp;&rarr;
+      
+  </span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/topic\/tech\/2019-05-18-python-os-path\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/topic\/tech\/2019-05-18-python-match\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
+
+
+
+
+<script async src="../../../js/fix-toc.js"></script>
+
+<script async src="../../../js/center-img.js"></script>
+
+<script async src="../../../js/right-quote.js"></script>
+
+<script async src="../../../js/no-highlight.js"></script>
+
+<script async src="../../../js/fix-footnote.js"></script>
+
+<script async src="../../../js/math-code.js"></script>
+
+<script async src="../../../js/external-link.js"></script>
+
+<script async src="../../../js/alt-title.js"></script>
+
+<script async src="../../../js/header-link.js"></script>
+
+<script async src="../../../js/dom-scripts.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

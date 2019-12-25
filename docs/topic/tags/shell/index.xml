@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on Steven Shen | 沈维燕</title>
+    <link>https://shen.bioitee.com/topic/tags/shell/</link>
+    <description>Recent content in Shell on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    <lastBuildDate>Sat, 29 Dec 2018 09:21:11 +0000</lastBuildDate>
+    
+	<atom:link href="https://shen.bioitee.com/topic/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>shell 命令实战合集</title>
+      <link>https://shen.bioitee.com/topic/tech/2018-12-29-shell-practice/</link>
+      <pubDate>Sat, 29 Dec 2018 09:21:11 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2018-12-29-shell-practice/</guid>
+      <description>shell 示例脚本 #!/bin/sh START=$(date +&#39;%Y-%m-%d %H:%M:%S&#39;);echo &amp;quot;Start: $START&amp;quot; &amp;gt;/data/database/onekp/nucl-v2/memo/log for i in `find /data/database/onekp/nucl-v2/samples/ -name &amp;quot;*.fa&amp;quot;`; do dir=`dirname $i`; fa=`basename $i`; cd $dir; makeblastdb -in $fa -dbtype nucl; echo $i &amp;gt;&amp;gt;/data/database/onekp/nucl-v2/memo/log; done END=$(date);echo &amp;quot;End: $END&amp;quot; &amp;gt;&amp;gt;/data/database/onekp/nucl-v2/memo/log linux 下使用命令排除当前行及下一行的内容 sed &#39;/关键字/,+1d&#39; file</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="../../../fonts/academicons-1.8.6/css/academicons.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../img/logo.png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    
+    
+    
+    <title>富集分析的几个区别 - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="富集分析的几个区别 - Steven Shen | 沈维燕">
+    
+
+    
+      
+    
+
+    
+
+    
+  
+    <link rel="stylesheet" href="https://shen.bioitee.com/css/style.css"/>
+    <link rel="stylesheet" href="https://shen.bioitee.com/css/fonts.css"/>
+    
+
+<link rel="stylesheet" href="https://shen.bioitee.com/css/custom.css" />
+
+  </head>
+
+  
+  <body class="topic">
+    
+    
+    <header class="intro-and-nav" role="banner">
+    <div>
+      <div class="intro">
+        <a class="logo" href="../../../" aria-label="Steven Shen | 沈维燕 home page">
+          <img src="https://shen.bioitee.com/img/logo.png" alt="">
+        </a>
+        <p class="library-desc">
+          
+            Welcome to the blog site of Steven Shen.
+          
+        </p>
+      </div>
+      <nav id="patterns-nav" class="patterns" role="navigation">
+        <h2 class="vh">Main navigation</h2>
+        <button id="menu-button" aria-expanded="false">
+          
+          Menu
+        </button>
+        
+        <ul id="patterns-list">
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../" >
+              
+              首页
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/tech/" >
+              
+              技术
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/life/" >
+              
+              生活
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/read/" >
+              
+              读书
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="https://www.yuque.com/shenweiyan" >
+              
+              语雀
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioinit/qrcode-bioinit.png" >
+              
+              微信
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/tags/" >
+              
+              标签
+            </a>
+          </li>
+          
+          <li class="pattern">
+          
+          
+          
+            <a href="../../../topic/archives/" >
+              
+              归档
+            </a>
+          </li>
+          
+          
+
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/shen.bioitee.com/edit/master/content/topic/tech/2019-12-05-uhunvv.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../../topic/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="../../../declare/" title="声明">声明</a></li>
+
+
+        </ul>
+      </nav>
+    </div>
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+  
+
+
+
+<h1>富集分析的几个区别</h1>
+
+
+
+
+
+
+<h3>
+2019-12-05</h3> 
+
+
+   
+  
+
+
+
+      </header>
+
+
+
+
+<h1 id="名词解释">名词解释</h1>
+
+<p><strong>GO</strong></p>
+
+<p>GO 是 Gene Ontology 的缩写，是基因功能国际标准分类体系。它旨在建立一个适用于各种物种的，对基因和蛋白质功能进行限定和描述的，并能随着研究不断深入而更新的语言词汇标准。GO 数据库分别从<strong>分子功能（Molecular Function）</strong>、<strong>生物过程（Biological Process）</strong>及<strong>细胞组成（Cellular Component）</strong>对基因产物进行了标准化描述，即对基因产物进行了简单注释。</p>
+
+<p>通过 <strong>GO 富集分析</strong>可以粗略了解差异基因富集在哪些生物学功能、途径或者细胞定位。</p>
+
+<p><strong>Pathway</strong></p>
+
+<p>Pathway 指代谢通路，对差异基因进行 pathway 分析，可以<strong>了解实验条件下显著改变的代谢通路</strong>，在机制研究中显得尤为重要。</p>
+
+<p>GO 分析好比是将基因分门别类放入一个个功能类群，而 pathway 则是将基因一个个具体放到代谢网络中的指定位置。</p>
+
+<h1 id="1-什么是富集分析">1. 什么是富集分析</h1>
+
+<p>基因富集分析是分析基因表达信息的一种方法，富集是指将基因按照先验知识，也就是基因组注释信息进行分类。</p>
+
+<h1 id="2-富集分析原理是什么">2. 富集分析原理是什么</h1>
+
+<h1 id="3-怎么做富集分析">3. 怎么做富集分析</h1>
+
+<p>基因富集分析需要我们提供某一类功能基因的集合用于背景，常用的注释数据库如：</p>
+
+<ul>
+<li>The Gene Ontology Consortium: 描述基因的层级关系</li>
+<li>Kyoto Encyclopedia of Genes and Genomes: 提供了 pathway 的数据库。</li>
+</ul>
+
+<p>未完，待续&hellip;.</p>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev">
+      
+      <a href="../../../topic/tech/2019-12-05-lwsgg0/">R 常用函数汇总</a>
+      <br/>&larr;&nbsp;
+      
+  </span>
+  <span class="nav-next">
+      
+      <a href="../../../topic/tech/2019-12-05-nvi8vg/">GO 功能富集分析结果绘图 R 代码</a>
+      <br/>&nbsp;&rarr;
+      
+  </span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/topic\/tech\/2019-12-05-lwsgg0\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/topic\/tech\/2019-12-05-nvi8vg\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+<section class="comments">
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
+
+
+
+
+<script async src="../../../js/fix-toc.js"></script>
+
+<script async src="../../../js/center-img.js"></script>
+
+<script async src="../../../js/right-quote.js"></script>
+
+<script async src="../../../js/no-highlight.js"></script>
+
+<script async src="../../../js/fix-footnote.js"></script>
+
+<script async src="../../../js/math-code.js"></script>
+
+<script async src="../../../js/external-link.js"></script>
+
+<script async src="../../../js/alt-title.js"></script>
+
+<script async src="../../../js/header-link.js"></script>
+
+<script async src="../../../js/dom-scripts.js"></script>
+
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+  
+  
+  
+  
+
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5m6pzaeh5ar&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=0" async="async"></script>
+  </footer>
+  </article>
+  
+  </body>
+</html>
+

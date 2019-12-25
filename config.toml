@@ -1,0 +1,116 @@
+baseurl = "https://shen.bioitee.com"
+RelativeURLs=true
+CanonifyURLs=true
+languageCode = "zh-cmn-Hans"	                  # html的lang属性值
+DefaultContentLanguage = "zh-cmn-Hans"   	  # 默认内容语言用于选择i18n语言模板
+title = "Steven Shen | 沈维燕"
+theme = "hugo-ivy"
+#googleAnalytics = "UA-112592341-1"
+disqusShortname = "shen-bioinit"
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+hasCJKLanguage = true                             # .WordCount works correctly for chinese
+enableEmoji = true
+footnotereturnlinkcontents = "↩"
+MetaDataFormat = "yaml" 			  # format of a new post
+enableGitInfo = false
+publishDir = "docs"
+
+
+[[menu.main]]
+    name = "首页"
+    url = "/"
+    weight = 1
+[[menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 2
+[[menu.main]]
+    name = "博客"
+    url = "/topic/"
+    weight = 3
+[[menu.main]]
+    name = "彩蛋"
+    url = "https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioitee/bioitee.png"
+    weight = 6
+[[menu.main]]
+    name = "语雀"
+    url = "https://www.yuque.com/shenweiyan"
+    weight = 7
+
+[[menu.topic]]
+    name = "首页"
+    url = "/"
+    weight = 1
+[[menu.topic]]
+    name = "技术"
+    url = "/topic/tech/"
+    weight = 2
+[[menu.topic]]
+    name = "生活"
+    url = "/topic/life/"
+    weight = 3
+[[menu.topic]]
+    name = "读书"
+    url = "/topic/read/"
+    weight = 5
+[[menu.topic]]
+    name = "语雀"
+    url = "https://www.yuque.com/shenweiyan"
+    weight = 6
+[[menu.topic]]
+    name = "微信"
+    url = "https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioinit/qrcode-bioinit.png"
+    weight = 7
+[[menu.topic]]
+    name = "标签"
+    url = "/topic/tags/"
+    weight = 8
+[[menu.topic]]
+    name = "归档"
+    url = "/topic/archives/"
+    weight = 9
+
+
+[params]
+    siteurl = "https://shen.bioitee.com"
+    description = "Welcome to the blog site of Steven Shen."
+    disqusURL = "https://shenweiyan.github.io/shen.bioitee.com/"
+    customJS = ["js/fix-toc.js", "js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js", "js/math-code.js", "js/external-link.js", "js/alt-title.js", "js/header-link.js", "js/dom-scripts.js"]
+    githubContentURL = "https://github.com/shenweiyan/shen.bioitee.com/edit/master/content/"
+    # options for highlight.js (version, additional languages, and theme)
+    highlightjsVersion = "9.12.0"
+    highlightjsLang = ["r", "yaml", "tex"]
+    highlightjsCDN = "//cdn.bootcss.com"
+    highlightjsTheme = "github"
+    dateFormat = "2019-01-01" # "2019-01-01, Mon, "
+
+[params.footer]
+    home = "<br/><br/>Powered by [Hugo](https://gohugo.io) and [Blogdown](https://bookdown.org/yihui/blogdown/) &copy; [Steven Shen](/) 2018 - 2019 <br/><br/>[<i class='fas fa-crow fa-1x'></i>](https://www.yuque.com/shenweiyan) &middot; [<i class='far fa-envelope fa-1x'></i>](mailto:ishenweiyan@qq.com) &middot; [<i class='fab fa-github fa-1x'></i>](https://github.com/shenweiyan) &middot; [<i class='fab fa-stack-overflow fa-1x'></i>](https://stackoverflow.com/users/9701168/steven-shen) &middot; [<i class='fab fa-zhihu fa-1x'></i>](https://www.zhihu.com/people/shenweiyan) &middot; [<i class='fab fa-weixin fa-1x'></i>](https://weixin.sogou.com/weixin?type=1&query=bioinit) &middot; [<i class='fas fa-cloud fa-1x'></i>](https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=mx65q35j)"
+
+[params.author]
+    en = "Steven Shen"
+    cn = "沈维燕"
+
+[params.logo.en]
+    img = "https://apps-db.oss-cn-shenzhen.aliyuncs.com/logos/shenweiyan.png"
+    url = "/"
+    alt = "Steven Shen"
+    tag = ""
+
+[params.lang.edit]
+    cn = "编辑"
+[params.lang.declare]
+    cn = "声明"
+[params.lang.subscribe]
+    cn = "订阅"
+
+[params.utteranc]
+enable = true              
+repo = "shenweiyan/issues"    # 存储评论的Repo，格式为 owner/repo
+issueTerm = "title"          # 表示你选择以那种方式让github issue的评论和你的文章关联可以选择默认的 pathname。
+theme = "github-light"        # 样式主题
+
+[taxonomies]
+    tag = "topic/tags"
+    series = "topic/series"
+    category = "topic/categories"

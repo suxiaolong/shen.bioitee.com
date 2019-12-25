@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Steven Shen | 沈维燕</title>
+    <link>https://shen.bioitee.com/topic/tags/linux/</link>
+    <description>Recent content in Linux on Steven Shen | 沈维燕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    <lastBuildDate>Sun, 29 Sep 2019 08:28:52 +0000</lastBuildDate>
+    
+	<atom:link href="https://shen.bioitee.com/topic/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在 Linux 上给用户赋予指定目录的读写权限</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-09-29-linux-acl-permission/</link>
+      <pubDate>Sun, 29 Sep 2019 08:28:52 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-09-29-linux-acl-permission/</guid>
+      <description>在 Linux 上指定目录的读写权限赋予用户，有两种方法可以实现这个目标：第一种是使用 ACL (访问控制列表)，第二种是创建用户组来管理文件权限，下面会一一介</description>
+    </item>
+    
+    <item>
+      <title>Linux 磁盘管理：LVM 逻辑卷管理器</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-07-19-linux-lvm/</link>
+      <pubDate>Fri, 19 Jul 2019 06:06:53 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-07-19-linux-lvm/</guid>
+      <description>LVM （ Logical V olume Manager, 逻辑卷管理器） 是 Linux 环境下对硬盘分区进行管理的一种机制，开创这项技术的初衷是为了解决传统硬盘分区创建后不易更改其大小的弱点。对于传</description>
+    </item>
+    
+    <item>
+      <title>Linux 下的动态库、静态库与环境变量</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-07-19-linux-lib-env/</link>
+      <pubDate>Fri, 19 Jul 2019 02:22:00 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-07-19-linux-lib-env/</guid>
+      <description>最近这几天在处理集群软件的过程中，遇到各种各样的库和环境变量的问题，被虐的不清！趁此机会，整理了一下 Linux 下静态库、动态库（共享库）和环境变量的</description>
+    </item>
+    
+    <item>
+      <title>基于 Web 的 Linux 终端 WebTerminal</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-07-01-webterminal-for-linux/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-07-01-webterminal-for-linux/</guid>
+      <description>有时候用公共电脑，或者在没有安装 putty、xshell 之类的终端的电脑上访问或展示服务器上的一些资料数据，甚至是在运维平台开发中想要嵌入 WebTerminal</description>
+    </item>
+    
+  </channel>
+</rss>
