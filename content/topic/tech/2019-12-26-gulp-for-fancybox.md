@@ -151,9 +151,9 @@ $ ./node_modules/gulp/bin/gulp.js
 
 - 正常情况下的 `gulp` 可以使用 `npm install -g gulp` 进行全局安装，或者 `npm install --save-dev gulp` 在当前项目(目录)中安装 `gulp` 。区别是， `-g` 参数会把 `gulp` 安装在 `node` 默认的 `bin` 路径下，即全局安装；而不加 `-g` 参数， 则会把 `gulp` 默认安装到当前目录的 `node_modules/gulp/bin` 下。
 - `--save` 会把依赖包名称添加到 `package.json` 文件 `dependencies` 键下；而 `--save-dev` 则添加到 `package.json` 文件 `devDependencies` 键下，譬如：
-```bash
+```json
 {
- "dependencies": {
+  "dependencies": {
     "vue": "^2.2.1"
   },
   "devDependencies": {
