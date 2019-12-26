@@ -6,10 +6,19 @@
     <description>Recent content in 开发 on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Wed, 04 Dec 2019 06:16:59 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Dec 2019 00:51:34 +0000</lastBuildDate>
     
 	<atom:link href="https://shen.bioitee.com/topic/tags/%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>基于 gulp 的 fancybox 源码压缩</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-12-26-gulp-for-fancybox/</link>
+      <pubDate>Thu, 26 Dec 2019 00:51:34 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-12-26-gulp-for-fancybox/</guid>
+      <description>前不久，处理生物信息网页版自动化报告的时候就使用过 fancybox，今天在优化个人博客，为博文的图片增加放大效果的功能，解决一些滚动条问题时</description>
+    </item>
     
     <item>
       <title>CODING 静态网站</title>

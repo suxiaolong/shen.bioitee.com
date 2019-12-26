@@ -4,7 +4,7 @@ type: post
 topic/tags: ["others", "开发"]
 date: 2019-12-26T00:51:34.000Z
 category: 开发
-published: false
+published: true
 ---
 
 前不久，处理生物信息网页版自动化报告的时候就使用过 fancybox，今天在优化个人博客，为博文的图片增加放大效果的功能，解决一些滚动条问题时才从 fancybox 的 Github 源码中接触到 gulp —— 基于流的前端自动化构建工具，特意记录学习一下。
@@ -14,7 +14,8 @@ published: false
 
 关于 fancybox，其官网的介绍是：JavaScript lightbox library for presenting various types of media. Responsive, touch-enabled and customizable. 翻译过来就是，Fancybox 是一个 JavaScript 库，用于以优雅的方式呈现图像，视频和任何 HTML 内容。它具有您期望的所有功能——触摸启用，响应和完全可定制。我们来看一下 fancybox 官网提供的 demo 效果。
 
-[![fancybox-demo.mp4 (12.43MB)](https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1577323608585-9164a399-0784-4f3d-959f-36d944439a45.jpeg?x-oss-process=image/resize,h_450)](https://www.yuque.com/shenweiyan/cookbook/gulp-for-fancybox?_lake_card=%7B%22status%22%3A%22done%22%2C%22name%22%3A%22fancybox-demo.mp4%22%2C%22size%22%3A13037442%2C%22percent%22%3A0%2C%22id%22%3A%22XaPKn%22%2C%22videoId%22%3A%2252ef72b577e543968d7981690d725d68%22%2C%22coverUrl%22%3A%22https%3A%2F%2Fqiniu.bioinit.com%2Fyuque%2F0%2F2019%2Fjpeg%2F126032%2F1577323608585-9164a399-0784-4f3d-959f-36d944439a45.jpeg%22%2C%22aliyunVideoSrc%22%3Anull%2C%22taobaoVideoId%22%3A%22249002385908%22%2C%22uploaderId%22%3A126032%2C%22authKey%22%3A%22YXBwX2tleT04MDAwMDAwMTImYXV0aF9pbmZvPXsidGltZXN0YW1wRW5jcnlwdGVkIjoiZTg1MjNkZmQzMGEzODFiOTI0YjRkYjVhMTAyMzZjODMifSZkdXJhdGlvbj0mdGltZXN0YW1wPTE1NzczMzIwMjY%3D%22%2C%22docUrl%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fshenweiyan%2Fcookbook%2Fgulp-for-fancybox%22%2C%22card%22%3A%22video%22%7D#XaPKn)
+![fancybox-demo-86.gif](https://qiniu.bioinit.com/yuque/0/2019/gif/126032/1577342995252-03959fe5-5bd2-4584-b37a-e50091119cf7.gif#align=left&display=inline&height=240&name=fancybox-demo-86.gif&originHeight=240&originWidth=320&size=8977538&status=done&style=none&width=320)
+
 
 
 ## 2. fancybox 的安装使用
@@ -61,7 +62,7 @@ fancybox 是基于 GPLv3 进行源码开放的，它的源吗托管在 github �
 
 ## 4. Gulp 简单介绍
 
-Gulp 在官网的 title 是：用自动化构建工具增强你的工作流程，即一款基于流的前端自动化构建工具**。**作为前端的菜鸟，第一次听到这样的描述，是不是跟小编一样满头雾水？那么，下面摘录 segmentfault 前端分享专栏中《[gulp前端构建工具白话讲解，也包含自己使用的一些心得体](https://segmentfault.com/q/1010000000403629)》的一些回答，让大家直观了解一下。
+Gulp 在官网的 title 是：用自动化构建工具增强你的工作流程，即一款基于流的前端自动化构建工具**。**作为前端的菜鸟，第一次听到这样的描述，是不是跟小编一样满头雾水？那么，下面摘录 segmentfault 前端分享专栏中《[gulp前端构建工具白话讲解，也包含自己使用的一些心得体](https://segmentfault.com/a/1190000007137199)》的一些回答，让大家直观了解一下。
 > ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1577327983661-70fafa53-8c51-4dc9-b005-9c3da4924558.png#align=left&display=inline&height=131&name=image.png&originHeight=131&originWidth=474&size=49158&status=done&style=none&width=474)
 > 大家现在看到的这个图片是我使用 gulp 的一个基本的项目结构，而这边的 src 文件就是我们的源文件，dist 是通过 gulp 编译过后的文件（稍后会详细说明每一个文件的作用）。
 > 
@@ -175,3 +176,12 @@ $ ./node_modules/gulp/bin/gulp.js
 
 - 它们真正的区别是， `npm` 自己的文档说 `dependencies` 是运行时依赖， `devDependencies` 是开发时的依赖。即 `devDependencies` 下列出的模块，是我们开发时用的，比如我们安装 js 的压缩包 `gulp-uglify` 时，我们采用的是 `npm install –save-dev gulp-uglify` 命令安装，因为我们在发布后用不到它，而只是在我们开发才用到它。 `dependencies` 下的模块，则是我们发布后还需要依赖的模块，譬如像 jQuery 库或者 Angular 框架类似的，我们在开发完后后肯定还要依赖它们，否则就运行不了。
 - 对于已经存在 `package.json` 配置文件(定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）)的目录，我们可以直接在当前目录执行 `npm install` 进行安装， `npm install` 命令根据这个配置文件，自动下载所需的模块，也就是配置项目所需的运行和开发环境。
+
+
+
+## 7. 参考资料
+
+- panw3i，《[npm --save-dev --save 的区别](https://www.jianshu.com/p/b1b6e5a94b6a)》，简书
+- 小丑皇，《[gulp前端构建工具白话讲解，也包含自己使用的一些心得体会](https://segmentfault.com/a/1190000007137199)》，SegmentFault
+- 十年踪迹的博客，《[使用Gulp构建网站小白教程](https://www.h5jun.com/post/gulp-build)》，十年踪迹的博客
+- bibichuan，《[fancybox3使用总结](https://bibichuan.github.io/2019/03/19/fancybox3%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/)》，bibichuan 的底盘 - Github 个人博客
