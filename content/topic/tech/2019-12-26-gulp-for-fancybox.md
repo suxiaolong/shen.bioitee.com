@@ -7,7 +7,7 @@ category: 开发
 published: true
 ---
 
-前不久，处理生物信息网页版自动化报告的时候就使用过 fancybox，今天在优化个人博客，为博文的图片增加放大效果的功能，解决一些滚动条问题时才从 fancybox 的 Github 源码中接触到 gulp —— 基于流的前端自动化构建工具，特意记录学习一下。
+前不久，处理生信分析网页版自动化报告的时候就使用过 fancybox，今天在优化个人博客，为博文增加图片缩放效果，解决一些滚动条问题时，才从 fancybox 的 Github 源码中接触到 gulp —— 一个基于流的前端自动化构建工具，记录一下学习的过程。
 
 
 ## 1. fancybox 简单介绍
@@ -56,30 +56,27 @@ published: true
 
 fancybox 是基于 GPLv3 进行源码开放的，它的源吗托管在 github 上，我们可以直接在 `fancybox/dist/jquery.fancybox.js` 源码中把 `hideScrollbar: true`，更改成 `hideScrollbar: false`，然后把修改后的 `jquery.fancybox.js` 应用到你的图片页面，以达到显示滚动条的效果。
 
-细心的童鞋可能发现了，fancybox 默认使用的 js 文件是 `jquery.fancybox.min.js` ，相比源码文件 `jquery.fancybox.js`  多了一个 **min **后缀！所以，我们怎么才能把 `jquery.fancybox.js`  变成 `jquery.fancybox.min.js` ？
+细心的童鞋可能发现了，fancybox 默认使用的 js 文件是 `jquery.fancybox.min.js` ，相比源码文件 `jquery.fancybox.js`  多了一个 **min** 后缀！所以，我们怎么才能把 `jquery.fancybox.js`  变成 `jquery.fancybox.min.js` ？
 
 
 
 ## 4. Gulp 简单介绍
 
 Gulp 在官网的 title 是：用自动化构建工具增强你的工作流程，即一款基于流的前端自动化构建工具**。**作为前端的菜鸟，第一次听到这样的描述，是不是跟小编一样满头雾水？那么，下面摘录 segmentfault 前端分享专栏中《[gulp前端构建工具白话讲解，也包含自己使用的一些心得体](https://segmentfault.com/a/1190000007137199)》的一些回答，让大家直观了解一下。
+
 > ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1577327983661-70fafa53-8c51-4dc9-b005-9c3da4924558.png#align=left&display=inline&height=131&name=image.png&originHeight=131&originWidth=474&size=49158&status=done&style=none&width=474)
+> 
 > 大家现在看到的这个图片是我使用 gulp 的一个基本的项目结构，而这边的 src 文件就是我们的源文件，dist 是通过 gulp 编译过后的文件（稍后会详细说明每一个文件的作用）。
 > 
 > **现在请大家思考这样一个问题**
 > 1. 倘若我让线上的网站（不论 PC 还是移动端）使用的 css 文件，JS 文件，images 文件等静态资源，JS 是压缩过的，css 是压缩过的，images（主要针对雪碧图）也是压缩过的，好来减少文件的大小，从而提升一下浏览器的性能，那么应该怎么办？
-
-
 > 1. 如果说我们在项目中使用 LESS，或者 SASS 作为 CSS 的预编译语言（浏览器本身是不支持 LESS，SASS 文件的，难道每次还要使用类似与考拉软件去处理这些吗？）
-
-
 > 1. 如果我想找一个东西帮我去处理上面的这些东西，我写的还是没有压缩的 JS 或者 CSS/less/sass 等，但是在页面上实际上运行（或者等到项目发布的时候替换为压缩过的文件），那么 gulp 就是你很好的选择。
 
 
 > 
-**
 > **那么现在这样说大家有没有明白 gulp 是干嘛的吗？不错，它就是来处理上述这些事情的，而且我们在编辑器里修改的代码都是在 src 的目录下，而 dist 文件目录就是经过上述处理过后的文件目录，江湖人称编译过后的文件目录，而 gulp 就是起到了这个桥梁的作用。**
-> **
+> 
 > - package.json 文件。它就是记录了我们使用了什么插件，以及版本号的记录的一个 json 文件。
 > - gulpfile.js 文件是大家学习 gulp 的重点。它就是告诉了 gulp 我们要将什么文件编译到什么文件下的 XXX 目录里面。例如在我的 src 目录里面存在一个 css 文件夹，里面装了很多 css 或者 LESS 等样式文件，我现在想通过 gulp 将它编译到 dist 目录下面的 css 文件夹里面并且这个 css 文件夹里的样式文件还是压缩过了。那么 gulpfile.js 就是起到了这样的一个作用。
 
