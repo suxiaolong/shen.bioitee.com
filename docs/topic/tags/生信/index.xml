@@ -6,10 +6,19 @@
     <description>Recent content in 生信 on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Thu, 05 Dec 2019 09:04:38 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jan 2020 07:01:01 +0000</lastBuildDate>
     
 	<atom:link href="https://shen.bioitee.com/topic/tags/%E7%94%9F%E4%BF%A1/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Galaxy 生信平台（三）：xlsx 上传与识别</title>
+      <link>https://shen.bioitee.com/topic/tech/2020-01-03-galaxy-xlsx-upload-issues/</link>
+      <pubDate>Fri, 03 Jan 2020 07:01:01 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2020-01-03-galaxy-xlsx-upload-issues/</guid>
+      <description>我在《Firefox Quantum 向左，Google Chrome 向右》中，曾经吐槽过在 Firefox 中使用 Galaxy 上传本地的 Excel 文件时，会出现 xlsx 无法识别异常的问题。今天，我们来聊一聊</description>
+    </item>
     
     <item>
       <title>GO 功能富集分析结果绘图 R 代码</title>
