@@ -52,7 +52,6 @@ python -m http.server --cgi 8080
 
 - **upload.cgi**
 
-**
 ```python
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
