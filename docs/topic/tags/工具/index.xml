@@ -6,10 +6,19 @@
     <description>Recent content in 工具 on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Mon, 30 Dec 2019 02:24:21 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jan 2020 07:06:47 +0000</lastBuildDate>
     
 	<atom:link href="https://shen.bioitee.com/topic/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R 语言中的 X11 相关问题</title>
+      <link>https://shen.bioitee.com/topic/tech/2020-01-14-ublsz7/</link>
+      <pubDate>Tue, 14 Jan 2020 07:06:47 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2020-01-14-ublsz7/</guid>
+      <description>R-3.6.2（conda create -n r-3.6.2 r-essentials r-base==3.6.2） &amp;gt; plot(1:10) Error in .External2(C_X11, d$display, d$width, d$height, d$pointsize, : unable to start device X11cairo In addition: Warning message: In (function (display = &amp;quot;&amp;quot;, width, height, pointsize, gamma, bg, : unable to open connection to X11 display &#39;&#39; &amp;gt;</description>
+    </item>
     
     <item>
       <title>从 Jupyter Notebook 升级到 JupyterLab</title>
