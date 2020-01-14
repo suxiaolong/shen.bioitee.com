@@ -4,7 +4,7 @@ type: post
 topic/tags: ["R", "运维"]
 date: 2019-07-01T03:50:35.000Z
 category: 运维
-published: false
+published: true
 ---
 
 如果你使用的 Linux 系统 GCC 版本太低，又没有 root 权限（即使有 root 权限又担心升级 GCC 带来的风险）；同时你又不想入坑 conda，但是你又希望安装一个最新版本的 R，那么恭喜你，这篇普通用户在 Linux（CentOS）下源码编译安装 R 的记录刚好满足了你想要的一切。
@@ -15,7 +15,6 @@ published: false
 | :---: | --- |
 | 系统 | Red Hat Enterprise Linux Server release 6.5 (Santiago), x86_64 |
 | gcc | gcc version 4.4.7 20120313 (Red Hat 4.4.7-4) (GCC) |
-
 
 
 
@@ -314,6 +313,7 @@ $ ./configure --prefix=/Bioinfo/SoftWare/R-3.6.0 \
   CC=/Bioinfo/SoftWare/gcc-4.8.5/bin/gcc \
   CXX=/Bioinfo/SoftWare/gcc-4.8.5/bin/c++ \
   --enable-R-shlib --with-libtiff --with-libpng --with-jpeglib \
+  --with-x --with-cairo \
   LDFLAGS="-L/Bioinfo/SoftWare/NewLibs/zlib-1.2.6/lib \
   -L/Bioinfo/SoftWare/NewLibs/bzip2-1.0.6/lib \ 
   -L/Bioinfo/SoftWare/NewLibs/pcre-8.40/lib \ 
@@ -334,6 +334,8 @@ $ ./configure --prefix=/Bioinfo/SoftWare/R-3.6.0 \
 $ make
 $ make install
 ```
+
+- `--with-x`，`--with-cairo` 是开启 X11 图形化的参数，应该增加一下。
 
 
 
@@ -431,4 +433,4 @@ $ ldd /Bioinfo/SoftWare/R-3.5.0/lib64/R/library/stats/libs/stats.so
 - 不死不灭，《[R-3.3.1源码安装](http://kuxingseng2016.blog.51cto.com/1374617/1846326)》，51CTO
 - R 官方文档，《[R Installation and Administration](https://cran.r-project.org/doc/manuals/r-release/R-admin.html)》
 
-![默认标题_横版二维码_2019.06.01.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559899789708-8643c293-0711-46d8-92b6-5cd94023175b.png#align=left&display=inline&height=500&name=%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98_%E6%A8%AA%E7%89%88%E4%BA%8C%E7%BB%B4%E7%A0%81_2019.06.01.png&originHeight=500&originWidth=900&size=67641&status=done&width=900#align=left&display=inline&height=500&originHeight=500&originWidth=900&status=done&width=900)
+![默认标题_横版二维码_2019.06.01.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559899789708-8643c293-0711-46d8-92b6-5cd94023175b.png#align=left&display=inline&height=500&name=%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98_%E6%A8%AA%E7%89%88%E4%BA%8C%E7%BB%B4%E7%A0%81_2019.06.01.png&originHeight=500&originWidth=900&size=67641&status=done&width=900#align=left&display=inline&height=500&originHeight=500&originWidth=900&status=done&style=none&width=900)

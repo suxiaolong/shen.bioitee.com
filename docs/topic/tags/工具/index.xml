@@ -6,10 +6,19 @@
     <description>Recent content in 工具 on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Tue, 24 Dec 2019 03:07:46 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Dec 2019 02:24:21 +0000</lastBuildDate>
     
 	<atom:link href="https://shen.bioitee.com/topic/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>从 Jupyter Notebook 升级到 JupyterLab</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-12-30-opodb3/</link>
+      <pubDate>Mon, 30 Dec 2019 02:24:21 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-12-30-opodb3/</guid>
+      <description>JupyterLab is a next-generation web-based user interface for Project Jupyter. 安装 JupyterLab 可以通过 conda, pip, pipenv or docker 的方式安装。 JupyterLab 需要 4.3 版本以上的 notebook，如果 notebook 没有安装需要先安装 notebook。 conda install notebook</description>
+    </item>
     
     <item>
       <title>一款英文文章阅读翻译精品工具</title>

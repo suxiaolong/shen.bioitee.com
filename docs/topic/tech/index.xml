@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>从 Jupyter Notebook 升级到 JupyterLab</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-12-30-opodb3/</link>
+      <pubDate>Mon, 30 Dec 2019 02:24:21 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-12-30-opodb3/</guid>
+      <description>JupyterLab is a next-generation web-based user interface for Project Jupyter. 安装 JupyterLab 可以通过 conda, pip, pipenv or docker 的方式安装。 JupyterLab 需要 4.3 版本以上的 notebook，如果 notebook 没有安装需要先安装 notebook。 conda install notebook</description>
+    </item>
+    
+    <item>
       <title>基于 gulp 的 fancybox 源码压缩</title>
       <link>https://shen.bioitee.com/topic/tech/2019-12-26-gulp-for-fancybox/</link>
       <pubDate>Thu, 26 Dec 2019 00:51:34 +0000</pubDate>
@@ -558,6 +567,15 @@
       
       <guid>https://shen.bioitee.com/topic/tech/2019-07-01-cloud-services-for-jupyter-notebook/</guid>
       <description>作者：Kevin Markham 编译：Steven Shen 原文：https://www.dataschool.io/cloud-services-for-jup</description>
+    </item>
+    
+    <item>
+      <title>手把手教你在 Linux 源码安装最新版本的 R</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-07-01-install-latest-r-from-source/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-07-01-install-latest-r-from-source/</guid>
+      <description>如果你使用的 Linux 系统 GCC 版本太低，又没有 root 权限（即使有 root 权限又担心升级 GCC 带来的风险）；同时你又不想入坑 conda，但是你又希望安装一个最新版本的</description>
     </item>
     
     <item>

@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>从 Jupyter Notebook 升级到 JupyterLab</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-12-30-opodb3/</link>
+      <pubDate>Mon, 30 Dec 2019 02:24:21 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-12-30-opodb3/</guid>
+      <description>JupyterLab is a next-generation web-based user interface for Project Jupyter. 安装 JupyterLab 可以通过 conda, pip, pipenv or docker 的方式安装。 JupyterLab 需要 4.3 版本以上的 notebook，如果 notebook 没有安装需要先安装 notebook。 conda install notebook</description>
+    </item>
+    
+    <item>
       <title>基于 gulp 的 fancybox 源码压缩</title>
       <link>https://shen.bioitee.com/topic/tech/2019-12-26-gulp-for-fancybox/</link>
       <pubDate>Thu, 26 Dec 2019 00:51:34 +0000</pubDate>
