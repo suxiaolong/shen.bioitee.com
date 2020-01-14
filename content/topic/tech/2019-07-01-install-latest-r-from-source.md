@@ -4,7 +4,7 @@ type: post
 topic/tags: ["R", "运维"]
 date: 2019-07-01T03:50:35.000Z
 category: 运维
-published: true
+published: false
 ---
 
 如果你使用的 Linux 系统 GCC 版本太低，又没有 root 权限（即使有 root 权限又担心升级 GCC 带来的风险）；同时你又不想入坑 conda，但是你又希望安装一个最新版本的 R，那么恭喜你，这篇普通用户在 Linux（CentOS）下源码编译安装 R 的记录刚好满足了你想要的一切。
