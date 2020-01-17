@@ -6,69 +6,15 @@
     <description>Recent content in Topic/Tags on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Thu, 04 Jul 2019 06:20:26 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2019 02:51:24 +0000</lastBuildDate>
     
 	<atom:link href="https://shen.bioitee.com/topic/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Anaconda</title>
-      <link>https://shen.bioitee.com/topic/tags/anaconda/</link>
-      <pubDate>Thu, 04 Jul 2019 06:20:26 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/anaconda/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Centos</title>
-      <link>https://shen.bioitee.com/topic/tags/centos/</link>
-      <pubDate>Thu, 25 Jul 2019 01:29:15 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/centos/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Chrome</title>
-      <link>https://shen.bioitee.com/topic/tags/chrome/</link>
-      <pubDate>Sat, 18 May 2019 12:29:57 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/chrome/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Conda</title>
-      <link>https://shen.bioitee.com/topic/tags/conda/</link>
-      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/conda/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Github</title>
-      <link>https://shen.bioitee.com/topic/tags/github/</link>
-      <pubDate>Thu, 12 Sep 2019 02:05:22 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/github/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jupyter</title>
-      <link>https://shen.bioitee.com/topic/tags/jupyter/</link>
-      <pubDate>Wed, 17 Jul 2019 08:25:34 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/jupyter/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Linux</title>
       <link>https://shen.bioitee.com/topic/tags/linux/</link>
-      <pubDate>Sun, 29 Sep 2019 08:28:52 +0000</pubDate>
+      <pubDate>Tue, 12 Mar 2019 02:51:24 +0000</pubDate>
       
       <guid>https://shen.bioitee.com/topic/tags/linux/</guid>
       <description></description>
@@ -77,135 +23,18 @@
     <item>
       <title>Others</title>
       <link>https://shen.bioitee.com/topic/tags/others/</link>
-      <pubDate>Thu, 16 Jan 2020 02:02:00 +0000</pubDate>
+      <pubDate>Mon, 06 Jan 2020 07:25:19 +0000</pubDate>
       
       <guid>https://shen.bioitee.com/topic/tags/others/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Perl</title>
-      <link>https://shen.bioitee.com/topic/tags/perl/</link>
-      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      <title>Tech</title>
+      <link>https://shen.bioitee.com/topic/tags/tech/</link>
+      <pubDate>Mon, 06 Jan 2020 07:25:19 +0000</pubDate>
       
-      <guid>https://shen.bioitee.com/topic/tags/perl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://shen.bioitee.com/topic/tags/python/</link>
-      <pubDate>Fri, 20 Sep 2019 23:20:19 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://shen.bioitee.com/topic/tags/r/</link>
-      <pubDate>Mon, 15 Jul 2019 09:24:35 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Redhat</title>
-      <link>https://shen.bioitee.com/topic/tags/redhat/</link>
-      <pubDate>Thu, 25 Jul 2019 01:29:15 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/redhat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Shell</title>
-      <link>https://shen.bioitee.com/topic/tags/shell/</link>
-      <pubDate>Sat, 29 Dec 2018 09:21:11 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/shell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vim</title>
-      <link>https://shen.bioitee.com/topic/tags/vim/</link>
-      <pubDate>Sat, 18 May 2019 12:47:11 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/vim/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vscode</title>
-      <link>https://shen.bioitee.com/topic/tags/vscode/</link>
-      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/vscode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>乱弹</title>
-      <link>https://shen.bioitee.com/topic/tags/%E4%B9%B1%E5%BC%B9/</link>
-      <pubDate>Thu, 16 Jan 2020 02:02:00 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/%E4%B9%B1%E5%BC%B9/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>工具</title>
-      <link>https://shen.bioitee.com/topic/tags/%E5%B7%A5%E5%85%B7/</link>
-      <pubDate>Tue, 14 Jan 2020 07:06:47 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/%E5%B7%A5%E5%85%B7/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>开发</title>
-      <link>https://shen.bioitee.com/topic/tags/%E5%BC%80%E5%8F%91/</link>
-      <pubDate>Thu, 26 Dec 2019 00:51:34 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/%E5%BC%80%E5%8F%91/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>生信</title>
-      <link>https://shen.bioitee.com/topic/tags/%E7%94%9F%E4%BF%A1/</link>
-      <pubDate>Fri, 03 Jan 2020 07:01:01 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/%E7%94%9F%E4%BF%A1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>编程</title>
-      <link>https://shen.bioitee.com/topic/tags/%E7%BC%96%E7%A8%8B/</link>
-      <pubDate>Thu, 05 Dec 2019 08:58:14 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/%E7%BC%96%E7%A8%8B/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>读书</title>
-      <link>https://shen.bioitee.com/topic/tags/%E8%AF%BB%E4%B9%A6/</link>
-      <pubDate>Tue, 09 Jul 2019 06:07:09 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/%E8%AF%BB%E4%B9%A6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>运维</title>
-      <link>https://shen.bioitee.com/topic/tags/%E8%BF%90%E7%BB%B4/</link>
-      <pubDate>Mon, 23 Dec 2019 05:35:37 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tags/%E8%BF%90%E7%BB%B4/</guid>
+      <guid>https://shen.bioitee.com/topic/tags/tech/</guid>
       <description></description>
     </item>
     
