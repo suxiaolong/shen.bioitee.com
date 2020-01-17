@@ -74,11 +74,7 @@ EOF
 
 ## pypiserver 简介
 
-> pypiserver is a minimal PyPI compatible server for pip or easy_install. It is based on bottle and serves packages from regular directories. Wheels, bdists, eggs and accompanying PGP-signatures can be uploaded either with pip, setuptools, twine, pypi-uploader, or simply copied with scp.
-
-
-
-## pypiserver 服务端配置
+> pypiserver is a minimal PyPI compatible server for pip or easy_install. It is based on bottle and serves packages from regular directories. Wheels, bdists, eggs and accompanying PGP-signatures can be uploaded either with pip, setuptools, twine, pypi-uploader, or simply copied with scp.## pypiserver 服务端配置
 
 > pypiserver > 1.2.x works with Python 2.7 and 3.4+ or pypy. Older Python versions may still work, but they are not tested. For legacy Python versions, use pypiserver-1.1.x series.
 

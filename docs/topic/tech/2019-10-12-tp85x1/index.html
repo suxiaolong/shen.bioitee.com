@@ -192,15 +192,14 @@
 
 &gt;&gt;&gt; print(dash_bio.__version__)
 0.1.4
-</code></pre>
+```## dash
 
-<h2 id="dash">dash</h2>
+Plotly 的 `dash` 库提供了一个声明性的 Python 接口，用于开发全栈式 Web 应用程序（“Dash apps&quot;）。除了主要的 `dash` 库之外，`dash-html-components` 和 `dash-core-components` 包还构成了 Dash 应用程序的 building blocks。`dash-html-components` 提供了一个用于构建 Dash 应用程序布局的界面，该界面模仿了构建网站布局的过程； `dash-core-components` 是用于与 Dash 应用程序进行交互的一组常用工具（例如，下拉菜单，文本输入和滑块），并包括 `dcc.Graph` 组件，用于使用 plotly.py 制作交互式图形。
 
-<p>Plotly 的 <code>dash</code> 库提供了一个声明性的 Python 接口，用于开发全栈式 Web 应用程序（“Dash apps&rdquo;）。除了主要的 <code>dash</code> 库之外，<code>dash-html-components</code> 和 <code>dash-core-components</code> 包还构成了 Dash 应用程序的 building blocks。<code>dash-html-components</code> 提供了一个用于构建 Dash 应用程序布局的界面，该界面模仿了构建网站布局的过程； <code>dash-core-components</code> 是用于与 Dash 应用程序进行交互的一组常用工具（例如，下拉菜单，文本输入和滑块），并包括 <code>dcc.Graph</code> 组件，用于使用 plotly.py 制作交互式图形。</p>
+一个只包含了一个字符串页面的最小 Dash 应用可以使用以下代码生成。
 
-<p>一个只包含了一个字符串页面的最小 Dash 应用可以使用以下代码生成。</p>
-
-<pre><code class="language-python">import dash
+```python
+import dash
 import dash_html_components as html
 
 app = dash.Dash()
@@ -215,11 +214,8 @@ app.run_server()
 
 <p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569400318751-94eb4631-6619-41c8-a745-ed93518802a1.png#align=left&amp;display=inline&amp;height=1416&amp;name=092513352363001.Png&amp;originHeight=1416&amp;originWidth=1812&amp;size=372056&amp;status=done&amp;width=1812"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569400318751-94eb4631-6619-41c8-a745-ed93518802a1.png#align=left&amp;display=inline&amp;height=1416&amp;name=092513352363001.Png&amp;originHeight=1416&amp;originWidth=1812&amp;size=372056&amp;status=done&amp;width=1812" alt="092513352363001.Png"></a></p>
 
-<p><strong>Fig. 1</strong>: A simple Dash application.</p>
-
-<p>运行上述代码后，将指定一个本地主机地址在控制台中。在浏览器中访问该地址会产生一个简单的结果包含文本 &ldquo;Hello，world！&rdquo; 的网页 （见图1）。</p>
-
-<h2 id="dash-bio">dash-bio</h2>
+<p><strong>Fig. 1</strong>: A simple Dash application.
+运行上述代码后，将指定一个本地主机地址在控制台中。在浏览器中访问该地址会产生一个简单的结果包含文本 &ldquo;Hello，world！&rdquo; 的网页 （见图1）。## dash-bio</p>
 
 <p>Dash Bio 是一个用于在 Python 中构建生物信息学和药物开发应用程序的开源工具包。许多 Dash Bio 组件都建立在 JavaScript 库之上，这些库在全栈生物信息学应用程序开发人员中已经很流行。Plotly<strong> </strong>团队对这些 JavaScript 小部件经过进行了重新设计，以便 Python 开发人员现在可以访问它们。换句话说，科学计算的 Python 开发人员现在可以将这些小部件投入使用而无需了解 JavaScript。您只需要了解 Python 和 Dash。</p>
 
@@ -229,9 +225,7 @@ app.run_server()
 
 <p>聚类图是热图-树状图的组合，通常在基因表达数据中使用。由树状图表示的分层聚类可用于识别具有相关表达水平的基因组。Dash Bio Clustergram 组件是基于 Python 的组件，它使用 plotly.py 生成图形。它以二维 numpy 浮点值数组作为输入。缺失数据的插入和层次聚类的计算都发生在组件本身内。达到或超过用户定义相似性阈值的聚类在相应的树状图中包含单个迹线，并且可以用注释突出显示。</p>
 
-<p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569394214632-88d9d9b4-1f36-4020-9467-df1197b23e96.png?x-oss-process=image/resize,w_746#align=left&amp;display=inline&amp;height=539&amp;originHeight=539&amp;originWidth=746&amp;status=done&amp;width=746"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569394214632-88d9d9b4-1f36-4020-9467-df1197b23e96.png?x-oss-process=image/resize,w_746#align=left&amp;display=inline&amp;height=539&amp;originHeight=539&amp;originWidth=746&amp;status=done&amp;width=746" alt=""></a></p>
-
-<h3 id="ideogram">Ideogram</h3>
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569394214632-88d9d9b4-1f36-4020-9467-df1197b23e96.png?x-oss-process=image/resize,w_746#align=left&amp;display=inline&amp;height=539&amp;originHeight=539&amp;originWidth=746&amp;status=done&amp;width=746" alt="" />### Ideogram</p>
 
 <p>ideogram 是基因组数据的示意图。染色体以链表示，特定基因的位置由染色体上的条带表示。Dash Bio Ideogram 组件建立在 ideogram.js 库之上，并包括注释，直方图和同源性等功能。可以对每个染色体的不同片段进行注释，并以条带的形式显示，并且可以通过使用同源性功能将一条染色体上的一个区域连接到另一条染色体上的一个区域来突出显示不同染色体之间的关系。</p>
 
@@ -281,15 +275,13 @@ app.run_server()
 
 <h3 id="sequence-viewer">Sequence Viewer</h3>
 
-<p>Dash Bio SequenceViewer 组件是一个可用于基因组或蛋白质组序列注释的简单工具。它基于 <code>react-sequence-viewer</code> 库。该可视化图包括一个搜索功能，允许用户使用正则表达式搜索序列。另外，可以使用由起始位置、终止位置和颜色定义的选项，或可以编码一旦单击子序列即可显示的其他信息的覆盖范围来注释序列。选择和覆盖范围可在 Dash 应用程序中进行读取和写入，还可以通过鼠标悬停来选择和搜索结果。</p>
-
-<p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569547009348-d6456085-0e6d-4599-8927-092f9f66689b.png#align=left&amp;display=inline&amp;height=229&amp;originHeight=229&amp;originWidth=455&amp;status=done&amp;width=455"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569547009348-d6456085-0e6d-4599-8927-092f9f66689b.png#align=left&amp;display=inline&amp;height=229&amp;originHeight=229&amp;originWidth=455&amp;status=done&amp;width=455" alt=""></a></p>
+<p>Dash Bio SequenceViewer 组件是一个可用于基因组或蛋白质组序列注释的简单工具。它基于 <code>react-sequence-viewer</code> 库。该可视化图包括一个搜索功能，允许用户使用正则表达式搜索序列。另外，可以使用由起始位置、终止位置和颜色定义的选项，或可以编码一旦单击子序列即可显示的其他信息的覆盖范围来注释序列。选择和覆盖范围可在 Dash 应用程序中进行读取和写入，还可以通过鼠标悬停来选择和搜索结果。
+<img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569547009348-d6456085-0e6d-4599-8927-092f9f66689b.png#align=left&amp;display=inline&amp;height=229&amp;originHeight=229&amp;originWidth=455&amp;status=done&amp;width=455" alt="" /></p>
 
 <h2 id="总结">总结</h2>
 
-<p>Dash Bio 组件有助于对生物信息学领域中收集和分析中常见的数据集类型进行可视化展示。它与 Plotly Dash 的声明性质保持一致，并允许用户创建可与其他 Dash 组件集成的交互响应式 Web 应用程序。</p>
-
-<p>除此之外，在 Dash Bio 中还有一个与 <code>dash-bio</code> 一起开发的 <code>dash-bio-utils</code> 包。它包含了生物信息学分析中常用文件类型的解析器。通过这个包的解析器可以将一些常用生物信息学文件中编码的数据转换为与 Dash Bio 组件兼容的输入，如将文件从一些最著名的生物信息学数据库（GEO 表达数据，PDB 蛋白质分子结构数据等）转换为熟悉的 Python 数据类型，例如字典。当与 <code>dash-bio</code> 软件包结合使用时，这使生物信息学家可以快速，简洁地相互之间以及与其他科学界人士交流信息。</p>
+<p>Dash Bio 组件有助于对生物信息学领域中收集和分析中常见的数据集类型进行可视化展示。它与 Plotly Dash 的声明性质保持一致，并允许用户创建可与其他 Dash 组件集成的交互响应式 Web 应用程序。
+除此之外，在 Dash Bio 中还有一个与 <code>dash-bio</code> 一起开发的 <code>dash-bio-utils</code> 包。它包含了生物信息学分析中常用文件类型的解析器。通过这个包的解析器可以将一些常用生物信息学文件中编码的数据转换为与 Dash Bio 组件兼容的输入，如将文件从一些最著名的生物信息学数据库（GEO 表达数据，PDB 蛋白质分子结构数据等）转换为熟悉的 Python 数据类型，例如字典。当与 <code>dash-bio</code> 软件包结合使用时，这使生物信息学家可以快速，简洁地相互之间以及与其他科学界人士交流信息。</p>
 
 <p>喜欢 R 语言的同学，也可以了解一下 <code>dashR</code> 这个包，它是 Dash 生态系统的 R 接口，可用于编写响应式的 Web 可视化应用程序。</p>
 

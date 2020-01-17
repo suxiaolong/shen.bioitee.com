@@ -181,9 +181,7 @@
 
 <h2 id="1-源码包下载">1. 源码包下载</h2>
 
-<p>在官方网站下载新版本的源码包：<a href="http://www.perl.org/get.html">http://www.perl.org/get.html</a>，我下载的是 <a href="http://www.cpan.org/src/5.0/perl-5.26.1.tar.gz">perl-5.26.1.tar.gz</a>。</p>
-
-<h2 id="2-解压-设置源码">2. 解压，设置源码</h2>
+<p>在官方网站下载新版本的源码包：<a href="http://www.perl.org/get.html">http://www.perl.org/get.html</a>，我下载的是 <a href="http://www.cpan.org/src/5.0/perl-5.26.1.tar.gz">perl-5.26.1.tar.gz</a>。## 2. 解压，设置源码</p>
 
 <pre><code class="language-bash">$ tar zvxf perl-5.26.1.tar.gz
 $ cd perl-5.26.1
@@ -231,11 +229,10 @@ Usage: Configure [-dehrsEKOSV] [-f config.sh] [-D symbol] [-D symbol=value]
 
 # 设置源码
 $ ./Configure -des -Dprefix=/usr/local/software/Perl-5.26 -Dusethreads -Uversiononly
-</code></pre>
+```## 3. 编译安装
 
-<h2 id="3-编译安装">3. 编译安装</h2>
-
-<pre><code class="language-bash">$ make
+```bash
+$ make
 ......
 make[1]: *** [IO.o] Error 1
 make[1]: Leaving directory `/users/rmi1/build/perl-5.12.0/dist/IO'
@@ -255,18 +252,16 @@ $ make
 
 <pre><code class="language-bash">$ make test
 $ make install   # 命令完成后，基本安装就完成了
-</code></pre>
+```## 4. 调整环境变量
 
-<h2 id="4-调整环境变量">4. 调整环境变量</h2>
+在 ~/.bashrc 中把 perl 添加到 PATH 中，然后 source ~/.bashrc 刷新。
 
-<p>在 ~/.bashrc 中把 perl 添加到 PATH 中，然后 source ~/.bashrc 刷新。</p>
+```bash
+export PATH=&quot;/usr/local/software/Perl-5.26/bin:$PATH&quot;
+```## 5. 安装完成
 
-<pre><code class="language-bash">export PATH=&quot;/usr/local/software/Perl-5.26/bin:$PATH&quot;
-</code></pre>
-
-<h2 id="5-安装完成">5. 安装完成</h2>
-
-<pre><code class="language-bash">$ perl -version
+```bash
+$ perl -version
 
 This is perl 5, version 26, subversion 1 (v5.26.1) built for x86_64-linux-thread
 

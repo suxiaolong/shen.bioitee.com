@@ -10,17 +10,9 @@ published: true
 
 ## 前言
 
-Jupyter Notebook 作为一个把代码、图像、注释、公式和作图集于一处，从而实现可读性分析的交互式笔记本工具，借助所谓的内核（Kernel）的概念，Jupyter Notebook 可以同时支持包括 python2、python3、R、Ruby 在内超过50多种不同编程环境。基于Kernel，Jupyter Notebook 可以支持的编程语言可以参考[列表](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)。
+Jupyter Notebook 作为一个把代码、图像、注释、公式和作图集于一处，从而实现可读性分析的交互式笔记本工具，借助所谓的内核（Kernel）的概念，Jupyter Notebook 可以同时支持包括 python2、python3、R、Ruby 在内超过50多种不同编程环境。基于Kernel，Jupyter Notebook 可以支持的编程语言可以参考[列表](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)。## 目的
 
-
-
-## 目的
-
-在 Jupyter Notebook 中实现 python2 与 python3 自由切换。
-
-
-
-## 步骤
+在 Jupyter Notebook 中实现 python2 与 python3 自由切换。## 步骤
 
 参考：[https://stackoverflow.com/questions/30492623/using-both-python-2-x-and-python-3-x-in-ipython-notebook](https://stackoverflow.com/questions/30492623/using-both-python-2-x-and-python-3-x-in-ipython-notebook)
 
@@ -67,11 +59,7 @@ ipython kernel install --user
 - IPython kernel spec 安装可以使用 `python -m ipykernel install` ，也可以使用 `ipython-kernel-install`  命令，两者是一样的。
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563351954924-9deae7b8-600e-423f-9fce-497337ef6696.png#align=left&display=inline&height=388&originHeight=388&originWidth=626&size=0&status=done&width=626)
-
-
-
-## 实战
+![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563351954924-9deae7b8-600e-423f-9fce-497337ef6696.png#align=left&display=inline&height=388&originHeight=388&originWidth=626&size=0&status=done&width=626)## 实战
 
 使用 `--prefix` 指定 IPython kernel spec 安装路径：
 ```

@@ -290,28 +290,28 @@ Known labextensions:
     &quot;password&quot;: &quot;sha1:1a611a30d93a:5ab8b4be55d5e.....b8c7a8sa&quot;
   }
 }
+```# 三、远程服务器部署与配置
+
+网上搜了一下 Jupyter 服务器的搭建，官方给出了很好的多用户服务端 Jupyterhub，但我的需求就是在 VPS/Linux 服务器搭建好一个 Jupyter 服务网页，完全自己用，所以搭建 Jupyterhub 有些浪费资源，因此我们需要一个更加简单的 Jupyter 服务搭建方案。当然，官网也写好文档（参考：[Running a notebook server](https://jupyter-notebook.readthedocs.io/en/latest/public_server.html)）给我们用了，但文档是用英文写的，有需要的也可以参考实现。
+
+
+## 1. 配置基于 IP 访问
+
+Jupyter Notebook 可以通过命令行参数指定 IP，也可以通过配置文件实现基于服务器公网 IP 下的远程访问。
+
+通过命令行实现基于服务器公网 IP 访问，只需要执行以下命令即可：
 </code></pre>
 
-<h1 id="三-远程服务器部署与配置">三、远程服务器部署与配置</h1>
+<p>$ jupyter notebook &ndash;ip=0.0.0.0 &ndash;port=8080</p>
 
-<p>网上搜了一下 Jupyter 服务器的搭建，官方给出了很好的多用户服务端 Jupyterhub，但我的需求就是在 VPS/Linux 服务器搭建好一个 Jupyter 服务网页，完全自己用，所以搭建 Jupyterhub 有些浪费资源，因此我们需要一个更加简单的 Jupyter 服务搭建方案。当然，官网也写好文档（参考：<a href="https://jupyter-notebook.readthedocs.io/en/latest/public_server.html">Running a notebook server</a>）给我们用了，但文档是用英文写的，有需要的也可以参考实现。</p>
+<pre><code>
 
-<h2 id="1-配置基于-ip-访问">1. 配置基于 IP 访问</h2>
+## 2. 基于域名访问
 
-<p>Jupyter Notebook 可以通过命令行参数指定 IP，也可以通过配置文件实现基于服务器公网 IP 下的远程访问。</p>
-
-<p>通过命令行实现基于服务器公网 IP 访问，只需要执行以下命令即可：</p>
-
-<pre><code>$ jupyter notebook --ip=0.0.0.0 --port=8080 
-</code></pre>
-
-<h2 id="2-基于域名访问">2. 基于域名访问</h2>
-
-<h3 id="1-配置">1) 配置</h3>
-
-<p>下面的命令会在 <code>~/.jupyter</code> 自动创建一个配置文件  jupyter_notebook_config.py。</p>
-
-<pre><code class="language-shell">$ jupyter notebook --generate-config
+### 1) 配置
+下面的命令会在 `~/.jupyter` 自动创建一个配置文件  jupyter_notebook_config.py。
+```shell
+$ jupyter notebook --generate-config
 Writing default config to: /home/shenweiyan/.jupyter/jupyter_notebook_config.py
 </code></pre>
 
@@ -474,10 +474,9 @@ ipython kernel install --user
 </code></pre>
 
 <blockquote>
-<p>Additionally you can pass the <code>--name</code> and <code>--display-name</code> options to ipython kernel install if you want to change the names of your kernels. See <code>ipython kernel install --help</code> for more informations.</p>
+<p>Additionally you can pass the <code>--name</code> and <code>--display-name</code> options to ipython kernel install if you want to change the names of your kernels. See <code>ipython kernel install --help</code> for more informations.
+总结起来就是：</p>
 </blockquote>
-
-<p>总结起来就是：</p>
 
 <ol>
 <li>在 python2 和 python3 环境中分别安装 ipykernel。</li>
@@ -487,9 +486,7 @@ ipython kernel install --user
 <li>IPython kernel spec 安装可以使用 python -m ipykernel install，也可以使用 ipython-kernel-install 命令，两者是一样的。</li>
 </ol>
 
-<p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550823171682-80206c72-17c9-4b35-91a0-205405db5f6a.png#align=left&amp;display=inline&amp;height=388&amp;originHeight=388&amp;originWidth=626&amp;size=0&amp;status=done&amp;width=626"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550823171682-80206c72-17c9-4b35-91a0-205405db5f6a.png#align=left&amp;display=inline&amp;height=388&amp;originHeight=388&amp;originWidth=626&amp;size=0&amp;status=done&amp;width=626" alt=""></a></p>
-
-<h2 id="2-实际操作">2. 实际操作</h2>
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550823171682-80206c72-17c9-4b35-91a0-205405db5f6a.png#align=left&amp;display=inline&amp;height=388&amp;originHeight=388&amp;originWidth=626&amp;size=0&amp;status=done&amp;width=626" alt="" />## 2. 实际操作</p>
 
 <p>使用 <code>--prefix</code> 指定 IPython kernel spec 安装路径：</p>
 

@@ -22,10 +22,6 @@ published: true
 有极客范的云笔记。
 
 
-
-
-
-
 ## 博客站点
 
 - 袁勇的个人主页：[http://yongyuan.name/cn/](http://yongyuan.name/cn/)
@@ -42,15 +38,7 @@ published: true
 
 - 璇珠杂俎博客，[https://www.oukohou.wang/](https://www.oukohou.wang/)
 
-达闼科技的深度学习算法工程师，Jekyll+Github Pages 博客。
-
-
-
-
-
-
-
-## 博客服务
+达闼科技的深度学习算法工程师，Jekyll+Github Pages 博客。## 博客服务
 
 - Typecho：[http://typecho.org/](http://typecho.org/)
 

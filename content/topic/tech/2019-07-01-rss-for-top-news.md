@@ -13,19 +13,11 @@ published: true
 > RSS 是站点用来和其他站点之间共享内容的一种简易方式（也叫聚合内容 Really Simple Syndication）。通常在时效性比较强的内容上使用 RSS 订阅能更快速获取信息，网站提供 RSS 输出，有利于让用户获取网站内容的最新更新。网络用户可以在客户端借助于支持 RSS 的聚合工具软件（例如Inoreader, NewzCrawler, FeedDemon），在不打开网站内容页面的情况下阅读支持 RSS 输出的网站内容。
 
 
-简单的来说，RSS 就是一个收集箱（海报栏），一个 inbox ，通过不同的 feed 地址，将各种订阅源汇总到一起，在某个客户端中统一体现，每天刷一次，一切就像清空收件箱一样方便。
-
-
-
-# 二、为什么需要 RSS
+简单的来说，RSS 就是一个收集箱（海报栏），一个 inbox ，通过不同的 feed 地址，将各种订阅源汇总到一起，在某个客户端中统一体现，每天刷一次，一切就像清空收件箱一样方便。# 二、为什么需要 RSS
 
 举个例子，假如我们同时关注了知乎的某个专栏（如，R 语言中文社区）、简书某个专题（如，生物信息学与算法），以及其他一些生信大神的博客，除此之外我们还是 BBC、The Wall Street Journal 的读者。如果我们想要获取这些专栏、博客、网站的最新文章内容，按照以往的阅览模式，我们需要分别登录这些不同的网站把这些网站的内容浏览一遍才可以。这就意味着我们要每天至少分别打开上面所有网站的链接各一次，而且每次都要加载网站的动画、排版和文字内容，消耗大量的时间和流量。
 
-有了 RSS 系统，你只需要订阅各个网站的 RSS 链接，并在 RSS 阅读器内统一阅读自己订阅的文章就行了。RSS 阅读器可以自动检索和更新各网站最新的内容，你读过的文章也可以自动标记，非常方便。
-
-
-
-# 三、如何开始我的 RSS
+有了 RSS 系统，你只需要订阅各个网站的 RSS 链接，并在 RSS 阅读器内统一阅读自己订阅的文章就行了。RSS 阅读器可以自动检索和更新各网站最新的内容，你读过的文章也可以自动标记，非常方便。# 三、如何开始我的 RSS
 
 
 ## 首先，我们需要一个 RSS 源，即 Feed。
@@ -35,11 +27,7 @@ published: true
 
 一般我们需要订阅的新闻或者博客网站中大部分主流网站会有专门的 RSS 链接方便用户订阅，如果没有也没关系，RSS 订阅服务通常会自动识别网站地址。或者我们可以使用专门的 RSS 生成器为没有 Feed 的网页生成 RSS 格式订阅源，如，Feed43、RSSHub 等等。
 
-关于常用的 RSS 源，这里推荐知乎的一个回答：[你必读的 RSS 订阅源有哪些？](https://www.zhihu.com/question/19580096/answer/20490041)
-
-
-
-## 其次，我们需要一个 RSS 阅读器。
+关于常用的 RSS 源，这里推荐知乎的一个回答：[你必读的 RSS 订阅源有哪些？](https://www.zhihu.com/question/19580096/answer/20490041)## 其次，我们需要一个 RSS 阅读器。
 
 就像电子书需要电子书阅读器才能阅读一样，Feed 只是 RSS 的一个数据源，它本身是写给程序看的，必须经过阅读器转换，才能成为可以浏览的格式。
 
@@ -87,10 +75,6 @@ Google reader 是 RSS 订阅服务的鼻祖，但该业务在 2013 年被 Google
 这是一种比较详细的订阅方式，我们需要去各大数据库选择自己需要的，比如 pubmed，你打开之后，输入你想要的关键词，在搜索框下方有一个 "create RSS" 直接点击：
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854111-96f37854-597d-4091-8fba-25b04fd30023.png#align=left&display=inline&height=147&originHeight=233&originWidth=1185&size=0&status=done&width=746)
-
-
-
-
 Inoreader 支持知乎专栏的 URL 搜索，比如我们要把知乎的 "R语言中文社区" 专栏添加到 Inoreader，只需要把该专栏的 URL 粘贴到 Inoreader 搜索区，在找到的源中点击订阅即可。
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1554873854197-1ad14b9d-e964-4f25-85d1-0701971e5bfc.png#align=left&display=inline&height=174&originHeight=447&originWidth=1919&size=0&status=done&width=746)
@@ -119,11 +103,7 @@ Inoreader 支持知乎专栏的 URL 搜索，比如我们要把知乎的 "R语�
 
 最后，提供几张 Inoreader 在安卓手机上使用的截图：
 
-![](https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1554873854239-d7980b78-ac47-424a-b776-75d3fc811cfb.jpeg#align=left&display=inline&height=1492&originHeight=2160&originWidth=1080&size=0&status=done&width=746)
-
-
-
-# 四、参考资料
+![](https://qiniu.bioinit.com/yuque/0/2019/jpeg/126032/1554873854239-d7980b78-ac47-424a-b776-75d3fc811cfb.jpeg#align=left&display=inline&height=1492&originHeight=2160&originWidth=1080&size=0&status=done&width=746)# 四、参考资料
 
 - Platycodon，《2018 年主流 RSS 服务选哪家？Feedly、Inoreader 和 NewsBlur 全面横评》，少数派，[https://sspai.com/post/44420](https://sspai.com/post/44420)
 - 数据小冰，《inoreader阅读器使用》，CSDN，[https://blog.csdn.net/mingyong_blog/article/details/40792687](https://blog.csdn.net/mingyong_blog/article/details/40792687)

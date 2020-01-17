@@ -11,11 +11,7 @@ published: true
 
 
 ## 1. 创建项目，进入代码浏览
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1575440647377-1c547ee2-4757-4339-9781-cb15263cdea6.png#align=left&display=inline&height=680&name=image.png&originHeight=680&originWidth=644&size=96913&status=done&style=none&width=644)
-
-
-
-## 2. 在服务器中生成网站，并推送
+![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1575440647377-1c547ee2-4757-4339-9781-cb15263cdea6.png#align=left&display=inline&height=680&name=image.png&originHeight=680&originWidth=644&size=96913&status=done&style=none&width=644)## 2. 在服务器中生成网站，并推送
 
 ```bash
 shenweiyan@ecs-steven 14:25:22 /home/shenweiyan
@@ -75,11 +71,7 @@ $ git push origin master        # 完成 public 目录的所有文件推送
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1575441748045-41ec5429-1705-40eb-ad10-d5f3a49e4488.png#align=left&display=inline&height=680&name=image.png&originHeight=680&originWidth=1020&size=102889&status=done&style=none&width=1020)
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1575441846673-27751544-6bdc-4baf-a7d3-bcd7ff057312.png#align=left&display=inline&height=693&name=image.png&originHeight=693&originWidth=1020&size=204624&status=done&style=none&width=1020)
-
-
-
-## 4. 绑定域名
+![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1575441846673-27751544-6bdc-4baf-a7d3-bcd7ff057312.png#align=left&display=inline&height=693&name=image.png&originHeight=693&originWidth=1020&size=204624&status=done&style=none&width=1020)## 4. 绑定域名
 
 在项目导航栏 "构建与部署" → "静态网站" 页面，点击右上角的 "设置" 按钮。
 

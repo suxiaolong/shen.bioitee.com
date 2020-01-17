@@ -201,19 +201,17 @@ export GOROOT=/usr/local/software/go-1.12.7    #这个就是我们安装的位�
 export PATH=$PATH:$GOROOT/bin                  #go语言一些常用的命令引入PATH环境变量
 
 $ go env 		# 查看 Go 的一些环境配置
-</code></pre>
+```### CentOS 7 安装 Hugo
 
-<h3 id="centos-7-安装-hugo">CentOS 7 安装 Hugo</h3>
-
-<pre><code class="language-bash">$ wget https://github.com/gohugoio/hugo/releases/download/v0.54.0/hugo_0.54.0_Linux-64bit.tar.gz
+```bash
+$ wget https://github.com/gohugoio/hugo/releases/download/v0.54.0/hugo_0.54.0_Linux-64bit.tar.gz
 $ tar zvxf hugo_0.54.0_Linux-64bit.tar.gz -C /usr/local/software/hugo-0.54.0
 $ echo &quot;export PATH=/usr/local/software/hugo-0.54.0:\$PATH&quot; &gt;&gt;~/.bashrc
 $ source ~/.bashrc
-</code></pre>
+```### 启动 hugo 博客服务
 
-<h3 id="启动-hugo-博客服务">启动 hugo 博客服务</h3>
-
-<pre><code class="language-bash">shenweiyan@ecs-steven 15:04:06 ~/shenweiyan/home
+```bash
+shenweiyan@ecs-steven 15:04:06 ~/shenweiyan/home
 $ hugo		# 渲染生成静态站点文件
 
                    | ZH
@@ -231,15 +229,14 @@ Total in 203 ms
 
 
 $ hugo server --baseUrl=120.77.xx.xx --bind=0.0.0.0		# 启动本地预览服务
-</code></pre>
+```### 一些问题
 
-<h3 id="一些问题">一些问题</h3>
+**问题：**
 
-<p><strong>问题：</strong></p>
+hugo-ivy 主题在 0.55 后版本的 Hugo 中 RSS 无法使用，并且在编译时会有如下警告：
 
-<p>hugo-ivy 主题在 0.55 后版本的 Hugo 中 RSS 无法使用，并且在编译时会有如下警告：</p>
-
-<pre><code class="language-bash">Building sites … 
+```bash
+Building sites … 
 WARN 2019/08/13 09:03:08 Page's .URL is deprecated and will be removed in a future release. Use .Permalink or .RelPermalink. If what you want is the front matter URL value, use .Params.url.
 WARN 2019/08/13 09:03:08 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like:
     {{ with .OutputFormats.Get &quot;RSS&quot; }}{{ .RelPermalink }}{{ end }}.

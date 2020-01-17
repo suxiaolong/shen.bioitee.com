@@ -234,13 +234,11 @@ $ /Bioinfo/Pipeline/SoftWare/R/R-3.6.1/bin/R CMD INSTALL /Bioinfo/Pipeline/Sourc
 ** testing if installed package can be loaded from final location
 ** testing if installed package keeps a record of temporary installation path
 * DONE (RamiGO)
-</code></pre>
+```## 二、RamiGO 使用与 libpng 依赖库异常
 
-<h2 id="二-ramigo-使用与-libpng-依赖库异常">二、RamiGO 使用与 libpng 依赖库异常</h2>
-
-<p>使用 <code>RamiGO</code> R 包过程中，如果发现：</p>
-
-<pre><code class="language-r">&gt; library('RamiGO')
+使用 `RamiGO` R 包过程中，如果发现：
+```r
+&gt; library('RamiGO')
 Loading required package: gsubfn
 Loading required package: proto
 &gt; goIDs &lt;- c(&quot;GO:0051130&quot;,&quot;GO:0019912&quot;,&quot;GO:0005783&quot;,&quot;GO:0043229&quot;,&quot;GO:0050789&quot;)

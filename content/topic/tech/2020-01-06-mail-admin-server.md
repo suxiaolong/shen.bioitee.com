@@ -19,21 +19,13 @@ Galaxy 收发邮件的核心代码主要位于以下两个程序，其核心模�
 - `lib/galaxy/webapps/galaxy/controllers/user.py`
 - `lib/galaxy/util/__init__.py`
 
-所以，在设置 Galaxy 邮箱服务前，我们先来了解一下如何在 Python 中基于 `email` 和 `smtplib` 库进行 QQ 邮件的发送。
-
-**
-
-## 2. 基于 Python 的邮件收发
+所以，在设置 Galaxy 邮箱服务前，我们先来了解一下如何在 Python 中基于 `email` 和 `smtplib` 库进行 QQ 邮件的发送。## 2. 基于 Python 的邮件收发
 
 首先我们要知道用 python 代理登录 qq 邮箱发邮件，是需要更改自己 qq 邮箱设置的。在这里大家需要做两件事情：邮箱开启 SMTP 功能 、获得授权码，步骤如下。
 
 首先，在打开的 QQ 邮箱中,进入**"设置"。**
 
-**![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578292378668-8948f35d-2b3e-4afd-b944-c127f2f50a57.png#align=left&display=inline&height=195&name=image.png&originHeight=195&originWidth=821&size=24711&status=done&style=none&width=821)**
-
-**
-
-第二，在邮箱设置界面,打开**“帐户”**。
+**![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578292378668-8948f35d-2b3e-4afd-b944-c127f2f50a57.png#align=left&display=inline&height=195&name=image.png&originHeight=195&originWidth=821&size=24711&status=done&style=none&width=821)**第二，在邮箱设置界面,打开**“帐户”**。
 
 ![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578292437426-d3419a60-6375-4c0d-9862-660f3c69da2c.png#align=left&display=inline&height=349&name=image.png&originHeight=349&originWidth=972&size=39686&status=done&style=none&width=972)
 
@@ -92,10 +84,6 @@ smtp.quit()
 ```
 
 ![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578294621933-2d5f314d-f0eb-4529-a606-fa4895911c9d.png#align=left&display=inline&height=325&name=image.png&originHeight=325&originWidth=684&size=26483&status=done&style=none&width=684)
-
-
-
-
 ## 3. 配置 Galaxy 邮件服务
 
 有了上一步 python 发送邮件的经验，接下来我们只需要修改一下 Galaxy 的主配置文件 config/galaxy.yml 即可：
@@ -110,17 +98,9 @@ galaxy:
     email_from: 'shenweiyan@bioitee.com'
 ```
 
-配置完成后，重启 Galaxy 服务即可。
+配置完成后，重启 Galaxy 服务即可。## 4. 管理员与强制登录
 
-
-
-## 4. 管理员与强制登录
-
-如果你只想把你个人部署的 Galaxy 提供给特定的人使用，例如同一个实验室的其他小伙伴，你可以把 Galaxy 的注册功能关闭，并设置只能通过管理员创建新账号。
-
-
-
-```yaml
+如果你只想把你个人部署的 Galaxy 提供给特定的人使用，例如同一个实验室的其他小伙伴，你可以把 Galaxy 的注册功能关闭，并设置只能通过管理员创建新账号。```yaml
 galaxy:
     # 设置 Galaxy 管理员账号，如有多个管理员，请用逗号分隔
     admin_users: 'shenweiyan@bioitee.com'
@@ -139,11 +119,7 @@ galaxy:
 ```
  
 
-![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578300288534-b06fda6b-f5fe-442b-a90e-c5e957f27a87.png#align=left&display=inline&height=689&name=image.png&originHeight=689&originWidth=1006&size=107517&status=done&style=none&width=1006)
-
-
-
-## 5. 一些测试
+![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578300288534-b06fda6b-f5fe-442b-a90e-c5e957f27a87.png#align=left&display=inline&height=689&name=image.png&originHeight=689&originWidth=1006&size=107517&status=done&style=none&width=1006)## 5. 一些测试
 
 配置好了 Galaxy 邮箱服务，我们来测试一下注册激活验证和重置密码。
 

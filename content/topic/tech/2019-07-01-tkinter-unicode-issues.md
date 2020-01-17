@@ -65,10 +65,6 @@ top.mainloop()
 4. python 的 PyPI 仓库中是没有 tkinter 包的，想要使用 `pip install tkinter` 卸载或者重装都是行不通的。
 
 5. 网上也有人说可以使用 `yum install python3-tk/python-tk` 解决，但对于本人来说，没用。
-
-
-
-
 # 什么是 tcl, tk, tkinter
 
 > The [tkinter](https://docs.python.org/3.6/library/tkinter.html#module-tkinter) package (“Tk interface”) is the standard Python interface to the Tk GUI toolkit. Both Tk and [tkinter](https://docs.python.org/3.6/library/tkinter.html#module-tkinter) are available on most Unix platforms, as well as on Windows systems. (Tk itself is not part of Python; it is maintained at ActiveState.)
@@ -89,21 +85,13 @@ tkinter 包（"Tk 接口"）是 Tk GUI 工具包的标准 Python 接口。 Tk �
 ![](https://qiniu.bioinit.com/yuque/0/2018/png/126032/1543216935547-c6324ffc-7042-4076-82a0-759565c4b258.png#width=687)
 
 接下来我们将尝试在 Python 2 中安装 Tcl/Tk，并重新编译 python 2，已完成 Tkinter 安装（tkinter 为 Python 的标准库，标准库的安装需要重新编译 Python ?）。
-
-
-
-
 # ActiveTcl 安装
 
 ActiveTcl 是 ActiveState 发布的关于 Tcl/Tk 的发行版本，该发行版本包含了最新版本的 Tk 和 Tcl 程序，我们下载其免费的社区版本进行安装即可。
 
 参考下载链接：[https://www.activestate.com/products/activetcl/downloads/](https://www.activestate.com/products/activetcl/downloads/)
 
-参考安装教程：[https://tkdocs.com/tutorial/install.html](https://tkdocs.com/tutorial/install.html)
-
-
-
-以下为 CentOS 7 下 **ActiveTcl-8.6.8.0 **的一些安装记录，仅作参考。
+参考安装教程：[https://tkdocs.com/tutorial/install.html](https://tkdocs.com/tutorial/install.html)以下为 CentOS 7 下 **ActiveTcl-8.6.8.0 **的一些安装记录，仅作参考。
 
 ```bash
 $ wget https://downloads.activestate.com/ActiveTcl/releases/8.6.8.0/ActiveTcl-8.6.8.0-x86_64-linux-glibc-2.5.tar.gz
@@ -171,11 +159,7 @@ Do you want to download a free trial of Komodo IDE? [Y/n]
 ActiveTcl 安装完成后，需要把 path 添加至环境变量（~/.bashrc）:
 ```
 export PATH="/usr/local/software/ActiveTcl-8.6/bin:$PATH"
-```
-
-
-
-# Python 重新编译安装
+```# Python 重新编译安装
 
 想要在 Python 2.7 安装 Tkinter，需要在编译过程中通过 `--with-tcltk-includes` 和 `--with-tcltk-libs` 中指定 ActiveTcl 的头文件以及库所在路径。
 
@@ -213,11 +197,7 @@ CentOS 下请参考以下解决方法：
 
 ```
 $ sudo yum install libXScrnSaver libXScrnSaver-devel
-```
-
-
-
-# 调用 Tkinter
+```# 调用 Tkinter
 
 Python 2 重新编译完后，执行 `python2 -m Tkinter` 显示 Tk 的 ui 界面，以及相应的 Tcl/Tk 版本。
 
@@ -227,11 +207,7 @@ Python 2 重新编译完后，执行 `python2 -m Tkinter` 显示 Tk 的 ui 界�
 
 ![](https://qiniu.bioinit.com/yuque/0/2018/png/126032/1543220938974-7d71cd19-ca4a-433c-ae27-8557c98b75d2.png#width=418)
 
----
-
-
-
-# 参考资料
+---# 参考资料
 
 - Download And Install Tcl: ActiveTcl，[https://www.activestate.com/products/activetcl/downloads/](https://www.activestate.com/products/activetcl/downloads/)
 

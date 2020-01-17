@@ -181,11 +181,10 @@
 $ git branch
 * master
   v-1.2
-</code></pre>
+```### 切换本地分支
 
-<h3 id="切换本地分支">切换本地分支</h3>
-
-<pre><code class="language-shell">$ git branch
+```shell
+$ git branch
 * master
   v-1.2
 
@@ -195,16 +194,14 @@ Switched to branch 'v-1.2'
 $ git branch
   master
 * v-1.2
-</code></pre>
+```### 删除本地分支
 
-<h3 id="删除本地分支">删除本地分支</h3>
+```shell
+$ git branch -D v-1.2
+```### 把本地分支提交到远程分支仓库
 
-<pre><code class="language-shell">$ git branch -D v-1.2
-</code></pre>
-
-<h3 id="把本地分支提交到远程分支仓库">把本地分支提交到远程分支仓库</h3>
-
-<pre><code class="language-shell">$ git add --all
+```shell
+$ git add --all
 
 $ git commit -m &quot;ASO design for Galaxy version 1.2&quot;
 
@@ -218,11 +215,10 @@ Writing objects: 100% (18/18), 29.87 KiB | 0 bytes/s, done.
 Total 18 (delta 3), reused 0 (delta 0)
 To https://git.dev.tencent.com/shenweiyan/aso_design.git
  * [new branch]      v-1.2 -&gt; v-1.2
-</code></pre>
+```### 查看一下远程仓库有几个分支
 
-<h3 id="查看一下远程仓库有几个分支">查看一下远程仓库有几个分支</h3>
-
-<pre><code class="language-shell">$ git branch -a
+```shell
+$ git branch -a
   master
 * v-1.2
   remotes/origin/HEAD -&gt; origin/master
@@ -230,13 +226,11 @@ To https://git.dev.tencent.com/shenweiyan/aso_design.git
   remotes/origin/v-1.2
   
  $ git remote show origin
-</code></pre>
+```### 删除远程分支和 tag
 
-<h3 id="删除远程分支和-tag">删除远程分支和 tag</h3>
-
-<p>在 Git v1.7.0 之后，可以使用这种语法删除远程分支：</p>
-
-<pre><code class="language-bash">git push origin --delete &lt;branchName&gt;
+在 Git v1.7.0 之后，可以使用这种语法删除远程分支：
+```bash
+git push origin --delete &lt;branchName&gt;
 </code></pre>
 
 <p>删除 tag 这么用：</p>
@@ -255,9 +249,7 @@ To https://git.dev.tencent.com/shenweiyan/aso_design.git
 git push origin :refs/tags/&lt;tagname&gt;
 </code></pre>
 
-<p>两种语法作用完全相同。</p>
-
-<h3 id="git-本地回滚到之前某一次的-commit">git 本地回滚到之前某一次的 commit</h3>
+<p>两种语法作用完全相同。### git 本地回滚到之前某一次的 commit</p>
 
 <pre><code class="language-bash">$ git log
 commit 610d4417c04ce2c53cfb7b77a0525ddb7695b869
@@ -287,41 +279,32 @@ Date:   Thu Aug 22 15:47:02 2019 +0800
 
 $ git reset --hard 8938003aa309ab3cd98af43e67ad4f4aaff5e672
 HEAD is now at 8938003 add new post at 2019-08-23-09:00:22
-</code></pre>
+```### git 远程回滚到之前某一次的 commit
 
-<h3 id="git-远程回滚到之前某一次的-commit">git 远程回滚到之前某一次的 commit</h3>
-
-<pre><code class="language-bash"># 方法一，先 git reset 回滚到本地，然后再强制 push 到远程。
+```bash
+# 方法一，先 git reset 回滚到本地，然后再强制 push 到远程。
 $ git reset --hard 8938003aa309ab3cd98af43e67ad4f4aaff5e672
 
 # 其中，-f：force（谨慎操作，备份预备）
 $ git push -u origin master -f        
-</code></pre>
+```### 删除 GitHub 的分支
 
-<h3 id="删除-github-的分支">删除 GitHub 的分支</h3>
+You can have head branches automatically deleted after pull requests are merged in your repository. For more information, see &quot;[Managing the automatic deletion of branches](https://help.github.com/en/articles/managing-the-automatic-deletion-of-branches).&quot;
 
-<p>You can have head branches automatically deleted after pull requests are merged in your repository. For more information, see &ldquo;<a href="https://help.github.com/en/articles/managing-the-automatic-deletion-of-branches">Managing the automatic deletion of branches</a>.&rdquo;</p>
+1. On GitHub, navigate to the main page of the repository.
+1. Above the list of files, click  NUMBER branches.
 
-<ol>
-<li>On GitHub, navigate to the main page of the repository.</li>
-<li>Above the list of files, click  NUMBER branches.</li>
-</ol>
+![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1568256121881-3a26cd07-df2e-4bae-bcc1-8be704767086.png#align=left&amp;display=inline&amp;height=215&amp;originHeight=215&amp;originWidth=779&amp;size=0&amp;status=done&amp;width=779)
 
-<p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1568256121881-3a26cd07-df2e-4bae-bcc1-8be704767086.png#align=left&amp;display=inline&amp;height=215&amp;originHeight=215&amp;originWidth=779&amp;size=0&amp;status=done&amp;width=779"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1568256121881-3a26cd07-df2e-4bae-bcc1-8be704767086.png#align=left&amp;display=inline&amp;height=215&amp;originHeight=215&amp;originWidth=779&amp;size=0&amp;status=done&amp;width=779" alt=""></a></p>
+3. Scroll to the branch that you want to delete, then click delete icon.
 
-<ol>
-<li>Scroll to the branch that you want to delete, then click delete icon.</li>
-</ol>
+![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1568256169345-3d470748-35ef-44bc-93a1-a163cb522ec4.png#align=left&amp;display=inline&amp;height=63&amp;originHeight=63&amp;originWidth=167&amp;size=0&amp;status=done&amp;width=167)
 
-<p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1568256169345-3d470748-35ef-44bc-93a1-a163cb522ec4.png#align=left&amp;display=inline&amp;height=63&amp;originHeight=63&amp;originWidth=167&amp;size=0&amp;status=done&amp;width=167"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1568256169345-3d470748-35ef-44bc-93a1-a163cb522ec4.png#align=left&amp;display=inline&amp;height=63&amp;originHeight=63&amp;originWidth=167&amp;size=0&amp;status=done&amp;width=167" alt=""></a></p>
+参考：[https://help.github.com/en/articles/creating-and-deleting-branches-within-your-repository](https://help.github.com/en/articles/creating-and-deleting-branches-within-your-repository)### 删除在本地有但在远程库中已经不存在的分支
 
-<p>参考：<a href="https://help.github.com/en/articles/creating-and-deleting-branches-within-your-repository">https://help.github.com/en/articles/creating-and-deleting-branches-within-your-repository</a></p>
-
-<h3 id="删除在本地有但在远程库中已经不存在的分支">删除在本地有但在远程库中已经不存在的分支</h3>
-
-<p>可以查看远程库的一些信息，及与本地分支的信息。有时候可能遇到如下情况：</p>
-
-<pre><code class="language-shell">$ git remote show origin
+可以查看远程库的一些信息，及与本地分支的信息。有时候可能遇到如下情况：
+```shell
+$ git remote show origin
 * remote origin
   Fetch URL: https://shenweiyan:git-sz-0201@github.com/shenweiyan/galaxy.git
   Push  URL: https://shenweiyan:git-sz-0201@github.com/shenweiyan/galaxy.git
@@ -336,16 +319,14 @@ $ git push -u origin master -f
     release_13.04                     tracked
 </code></pre>
 
-<p>其中 release_17.09, release_18.05 两个分支在远程库已经不存在了（你之前从远程库拉取过，可能之后被其他人删除了，你用 <code>git branch -a</code> 也是不能看出它们是否已被删除的），这时候我们可以删除本地库中这些相比较远程库中已经不存在的分支：</p>
-
-<pre><code class="language-shell">$ git remote prune origin
+<p>其中 release_17.09, release_18.05 两个分支在远程库已经不存在了（你之前从远程库拉取过，可能之后被其他人删除了，你用 <code>git branch -a</code> 也是不能看出它们是否已被删除的），这时候我们可以删除本地库中这些相比较远程库中已经不存在的分支：
+<code>shell
+$ git remote prune origin
 Pruning origin
 URL: https://shenweiyan:git-sz-0201@github.com/shenweiyan/galaxy.git
  * [pruned] origin/release_17.09
  * [pruned] origin/release_18.05
-</code></pre>
-
-<h3 id="同步-github-fork-后新增加的分支">同步 GitHub fork 后新增加的分支</h3>
+</code>### 同步 GitHub fork 后新增加的分支</p>
 
 <p>参考：<a href="https://segmentfault.com/q/1010000004228020">https://segmentfault.com/q/1010000004228020</a></p>
 

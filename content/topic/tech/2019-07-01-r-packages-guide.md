@@ -52,11 +52,7 @@ help(package = "stats")
 
 - [Bioconductor](https://www.bioconductor.org/)：这是一个专题库，用于生物信息学的开源软件。 作为 CRAN，它有自己的 [提交和审核流程](https://www.bioconductor.org/developers/package-submission/)，其社区非常活跃，每年举行多次会议。
 
-- [Github](https://github.com/)：虽然这不是 R 特有的，但 github 可能是开源项目中最受欢迎的存储库。 它的受欢迎程度来自于开源的无限空间，与 git 的集成，版本控制软件以及与其他人共享和协作的便利性。 但请注意，没有与之相关的审核流程。
-
-
-
-# 3. 如何安装 R 包
+- [Github](https://github.com/)：虽然这不是 R 特有的，但 github 可能是开源项目中最受欢迎的存储库。 它的受欢迎程度来自于开源的无限空间，与 git 的集成，版本控制软件以及与其他人共享和协作的便利性。 但请注意，没有与之相关的审核流程。# 3. 如何安装 R 包
 
 
 ## 从 CRAN 安装
@@ -453,11 +449,7 @@ help(vioplot)
 ```
 ![](https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/topics_vioplot.png/bioinit#width=)
 
-- [RDocumentation API](https://www.rdocumentation.org/docs/)。最后，RDocumentation 不仅是一个网站和一个 R包，还是一个 API。 对于需要更多灵活性的更高级用户，[RDocumentation.org](http://RDocumentation.org) 提供了具有其网页功能的 JSON API。
-
-
-
-# 总结
+- [RDocumentation API](https://www.rdocumentation.org/docs/)。最后，RDocumentation 不仅是一个网站和一个 R包，还是一个 API。 对于需要更多灵活性的更高级用户，[RDocumentation.org](http://RDocumentation.org) 提供了具有其网页功能的 JSON API。# 总结
 
 本文章涵盖了广泛的通过使用包来从 R 中获得最大收益的相关技术（techniques）和功能（functions）。 像往常一样，在 R 中执行某项任务的方法不止一种，管理包也不例外。
 

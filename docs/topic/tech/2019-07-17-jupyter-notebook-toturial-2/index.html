@@ -173,19 +173,13 @@
   
   
 
-  
-
-<p>今天我们介绍一下 Python3+Nginx+SSL 下的 Jupyter Notebook 服务部署，也就是 Jupyter 服务器的搭建与配置。</p>
+  <p>今天我们介绍一下 Python3+Nginx+SSL 下的 Jupyter Notebook 服务部署，也就是 Jupyter 服务器的搭建与配置。</p>
 
 <p>网上搜了一下 jupyter 服务器的搭建，官方给出了很好的多用户服务端 jupyterhub，但我的需求就是在 VPS 搭建好一个 jupyter 服务网页，完全自己用，所以搭建 jupyterhub 有些浪费资源，转而去寻找简单的 jupyter 服务搭建方案，别说，官网也写好文档给我们用了，但文档是用英文写的，看的不舒服，这里把要点写出来，供参考。</p>
 
-<p><a href="http://jupyter-notebook.readthedocs.io/en/latest/public_server.html">英文文档地址在此</a>，英文好的小伙伴可以直接去实施。</p>
+<p><a href="http://jupyter-notebook.readthedocs.io/en/latest/public_server.html">英文文档地址在此</a>，英文好的小伙伴可以直接去实施。## 1. 安装</p>
 
-<h2 id="1-安装">1. 安装</h2>
-
-<p>Jupyter Notebook 的安装参考《<a href="https://www.yuque.com/shenweiyan/cookbook/jupyter-notebook-toturial-1">数据科学工具 Jupyter Notebook 教程(一)</a>》。</p>
-
-<h2 id="2-配置">2. 配置</h2>
+<p>Jupyter Notebook 的安装参考《<a href="https://www.yuque.com/shenweiyan/cookbook/jupyter-notebook-toturial-1">数据科学工具 Jupyter Notebook 教程(一)</a>》。## 2. 配置</p>
 
 <p>下面的命令会在 <code>~/.jupyter</code> 自动创建一个配置文件 <strong> jupyter_notebook_config.py</strong>。</p>
 
@@ -216,9 +210,7 @@ c.NotebookApp.open_browser = False
 c.NotebookApp.port = 8888
 </code></pre>
 
-<p>如此这般之后，配置完成咯！</p>
-
-<h2 id="3-运行">3. 运行</h2>
+<p>如此这般之后，配置完成咯！## 3. 运行</p>
 
 <p>执行命令，就可以看到 jupyter notebook 执行的日志信息：</p>
 
@@ -249,21 +241,20 @@ c.NotebookApp.port = 8888
 <p><strong>解决：</strong>运行 Jupyter 时增加 <code>--ip=0.0.0.0</code> 参数。</p>
 
 <pre><code>jupyter notebook --ip=0.0.0.0 --no-browser --allow-root
-</code></pre>
+```## 4. 域名解析
 
-<h2 id="4-域名解析">4. 域名解析</h2>
+配置 nginx 前需要把你已经申请的域名跟 Jupyter Notebook 的服务器 ip 进行绑定解析。打开阿里云域名管理，增加 A 记录解析：
 
-<p>配置 nginx 前需要把你已经申请的域名跟 Jupyter Notebook 的服务器 ip 进行绑定解析。打开阿里云域名管理，增加 A 记录解析：</p>
+![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563334760254-00323543-edb8-4b95-8d6a-fb88595aef5a.png#align=left&amp;display=inline&amp;height=398&amp;originHeight=398&amp;originWidth=736&amp;size=0&amp;status=done&amp;width=736)
 
-<p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563334760254-00323543-edb8-4b95-8d6a-fb88595aef5a.png#align=left&amp;display=inline&amp;height=398&amp;originHeight=398&amp;originWidth=736&amp;size=0&amp;status=done&amp;width=736"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563334760254-00323543-edb8-4b95-8d6a-fb88595aef5a.png#align=left&amp;display=inline&amp;height=398&amp;originHeight=398&amp;originWidth=736&amp;size=0&amp;status=done&amp;width=736" alt=""></a></p>
 
-<h2 id="5-配置-nginx">5. 配置 nginx</h2>
+## 5. 配置 nginx
 
-<p>Nginx 是一个高效的服务器，著名的 LNMP 中的 N，相信很多在 VPS 搭建过网站的小伙伴一定不陌生。我假设你已经安装好了 nginx，如果不会安装可以自行百度。</p>
+Nginx 是一个高效的服务器，著名的 LNMP 中的 N，相信很多在 VPS 搭建过网站的小伙伴一定不陌生。我假设你已经安装好了 nginx，如果不会安装可以自行百度。
 
-<p>Nginx 创建一个虚拟主机 vhost，然后配置文件参考下面：</p>
-
-<pre><code class="language-bash">upstream notebook {
+Nginx 创建一个虚拟主机 vhost，然后配置文件参考下面：
+```bash
+upstream notebook {
     server localhost:8888;
 }
 server {
@@ -314,9 +305,7 @@ server{
 
 <p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563341527122-326cddb2-b2b2-4ccf-8b01-f2c03cca27e2.png#align=left&amp;display=inline&amp;height=577&amp;name=jupyter_server.png&amp;originHeight=577&amp;originWidth=829&amp;size=27393&amp;status=done&amp;width=829"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563341527122-326cddb2-b2b2-4ccf-8b01-f2c03cca27e2.png#align=left&amp;display=inline&amp;height=577&amp;name=jupyter_server.png&amp;originHeight=577&amp;originWidth=829&amp;size=27393&amp;status=done&amp;width=829" alt="jupyter_server.png"></a></p>
 
-<p>以上就是远程 Jupter Notebook 服务安装与配置的全部内容，下一篇我们介绍一下如何在  Jupyter Notebook  中使用不同内核（Kernel）实现支持包括 python2、python3、R 在的多种不同编程环境。</p>
-
-<h2 id="6-其他问题">6. 其他问题</h2>
+<p>以上就是远程 Jupter Notebook 服务安装与配置的全部内容，下一篇我们介绍一下如何在  Jupyter Notebook  中使用不同内核（Kernel）实现支持包括 python2、python3、R 在的多种不同编程环境。## 6. 其他问题</p>
 
 <ul>
 <li><strong>missing react-dom js to package data</strong></li>

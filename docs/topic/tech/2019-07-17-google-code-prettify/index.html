@@ -179,45 +179,35 @@
 
 <p>Google Code Prettify 支持的语言数量比较多、比较全，支持自动识别代码语言，不需要手动指定，渲染效果也不错。最重要的是，非常轻巧，加载速度远比 SyntaxHighlighter 快得多，而且可以直接使用 Markdown 的语法写代码。</p>
 
-<p>GitHub 地址：<a href="https://github.com/google/code-prettify">https://github.com/google/code-prettify</a></p>
+<p>GitHub 地址：<a href="https://github.com/google/code-prettify">https://github.com/google/code-prettify</a># <strong>1、主题</strong></p>
 
-<h1 id="1-主题"><strong>1、主题</strong></h1>
-
-<p>google-code-prettify 提供了 5 个 css 主题可供选择，而且支持自定义 style。相关的 demo 及 style 文件参见：<a href="https://rawgit.com/google/code-prettify/master/styles/index.html">https://rawgit.com/google/code-prettify/master/styles/index.html</a>。</p>
-
-<h1 id="2-文件"><strong>2、文件</strong></h1>
+<p>google-code-prettify 提供了 5 个 css 主题可供选择，而且支持自定义 style。相关的 demo 及 style 文件参见：<a href="https://rawgit.com/google/code-prettify/master/styles/index.html">https://rawgit.com/google/code-prettify/master/styles/index.html</a>。# <strong>2、文件</strong></p>
 
 <p>google-code-prettify 需要两个文件，prettify.js 和 prettify.css，去官网下载。把这两个放到 head 模板中，如下：</p>
 
 <pre><code class="language-html">&lt;link href=&quot;http://alfred-sun.github.io/assets/google-code-prettify/prettify.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot;&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;http://alfred-sun.github.io/assets/google-code-prettify/prettify.js&quot;&gt;&lt;/script&gt;
-</code></pre>
+```# **3、使用**
 
-<h1 id="3-使用"><strong>3、使用</strong></h1>
-
-<p>考虑到加载速度，最好 js 写到文档末尾，body 闭合标签之前，css 写到头部之后，还需要在合适位置（如：$(document).ready）添加如下代码，用于识别并高亮代码块，这个需要使用 jQuery：</p>
-
-<pre><code class="language-javascript">$(function() {
+考虑到加载速度，最好 js 写到文档末尾，body 闭合标签之前，css 写到头部之后，还需要在合适位置（如：$(document).ready）添加如下代码，用于识别并高亮代码块，这个需要使用 jQuery：
+```javascript
+$(function() {
     window.prettyPrint &amp;&amp; prettyPrint();
 });
 </code></pre>
 
-<p>到这里，我们就可以使用 <code>&lt;pre&gt;&lt;/pre&gt;</code> 标签进行高亮了。</p>
-
-<h2 id="3-1-基本用法">3.1. 基本用法</h2>
+<p>到这里，我们就可以使用 <code>&lt;pre&gt;&lt;/pre&gt;</code> 标签进行高亮了。## 3.1. 基本用法</p>
 
 <p>Google 的高亮插件使用比较方便，只需要在 <code>&lt;pre&gt;</code> 的标签上加入 <code>prettyprint</code> 即可。</p>
 
 <pre><code class="language-html">&lt;pre class=&quot;prettyPrint&quot;&gt;
     // code here
 &lt;/pre&gt;
-</code></pre>
+```## 3.2. 行号设置
 
-<h2 id="3-2-行号设置">3.2. 行号设置</h2>
-
-<p>google-code-prettify 默认每五行显示一次行号，如果想要显示所有的行号，我们只需要在 google-code-prettify 对应主题的 css 文件中找到下面一样把它注释掉即可：</p>
-
-<pre><code class="language-html">li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+google-code-prettify 默认每五行显示一次行号，如果想要显示所有的行号，我们只需要在 google-code-prettify 对应主题的 css 文件中找到下面一样把它注释掉即可：
+```html
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
 </code></pre>
 
 <p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563342577013-d0f4a151-8558-4bf0-aa30-e4853daa64c9.png#align=left&amp;display=inline&amp;height=501&amp;originHeight=501&amp;originWidth=584&amp;size=0&amp;status=done&amp;width=584"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563342577013-d0f4a151-8558-4bf0-aa30-e4853daa64c9.png#align=left&amp;display=inline&amp;height=501&amp;originHeight=501&amp;originWidth=584&amp;size=0&amp;status=done&amp;width=584" alt=""></a></p>
@@ -231,9 +221,7 @@
 });
 </code></pre>
 
-<p>这样就没有问题了，可以直接用 markdown 的前置 4 空格来写代码了。其中 <code>addClass('prettyprint linenums')</code> 的 linenums 是添加行号的意思。默认只显示第 5、10、15&hellip; 行，可以在 css 文件中 li 的格式添加 <code>list-style-type: decimal;</code> ，以显示全部行号。</p>
-
-<h2 id="3-4-bootstrap-代码框滚动">3.4. Bootstrap 代码框滚动</h2>
+<p>这样就没有问题了，可以直接用 markdown 的前置 4 空格来写代码了。其中 <code>addClass('prettyprint linenums')</code> 的 linenums 是添加行号的意思。默认只显示第 5、10、15&hellip; 行，可以在 css 文件中 li 的格式添加 <code>list-style-type: decimal;</code> ，以显示全部行号。## 3.4. Bootstrap 代码框滚动</p>
 
 <p>如果博客中有用 Bootstrap，其中对 pre 有如下几句：</p>
 
@@ -245,15 +233,10 @@ word-wrap:break-word;
 
 <p>这会使得 pre 中的代码自动换行，而不是溢出形成滚动条。如果不希望如此，可以注释掉。看个人喜好。</p>
 
-<p>如果是滚动条，默认的滚动太难看而且还有个 Bug（stripe 的高亮背景色无法固定，随着滚动条位置改变而改变，可以考虑去掉 stripe，或者禁用横向滚动条），可以修改一下样式，看一下：<a href="http://ju.outofmemory.cn/entry/149458">CSS自定义浏览器滚动条样式</a>。</p>
+<p>如果是滚动条，默认的滚动太难看而且还有个 Bug（stripe 的高亮背景色无法固定，随着滚动条位置改变而改变，可以考虑去掉 stripe，或者禁用横向滚动条），可以修改一下样式，看一下：<a href="http://ju.outofmemory.cn/entry/149458">CSS自定义浏览器滚动条样式</a>。# <strong>4、Leanote 博客</strong></p>
 
-<h1 id="4-leanote-博客"><strong>4、Leanote 博客</strong></h1>
-
-<p>这里主要讲一下如何在 leanote 博客中使用 Google Code Prettify，并实现代码框左右滚动的效果。</p>
-
-<h2 id="4-1-bootstrap-文件">4.1. bootstrap 文件</h2>
-
-<p>由于 leanote 应用了 bootstrap 的样式，其内置的 pre 代码会自动换行，而不是溢出形成滚动条，因此我们需要自定义样式（以下为完整 customHilight.css 文件内容）：</p>
+<p>这里主要讲一下如何在 leanote 博客中使用 Google Code Prettify，并实现代码框左右滚动的效果。## 4.1. bootstrap 文件
+由于 leanote 应用了 bootstrap 的样式，其内置的 pre 代码会自动换行，而不是溢出形成滚动条，因此我们需要自定义样式（以下为完整 customHilight.css 文件内容）：</p>
 
 <pre><code>/*自定义 ol 列表数字距离*/
 code.prettyprint ol.linenums, pre.prettyprint ol.linenums{
@@ -281,9 +264,7 @@ code.prettyprint .linenums, pre.prettyprint .linenums{
 }
 </code></pre>
 
-<p>最后，清空浏览器缓存，就可以看到 <a href="http://blog.leanote.com/shenweiyan">leanote 博客</a>代码框左右滚动的效果。</p>
-
-<h1 id="5-参考资料">5. 参考资料</h1>
+<p>最后，清空浏览器缓存，就可以看到 <a href="http://blog.leanote.com/shenweiyan">leanote 博客</a>代码框左右滚动的效果。# 5. 参考资料</p>
 
 <ul>
 <li><a href="http://ju.outofmemory.cn/entry/149451">Jekyll 中用 Google Code Prettify</a>，Vermillion Phoinix by Alfred Sun，2014-12-15</li>

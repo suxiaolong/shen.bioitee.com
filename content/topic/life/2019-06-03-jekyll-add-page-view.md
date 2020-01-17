@@ -70,11 +70,7 @@ galite('send', 'pageview');
 </script>
 ```
 
-[ga-lite](https://github.com/jehna/ga-lite) 不仅解决了谷歌分析跟踪代码在中国大陆影响加载速度的问题，还解决了官方脚本只缓存2个小时的问题。
-
-
-
-## 不蒜子
+[ga-lite](https://github.com/jehna/ga-lite) 不仅解决了谷歌分析跟踪代码在中国大陆影响加载速度的问题，还解决了官方脚本只缓存2个小时的问题。## 不蒜子
 
 官网：[https://busuanzi.ibruce.info/](https://busuanzi.ibruce.info/)
 

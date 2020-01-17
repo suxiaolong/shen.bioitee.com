@@ -11,17 +11,9 @@ published: true
 
 网上搜了一下 jupyter 服务器的搭建，官方给出了很好的多用户服务端 jupyterhub，但我的需求就是在 VPS 搭建好一个 jupyter 服务网页，完全自己用，所以搭建 jupyterhub 有些浪费资源，转而去寻找简单的 jupyter 服务搭建方案，别说，官网也写好文档给我们用了，但文档是用英文写的，看的不舒服，这里把要点写出来，供参考。
 
-[英文文档地址在此](http://jupyter-notebook.readthedocs.io/en/latest/public_server.html)，英文好的小伙伴可以直接去实施。
+[英文文档地址在此](http://jupyter-notebook.readthedocs.io/en/latest/public_server.html)，英文好的小伙伴可以直接去实施。## 1. 安装
 
-
-
-## 1. 安装
-
-Jupyter Notebook 的安装参考《[数据科学工具 Jupyter Notebook 教程(一)](https://www.yuque.com/shenweiyan/cookbook/jupyter-notebook-toturial-1)》。
-
-
-
-## 2. 配置
+Jupyter Notebook 的安装参考《[数据科学工具 Jupyter Notebook 教程(一)](https://www.yuque.com/shenweiyan/cookbook/jupyter-notebook-toturial-1)》。## 2. 配置
 
 下面的命令会在 `~/.jupyter` 自动创建一个配置文件 ** jupyter_notebook_config.py**。
 ```bash
@@ -52,11 +44,7 @@ c.NotebookApp.open_browser = False
 c.NotebookApp.port = 8888
 ```
 
-如此这般之后，配置完成咯！
-
-
-
-## 3. 运行
+如此这般之后，配置完成咯！## 3. 运行
 
 执行命令，就可以看到 jupyter notebook 执行的日志信息：
 ```bash
@@ -87,11 +75,7 @@ $ jupyter notebook --ip=0.0.0.0 --port=9000
 **解决：**运行 Jupyter 时增加 `--ip=0.0.0.0` 参数。
 ```
 jupyter notebook --ip=0.0.0.0 --no-browser --allow-root
-```
-
-
-
-## 4. 域名解析
+```## 4. 域名解析
 
 配置 nginx 前需要把你已经申请的域名跟 Jupyter Notebook 的服务器 ip 进行绑定解析。打开阿里云域名管理，增加 A 记录解析：
 
@@ -155,11 +139,7 @@ server{
 
 ![jupyter_server.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563341527122-326cddb2-b2b2-4ccf-8b01-f2c03cca27e2.png#align=left&display=inline&height=577&name=jupyter_server.png&originHeight=577&originWidth=829&size=27393&status=done&width=829)
 
-以上就是远程 Jupter Notebook 服务安装与配置的全部内容，下一篇我们介绍一下如何在  Jupyter Notebook  中使用不同内核（Kernel）实现支持包括 python2、python3、R 在的多种不同编程环境。
-
-
-
-## 6. 其他问题
+以上就是远程 Jupter Notebook 服务安装与配置的全部内容，下一篇我们介绍一下如何在  Jupyter Notebook  中使用不同内核（Kernel）实现支持包括 python2、python3、R 在的多种不同编程环境。## 6. 其他问题
 
 - **missing react-dom js to package data**
 

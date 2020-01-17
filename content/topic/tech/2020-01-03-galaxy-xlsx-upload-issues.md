@@ -23,20 +23,12 @@ published: true
 对于不太熟悉命令行操作的科研工作者，Excel 是他们进行批量订单提交和处理最喜欢也是最熟悉的一个数据格式，因此，我们以 Galaxy 为基础开发一部分定制化工具中，有很大的一部分都是基于 excel 文件进行处理的工具。但随之而来的问题是，所有的这些工具在 Google Chrome 下可以运行良好，但是在 Firefox 下却出现了问题。
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1561788526653-5fec525f-ec2e-4aa6-829f-5f0034bc5fc9.png#align=left&display=inline&height=335&originHeight=335&originWidth=288&status=done&style=none&width=288)
-
-
-
-
 ## xlsx 文件上传
 
 一开始，在办公环境下，我在内网环境部署的 Galaxy 和 [https://usegalaxy.org/](https://usegalaxy.org/) 中分别对 xlsx 格式的文件进行上传测试，发现：
 
 - 在 Chrome 中两个 Galaxy 都能正常上传文件，没有任何错误。
-- 只有在 Firefox 中两个 Galaxy 才会出现如上截图的相同 Warning。
-
-
-
-于是，下意识的，我开始怀疑，是不是 Firefox 会针对 Excel 的文件进行了特殊处理？还是 Galaxy 的 xlsx 文件识别存在 bug？针对前一个问题，我一开始并不知道如何去验证，但对于后一个问题，我开始了另外的尝试。
+- 只有在 Firefox 中两个 Galaxy 才会出现如上截图的相同 Warning。于是，下意识的，我开始怀疑，是不是 Firefox 会针对 Excel 的文件进行了特殊处理？还是 Galaxy 的 xlsx 文件识别存在 bug？针对前一个问题，我一开始并不知道如何去验证，但对于后一个问题，我开始了另外的尝试。
 
 - **start_cgi_http_server.sh**
 
@@ -124,11 +116,7 @@ save_uploaded_file()
 
 通过这三个程序，就可以在 Linux 下启动一个简单文件上传小网站。网站效果如下面的截图所示。
 
-![galaxy-xlsx-upload-issues.gif](https://qiniu.bioinit.com/yuque/0/2020/gif/126032/1578034982122-439ccfa4-3414-48f3-9b95-61fa73aa01a4.gif#align=left&display=inline&height=768&name=galaxy-xlsx-upload-issues.gif&originHeight=768&originWidth=1364&size=4771022&status=done&style=none&width=1364)
-
-
-
-## xlsx 文件识别
+![galaxy-xlsx-upload-issues.gif](https://qiniu.bioinit.com/yuque/0/2020/gif/126032/1578034982122-439ccfa4-3414-48f3-9b95-61fa73aa01a4.gif#align=left&display=inline&height=768&name=galaxy-xlsx-upload-issues.gif&originHeight=768&originWidth=1364&size=4771022&status=done&style=none&width=1364)## xlsx 文件识别
 
 通过 python cgi 上传完文件后，在使用 python 模块进行处理的时，发现通过 Firefox 上传的文件开始出现问题了：
 
@@ -165,11 +153,7 @@ BadZipFile                                Traceback (most recent call last)
 BadZipFile: File is not a zip file
 ```
 
-同样的操作，我在 Chrome 重复了一遍，但是却神奇的发现，不管是 `panda` 还是 `zipfile` 模块，竟然一切都表现正常！ 似乎，Firefox 的确有点不正常。
-
-
-
-## 真正原因
+同样的操作，我在 Chrome 重复了一遍，但是却神奇的发现，不管是 `panda` 还是 `zipfile` 模块，竟然一切都表现正常！ 似乎，Firefox 的确有点不正常。## 真正原因
 
 针对这个问题，我最开始向 Galaxy Project 团队咨询过，但一直没有从根本解决掉这个问题，他们建议考虑非 xlsx 格式数据的工具开发。
 
@@ -187,10 +171,6 @@ BadZipFile: File is not a zip file
 很明显，我的原始 xlsx 文件是有问题的！！吐血中！！！但是在办公环境中，这个原始的 xlsx 文件不管是 Office 2016 还是 WPS 都能正常打开，正常编辑保存。唯一不同的是文件中多了一个锁的标志。
 
 ![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1577955786229-5e2c4184-4712-417f-8c9a-ba695b81d5d5.png#align=left&display=inline&height=108&name=image.png&originHeight=108&originWidth=632&size=10347&status=done&style=none&width=632)
-
-
-
-
 其实，这就是企业企业办公文档 Office Excel 软件加密的一种效果。
 
 1. 安装加密软件：安装加密服务端和管理端，客户端安装在被加密的电脑中;
@@ -204,11 +184,7 @@ BadZipFile: File is not a zip file
 
 **实现效果**：员工编辑后的文档自动加密，加密后的文档未经许可，私自通过 QQ，电子邮件，U盘等任何方式传输到公司以外，都将无法打开使用；不改变编辑操作习惯，在企业内部相互流通编辑，不受影响。彻底从源头保障数据的安全性。此外还可实现如需外发文件，可通过申请解密流程授权解密后方可外发；同时还可对其他软件进行加密，比如办公软件，设计软件，工程软件，编程软件，研发软件等。
 
-最后，把未加密的 xlsx 文件进行重新测试，一切问题迎刃而解。
-
-
-
-## 总结一下
+最后，把未加密的 xlsx 文件进行重新测试，一切问题迎刃而解。## 总结一下
 
 这是一个企业文档加密引发的填坑记录，从问题的发现，问题的思考，到解决的思路值得探讨记录一下。
 
@@ -217,11 +193,7 @@ BadZipFile: File is not a zip file
 - 接触了 Python CGI 的一些简单应用，总体而言，挺好玩的。
 - 多多交流，学会搜索，善用资源，事半功倍。
 
-Chrome 为什么能绕开部分企业文档加密的枷锁，还原文件，这是一个有待后面学习的问题，mark 一下，同时期待老师们指点迷津。
-
-
-
-## 参考资料
+Chrome 为什么能绕开部分企业文档加密的枷锁，还原文件，这是一个有待后面学习的问题，mark 一下，同时期待老师们指点迷津。## 参考资料
 
 1. 易控王，[如何加密excel表格？企业excel表格加密方法](http://www.ekongsoft.com/a/xinwenzhongxin/wenjianjiami/41.html)，易控王新闻中心
 1. istevenshen，[xlsx upload failed in usegalaxy.org](https://help.galaxyproject.org/t/xlsx-upload-failed-in-usegalaxy-org/1346)，Galaxy Help

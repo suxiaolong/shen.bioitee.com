@@ -175,9 +175,7 @@
 
   
 
-<p>最近这几天在处理集群软件的过程中，遇到各种各样的库和环境变量的问题，被虐的不清！趁此机会，整理了一下 Linux 下静态库、动态库（共享库）和环境变量的一些知识，与大家共享一下。</p>
-
-<h1 id="库的种类">库的种类</h1>
+<p>最近这几天在处理集群软件的过程中，遇到各种各样的库和环境变量的问题，被虐的不清！趁此机会，整理了一下 Linux 下静态库、动态库（共享库）和环境变量的一些知识，与大家共享一下。# 库的种类</p>
 
 <p>Linux 下的库有两种：<strong>静态库</strong>和<strong>动态库</strong>（共享库）。</p>
 
@@ -185,17 +183,13 @@
 
 <p>动态库（共享库）的代码是在可执行<strong>程序运行时</strong>才载入内存的，在编译过程中仅简单的引用，因此生成的可执行程序代码体积较小。动态库通常用 <code>.so</code> 为后缀， 例如： <code>libhello.so</code> 。</p>
 
-<p>为了在同一系统中使用不同版本的库，可以在库文件名后加上版本号为后缀,例如： <code>libhello.so.1.0</code> ，由于程序连接默认以 <code>.so</code> 为文件后缀名。所以为了使用这些库，通常使用建立符号连接的方式。</p>
-
-<h1 id="库的环境变量">库的环境变量</h1>
+<p>为了在同一系统中使用不同版本的库，可以在库文件名后加上版本号为后缀,例如： <code>libhello.so.1.0</code> ，由于程序连接默认以 <code>.so</code> 为文件后缀名。所以为了使用这些库，通常使用建立符号连接的方式。# 库的环境变量</p>
 
 <p><strong>LIBRARY_PATH</strong>
 环境变量：指定程序静态链接库文件搜索路径。</p>
 
 <p><strong>LD_LIBRARY_PATH</strong>
-环境变量：指定程序动态链接库文件搜索路径。</p>
-
-<h1 id="库的搜索顺序">库的搜索顺序</h1>
+环境变量：指定程序动态链接库文件搜索路径。# 库的搜索顺序</p>
 
 <p><strong>动态库链接时搜索路径的顺序：</strong></p>
 
@@ -258,9 +252,7 @@ echo &quot;/etc/profile goes start&quot;
 
 <p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563513885037-271bd3eb-80e8-4d48-b871-387cf23ea70e.png#align=left&amp;display=inline&amp;height=291&amp;name=image.png&amp;originHeight=291&amp;originWidth=723&amp;size=20899&amp;status=done&amp;width=723"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563513885037-271bd3eb-80e8-4d48-b871-387cf23ea70e.png#align=left&amp;display=inline&amp;height=291&amp;name=image.png&amp;originHeight=291&amp;originWidth=723&amp;size=20899&amp;status=done&amp;width=723" alt=""></a></p>
 
-<p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563514034328-0b7fdc31-638d-4c3a-8681-bce631eac7d4.png#align=left&amp;display=inline&amp;height=456&amp;name=image.png&amp;originHeight=456&amp;originWidth=840&amp;size=51052&amp;status=done&amp;width=840"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563514034328-0b7fdc31-638d-4c3a-8681-bce631eac7d4.png#align=left&amp;display=inline&amp;height=456&amp;name=image.png&amp;originHeight=456&amp;originWidth=840&amp;size=51052&amp;status=done&amp;width=840" alt=""></a></p>
-
-<h1 id="常用环境变量">常用环境变量</h1>
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563514034328-0b7fdc31-638d-4c3a-8681-bce631eac7d4.png#align=left&amp;display=inline&amp;height=456&amp;name=image.png&amp;originHeight=456&amp;originWidth=840&amp;size=51052&amp;status=done&amp;width=840" alt="" /># 常用环境变量</p>
 
 <p>我们可以使用 <code>env</code> 命令查看当前用户的所有环境变量设置：</p>
 
@@ -278,49 +270,38 @@ XDG_RUNTIME_DIR=/run/user/1000
 DISPLAY=localhost:16.0
 HISTTIMEFORMAT=%F %T
 _=/usr/bin/env
-</code></pre>
+```# **用户环境变量常用设置方法**
 
-<h1 id="用户环境变量常用设置方法"><strong>用户环境变量常用设置方法</strong></h1>
 
-<h2 id="系统级别设置">系统级别设置</h2>
+## 系统级别设置
 
-<ul>
-<li>/etc/profile：</li>
-</ul>
+- /etc/profile：
 
-<p>全局的系统环境变量设置。适用于多个 shell，比如 bash, sh, zsh 之类。</p>
+全局的系统环境变量设置。适用于多个 shell，比如 bash, sh, zsh 之类。
 
-<ul>
-<li>/etc/bashrc：</li>
-</ul>
+- /etc/bashrc：
 
-<p>bash shell 全局环境变量。</p>
+bash shell 全局环境变量。## 用户级别设置
 
-<h2 id="用户级别设置">用户级别设置</h2>
+- ~/.bashrc：
 
-<ul>
-<li>~/.bashrc：</li>
-</ul>
-
-<p>包含专用于当前用户 bash
+包含专用于当前用户 bash
 shell 的 bash 信息，当登录时以及每次打开新的 shell
-时，该文件被读取。每开一个 shell，这个文件会读取一次。</p>
+时，该文件被读取。每开一个 shell，这个文件会读取一次。
 
-<ul>
-<li>~/.bash_profile：</li>
-</ul>
+- ~/.bash_profile：
 
-<p>每个用户都可使用该文件输入专用于自己使用的 shell 信息，当用户使用 login
-shell 模式登陆时，该文件仅仅执行一次。</p>
+每个用户都可使用该文件输入专用于自己使用的 shell 信息，当用户使用 login
+shell 模式登陆时，该文件仅仅执行一次。## **用户临时（当前 shell 对话框）环境变量设置**
 
-<h2 id="用户临时-当前-shell-对话框-环境变量设置"><strong>用户临时（当前 shell 对话框）环境变量设置</strong></h2>
+export
+命令：用于/bin/bash shell类型
 
-<p>export
-命令：用于/bin/bash shell类型</p>
 
-<h2 id="用户级别-bashrc-示例">用户级别 .bashrc 示例</h2>
+## 用户级别 .bashrc 示例
 
-<pre><code class="language-bash"># User Specific Alias
+```bash
+# User Specific Alias
 alias ll='ls -lht'
 alias le='less -S'
 

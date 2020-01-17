@@ -24,10 +24,6 @@ webSSH 是 Python 语言写的一个基于 tornado 和 paramiko 包的 web 应�
 ```bash
 pip install webssh
 ```
-
-
-
-
 # 2. 启动
 
 webssh 安装完成，我们可以通过 wssh 命令进行启动
@@ -49,10 +45,6 @@ $ wssh --address='0.0.0.0' --port=8000
 ![webt.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1557796843233-f8bfb6ab-eb70-4cef-8abc-a48ee9c7421e.png#align=left&display=inline&height=396&name=webt.png&originHeight=396&originWidth=783&size=48775&status=done&width=783)
 
 ![webt-2.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1557796855288-8e6be73e-0d6d-4771-8eef-d30b387bd673.png#align=left&display=inline&height=395&name=webt-2.png&originHeight=395&originWidth=784&size=77127&status=done&width=784)
-
-
-
-
 # 3. 参数
 
 wssh 的一些主要参数如下
@@ -72,10 +64,6 @@ wssh --log-file-prefix=main.log
 #更多参数说明
 wssh --help
 ```
-
-
-
-
 # 4. Nginx
 
 wssh 可以使用 Nginx 作为后台代理，以及启用 SSL 访问，参考配置文件

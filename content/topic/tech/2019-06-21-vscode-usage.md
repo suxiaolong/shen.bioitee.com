@@ -9,11 +9,7 @@ published: true
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1561100166886-8101e9e6-c7d4-45fd-b981-7a1656f3bd90.png#align=left&display=inline&height=292&name=image.png&originHeight=292&originWidth=380&size=30073&status=done&width=380)
 
-版本: 1.35.1 (user setup)
-
-
-
-### 1. 通过配置文件设置
+版本: 1.35.1 (user setup)### 1. 通过配置文件设置
 
 VS Code 的配置文件默认为：settings.json，我们可以通过下面的方式打开该文件进行自定义配置：
 

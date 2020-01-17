@@ -141,11 +141,7 @@ $ cat ~/.jupyter/jupyter_notebook_config.json
     "password": "sha1:1a611a30d93a:5ab8b4be55d5e.....b8c7a8sa"
   }
 }
-```
-
-
-
-# 三、远程服务器部署与配置
+```# 三、远程服务器部署与配置
 
 网上搜了一下 Jupyter 服务器的搭建，官方给出了很好的多用户服务端 Jupyterhub，但我的需求就是在 VPS/Linux 服务器搭建好一个 Jupyter 服务网页，完全自己用，所以搭建 Jupyterhub 有些浪费资源，因此我们需要一个更加简单的 Jupyter 服务搭建方案。当然，官网也写好文档（参考：[Running a notebook server](https://jupyter-notebook.readthedocs.io/en/latest/public_server.html)）给我们用了，但文档是用英文写的，有需要的也可以参考实现。
 
@@ -332,10 +328,6 @@ ipython kernel install --user
 
 
 > Additionally you can pass the `--name` and `--display-name` options to ipython kernel install if you want to change the names of your kernels. See `ipython kernel install --help` for more informations.
-
-
-
-
 总结起来就是：
 
 1. 在 python2 和 python3 环境中分别安装 ipykernel。
@@ -345,11 +337,7 @@ ipython kernel install --user
 1. IPython kernel spec 安装可以使用 python -m ipykernel install，也可以使用 ipython-kernel-install 命令，两者是一样的。
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550823171682-80206c72-17c9-4b35-91a0-205405db5f6a.png#align=left&display=inline&height=388&originHeight=388&originWidth=626&size=0&status=done&width=626)
-
-
-
-## 2. 实际操作
+![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550823171682-80206c72-17c9-4b35-91a0-205405db5f6a.png#align=left&display=inline&height=388&originHeight=388&originWidth=626&size=0&status=done&width=626)## 2. 实际操作
 
 使用 `--prefix` 指定 IPython kernel spec 安装路径：
 ```

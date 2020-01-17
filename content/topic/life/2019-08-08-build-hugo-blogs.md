@@ -33,22 +33,14 @@ export GOROOT=/usr/local/software/go-1.12.7    #这个就是我们安装的位�
 export PATH=$PATH:$GOROOT/bin                  #go语言一些常用的命令引入PATH环境变量
 
 $ go env 		# 查看 Go 的一些环境配置
-```
-
-
-
-### CentOS 7 安装 Hugo
+```### CentOS 7 安装 Hugo
 
 ```bash
 $ wget https://github.com/gohugoio/hugo/releases/download/v0.54.0/hugo_0.54.0_Linux-64bit.tar.gz
 $ tar zvxf hugo_0.54.0_Linux-64bit.tar.gz -C /usr/local/software/hugo-0.54.0
 $ echo "export PATH=/usr/local/software/hugo-0.54.0:\$PATH" >>~/.bashrc
 $ source ~/.bashrc
-```
-
-
-
-### 启动 hugo 博客服务
+```### 启动 hugo 博客服务
 
 ```bash
 shenweiyan@ecs-steven 15:04:06 ~/shenweiyan/home
@@ -69,11 +61,7 @@ Total in 203 ms
 
 
 $ hugo server --baseUrl=120.77.xx.xx --bind=0.0.0.0		# 启动本地预览服务
-```
-
-
-
-### 一些问题
+```### 一些问题
 
 **问题：**
 

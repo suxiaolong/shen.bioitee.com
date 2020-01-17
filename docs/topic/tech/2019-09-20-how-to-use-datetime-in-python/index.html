@@ -183,9 +183,7 @@
 
 <hr />
 
-<p>在本教程中，我们将介绍 python 的 <code>datetime</code> 模块以及如何使用它来处理日期、时间，以及日期时间的格式化处理。 它包含各种实用示例，可帮助您通过 python 函数更加快捷高效进行日期和时间处理。 一般来说，日期类型列不容易操作，因为它带来很多挑战，例如处理闰年，一个月中的不同天数，不同的日期和时间格式，或者日期值是否以字符串（字符）格式存储等等。</p>
-
-<h3 id="1-datatime-模块">1. datatime 模块</h3>
+<p>在本教程中，我们将介绍 python 的 <code>datetime</code> 模块以及如何使用它来处理日期、时间，以及日期时间的格式化处理。 它包含各种实用示例，可帮助您通过 python 函数更加快捷高效进行日期和时间处理。 一般来说，日期类型列不容易操作，因为它带来很多挑战，例如处理闰年，一个月中的不同天数，不同的日期和时间格式，或者日期值是否以字符串（字符）格式存储等等。### 1. datatime 模块</p>
 
 <p>它是一个 python 模块，它提供了几个处理日期和时间的函数。它有以下四个类，在本文的后半部分将解释这些类是如何工作的。</p>
 
@@ -202,19 +200,15 @@
 <li>选择 2018 年 6 月 30 日活跃的所有储蓄账户持有人，并检查他们的状态是否仍然有效；</li>
 <li>确定在过去 3 个月内提交超过 20 件索赔的被保险人；</li>
 <li>识别在过去 6 个月内进行多笔交易的客户；</li>
-<li>从时间戳值中提取日期。</li>
+<li>从时间戳值中提取日期。#### 导入 <code>datetime</code> 模块</li>
 </ol>
-
-<h4 id="导入-datetime-模块">导入 <code>datetime</code> 模块</h4>
 
 <p>您可以使用以下命令导入或加载 <code>datetime</code> 模块：</p>
 
 <pre><code class="language-python">import datetime
 </code></pre>
 
-<p>您不需要安装此模块，因为它与 python 软件的安装捆绑在一起。</p>
-
-<h3 id="2-dates">2. Dates</h3>
+<p>您不需要安装此模块，因为它与 python 软件的安装捆绑在一起。### 2. Dates</p>
 
 <p>这里我们使用 <code>datetime.date</code> 类来表示日历日期值。 <code>today()</code> 方法用于获取当前日期。</p>
 
@@ -227,33 +221,30 @@ datetime.date(2019, 9, 10)
 
 <pre><code class="language-python">&gt;&gt;&gt; print(datetime.date.today())
 2019-09-10
-</code></pre>
+```#### 2.1 创建 Date 对象
 
-<h4 id="2-1-创建-date-对象">2.1 创建 Date 对象</h4>
+日期类遵循如下所示的语法：`**date(year, month, day)**`
 
-<p>日期类遵循如下所示的语法：<code>**date(year, month, day)**</code></p>
-
-<pre><code class="language-python">&gt;&gt;&gt; dt = datetime.date(2019, 10, 20)
+```python
+&gt;&gt;&gt; dt = datetime.date(2019, 10, 20)
 &gt;&gt;&gt; print(dt)
 2019-10-20
-</code></pre>
+```#### 2.2 从 date 值中提取 day, month 和 year 
 
-<h4 id="2-2-从-date-值中提取-day-month-和-year">2.2 从 date 值中提取 day, month 和 year </h4>
-
-<pre><code class="language-python">&gt;&gt;&gt; dt = datetime.date(2019, 10, 20)
+```python
+&gt;&gt;&gt; dt = datetime.date(2019, 10, 20)
 &gt;&gt;&gt; dt.day
 20
 &gt;&gt;&gt; dt.month
 10
 &gt;&gt;&gt; dt.year
 2019
-</code></pre>
+```#### 2.3 自定义日期格式
 
-<h4 id="2-3-自定义日期格式">2.3 自定义日期格式</h4>
+您可以使用 `strftime` 方法定义日期格式来自定义日期格式。它将日期对象转换为字符串。
 
-<p>您可以使用 <code>strftime</code> 方法定义日期格式来自定义日期格式。它将日期对象转换为字符串。</p>
-
-<pre><code class="language-python">&gt;&gt;&gt; dt = datetime.date(2019, 10, 20)
+```python
+&gt;&gt;&gt; dt = datetime.date(2019, 10, 20)
 &gt;&gt;&gt; print(dt)
 2019-10-20
 &gt;&gt;&gt; dt.strftime(&quot;%d-%m-%Y&quot;)
@@ -296,22 +287,20 @@ datetime.date(2019, 9, 10)
 
 &gt;&gt;&gt; dt.strftime(&quot;%A, %B %d, %Y&quot;)
 'Sunday, October 20, 2019'
-</code></pre>
+```### 3. Time
 
-<h3 id="3-time">3. Time</h3>
+时间值使用 `datetime.time` 类定义。它遵循如下所示的语法：
 
-<p>时间值使用 <code>datetime.time</code> 类定义。它遵循如下所示的语法：</p>
+`_datetime.time(hour, minute, second, microseconds)_` 
 
-<p><code>_datetime.time(hour, minute, second, microseconds)_</code> </p>
-
-<pre><code class="language-python">&gt;&gt;&gt; t = datetime.time(21, 2, 3)
+```python
+&gt;&gt;&gt; t = datetime.time(21, 2, 3)
 &gt;&gt;&gt; print(t)
 21:02:03
-</code></pre>
+```#### 3.1 从时间值获取小时，分钟和秒
 
-<h4 id="3-1-从时间值获取小时-分钟和秒">3.1 从时间值获取小时，分钟和秒</h4>
-
-<pre><code class="language-python">&gt;&gt;&gt; t = datetime.time(21, 2, 3)
+```python
+&gt;&gt;&gt; t = datetime.time(21, 2, 3)
 &gt;&gt;&gt; t.hour
 21
 &gt;&gt;&gt; t.minute
@@ -320,30 +309,26 @@ datetime.date(2019, 9, 10)
 3
 &gt;&gt;&gt; t.microsecond
 0
-</code></pre>
+```#### 3.2 将时间转换为 AM PM 格式
 
-<h4 id="3-2-将时间转换为-am-pm-格式">3.2 将时间转换为 AM PM 格式</h4>
+- `%I` 将 24 小时时间格式转换为 12 小时格式。
+- `%p` 根据时间值返回 AM PM。
+- `%H` 返回时间值的小时数。
+- `%M` 返回时间值的分钟数。
+- `%S` 返回时间值的秒数。
 
-<ul>
-<li><code>%I</code> 将 24 小时时间格式转换为 12 小时格式。</li>
-<li><code>%p</code> 根据时间值返回 AM PM。</li>
-<li><code>%H</code> 返回时间值的小时数。</li>
-<li><code>%M</code> 返回时间值的分钟数。</li>
-<li><code>%S</code> 返回时间值的秒数。</li>
-</ul>
-
-<pre><code class="language-python">&gt;&gt;&gt; t = datetime.time(21, 2, 3)
+```python
+&gt;&gt;&gt; t = datetime.time(21, 2, 3)
 &gt;&gt;&gt; print(t)
 21:02:03
 &gt;&gt;&gt; t.strftime(&quot;%I:%M %p&quot;)
 '09:02 PM'
-</code></pre>
+```### 4. 同时处理 Dates 和 Time
 
-<h3 id="4-同时处理-dates-和-time">4. 同时处理 Dates 和 Time</h3>
+`datetime`  库有另一个名为 `datetime.datetime` 的类，用于表示日期加时间。你可以称之为时间戳。 `now()` 或 `today()` 方法的 `datetime` 类用于提取当前日期和时间。
 
-<p><code>datetime</code>  库有另一个名为 <code>datetime.datetime</code> 的类，用于表示日期加时间。你可以称之为时间戳。 <code>now()</code> 或 <code>today()</code> 方法的 <code>datetime</code> 类用于提取当前日期和时间。</p>
-
-<pre><code class="language-python">&gt;&gt;&gt; dt = datetime.datetime.now()
+```python
+&gt;&gt;&gt; dt = datetime.datetime.now()
 &gt;&gt;&gt; print(dt)
 2019-09-10 10:45:46.941261
 </code></pre>
@@ -362,25 +347,23 @@ datetime.date(2019, 9, 10)
 
 &gt;&gt;&gt; dt.strftime(&quot;%A %B %d %H:%M&quot;)
 'Tuesday September 10 10:45'
-</code></pre>
+```#### 4.1 创建 datetime 对象
 
-<h4 id="4-1-创建-datetime-对象">4.1 创建 datetime 对象</h4>
+`datetime` 类的语法如下：
 
-<p><code>datetime</code> 类的语法如下：</p>
+`_datetime(year, month, day, hour, minute, second, microsecond)_` 
 
-<p><code>_datetime(year, month, day, hour, minute, second, microsecond)_</code> </p>
-
-<pre><code class="language-python">&gt;&gt;&gt; dt = datetime.datetime(2019, 7, 20, 10, 51, 0)
+```python
+&gt;&gt;&gt; dt = datetime.datetime(2019, 7, 20, 10, 51, 0)
 &gt;&gt;&gt; print(dt)
 2019-07-20 10:51:00
         
 &gt;&gt;&gt; dt.strftime('%d-%m-%Y %H-%M')
 '20-07-2019 10-51'
-</code></pre>
+```#### 4.2 在 python 中将字符串转换为 datetime
 
-<h4 id="4-2-在-python-中将字符串转换为-datetime">4.2 在 python 中将字符串转换为 datetime</h4>
-
-<pre><code class="language-python">&gt;&gt;&gt; from dateutil.parser import parse
+```python
+&gt;&gt;&gt; from dateutil.parser import parse
 &gt;&gt;&gt; print(parse('March 01, 2019'))
 2019-03-01 00:00:00
 </code></pre>
@@ -462,13 +445,13 @@ datetime.date(2019, 9, 10)
 #Next Year        
 &gt;&gt;&gt; print(dt + relativedelta(years=+1))
 2020-07-20 10:51:00
-</code></pre>
+```#### 7.1 考虑闰年
 
-<h4 id="7-1-考虑闰年">7.1 考虑闰年</h4>
 
-<p>来自 <code>dateutil</code> 包的 <code>relativedelta</code> 方法在计算未来或过去日期时会同时考虑闰年的情况。2000 年是闰年，所以 2 月份有 29 天；但明年 2 月只有 28 天。</p>
+来自 `dateutil` 包的 `relativedelta` 方法在计算未来或过去日期时会同时考虑闰年的情况。2000 年是闰年，所以 2 月份有 29 天；但明年 2 月只有 28 天。
 
-<pre><code class="language-python">&gt;&gt;&gt; print(datetime.date(2000, 2, 29)+ relativedelta(years=+1))
+```python
+&gt;&gt;&gt; print(datetime.date(2000, 2, 29)+ relativedelta(years=+1))
 2001-02-28
 </code></pre>
 
@@ -481,31 +464,27 @@ datetime.date(2019, 9, 10)
 &gt;&gt;&gt; diff = date1- date2
 &gt;&gt;&gt; diff.days
 305
-</code></pre>
+```#### 8.1 如何计算两个日期之间的月数
 
-<h4 id="8-1-如何计算两个日期之间的月数">8.1 如何计算两个日期之间的月数</h4>
+一种方法是计算天数，然后除以 30 得到月数。但它并不总是正确的，因为有些月份有 31 天。
 
-<p>一种方法是计算天数，然后除以 30 得到月数。但它并不总是正确的，因为有些月份有 31 天。</p>
+![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1568085011856-f1944dbf-86b7-46f2-8b07-e25101a3e496.png#align=left&amp;display=inline&amp;height=175&amp;name=image.png&amp;originHeight=175&amp;originWidth=857&amp;size=11214&amp;status=done&amp;width=857)
 
-<p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1568085011856-f1944dbf-86b7-46f2-8b07-e25101a3e496.png#align=left&amp;display=inline&amp;height=175&amp;name=image.png&amp;originHeight=175&amp;originWidth=857&amp;size=11214&amp;status=done&amp;width=857"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1568085011856-f1944dbf-86b7-46f2-8b07-e25101a3e496.png#align=left&amp;display=inline&amp;height=175&amp;name=image.png&amp;originHeight=175&amp;originWidth=857&amp;size=11214&amp;status=done&amp;width=857" alt=""></a></p>
+**它是怎么起作用的呢？**
 
-<p><strong>它是怎么起作用的呢？</strong></p>
+- date1.month - date2.month returns -2
+- 12*(date1.year - date2.year) returns 12
+- -2 + 12 = 10
 
-<ul>
-<li>date1.month - date2.month returns -2</li>
-<li>12*(date1.year - date2.year) returns 12</li>
-<li>-2 + 12 = 10</li>
-</ul>
+**注意：** 
 
-<p><strong>注意：</strong> </p>
+假设您要计算 31/10/2018 和 01/11/2018 之间的月数，上面建议的方法将返回 1，因为两个日期位于月差异中。您可能会发现它不正确，因为两个日期之间的天数是1。您是否知道 SAS 软件中的 INTCK 功能（默认设置）也会返回1？ 返回 1 的用法是什么？ 当您需要将时间序列数据排序到箱中时，它非常有用。例如，每日数据可以累积到月度数据，以作为月度系列进行处理。如果您希望 0 作为月数，则可以使用上面“_Not full-proof Solution_”下面显示的代码。
+### 9. 如何使用 pandas 数据框上的日期？
 
-<p>假设您要计算 31/10/2018 和 01/11/2018 之间的月数，上面建议的方法将返回 1，因为两个日期位于月差异中。您可能会发现它不正确，因为两个日期之间的天数是1。您是否知道 SAS 软件中的 INTCK 功能（默认设置）也会返回1？ 返回 1 的用法是什么？ 当您需要将时间序列数据排序到箱中时，它非常有用。例如，每日数据可以累积到月度数据，以作为月度系列进行处理。如果您希望 0 作为月数，则可以使用上面“_Not full-proof Solution_”下面显示的代码。</p>
+在现实世界中，我们通常从外部文件导入数据并将其存储在 pandas DataFrame 中。因此，了解我们如何在 DataFrame 上执行日期和时间操作非常重要。让我们创建一个示例数据框用于说明目的。
 
-<h3 id="9-如何使用-pandas-数据框上的日期">9. 如何使用 pandas 数据框上的日期？</h3>
-
-<p>在现实世界中，我们通常从外部文件导入数据并将其存储在 pandas DataFrame 中。因此，了解我们如何在 DataFrame 上执行日期和时间操作非常重要。让我们创建一个示例数据框用于说明目的。</p>
-
-<pre><code class="language-python">&gt;&gt;&gt; import pandas as pd
+```python
+&gt;&gt;&gt; import pandas as pd
 &gt;&gt;&gt; df = pd.DataFrame({&quot;A&quot;:[&quot;2019-01-01&quot;, &quot;2019-05-03&quot;, &quot;2019-07-03&quot;],
                        &quot;B&quot;:[&quot;2019-03-02&quot;, &quot;2019-08-01&quot;, &quot;2019-10-01&quot;] })
 
@@ -544,13 +523,12 @@ dtype: object
 0 2019-01-01 2019-03-02  60
 1 2019-05-03 2019-08-01  90
 2 2019-07-03 2019-10-01  90
-</code></pre>
+```#### 9.1 获取过去 3 个月的日期
 
-<h4 id="9-1-获取过去-3-个月的日期">9.1 获取过去 3 个月的日期</h4>
+纯粹的 pythonic 方法是在 lambda 中定义函数，它在所有行上运行。
 
-<p>纯粹的 pythonic 方法是在 lambda 中定义函数，它在所有行上运行。</p>
-
-<pre><code class="language-python">&gt;&gt;&gt; from dateutil.relativedelta import *
+```python
+&gt;&gt;&gt; from dateutil.relativedelta import *
 &gt;&gt;&gt; df['D'] = df[&quot;B&quot;].apply(lambda x: x - relativedelta(months=3))
 &gt;&gt;&gt; df
            A          B   C          D
@@ -562,20 +540,17 @@ dtype: object
 <p>另一种方法是使用 <code>pandas</code> 包的内置函数 <code>DateOffset</code> ，它可以增加或减少天，月，年，周，小时，分钟，秒，微秒和纳秒。</p>
 
 <pre><code class="language-python">df['D1'] = df['B'] - pd.DateOffset(months=3)
-</code></pre>
+```#### 9.2 按日期过滤数据框
 
-<h4 id="9-2-按日期过滤数据框">9.2 按日期过滤数据框</h4>
+假设您只想选择列 B 的值大于 2019 年 5 月 1 日的那些行。
+```python
+df[df['B']&gt;datetime.datetime(2019,5,1)]
+```#### 9.3 选择两个日期之间的数据
 
-<p>假设您只想选择列 B 的值大于 2019 年 5 月 1 日的那些行。</p>
+假设您要在两个日期之间从 pandas 数据框中选择行（比如 5 月 1 日到 9 月 30 日之间）。
 
-<pre><code class="language-python">df[df['B']&gt;datetime.datetime(2019,5,1)]
-</code></pre>
-
-<h4 id="9-3-选择两个日期之间的数据">9.3 选择两个日期之间的数据</h4>
-
-<p>假设您要在两个日期之间从 pandas 数据框中选择行（比如 5 月 1 日到 9 月 30 日之间）。</p>
-
-<pre><code class="language-python">df[df.B.between(datetime.datetime(2019,5,1), datetime.datetime(2019,9,30))]
+```python
+df[df.B.between(datetime.datetime(2019,5,1), datetime.datetime(2019,9,30))]
 
 # OR
 df[(df['B'] &gt; datetime.datetime(2019,5,1)) &amp; (df['B'] &lt; datetime.datetime(2019,9,30))]

@@ -43,11 +43,7 @@ TEXLive 是 Tex 的一种比较流行的发行版，它是由 TUG（TEX User Gro
 |  | ConTeXt | 和 LaTeX 相比，它更加灵活和自由。 |
 |  | ctex | 小写的 ctex 是可以很好支持中文的宏包。 |
 |  | ...... | ...... |
-| 
-
-
-
-发行版 | **TeX Live** | 国际 TeX 用户组织 TUG 开发，支持不同的操作系统。 |
+| 发行版 | **TeX Live** | 国际 TeX 用户组织 TUG 开发，支持不同的操作系统。 |
 |  | MiKTeX | Windows 下广泛使用的一个 TeX 发行版。 |
 |  | ConTeXt Minimals | 它包含了最新版本的 ConTeXt。 |
 |  | teTeX | 一个 Unix 下的 TeX 发行版，现在已经停止更新且并入 TeXLive。 |
@@ -312,8 +308,4 @@ $ tlmgr install pkgname
 - [CTEX.ORG](http://CTEX.ORG)，《[xeCJK 宏包（中文文档）](http://mirrors.sjtug.sjtu.edu.cn/ctan/macros/xetex/latex/xecjk/xeCJK.pdf)》
 - CTAN，[xecjk – Support for CJK documents in XELATEX](https://ctan.org/pkg/xecjk)
 - Jiedong Hao，jdhao blog，[LaTeX 中如何使用中文](https://jdhao.github.io/2018/03/29/latex-chinese.zh/)
-
-
-
-
 

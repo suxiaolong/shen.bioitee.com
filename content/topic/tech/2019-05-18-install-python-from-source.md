@@ -17,11 +17,7 @@ published: true
 ```bash
 os : CentOS Linux release 6.5 (x86_64) 
 gcc: 4.8.5 20150623
-```
-
-
-
-## 2. 安装步骤
+```## 2. 安装步骤
 
 如果您拥有 root 权限，请执以下依赖安装：
 ```bash
@@ -66,11 +62,7 @@ source $HOME/.bashrc
 **请注意：**
 
 1. **openssl **编译（config）的时候 **必须要加上 shared 参数**，否者源码安装 Python 即使添加了 `--with-openssl` 的自定义路径，依然会导致 `Could not build the ssl module!` 报错！
-1. 从 [https://www.openssl.org/source/](https://www.openssl.org/source/) 下载的源码 openssl-1.0.2s、openssl-1.0.2m，包括 CentOS-7.5 使用 `yum` 安装的最高版本的 openssl-1.0.2k 目前发现依然会导致 `Could not build the ssl module` ，建议从 [https://www.openssl.org/source/old/](https://www.openssl.org/source/old/) 下载 1.1.1 的源码编译安装。
-
-
-
-### 2.2 ctypes
+1. 从 [https://www.openssl.org/source/](https://www.openssl.org/source/) 下载的源码 openssl-1.0.2s、openssl-1.0.2m，包括 CentOS-7.5 使用 `yum` 安装的最高版本的 openssl-1.0.2k 目前发现依然会导致 `Could not build the ssl module` ，建议从 [https://www.openssl.org/source/old/](https://www.openssl.org/source/old/) 下载 1.1.1 的源码编译安装。### 2.2 ctypes
 
 在 CentOS 6.x 安装 `libffi-devel` 的时候出现以下问题：
 
@@ -104,11 +96,7 @@ $ tar zvxf libffi-3.2.1.tar.gz
 $ ./configure --prefix=/Bioinfo/Pipeline/SoftWare/LibDependence/libffi-3.2.1
 $ make 
 $ make install 
-```
-
-
-
-### 2.3 pygraphviz
+```### 2.3 pygraphviz
 
 ```bash
 $ /Bioinfo/Pipeline/SoftWare/Python-3.7.3/bin/pip3 install pygraphviz
@@ -186,11 +174,7 @@ Collecting pygraphviz
 Installing collected packages: pygraphviz
   Running setup.py install for pygraphviz ... done
 Successfully installed pygraphviz-1.5
-```
-
-
-
-### 2.4 编译安装
+```### 2.4 编译安装
 
 第一，下载 Python 源码，解压。
 
@@ -278,11 +262,7 @@ echo "export PATH=/Bioinfo/Pipeline/SoftWare/Python-3.7.3/bin:$PATH" >>~/.bashrc
 source ~/.bashrc
 ```
 
-运行命令 `python -V` ，查看是否出现 3.7.3 的版本，出现即为安装成功。
-
-
-
-## 3. 安装 pip+setuptools
+运行命令 `python -V` ，查看是否出现 3.7.3 的版本，出现即为安装成功。## 3. 安装 pip+setuptools
 
 ```bash
 # 下载 setuptools 和 pip 安装程序
@@ -290,11 +270,7 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
 ```
 
-至此，CentOS Linux release 6.5 下的 python-3.7.3 全部安装完成。如果在安装过程中出现其他的报错，建议把 error 关键信息直接复制到 Google 进行检索，参考其他人的解决方法。
-
-
-
-## 4. 参考资料
+至此，CentOS Linux release 6.5 下的 python-3.7.3 全部安装完成。如果在安装过程中出现其他的报错，建议把 error 关键信息直接复制到 Google 进行检索，参考其他人的解决方法。## 4. 参考资料
 
 1. 行者无疆-ITer,《[python2.7 源码编译安装](https://www.cnblogs.com/ITer-jack/p/8305912.html)》, 博客园
 1. Scott Frazer,《[How do I compile Python 3.4 with custom OpenSSL?](https://stackoverflow.com/questions/23548188/how-do-i-compile-python-3-4-with-custom-openssl)》, Stack Overflow

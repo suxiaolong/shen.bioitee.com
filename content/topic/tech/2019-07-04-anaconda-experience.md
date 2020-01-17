@@ -42,11 +42,7 @@ channels:
 show_channels_urls: true
 ```
 
-更多 Anaconda channels，可以参考：[https://repo.continuum.io/pkgs/](https://repo.continuum.io/pkgs/)。
-
-
-
-# 2. 软件安装使用
+更多 Anaconda channels，可以参考：[https://repo.continuum.io/pkgs/](https://repo.continuum.io/pkgs/)。# 2. 软件安装使用
 
 conda 环境下的软件尽量使用 conda、pip 命令去安装。但同时也产生了一个问题，即 conda 中安装了 R，有些使用了 `install.packages()` , `install_github` , `biocLite` 等方式安装的 R 包，在环境迁移的时候，这些包如何迁移？
 
@@ -103,11 +99,7 @@ $ source activate bio-base
 $ conda deactivate
 (bio-base) shenweiyan@ecs-steven  11:03:57 /home/shenweiyan
 $
-```
-
-
-
-# 4. 环境导出与恢复
+```# 4. 环境导出与恢复
 
 使用 conda 命令安装的包，都可以使用下面的命令导出依赖包/环境并批量恢复：
 ```shell
@@ -132,17 +124,9 @@ conda install --yes --file requirements.txt
 
 # To go around issue above, one can iterate over all lines in the requirements.txt file.
 while read requirement; do conda install --yes $requirement; done < requirements.txt
-```
+```# 5. R 与 R 包安装
 
-
-
-# 5. R 与 R 包安装
-
-R Essentials 软件包包含 IRKernel 和 80 多种最流行的数据科学 R 软件包，包括 dplyr，shiny，ggplot2，tidyr，caret 和 nnet 等。
-
-
-
-## 5.1 R 软件
+R Essentials 软件包包含 IRKernel 和 80 多种最流行的数据科学 R 软件包，包括 dplyr，shiny，ggplot2，tidyr，caret 和 nnet 等。## 5.1 R 软件
 
 conda 安装 R 有很多种方法，如可以通过 r=3.6.x，或者 r-base、r-irkernel、r-essentials 都可以。需要注意：
 
@@ -209,22 +193,14 @@ biocLite("包名")
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 BiocManager::install()
-```
-
-
-
-### 3. github_install
+```### 3. github_install
 
 GitHub 上的一些最新 R 包，可以使用 `devtools` 进行安装：
 ```r
 install.packages("devtools")
 library(devtools)
 install_github("jokergoo/ComplexHeatmap")
-```
-
-
-
-# 6. 特别注意的软件
+```# 6. 特别注意的软件
 
 
 ## 6.1 gcc
@@ -232,21 +208,13 @@ install_github("jokergoo/ComplexHeatmap")
 对于使用 `conda install --yes --file requirements.txt` 重装某一个环境的所有软件时，如果软件中包含了 gcc，安装了 R 后，在使用 R 时会可能会引发错误：
 ```r
 /path/to/SoftWare/Anaconda/v2/lib/R/bin/exec/R: /path/to/SoftWare/Anaconda/v2/lib/R/bin/exec/../../lib/../../libgomp.so.1: version `GOMP_4.0' not found (required by /path/to/SoftWare/Anaconda/v2/lib/R/bin/exec/../../lib/libR.so)
-```
-
-
-
-## 6.2 glibc
+```## 6.2 glibc
 
 > glibc 是 GNU 发布的 libc 库，即 c 运行库。glibc 是 linux 系统中最底层的 api，几乎其它任何运行库都会依赖于 glibc。glibc 除了封装 linux 操作系统所提供的系统服务外，它本身也提供了许多其它一些必要功能服务的实现。由于 glibc 囊括了几乎所有的 UNIX 通行的标准，可以想见其内容包罗万象。而就像其他的 UNIX 系统一样，其内含的档案群分散于系统的树状目录结构中，像一个支架一般撑起整个作业系统。在 GNU/Linux 系统中，其 C 函式库发展史点出了 GNU/Linux 演进的几个重要里程碑，用 glibc 作为系统的 C 函式库，是 GNU/Linux 演进的一个重要里程碑。
 
 有一些软件对于 glibc 的版本会有要求，如 cnvnator-0.3.3 要求 glibc >= 2.14。虽然在 anaconda 中有很多 channel 都提供了 glibc，但**千万注意一定要注意不要轻易去安装**，否则有很大的概率会导致整个环境挂掉，甚至会导致当前环境中的 conda、python 出现动态库混乱错误，恢复起来相当麻烦！
 
-我在《[一次"胆战心惊"的真实集群运维经历](https://www.yuque.com/shenweiyan/cookbook/hpc-experience-glibc)》记录了 gblic 的一些集群吐血经历，感兴趣的可以了解一下。
-
-
-
-# 7. 什么时候使用 Anaconda
+我在《[一次"胆战心惊"的真实集群运维经历](https://www.yuque.com/shenweiyan/cookbook/hpc-experience-glibc)》记录了 gblic 的一些集群吐血经历，感兴趣的可以了解一下。# 7. 什么时候使用 Anaconda
 
 对于 Anaconda(conda) 软件安装以及依赖解决的原理，我对这个黑盒子表示一头雾水。真实的情况是，如果在一个环境中安装了几百个软件(包)，再去新装软件，这时候 Anaconda 常常会卡在 Collecting package metadata 和 Solving environment 过程中，甚至一个晚上都没法解决环境的依赖。
 

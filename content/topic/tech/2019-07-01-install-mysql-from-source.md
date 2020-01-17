@@ -80,11 +80,7 @@ $ wget https://cdn.mysql.com//Downloads/MySQL-8.0/mysql-boost-8.0.12.tar.gz
 
 如果想要下载其他版本的 MySQL，可以在 [https://downloads.mysql.com/archives/community/](https://downloads.mysql.com/archives/community/) 选择符合自己服务器的版本进行下载。
 
-![](https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-download-archives.png#width=)
-
-
-
-# 四、MySQL 源码编译安装
+![](https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/18-Tue/mysql-download-archives.png#width=)# 四、MySQL 源码编译安装
 
 
 ## 1. 安装依赖包

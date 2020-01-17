@@ -48,11 +48,7 @@ $(window).load(function() {
 });
 ```
 
-**FAQ01**：[如何使用flexslider设置多个滑块？](http://cn.voidcc.com/question/p-pumryoaf-hm.html)
-
-
-
-## Raxus Slider
+**FAQ01**：[如何使用flexslider设置多个滑块？](http://cn.voidcc.com/question/p-pumryoaf-hm.html)## Raxus Slider
 
 链接：[https://codecanyon.net/item/raxus-slider-easytouse-advanced-html5-slider/7008343](https://codecanyon.net/item/raxus-slider-easytouse-advanced-html5-slider/7008343)
 

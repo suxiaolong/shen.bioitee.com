@@ -26,11 +26,7 @@ published: true
 - 它们都可以让你访问 Jupyter Notebook 环境（或类似 Jupyter 的环境）。
 - 它们都持 Python 语言（并且大多数支持其他语言）。
 
-由于所有的这些都是基于云的服务，如果您仅限于使用内部部署的数据，则它们都不适合您。
-
-
-
-## 比较标准
+由于所有的这些都是基于云的服务，如果您仅限于使用内部部署的数据，则它们都不适合您。## 比较标准
 
 以下是我对六种服务进行比较的标准：
 
@@ -47,11 +43,7 @@ published: true
 - **协作能力：** 此服务是否允许您邀请某人在笔记本上进行协作，并且协作是否可以实时进行？
 - **免费计划的性能表现：** 该服务提供哪些计算资源（RAM 和 CPU）？ 它是否允许您访问 GPU（这对深度学习很有用）？ 包含多少磁盘空间？ 会话可以运行多长时间？
 - **性能升级：** 您是否可以为此服务付费以获取更多计算资源？
-- **文档和技术支持：** 该服务是否有详细记录？ 如果遇到问题，你可以与某人取得联系吗？
-
-
-
-## 1. Binder
+- **文档和技术支持：** 该服务是否有详细记录？ 如果遇到问题，你可以与某人取得联系吗？## 1. Binder
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092377-90245040-4088-45c2-9dff-1bcfb01c6d1a.png#align=left&display=inline&height=586&originHeight=586&originWidth=746&size=0&status=done&width=746)
 
@@ -103,11 +95,7 @@ Binder 有大量[文档](https://mybinder.readthedocs.io/en/latest/)。它通过
 
 **结论：**
 
-如果您的笔记本已经存储在公共 GitHub 中，Binder 是让其他人与它们进行交互的最简单方法。用户不必创建帐户，如果他们已经知道如何使用 Jupyter Notebook，他们会感到宾至如归。但是，您需要牢记 Binder 的性能限制和用户限制！
-
-
-
-## 2. Kaggle Kernels
+如果您的笔记本已经存储在公共 GitHub 中，Binder 是让其他人与它们进行交互的最简单方法。用户不必创建帐户，如果他们已经知道如何使用 Jupyter Notebook，他们会感到宾至如归。但是，您需要牢记 Binder 的性能限制和用户限制！## 2. Kaggle Kernels
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092440-e46cb2ef-d051-46aa-811b-a57c91035a31.png#align=left&display=inline&height=586&originHeight=586&originWidth=746&size=0&status=done&width=746)
 
@@ -161,11 +149,7 @@ Kaggle** **预先安装了数百个软件包，您可以使用 pip 或通过指
 
 **结论：**
 
-只要您对稍微混乱的界面（在重新设计中已得到改进）感到满意，您就可以访问高性能环境，在该环境中可以轻松使用数据集并公开分享您的工作 （或保持私密）。Kaggle 包含的版本控制和协作功能也是很好的功能补充，但两者都不是功能很齐全。
-
-
-
-## 3. Google Colaboratory (Colab)
+只要您对稍微混乱的界面（在重新设计中已得到改进）感到满意，您就可以访问高性能环境，在该环境中可以轻松使用数据集并公开分享您的工作 （或保持私密）。Kaggle 包含的版本控制和协作功能也是很好的功能补充，但两者都不是功能很齐全。## 3. Google Colaboratory (Colab)
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092472-b9efd4a2-5e77-4631-b257-f3caf130a36d.png#align=left&display=inline&height=583&originHeight=583&originWidth=746&size=0&status=done&width=746)
 
@@ -233,11 +217,7 @@ Colab 拥有很少的文档，这些文档都包含在 [FAQ 页面](https://res
 
 **结论：**
 
-Colab 的最大优势在于它易于上手，因为大多数人已经拥有 Google 帐户，并且共享笔记本很容易，因为共享功能与 Google Docs 相同。然而，繁琐的键盘快捷键和使用数据集的困难是显著的缺点。在同一笔记本上进行协作的能力很有用，但由于您没有共享环境，因此协作能力的作用也会有所降低。
-
-
-
-## 4. Microsoft Azure Notebooks
+Colab 的最大优势在于它易于上手，因为大多数人已经拥有 Google 帐户，并且共享笔记本很容易，因为共享功能与 Google Docs 相同。然而，繁琐的键盘快捷键和使用数据集的困难是显著的缺点。在同一笔记本上进行协作的能力很有用，但由于您没有共享环境，因此协作能力的作用也会有所降低。## 4. Microsoft Azure Notebooks
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092289-14f579c6-072e-45ab-be67-7dd87bb76b59.png#align=left&display=inline&height=588&originHeight=588&originWidth=746&size=0&status=done&width=746)
 
@@ -292,11 +272,7 @@ Azure 提供了大量的[文档](https://docs.microsoft.com/en-us/azure/notebook
 
 **结论：**
 
-Azure Notebooks 的最大优势在于它的易用性：项目结构（从 GitHub 借用）使得使用多个笔记本和数据集变得简单，并且使用原生 Jupyter 界面意味着现有的 Jupyter 用户将拥有一个简单的过渡。但是，RAM 和磁盘空间并不是特别慷慨，缺乏协作是功能上的一个巨大差距。
-
-
-
-## 5. CoCalc
+Azure Notebooks 的最大优势在于它的易用性：项目结构（从 GitHub 借用）使得使用多个笔记本和数据集变得简单，并且使用原生 Jupyter 界面意味着现有的 Jupyter 用户将拥有一个简单的过渡。但是，RAM 和磁盘空间并不是特别慷慨，缺乏协作是功能上的一个巨大差距。## 5. CoCalc
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092694-f4d33ad5-1ca8-4c4e-8a5b-94ce251a8144.png#align=left&display=inline&height=588&originHeight=588&originWidth=746&size=0&status=done&width=746)
 
@@ -356,11 +332,7 @@ CoCalc 拥有[大量文档](https://doc.cocalc.com/)。用户可通过电子邮�
 
 **结论：**
 
-使用 CoCalc 的最有吸引力是它的实时协作和 "time travel" 版本控制功能，以及课程管理功能（如果您是教练）。 虽然界面有点混乱，但现有的 Jupyter 用户可以相对轻松地过渡到 CoCalc。但是，免费计划确实存在一些重要的限制（无法安装其他软件包或访问 Internet），另外，免费计划的性能也不高。
-
-
-
-## 6. Datalore
+使用 CoCalc 的最有吸引力是它的实时协作和 "time travel" 版本控制功能，以及课程管理功能（如果您是教练）。 虽然界面有点混乱，但现有的 Jupyter 用户可以相对轻松地过渡到 CoCalc。但是，免费计划确实存在一些重要的限制（无法安装其他软件包或访问 Internet），另外，免费计划的性能也不高。## 6. Datalore
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092356-94a5aab3-a5c7-46a9-b2a8-db8d26c5b4c8.png#align=left&display=inline&height=587&originHeight=587&originWidth=746&size=0&status=done&width=746)
 
@@ -431,11 +403,7 @@ Datalore 具有比较少的文档，包含在示例工作簿中。用户可通�
 
 **结论：**
 
-Datalore 不再是对 Jupyter 笔记本的改编，而是更像是对笔记本的重塑。它包括一个创新的功能集，包括实时计算，依赖关系跟踪，实时协作和内置版本控制。但是，现有的 Jupyter 用户可能难以过渡到 Datalore，特别是因为强制执行单元格排序并且所有键盘快捷方式都完全不同。同样，Datalore 目前还包含一些值得注意的限制，即工作簿无法公开共享，上传的数据集无法在工作簿之间共享等。
-
-
-
-## 如何选择合适的服务
+Datalore 不再是对 Jupyter 笔记本的改编，而是更像是对笔记本的重塑。它包括一个创新的功能集，包括实时计算，依赖关系跟踪，实时协作和内置版本控制。但是，现有的 Jupyter 用户可能难以过渡到 Datalore，特别是因为强制执行单元格排序并且所有键盘快捷方式都完全不同。同样，Datalore 目前还包含一些值得注意的限制，即工作簿无法公开共享，上传的数据集无法在工作簿之间共享等。## 如何选择合适的服务
 
 在提出的六个选项中，没有一个明确的"赢家"。相反，正确的选择将取决于您的优先事项。以下是我根据您的特殊需求选择的建议。（注意：您也可以点击 [comparison table](https://docs.google.com/spreadsheets/d/12thaaXg1Idr3iWST8QyASNDs08sjdPd6m9mbCGtHFn0/edit?usp=sharing) 进行查看 。）
 
@@ -497,11 +465,7 @@ Kernels 提供最强大的环境（4 核 CPU 和 17 GB RAM），其次是 Datal
 
 Kernels 和 Colab 都可以免费访问 GPU。 Azure 访问和（很快）Datalore 的付费客户也可以使用 GPU 访问。Binder 或 CoCalc 无法访问 GPU。
 
-**您更喜欢使用非商业工具：**Binder 是由非商业实体管理的唯一选项。
-
-
-
-## 其他类似的服务
+**您更喜欢使用非商业工具：**Binder 是由非商业实体管理的唯一选项。## 其他类似的服务
 
 以下服务与上述六个选项类似，但未包括在我的比较中：
 
@@ -509,11 +473,7 @@ Kernels 和 Colab 都可以免费访问 GPU。 Azure 访问和（很快）Datalo
 - 我没有包含 [IBM Watson Studio Cloud](https://www.ibm.com/cloud/watson-studio)，因为入门过程繁琐，界面过于复杂，免费计划有很多限制，在测试期间有很多错误消息。
 - 我没有包括 [Gryd](https://gryd.us/)，因为免费计划需要一个学术性的电子邮件地址，而且我没有包含 [Code Ocean](https://codeocean.com/)，因为没有学术电子邮件地址，免费计划受到严格限制。
 - 我没有包含 [ZEPL](https://www.zepl.com/)，因为它不允许您使用标准的 `.ipynb` 格式导出笔记本。
-- 我没有包括任何付费服务，例如 [Saturn Cloud](https://www.saturncloud.io/)， [Crestle.ai](https://www.crestle.ai/)，[Paperspace](https://www.paperspace.com/) 和 [Salamander](https://salamander.ai/)。
-
-
-
-## 我真实的核查过程
+- 我没有包括任何付费服务，例如 [Saturn Cloud](https://www.saturncloud.io/)， [Crestle.ai](https://www.crestle.ai/)，[Paperspace](https://www.paperspace.com/) 和 [Salamander](https://salamander.ai/)。## 我真实的核查过程
 
 本文是 50 多个小时的研究，测试和写作的结果。 此外，我在 2019 年 3 月与 Binder，Kaggle，Google，Microsoft，CoCalc 和 Datalore 的相关团队分享了本文的草稿。我收到了来自所有六家公司/组织的详细反馈（谢谢！），我将其纳入 发表之前的文章。
 

@@ -9,11 +9,7 @@ published: true
 
 > 关于学术机构的官方邮箱，听的最多的一个问题就是，要投稿要发论文了，用 QQ 邮箱或者网易邮箱可不可以，会不会有影响？再比如，有时很正式很重要的通讯，如申请博后或访问学者，学术交流等，国内学者大多留下的联络邮箱常为普通公共邮箱，如 hotmail.com，126.com，163.com，QQ.com，sohu.com，sina.com，yahoo.com，… 等。虽然这些非学术公共邮箱使用是没有任何问题的，但总不够正式。那么，有没有什么办法自己可以申请或创建一个看起来更专业高大上的邮箱呢？  
 > 
-> 首先理解一下，qq 邮箱设置域名邮箱，其实就是给你的 qq 邮箱起个别名而已，可以用自定义邮箱去收发邮件，但是邮件还是在 qq 邮箱里，qq 邮箱的无限邮箱容量对你的域名邮箱同样适用。 
-
-
-
-## 1. 创建域名邮箱
+> 首先理解一下，qq 邮箱设置域名邮箱，其实就是给你的 qq 邮箱起个别名而已，可以用自定义邮箱去收发邮件，但是邮件还是在 qq 邮箱里，qq 邮箱的无限邮箱容量对你的域名邮箱同样适用。 ## 1. 创建域名邮箱
 
 域名邮箱的主页是：[http://domain.mail.qq.com/](http://domain.mail.qq.com/)，这也是 QQ 域名邮箱直接登录的地址。我们直接在浏览器打开，在页面的左边栏就可以看到域名邮箱的创建入口。我们需要先通过 QQ 邮箱登陆。
 
@@ -47,10 +43,6 @@ published: true
 这里以阿里云为例，登陆阿里云账号，选择对应域名的解析，点击"**添加记录**"。
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1577081811908-b8fc34de-3c4a-4d78-9802-ef495dbfc1e5.png#align=left&display=inline&height=236&name=image.png&originHeight=236&originWidth=645&size=22161&status=done&style=none&width=645)
-
-
-
-
 ### 3.2 添加记录
 
 添加两条记录，将前面的内容直接复制过来，其余的默认就好。
@@ -58,10 +50,6 @@ published: true
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1577082738823-96d1ea8c-e12f-4bbf-b5f8-e37bbaf03385.png#align=left&display=inline&height=424&name=image.png&originHeight=424&originWidth=592&size=18674&status=done&style=none&width=592)
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1577082913294-55807943-f3f0-41f9-b11e-aa679da49900.png#align=left&display=inline&height=478&name=image.png&originHeight=478&originWidth=587&size=20508&status=done&style=none&width=587)
-
-
-
-
 ## 4. 提交验证
 
 返回 qq 邮箱刚才界面，点击提交验证。
@@ -88,11 +76,7 @@ published: true
 
 最后，我们再次回到新创建用户 qq 邮箱**设置 **–>**账户**–>**账号管理**，此时就会出现刚刚设置的域名邮箱。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1577085255696-9c855e06-26c8-4a65-a679-809c9656e2d2.png#align=left&display=inline&height=242&name=image.png&originHeight=242&originWidth=888&size=27837&status=done&style=none&width=888)
-
-
-
-## 6. 主显账号
+![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1577085255696-9c855e06-26c8-4a65-a679-809c9656e2d2.png#align=left&display=inline&height=242&name=image.png&originHeight=242&originWidth=888&size=27837&status=done&style=none&width=888)## 6. 主显账号
 
 QQ 邮箱默认是以 xxx.qq.com 作为你的发信账号和主显账号，如果我们想在打开 QQ 邮箱的时候第一眼看到的就是自己的域名邮箱，我们可以这样设置。
 

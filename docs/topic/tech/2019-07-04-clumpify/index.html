@@ -207,10 +207,11 @@
 <li>对于具有非常低 kmer 深度的 reads，由于覆盖率非常低（如 1x WGS）或超高错误率（如原始 PacBio 数据）。 它不会损坏任何东西，但也不会完成任何事情。</li>
 <li>对于大量扩增子数据。 这可能有效，也可能无效; 但如果你的所有的 reads 都被期望共享相同的 kmers，它们可能都会形成一个巨大的丛，再也没有任何东西可以实现。 同样，它不会损坏任何东西，如果从可变区域中随机选择 pivots ，它可能会增加压缩。</li>
 <li>当你的过程依赖 reads 的顺序时。如果你总是从文件中获取前一百万条 reads，假设它们在文件其余部分具有良好代表性，那么 Clumpify 将导致你的假设无效 —— 就像从分类的 bam 文件中获取前一百万条 reads 不具有代表性。 幸运的是，这绝不是一个好习惯，所以如果你现在正在这样做，现在无论如何都是改变你的流程的好机会。 随机子采样（Randomly subsampling）是一种更好的方法。</li>
-<li>If you are only going to read data fewer than ~3 times, it will never go into long-term storage, and it&rsquo;s being used on local disk so bandwidth is not an issue, there&rsquo;s no point in using Clumpify (or gzip, for that matter).</li>
-</ol>
 
-<h2 id="clumpify使用与数据一致性检验">Clumpify使用与数据一致性检验</h2>
+<li><p>If you are only going to read data fewer than ~3 times, it will never go into long-term storage, and it&rsquo;s being used on local disk so bandwidth is not an issue, there&rsquo;s no point in using Clumpify (or gzip, for that matter).</p>
+
+<h2 id="clumpify使用与数据一致性检验">Clumpify使用与数据一致性检验</h2></li>
+</ol>
 
 <p>在实际测试用，使用 Hiseq2500 的 fastq 压缩数据 A，经 clumpify.sh 处理后得到压缩数据 B，但 A、B 解压出来的 fastq 数据 md5 是不一致的：</p>
 
@@ -267,9 +268,7 @@ a3c411044914a671f88dd0976f29b237  test_R1.fastq
 
 <p>因此，我们可以基于此建议对于数据需要长期存储，或者后续分析流程耗时较长的场景，数据下机之后首先用 clumpify 对 fastq 进行排序压缩，节省数据存储空间。</p>
 
-<h2 id="clumpify使用注意事项">Clumpify使用注意事项</h2>
-
-<h3 id="内存设置">内存设置</h3>
+<h2 id="clumpify使用注意事项-内存设置">Clumpify使用注意事项### 内存设置</h2>
 
 <p>实测 Clumpify 确实能显著减少 fastq 压缩文件的体积，这里注意一个参数 <strong>-Xmx</strong>：限制 JVM 使用的最大内存。一定要根据自己机器配置情况设置一下，不然 Clumpify 默认自动检测可用内存，如果处理的 Fastq 文件太大，会把机器内存都占满，就别再想跑别的程序了。</p>
 

@@ -42,11 +42,7 @@ published: true
 
 在创建好的对象存储空间（note-db）中，选择 "镜像存储"，添加语雀镜像源地址：
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1565242263407-a2d8c1cd-ae81-476f-bc31-310e1087b1c5.png#align=left&display=inline&height=428&name=image.png&originHeight=428&originWidth=1037&size=40000&status=done&style=none&width=1037)
-
-
-
-### 1.3 绑定域名
+![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1565242263407-a2d8c1cd-ae81-476f-bc31-310e1087b1c5.png#align=left&display=inline&height=428&name=image.png&originHeight=428&originWidth=1037&size=40000&status=done&style=none&width=1037)### 1.3 绑定域名
 
 七牛云绑定域名，并且设置 CNAME 的一个重要前提是：域名必须备案成功了才可以使用的！
 
@@ -70,11 +66,7 @@ published: true
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1565243547685-99f99f9c-3775-4c63-ad7d-cc04048bb9ef.png#align=left&display=inline&height=333&name=image.png&originHeight=333&originWidth=847&size=39662&status=done&style=none&width=847)
 
-**第二步**，到你买域名的地方去配置。我是在阿里云上面买的，下面以阿里云为例：
-
-**
-
-**![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1565244440370-93369291-54fb-4a27-b379-f6bd6743c121.png#align=left&display=inline&height=467&name=image.png&originHeight=467&originWidth=921&size=52928&status=done&style=none&width=921)**
+**第二步**，到你买域名的地方去配置。我是在阿里云上面买的，下面以阿里云为例：**![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1565244440370-93369291-54fb-4a27-b379-f6bd6743c121.png#align=left&display=inline&height=467&name=image.png&originHeight=467&originWidth=921&size=52928&status=done&style=none&width=921)**
 
 **做到这一步就算已经完成了。成功之后，回到七牛云对象存储，在存储空间的概览也可以看到 CNAME 状态显示为"成功"：
 
@@ -89,26 +81,14 @@ published: true
 HTTPS 配置中的 SSL 证书可以选择申请七牛与的免费证书；也可以申请阿里云的** "免费型 DV SSL" **证书，然后选择本地上传 **"证书内容"** 和 **"证书私钥"**，我这里选择的是阿里云的** "免费型 DV SSL" **证书。
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1565245903884-c498b8b9-7305-4413-afa6-c605853ed817.png#align=left&display=inline&height=344&name=image.png&originHeight=344&originWidth=1168&size=74764&status=done&style=none&width=1168)
-
-
-
-
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1565246118194-c1d76ebf-f8ae-4917-b37d-de0c159c8587.png#align=left&display=inline&height=283&name=image.png&originHeight=283&originWidth=636&size=29947&status=done&style=none&width=636)
-
-
-
-
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1565245579390-7de4e039-e6e3-4f7a-bb9c-e4a015fb4472.png#align=left&display=inline&height=505&name=image.png&originHeight=505&originWidth=674&size=68177&status=done&style=none&width=674)
 
 **"确认"** 提交后，等待大约 10 分钟，可以在七牛云对象存储空间的 **"域名管理"** → **"HPPTS 配置"** 看到 HTTPS 已经开启。
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1565246484060-358cc366-38c8-4e0e-95a4-81a937b623f0.png#align=left&display=inline&height=327&name=image.png&originHeight=327&originWidth=1208&size=48069&status=done&style=none&width=1208)
 
-**最后**，在博客中把博客所有 [https://qiniu.bioinit.com](https://qiniu.bioinit.com/) 的域名都替换成 [https://qiniu.bioinit.com](http://qiniu.bioinit.com/)，并检查图片是否正常显示。
-
-
-
-## 二、使用对象存储的镜像回源
+**最后**，在博客中把博客所有 [https://qiniu.bioinit.com](https://qiniu.bioinit.com/) 的域名都替换成 [https://qiniu.bioinit.com](http://qiniu.bioinit.com/)，并检查图片是否正常显示。## 二、使用对象存储的镜像回源
 
 关于对象存储的镜像回源，我们以阿里云的 oss 对象存储为例。
 
@@ -135,16 +115,8 @@ HTTPS 配置中的 SSL 证书可以选择申请七牛与的免费证书；也可
 
 #### 2.3 变更链接
 
-上一步镜像回源的规则创建好，点击 "确定" 后，在博客中我们只需要把博客所有 `https://qiniu.bioinit.com` 的域名都替换成你 oss 对应的外网访问 Bucket 域名（如， `https://bucketname.oss-endpoint.com` 即可），并检查图片是否正常显示。
-
-
-
-## 三、个人博客
+上一步镜像回源的规则创建好，点击 "确定" 后，在博客中我们只需要把博客所有 `https://qiniu.bioinit.com` 的域名都替换成你 oss 对应的外网访问 Bucket 域名（如， `https://bucketname.oss-endpoint.com` 即可），并检查图片是否正常显示。## 三、个人博客
 
 最后，附上与语雀文章同步更新，基于 Hugo 的个人博客。
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1574990483243-a5e54493-68c5-460e-8e18-9dc5b0660b21.png#align=left&display=inline&height=659&name=image.png&originHeight=659&originWidth=786&size=111153&status=done&style=none&width=786)
-
-
-
-

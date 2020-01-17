@@ -177,9 +177,7 @@
 
 <p>最新的 <a href="https://cran.r-project.org/package=magick">magick</a> 包是为能够在 R 中更现代化、简单化高质量图像处理而进行的一次努力。该包封装了目前最强大的开源图片处理库 <a href="https://www.imagemagick.org/Magick++/STL.html">ImageMagick STL</a> 。</p>
 
-<p>ImageMagick 库具有大量功能。当前版本的 Magick 公开了很多内容，但是作为第一个发行版本，文档仍然很少。本文简单的介绍了其中一些最重要的概念来帮助了解 <code>magick</code> 。</p>
-
-<h2 id="安装-magick">安装 magick</h2>
+<p>ImageMagick 库具有大量功能。当前版本的 Magick 公开了很多内容，但是作为第一个发行版本，文档仍然很少。本文简单的介绍了其中一些最重要的概念来帮助了解 <code>magick</code> 。## 安装 magick</p>
 
 <p>在 Windows 或者 MacOS，可以通过 CRAN 安装该软件包。</p>
 
@@ -264,9 +262,7 @@ print(tiger)
 image_write(tiger, path = &quot;tiger.png&quot;, format = &quot;png&quot;)
 </code></pre>
 
-<p>如果 <code>path</code> 是文件名，则 <code>image_write</code> 成功返回 <code>path</code>，以便可以将结果通过文件路径传递给函数。</p>
-
-<h3 id="转换格式">转换格式</h3>
+<p>如果 <code>path</code> 是文件名，则 <code>image_write</code> 成功返回 <code>path</code>，以便可以将结果通过文件路径传递给函数。### 转换格式</p>
 
 <p>Magick 以原始格式将图像保留在内存中。你可以在 <code>image_write</code> 中通过指定格式参数以转换为另一种格式。或者还可以在应用转换之前，先在内部将图像转换为其他格式。如果你的原始格式是有损的，这将很有用。</p>
 
@@ -293,9 +289,7 @@ image_display(tiger)
 image_browse(tiger)
 </code></pre>
 
-<p>另一种方法是将图像转换为栅格对象，然后将其绘制在 R 的图形显示上。但是，这非常慢，并且仅在与其他绘图功能结合使用时才有用。 请参阅下面的 #raster。</p>
-
-<h2 id="转变">转变</h2>
+<p>另一种方法是将图像转换为栅格对象，然后将其绘制在 R 的图形显示上。但是，这非常慢，并且仅在与其他绘图功能结合使用时才有用。 请参阅下面的 #raster。## 转变</p>
 
 <p>了解可用转换的最佳方法是遍历 RStudio中 <code>?transformations</code> 页面中的示例。下面是一些示例。</p>
 
@@ -562,9 +556,7 @@ length(earth)
   image_annotate(&quot;meanwhile in Australia&quot;, size = 20, color = &quot;white&quot;)
 </code></pre>
 
-<p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/gif/126032/1571404528216-39cef120-0102-45f2-90d7-be2cf56a7099.gif#align=left&amp;display=inline&amp;height=200&amp;name=image.gif&amp;originHeight=200&amp;originWidth=200&amp;size=324322&amp;status=done&amp;width=200"><img src="https://qiniu.bioinit.com/yuque/0/2019/gif/126032/1571404528216-39cef120-0102-45f2-90d7-be2cf56a7099.gif#align=left&amp;display=inline&amp;height=200&amp;name=image.gif&amp;originHeight=200&amp;originWidth=200&amp;size=324322&amp;status=done&amp;width=200" alt=""></a></p>
-
-<h3 id="图层">图层</h3>
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/gif/126032/1571404528216-39cef120-0102-45f2-90d7-be2cf56a7099.gif#align=left&amp;display=inline&amp;height=200&amp;name=image.gif&amp;originHeight=200&amp;originWidth=200&amp;size=324322&amp;status=done&amp;width=200" alt="" />### 图层</p>
 
 <p>我们可以像在 Photoshop 中那样，将图层堆叠在一起：</p>
 
@@ -611,9 +603,7 @@ image_info(img)
 <pre><code class="language-r">image_flatten(img, 'Minus')
 </code></pre>
 
-<p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571405462410-4143125d-a04c-4721-9052-51d990f6ac30.png#align=left&amp;display=inline&amp;height=225&amp;name=image.png&amp;originHeight=225&amp;originWidth=300&amp;size=36730&amp;status=done&amp;width=300"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571405462410-4143125d-a04c-4721-9052-51d990f6ac30.png#align=left&amp;display=inline&amp;height=225&amp;name=image.png&amp;originHeight=225&amp;originWidth=300&amp;size=36730&amp;status=done&amp;width=300" alt=""></a></p>
-
-<h3 id="合并">合并</h3>
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571405462410-4143125d-a04c-4721-9052-51d990f6ac30.png#align=left&amp;display=inline&amp;height=225&amp;name=image.png&amp;originHeight=225&amp;originWidth=300&amp;size=36730&amp;status=done&amp;width=300" alt="" />### 合并</p>
 
 <p>Appending 追加意味着将框架彼此相邻放置：</p>
 
@@ -635,9 +625,7 @@ image_info(img)
 image_composite(image_scale(bigdata, &quot;x400&quot;), bigdatafrink, offset = &quot;+180+100&quot;)
 </code></pre>
 
-<p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571405764948-75c0f0fd-8705-4398-97a4-ac569584903a.png#align=left&amp;display=inline&amp;height=400&amp;name=image.png&amp;originHeight=400&amp;originWidth=533&amp;size=431139&amp;status=done&amp;width=533"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571405764948-75c0f0fd-8705-4398-97a4-ac569584903a.png#align=left&amp;display=inline&amp;height=400&amp;name=image.png&amp;originHeight=400&amp;originWidth=533&amp;size=431139&amp;status=done&amp;width=533" alt=""></a></p>
-
-<h3 id="页面">页面</h3>
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571405764948-75c0f0fd-8705-4398-97a4-ac569584903a.png#align=left&amp;display=inline&amp;height=400&amp;name=image.png&amp;originHeight=400&amp;originWidth=533&amp;size=431139&amp;status=done&amp;width=533" alt="" />### 页面</p>
 
 <p>当读取 PDF 文档时，每个页面都成为向量的一个元素。注意，PDF 是在读取时呈现的，因此需要立即指定密度。</p>
 
@@ -686,9 +674,7 @@ image_info(manual)
 <pre><code class="language-r">manual[1]
 </code></pre>
 
-<p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571406026171-f59acaba-02a2-4a3d-ab75-42f645a8658c.png#align=left&amp;display=inline&amp;height=792&amp;name=image.png&amp;originHeight=792&amp;originWidth=612&amp;size=35697&amp;status=done&amp;width=612"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571406026171-f59acaba-02a2-4a3d-ab75-42f645a8658c.png#align=left&amp;display=inline&amp;height=792&amp;name=image.png&amp;originHeight=792&amp;originWidth=612&amp;size=35697&amp;status=done&amp;width=612" alt=""></a></p>
-
-<h3 id="动画">动画</h3>
+<p><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571406026171-f59acaba-02a2-4a3d-ab75-42f645a8658c.png#align=left&amp;display=inline&amp;height=792&amp;name=image.png&amp;originHeight=792&amp;originWidth=612&amp;size=35697&amp;status=done&amp;width=612" alt="" />### 动画</p>
 
 <p>除了将矢量元素视为图层之外，我们还可以将它们制作成动画帧！</p>
 
@@ -855,17 +841,17 @@ print(animation)
 <p>要将其写入文件，您只需执行以下操作：</p>
 
 <pre><code class="language-r">image_write(animation, &quot;gapminder.gif&quot;)
-</code></pre>
+```## 光栅图像
 
-<h2 id="光栅图像">光栅图像</h2>
+Magick 图像也可以转换为光栅对象，来用于 R 的图形设备。因此，我们可以将它与其他图形工具相结合。然而，请注意，R 的图形设备非常慢，且它有一个非常不同的坐标系，它会降低图像的质量。
 
-<p>Magick 图像也可以转换为光栅对象，来用于 R 的图形设备。因此，我们可以将它与其他图形工具相结合。然而，请注意，R 的图形设备非常慢，且它有一个非常不同的坐标系，它会降低图像的质量。</p>
 
-<h3 id="基础格栅">基础格栅</h3>
+### 基础格栅
 
-<p>Base R 有一个 as.raster 格式，它可将图像转换为字符串向量。Paul Murrell 在  <a href="https://journal.r-project.org/archive/2011-1/RJournal_2011-1_Murrell.pdf">Raster Images in R Graphics</a> 一文中给出了一个很好的概述。</p>
+Base R 有一个 as.raster 格式，它可将图像转换为字符串向量。Paul Murrell 在  [Raster Images in R Graphics](https://journal.r-project.org/archive/2011-1/RJournal_2011-1_Murrell.pdf) 一文中给出了一个很好的概述。
 
-<pre><code class="language-r">plot(as.raster(frink))
+```r
+plot(as.raster(frink))
 </code></pre>
 
 <p><a data-fancybox="gallery" href="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571407922083-b20af564-e572-4625-aed6-7548f4d40f34.png#align=left&amp;display=inline&amp;height=960&amp;name=image.png&amp;originHeight=960&amp;originWidth=1344&amp;size=158352&amp;status=done&amp;width=1344"><img src="https://qiniu.bioinit.com/yuque/0/2019/png/126032/1571407922083-b20af564-e572-4625-aed6-7548f4d40f34.png#align=left&amp;display=inline&amp;height=960&amp;name=image.png&amp;originHeight=960&amp;originWidth=1344&amp;size=158352&amp;status=done&amp;width=1344" alt=""></a></p>
@@ -953,13 +939,9 @@ cat(image_ocr(img))
 
 <p>在 RStudio 中，可以将图像打印到控制台后会自动预览，从而形成一个交互式编辑环境。因此，强烈推荐大家在 RStudio 中进行使用和测试。</p>
 
-<p>更多 magick、ImageMagick 相关的 R 语言高级图像处理操作，有兴趣的童鞋可以自行去研究学习，也欢迎大家留言交流。</p>
-
-<blockquote>
-<p><strong>参考资料：</strong></p>
-
-<p><a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html">https://cran.r-project.org/web/packages/magick/vignettes/intro.html</a></p>
-</blockquote>
+<p>更多 magick、ImageMagick 相关的 R 语言高级图像处理操作，有兴趣的童鞋可以自行去研究学习，也欢迎大家留言交流。&gt; <strong>参考资料：</strong>
+&gt;
+&gt; <a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html">https://cran.r-project.org/web/packages/magick/vignettes/intro.html</a></p>
 
 
   <footer>

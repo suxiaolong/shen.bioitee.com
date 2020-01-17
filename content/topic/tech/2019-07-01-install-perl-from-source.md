@@ -15,11 +15,7 @@ Perl 是一种功能丰富的计算机程序语言，运行在超过 100 种计�
 
 ## 1. 源码包下载
 
-在官方网站下载新版本的源码包：[http://www.perl.org/get.html](http://www.perl.org/get.html)，我下载的是 [perl-5.26.1.tar.gz](http://www.cpan.org/src/5.0/perl-5.26.1.tar.gz)。
-
-
-
-## 2. 解压，设置源码
+在官方网站下载新版本的源码包：[http://www.perl.org/get.html](http://www.perl.org/get.html)，我下载的是 [perl-5.26.1.tar.gz](http://www.cpan.org/src/5.0/perl-5.26.1.tar.gz)。## 2. 解压，设置源码
 
 ```bash
 $ tar zvxf perl-5.26.1.tar.gz
@@ -68,11 +64,7 @@ Usage: Configure [-dehrsEKOSV] [-f config.sh] [-D symbol] [-D symbol=value]
 
 # 设置源码
 $ ./Configure -des -Dprefix=/usr/local/software/Perl-5.26 -Dusethreads -Uversiononly
-```
-
-
-
-## 3. 编译安装
+```## 3. 编译安装
 
 ```bash
 $ make
@@ -95,21 +87,13 @@ $ make
 ```bash
 $ make test
 $ make install   # 命令完成后，基本安装就完成了
-```
-
-
-
-## 4. 调整环境变量
+```## 4. 调整环境变量
 
 在 ~/.bashrc 中把 perl 添加到 PATH 中，然后 source ~/.bashrc 刷新。
 
 ```bash
 export PATH="/usr/local/software/Perl-5.26/bin:$PATH"
-```
-
-
-
-## 5. 安装完成
+```## 5. 安装完成
 
 ```bash
 $ perl -version

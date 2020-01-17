@@ -29,11 +29,7 @@ published: true
 
 ![2-galaxyproject-master.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1568266793800-04ac5f39-8799-4aa4-9147-b400fb32c785.png#align=left&display=inline&height=579&name=2-galaxyproject-master.png&originHeight=579&originWidth=914&size=73717&status=done&width=914)
 
-下面我们简单介绍一下，如何同被 fork 的项目保持同步更新，将以 galaxyproject/galaxy 项目为例。
-
-
-
-### fork 同步更新步骤
+下面我们简单介绍一下，如何同被 fork 的项目保持同步更新，将以 galaxyproject/galaxy 项目为例。### fork 同步更新步骤
 
 1. 打开自己的 github 中 fork 的项目，打开 Code 选项卡，点击下面的 **"New pull request"** 创建一个新的 pull 请求；
 

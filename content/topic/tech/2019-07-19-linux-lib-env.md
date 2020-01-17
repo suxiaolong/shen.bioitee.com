@@ -7,11 +7,7 @@ category: 运维
 published: true
 ---
 
-最近这几天在处理集群软件的过程中，遇到各种各样的库和环境变量的问题，被虐的不清！趁此机会，整理了一下 Linux 下静态库、动态库（共享库）和环境变量的一些知识，与大家共享一下。
-
-
-
-# 库的种类
+最近这几天在处理集群软件的过程中，遇到各种各样的库和环境变量的问题，被虐的不清！趁此机会，整理了一下 Linux 下静态库、动态库（共享库）和环境变量的一些知识，与大家共享一下。# 库的种类
 
 Linux 下的库有两种：**静态库**和**动态库**（共享库）。
 
@@ -19,21 +15,13 @@ Linux 下的库有两种：**静态库**和**动态库**（共享库）。
 
 动态库（共享库）的代码是在可执行**程序运行时**才载入内存的，在编译过程中仅简单的引用，因此生成的可执行程序代码体积较小。动态库通常用 `.so` 为后缀， 例如： `libhello.so` 。
 
-为了在同一系统中使用不同版本的库，可以在库文件名后加上版本号为后缀,例如： `libhello.so.1.0` ，由于程序连接默认以 `.so` 为文件后缀名。所以为了使用这些库，通常使用建立符号连接的方式。
-
-
-
-# 库的环境变量
+为了在同一系统中使用不同版本的库，可以在库文件名后加上版本号为后缀,例如： `libhello.so.1.0` ，由于程序连接默认以 `.so` 为文件后缀名。所以为了使用这些库，通常使用建立符号连接的方式。# 库的环境变量
 
 **LIBRARY_PATH**
 环境变量：指定程序静态链接库文件搜索路径。
 
 **LD_LIBRARY_PATH**
-环境变量：指定程序动态链接库文件搜索路径。
-
-
-
-# 库的搜索顺序
+环境变量：指定程序动态链接库文件搜索路径。# 库的搜索顺序
 
 **动态库链接时搜索路径的顺序：**
 
@@ -94,11 +82,7 @@ echo "/etc/profile goes start"
 
 ![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563513885037-271bd3eb-80e8-4d48-b871-387cf23ea70e.png#align=left&display=inline&height=291&name=image.png&originHeight=291&originWidth=723&size=20899&status=done&width=723)
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563514034328-0b7fdc31-638d-4c3a-8681-bce631eac7d4.png#align=left&display=inline&height=456&name=image.png&originHeight=456&originWidth=840&size=51052&status=done&width=840)
-
-
-
-# 常用环境变量
+![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563514034328-0b7fdc31-638d-4c3a-8681-bce631eac7d4.png#align=left&display=inline&height=456&name=image.png&originHeight=456&originWidth=840&size=51052&status=done&width=840)# 常用环境变量
 
 我们可以使用 `env` 命令查看当前用户的所有环境变量设置：
 ```bash
@@ -116,11 +100,7 @@ XDG_RUNTIME_DIR=/run/user/1000
 DISPLAY=localhost:16.0
 HISTTIMEFORMAT=%F %T
 _=/usr/bin/env
-```
-
-
-
-# **用户环境变量常用设置方法**
+```# **用户环境变量常用设置方法**
 
 
 ## 系统级别设置
@@ -131,11 +111,7 @@ _=/usr/bin/env
 
 - /etc/bashrc：
 
-bash shell 全局环境变量。
-
-
-
-## 用户级别设置
+bash shell 全局环境变量。## 用户级别设置
 
 - ~/.bashrc：
 
@@ -146,11 +122,7 @@ shell 的 bash 信息，当登录时以及每次打开新的 shell
 - ~/.bash_profile：
 
 每个用户都可使用该文件输入专用于自己使用的 shell 信息，当用户使用 login
-shell 模式登陆时，该文件仅仅执行一次。
-
-
-
-## **用户临时（当前 shell 对话框）环境变量设置**
+shell 模式登陆时，该文件仅仅执行一次。## **用户临时（当前 shell 对话框）环境变量设置**
 
 export
 命令：用于/bin/bash shell类型

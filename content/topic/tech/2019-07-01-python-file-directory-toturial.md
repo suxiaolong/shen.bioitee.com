@@ -48,11 +48,7 @@ Create and extract ZIP and TAR archives
 
 Open multiple files using the fileinput module
 
----
-
-
-
-# Python 读写数据到文件
+---# Python 读写数据到文件
 
 使用 Python 读取和写入文件数据非常简单。 为此，我们必须首先以适当的模式打开文件。 以下是如何打开文本文件并读取其内容的示例：
 ```python
@@ -69,11 +65,7 @@ with open('data.txt', 'w') as f:
 
 在上面的示例中，`open()` 打开用于读取或写入的文件，并返回文件句柄（在本例中为 `f`），该句柄提供可用于读取或写入文件数据的方法。 更多有关如何读取和写入文件的更多信息，参考：[Working With File I/O in Python ](https://dbader.org/blog/python-file-io)。
 
----
-
-
-
-# 获取目录列表
+---# 获取目录列表
 
 假设您当前的工作目录有一个名为 my_directory 的子目录，其中包含以下内容：
 ```python
