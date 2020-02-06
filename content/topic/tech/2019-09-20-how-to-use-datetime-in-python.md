@@ -305,7 +305,7 @@ from dateutil.relativedelta import *
 
 一种方法是计算天数，然后除以 30 得到月数。但它并不总是正确的，因为有些月份有 31 天。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1568085011856-f1944dbf-86b7-46f2-8b07-e25101a3e496.png#align=left&display=inline&height=175&name=image.png&originHeight=175&originWidth=857&size=11214&status=done&width=857)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1568085011856-f1944dbf-86b7-46f2-8b07-e25101a3e496.png#align=left&display=inline&height=175&name=image.png&originHeight=175&originWidth=857&size=11214&status=done&width=857)
 
 **它是怎么起作用的呢？**
 

@@ -45,7 +45,7 @@ top['menu']=menubar
 top.mainloop()
 ```
 
-![](https://qiniu.bioinit.com/yuque/0/2018/png/126032/1542963148853-7093deb3-357e-4a7d-a42c-8e823a34443a.png#width=390)
+![](https://note.bioitee.com/yuque/0/2018/png/126032/1542963148853-7093deb3-357e-4a7d-a42c-8e823a34443a.png#width=390)
 
 - python3.x中文编码转换的问题，[https://bbs.bccn.net/thread-479560-1-1.html](https://bbs.bccn.net/thread-479560-1-1.html)
 
@@ -78,11 +78,11 @@ Tcl 是"工具控制语言（Tool Control Language）"的缩写。Tk 是 Tcl "�
 
 tkinter 包（"Tk 接口"）是 Tk GUI 工具包的标准 Python 接口。 Tk 和 tkinter 在大多数 Unix 平台以及 Windows 系统上都可用（Tk 本身不是 Python 的一部分，它在 ActiveState 中维护）。您可以通过从命令行运行 `python -m tkinter`来检查 tkinter 是否已正确安装在系统上。如果已经安装该命令会打开一个简单的 Tk 界面，该界面除了让我们知道 tkinter 已正确安装，并且还显示安装了哪个版本的 Tcl/Tk，因此我们可以阅读特定于该版本的 Tcl/Tk 文档。
 
-![](https://qiniu.bioinit.com/yuque/0/2018/png/126032/1543216747804-1a032456-97a6-40d5-a6d8-26df90208753.png#width=348)
+![](https://note.bioitee.com/yuque/0/2018/png/126032/1543216747804-1a032456-97a6-40d5-a6d8-26df90208753.png#width=348)
 
 如果 tkinter 没有安装，则会提示找不到该包（注意在 Python 2 中该包包名为 Tkinter，Python 3 中为 tkinter）：
 
-![](https://qiniu.bioinit.com/yuque/0/2018/png/126032/1543216935547-c6324ffc-7042-4076-82a0-759565c4b258.png#width=687)
+![](https://note.bioitee.com/yuque/0/2018/png/126032/1543216935547-c6324ffc-7042-4076-82a0-759565c4b258.png#width=687)
 
 接下来我们将尝试在 Python 2 中安装 Tcl/Tk，并重新编译 python 2，已完成 Tkinter 安装（tkinter 为 Python 的标准库，标准库的安装需要重新编译 Python ?）。
 # ActiveTcl 安装
@@ -201,11 +201,11 @@ $ sudo yum install libXScrnSaver libXScrnSaver-devel
 
 Python 2 重新编译完后，执行 `python2 -m Tkinter` 显示 Tk 的 ui 界面，以及相应的 Tcl/Tk 版本。
 
-![](https://qiniu.bioinit.com/yuque/0/2018/png/126032/1543220699215-2e7e0388-1f6e-46b2-b6ec-4688460a1d3d.png#width=516)
+![](https://note.bioitee.com/yuque/0/2018/png/126032/1543220699215-2e7e0388-1f6e-46b2-b6ec-4688460a1d3d.png#width=516)
 
 这时候，我们重新运行开头的 GUI 界面程序，可以看到中文已经正常显示：
 
-![](https://qiniu.bioinit.com/yuque/0/2018/png/126032/1543220938974-7d71cd19-ca4a-433c-ae27-8557c98b75d2.png#width=418)
+![](https://note.bioitee.com/yuque/0/2018/png/126032/1543220938974-7d71cd19-ca4a-433c-ae27-8557c98b75d2.png#width=418)
 
 ---# 参考资料
 

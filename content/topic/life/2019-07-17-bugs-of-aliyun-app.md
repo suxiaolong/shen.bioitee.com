@@ -20,7 +20,7 @@ Android 只会在每次启动的时候扫描系统相册，并将扫描到的信
 
 后来，向阿里云反馈也的确证实了该问题：
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563344876240-5828f914-7c3b-47b0-8a98-ee866bdfc41c.png#align=left&display=inline&height=220&originHeight=220&originWidth=721&size=0&status=done&width=721)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1563344876240-5828f914-7c3b-47b0-8a98-ee866bdfc41c.png#align=left&display=inline&height=220&originHeight=220&originWidth=721&size=0&status=done&width=721)
 
 虽然本人对 Android 开发完全不懂， 但也想了解一下，在 Android 手机中下载图片怎么样才能实时刷新系统相册呢？
 

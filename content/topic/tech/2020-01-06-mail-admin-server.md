@@ -25,25 +25,25 @@ Galaxy 收发邮件的核心代码主要位于以下两个程序，其核心模�
 
 首先，在打开的 QQ 邮箱中,进入**"设置"。**
 
-**![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578292378668-8948f35d-2b3e-4afd-b944-c127f2f50a57.png#align=left&display=inline&height=195&name=image.png&originHeight=195&originWidth=821&size=24711&status=done&style=none&width=821)**第二，在邮箱设置界面,打开**“帐户”**。
+**![](https://note.bioitee.com/yuque/0/2020/png/126032/1578292378668-8948f35d-2b3e-4afd-b944-c127f2f50a57.png#align=left&display=inline&height=195&name=image.png&originHeight=195&originWidth=821&size=24711&status=done&style=none&width=821)**第二，在邮箱设置界面,打开**“帐户”**。
 
-![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578292437426-d3419a60-6375-4c0d-9862-660f3c69da2c.png#align=left&display=inline&height=349&name=image.png&originHeight=349&originWidth=972&size=39686&status=done&style=none&width=972)
+![](https://note.bioitee.com/yuque/0/2020/png/126032/1578292437426-d3419a60-6375-4c0d-9862-660f3c69da2c.png#align=left&display=inline&height=349&name=image.png&originHeight=349&originWidth=972&size=39686&status=done&style=none&width=972)
 
 第三，往下找到 POP3/IMAP/...服务,点击 POP3/SMTP 所在行，右侧的**“开启”**。
 
-![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578292851877-236be38e-d100-4d3f-9d8f-b13fed0163a2.png#align=left&display=inline&height=291&name=image.png&originHeight=291&originWidth=828&size=31265&status=done&style=none&width=828)
+![](https://note.bioitee.com/yuque/0/2020/png/126032/1578292851877-236be38e-d100-4d3f-9d8f-b13fed0163a2.png#align=left&display=inline&height=291&name=image.png&originHeight=291&originWidth=828&size=31265&status=done&style=none&width=828)
 
 如果是第一次开启 POP3/SMTP 这时系统会要求通过密保手机发送一条特别内容的短信，待手机上短信发送完成后，点击**“我已发送”**。
 
-![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578292906922-11102102-5128-40f9-ace9-f365be6daeb5.png#align=left&display=inline&height=405&name=image.png&originHeight=405&originWidth=825&size=47215&status=done&style=none&width=825)
+![](https://note.bioitee.com/yuque/0/2020/png/126032/1578292906922-11102102-5128-40f9-ace9-f365be6daeb5.png#align=left&display=inline&height=405&name=image.png&originHeight=405&originWidth=825&size=47215&status=done&style=none&width=825)
 
 这样就可以得到 POP3/SMTP 服务的授权码了。
 
-![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578293068784-4958f676-2517-4dbb-b4c4-c66c20f45fc7.png#align=left&display=inline&height=433&name=image.png&originHeight=433&originWidth=888&size=56881&status=done&style=none&width=888)
+![](https://note.bioitee.com/yuque/0/2020/png/126032/1578293068784-4958f676-2517-4dbb-b4c4-c66c20f45fc7.png#align=left&display=inline&height=433&name=image.png&originHeight=433&originWidth=888&size=56881&status=done&style=none&width=888)
 
 回到上页，可以看到 POP3/SMTP 服务已经处于开启状态。同样的，如果忘记了授权码，可以点击温馨提示中"生成授权码"的链接重新再次生成。
 
-![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578293143597-dff55415-2710-4e96-8765-f2afbd3341f3.png#align=left&display=inline&height=331&name=image.png&originHeight=331&originWidth=881&size=40621&status=done&style=none&width=881)
+![](https://note.bioitee.com/yuque/0/2020/png/126032/1578293143597-dff55415-2710-4e96-8765-f2afbd3341f3.png#align=left&display=inline&height=331&name=image.png&originHeight=331&originWidth=881&size=40621&status=done&style=none&width=881)
 
 
 SMTP 服务和授权码都有了，接下来我们要基于 python3 的 **email **和 **smtplib **库实现一个简单的发邮件功能。
@@ -83,7 +83,7 @@ smtp.sendmail(sender_mail, receiver, msg.as_string())
 smtp.quit()
 ```
 
-![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578294621933-2d5f314d-f0eb-4529-a606-fa4895911c9d.png#align=left&display=inline&height=325&name=image.png&originHeight=325&originWidth=684&size=26483&status=done&style=none&width=684)
+![](https://note.bioitee.com/yuque/0/2020/png/126032/1578294621933-2d5f314d-f0eb-4529-a606-fa4895911c9d.png#align=left&display=inline&height=325&name=image.png&originHeight=325&originWidth=684&size=26483&status=done&style=none&width=684)
 ## 3. 配置 Galaxy 邮件服务
 
 有了上一步 python 发送邮件的经验，接下来我们只需要修改一下 Galaxy 的主配置文件 config/galaxy.yml 即可：
@@ -119,14 +119,14 @@ galaxy:
 ```
  
 
-![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578300288534-b06fda6b-f5fe-442b-a90e-c5e957f27a87.png#align=left&display=inline&height=689&name=image.png&originHeight=689&originWidth=1006&size=107517&status=done&style=none&width=1006)## 5. 一些测试
+![](https://note.bioitee.com/yuque/0/2020/png/126032/1578300288534-b06fda6b-f5fe-442b-a90e-c5e957f27a87.png#align=left&display=inline&height=689&name=image.png&originHeight=689&originWidth=1006&size=107517&status=done&style=none&width=1006)## 5. 一些测试
 
 配置好了 Galaxy 邮箱服务，我们来测试一下注册激活验证和重置密码。
 
-![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578303073127-101150dd-d70f-4d1f-a844-a58806a773c4.png#align=left&display=inline&height=397&name=image.png&originHeight=397&originWidth=1006&size=68346&status=done&style=none&width=1006)
+![](https://note.bioitee.com/yuque/0/2020/png/126032/1578303073127-101150dd-d70f-4d1f-a844-a58806a773c4.png#align=left&display=inline&height=397&name=image.png&originHeight=397&originWidth=1006&size=68346&status=done&style=none&width=1006)
 
-![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578303049973-dafe5e6b-8b45-4dd9-a517-4cd1dd82c978.png#align=left&display=inline&height=394&name=image.png&originHeight=394&originWidth=977&size=47011&status=done&style=none&width=977)
+![](https://note.bioitee.com/yuque/0/2020/png/126032/1578303049973-dafe5e6b-8b45-4dd9-a517-4cd1dd82c978.png#align=left&display=inline&height=394&name=image.png&originHeight=394&originWidth=977&size=47011&status=done&style=none&width=977)
 
-![](https://qiniu.bioinit.com/yuque/0/2020/png/126032/1578303303678-1b26f86f-7743-4ee9-a75a-014a19c139bb.png#align=left&display=inline&height=347&name=image.png&originHeight=347&originWidth=994&size=37096&status=done&style=none&width=994)
+![](https://note.bioitee.com/yuque/0/2020/png/126032/1578303303678-1b26f86f-7743-4ee9-a75a-014a19c139bb.png#align=left&display=inline&height=347&name=image.png&originHeight=347&originWidth=994&size=37096&status=done&style=none&width=994)
 
 到这里，Galaxy 的邮件服务和管理员设置就完成了，如果想要更改 Galaxy 默认的邮件内容，可以仔细去研究一下它的源码。最后总结一句，就是，QQ 域名邮箱的本质还是 QQ 邮箱，因此，它收发邮箱的服务器设置依然是 qq.com。

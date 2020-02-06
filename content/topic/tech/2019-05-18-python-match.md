@@ -19,7 +19,7 @@ published: true
 
 下图展示了使用正则表达式进行匹配的流程：
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1558183748458-b30abed3-8df3-4b3a-af8a-6384f7ee1b22.png#align=left&display=inline&height=177&originHeight=177&originWidth=431&size=0&status=done&width=431)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1558183748458-b30abed3-8df3-4b3a-af8a-6384f7ee1b22.png#align=left&display=inline&height=177&originHeight=177&originWidth=431&size=0&status=done&width=431)
 
 正则表达式的大致匹配过程是：依次拿出表达式和文本中的字符比较，如果每一个字符都能匹配，则匹配成功；一旦有匹配不成功的字符则匹配失败。
 

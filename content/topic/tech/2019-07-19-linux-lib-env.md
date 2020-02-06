@@ -46,7 +46,7 @@ Linux 下的库有两种：**静态库**和**动态库**（共享库）。
 
 正常登录配置文件顺序加载过程，所谓正常登录指用户通过输入用户名和密码登录的状态。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1566551259962-56a823c2-f6f6-4e64-bd75-4dc0e27f4e28.png#align=left&display=inline&height=244&name=image.png&originHeight=244&originWidth=845&size=19821&status=done&width=845)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1566551259962-56a823c2-f6f6-4e64-bd75-4dc0e27f4e28.png#align=left&display=inline&height=244&name=image.png&originHeight=244&originWidth=845&size=19821&status=done&width=845)
 
 在 CentOS 7，我们测试一下：
 ```bash
@@ -75,14 +75,14 @@ echo "/etc/profile goes start"
 
 重新登录终端，可以看到各个环境变量文件的启动顺序：
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563507266576-43dcd960-e475-4305-80d6-1c81b023ab4d.png#align=left&display=inline&height=327&name=image.png&originHeight=327&originWidth=772&size=42121&status=done&width=772)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1563507266576-43dcd960-e475-4305-80d6-1c81b023ab4d.png#align=left&display=inline&height=327&name=image.png&originHeight=327&originWidth=772&size=42121&status=done&width=772)
 
 
 当我们不正常启动（su 命令切换用户），环境变量文件加载顺序如下：
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563513885037-271bd3eb-80e8-4d48-b871-387cf23ea70e.png#align=left&display=inline&height=291&name=image.png&originHeight=291&originWidth=723&size=20899&status=done&width=723)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1563513885037-271bd3eb-80e8-4d48-b871-387cf23ea70e.png#align=left&display=inline&height=291&name=image.png&originHeight=291&originWidth=723&size=20899&status=done&width=723)
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563514034328-0b7fdc31-638d-4c3a-8681-bce631eac7d4.png#align=left&display=inline&height=456&name=image.png&originHeight=456&originWidth=840&size=51052&status=done&width=840)# 常用环境变量
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1563514034328-0b7fdc31-638d-4c3a-8681-bce631eac7d4.png#align=left&display=inline&height=456&name=image.png&originHeight=456&originWidth=840&size=51052&status=done&width=840)# 常用环境变量
 
 我们可以使用 `env` 命令查看当前用户的所有环境变量设置：
 ```bash

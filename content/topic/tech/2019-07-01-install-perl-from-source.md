@@ -144,34 +144,34 @@ windows 下的 Perl 安装推荐使用 ActivePerl（[https://www.activestate.com
 
 ActivePerl-5.26.3.2603-MSWin32-x64-a95bce075.exe 安装包下载完后，我们直接点击进行安装。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1556700512724-bb805074-52d4-4307-be9e-0d8ac20c8b3a.png#align=left&display=inline&height=394&name=image.png&originHeight=394&originWidth=504&size=60550&status=done&width=504)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1556700512724-bb805074-52d4-4307-be9e-0d8ac20c8b3a.png#align=left&display=inline&height=394&name=image.png&originHeight=394&originWidth=504&size=60550&status=done&width=504)
 
 选择 "Custom" 自定义安装：
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1556700665868-7793ac41-e803-4243-9ece-02fbea5844e1.png#align=left&display=inline&height=398&name=image.png&originHeight=398&originWidth=511&size=47129&status=done&width=511)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1556700665868-7793ac41-e803-4243-9ece-02fbea5844e1.png#align=left&display=inline&height=398&name=image.png&originHeight=398&originWidth=511&size=47129&status=done&width=511)
 
 自定义安装路径：
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1556700921091-6a049d3f-5592-46f5-9c88-df904daafb84.png#align=left&display=inline&height=401&name=image.png&originHeight=401&originWidth=512&size=43927&status=done&width=512)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1556700921091-6a049d3f-5592-46f5-9c88-df904daafb84.png#align=left&display=inline&height=401&name=image.png&originHeight=401&originWidth=512&size=43927&status=done&width=512)
 
 把 Perl 添加到系统环境变量：
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1556700957932-1b87240b-d4c1-4978-ba29-61121e3cf316.png#align=left&display=inline&height=402&name=image.png&originHeight=402&originWidth=512&size=27876&status=done&width=512)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1556700957932-1b87240b-d4c1-4978-ba29-61121e3cf316.png#align=left&display=inline&height=402&name=image.png&originHeight=402&originWidth=512&size=27876&status=done&width=512)
 
 Perl 安装完成后，我们在 DOC 命令行输入 perl -V，可以看到详细的相关信息：
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1556701474909-059552ea-d6bf-46d3-8241-c8d97115d471.png#align=left&display=inline&height=597&name=image.png&originHeight=597&originWidth=725&size=91064&status=done&width=725)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1556701474909-059552ea-d6bf-46d3-8241-c8d97115d471.png#align=left&display=inline&height=597&name=image.png&originHeight=597&originWidth=725&size=91064&status=done&width=725)
 
 如果我们在安装过程中没有勾选把 Perl 添加到系统环境变量，DOC 中直接执行 perl -V 会出现""提示，这时候我们需要手动把 perl 添加到 Windows 的系统环境变量中就可以了。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1556701347137-15b268b6-17fa-455a-878f-adca0ebf9804.png#align=left&display=inline&height=601&name=image.png&originHeight=601&originWidth=852&size=191508&status=done&width=852)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1556701347137-15b268b6-17fa-455a-878f-adca0ebf9804.png#align=left&display=inline&height=601&name=image.png&originHeight=601&originWidth=852&size=191508&status=done&width=852)
 
 
 ## 2.3 配置cpan
 
 为了更好对 Perl 进行扩展，方便以后的模块安装，我们最好配置一下 cpan。ActivePerl 有个好处就是在初始化 cpan 的时候会自动把 dmake、gcc、g++、mingw32-make 等 windows 常用的编译工具一起安装到 "**$Dprefix/site/bin**" 目录下，免去了我们手动安装这些编译器的各种麻烦。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1556702232382-4f856e00-21e8-408e-8cb3-a4023f83ae58.png#align=left&display=inline&height=713&name=image.png&originHeight=713&originWidth=729&size=134813&status=done&width=729)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1556702232382-4f856e00-21e8-408e-8cb3-a4023f83ae58.png#align=left&display=inline&height=713&name=image.png&originHeight=713&originWidth=729&size=134813&status=done&width=729)
 
 
 ## 2.4 安装完成

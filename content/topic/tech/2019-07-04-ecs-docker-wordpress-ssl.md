@@ -124,7 +124,7 @@ server {
 
 登入阿里域名解析：https://netcn.console.aliyun.com/core/domain/list，点击相应域名的 "解析" 链接，根据提示添加域名的 A 记录，解析到你的服务器 ip 下。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255882-d5b2c908-7053-4474-bd71-4aa011f41e6b.png#align=left&display=inline&height=384&originHeight=384&originWidth=713&size=0&status=done&width=713#align=left&display=inline&height=384&originHeight=384&originWidth=713&status=done&width=713)## 5.5 安装 wordpress
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1559373255882-d5b2c908-7053-4474-bd71-4aa011f41e6b.png#align=left&display=inline&height=384&originHeight=384&originWidth=713&size=0&status=done&width=713#align=left&display=inline&height=384&originHeight=384&originWidth=713&status=done&width=713)## 5.5 安装 wordpress
 
 添加完域名解析后，打开浏览器，输入 http://youdomain.com，然后就可以看到 WordPress 了。按照提示输入用户名等信息，然后安装 WordPress。等到它提示安装完成，那么 WordPress 的安装就算大功告成了。
 # 6. 安装 SSL 证书开启 https 访问
@@ -134,11 +134,11 @@ server {
 
 登入阿里域名解析：https://netcn.console.aliyun.com/core/domain/list，点击相应域名的 "SSL证书" 链接，设置单域名免费证书。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255815-7ac27782-8249-43a6-9e7d-98a053b6eee2.png#align=left&display=inline&height=336&originHeight=336&originWidth=729&size=0&status=done&width=729#align=left&display=inline&height=336&originHeight=336&originWidth=729&status=done&width=729)## 6.2 SSL 证书下载
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1559373255815-7ac27782-8249-43a6-9e7d-98a053b6eee2.png#align=left&display=inline&height=336&originHeight=336&originWidth=729&size=0&status=done&width=729#align=left&display=inline&height=336&originHeight=336&originWidth=729&status=done&width=729)## 6.2 SSL 证书下载
 
 单域名免费证书提交申请后，一般十分钟就会审批下来。这时候，我们登陆 "[CA证书服务（数据安全）](https://yundun.console.aliyun.com/?spm=5176.2020520163.aliyun_sidebar.24.4eb62b7auFTPPK&p=cas#/cas/home)"，在 "我的订单" 中找到已经签发的域名证书，点击 "下载" 链接，通过 "下载证书for Nginx" 下载证书。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255775-88b7ae35-3ef8-4737-a5c4-ff1997f36fa2.png#align=left&display=inline&height=453&originHeight=453&originWidth=835&size=0&status=done&width=835#align=left&display=inline&height=453&originHeight=453&originWidth=835&status=done&width=835)## 6.3 SSL 证书安装
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1559373255775-88b7ae35-3ef8-4737-a5c4-ff1997f36fa2.png#align=left&display=inline&height=453&originHeight=453&originWidth=835&size=0&status=done&width=835#align=left&display=inline&height=453&originHeight=453&originWidth=835&status=done&width=835)## 6.3 SSL 证书安装
 
 ( 1 ) 在 Nginx 的安装目录下创建 cert 目录，并且将下载的全部文件拷贝到 cert 目录中。
 
@@ -225,7 +225,7 @@ https://wordpress.org/plugins/really-simple-ssl/
 
 或者登陆 wordpress 后台，在"设置"→ "常规" 中设置 "WordPress地址（URL）" 和 "站点地址（URL）"为 https 链接地址。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373255781-a5c5bd01-df19-43a5-869d-bb1b54e0bfc3.png#align=left&display=inline&height=188&originHeight=188&originWidth=971&size=0&status=done&width=971#align=left&display=inline&height=188&originHeight=188&originWidth=971&status=done&width=971)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1559373255781-a5c5bd01-df19-43a5-869d-bb1b54e0bfc3.png#align=left&display=inline&height=188&originHeight=188&originWidth=971&size=0&status=done&width=971#align=left&display=inline&height=188&originHeight=188&originWidth=971&status=done&width=971)
 
 至此，真正意义上解决 wordpress 全站开启 https 的 ssl 证书问题。
 # 7. 填坑总结## 7.1. 更换域名无法登陆后台

@@ -54,6 +54,6 @@ $(window).load(function() {
 
 相比 FlexSlider，也有人会选择使用 Raxus Slider，从代码简洁性上而言，后者能用更少的代码实现同样的效果；不同的是，FlexSlider 是开源免费的，而 Raxus Slider是付费的。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1565168362478-c1dbae85-6549-4266-85af-8af5c136afba.png#align=left&display=inline&height=468&name=image.png&originHeight=468&originWidth=1024&size=190757&status=done&width=1024)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1565168362478-c1dbae85-6549-4266-85af-8af5c136afba.png#align=left&display=inline&height=468&name=image.png&originHeight=468&originWidth=1024&size=190757&status=done&width=1024)
 
 

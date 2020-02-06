@@ -70,7 +70,7 @@ $ jupyter notebook --ip=0.0.0.0 --port=9000
 
 如果在启动过程中出现：OSError: [Errno 99] Cannot assign requested address，请参考下面的方法解决。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563351248558-4c343f89-968f-4a50-aade-c227b3f70b77.png#align=left&display=inline&height=322&originHeight=322&originWidth=937&size=0&status=done&width=937)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1563351248558-4c343f89-968f-4a50-aade-c227b3f70b77.png#align=left&display=inline&height=322&originHeight=322&originWidth=937&size=0&status=done&width=937)
 
 **解决：**运行 Jupyter 时增加 `--ip=0.0.0.0` 参数。
 ```
@@ -79,7 +79,7 @@ jupyter notebook --ip=0.0.0.0 --no-browser --allow-root
 
 配置 nginx 前需要把你已经申请的域名跟 Jupyter Notebook 的服务器 ip 进行绑定解析。打开阿里云域名管理，增加 A 记录解析：
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563334760254-00323543-edb8-4b95-8d6a-fb88595aef5a.png#align=left&display=inline&height=398&originHeight=398&originWidth=736&size=0&status=done&width=736)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1563334760254-00323543-edb8-4b95-8d6a-fb88595aef5a.png#align=left&display=inline&height=398&originHeight=398&originWidth=736&size=0&status=done&width=736)
 
 
 ## 5. 配置 nginx
@@ -137,7 +137,7 @@ server{
 
 至此，大功告成，打开你的网址 **xxx.xxx.com** 是不是可以看到熟悉的 jupyter 了呢？如有疑问，欢迎留言讨论。
 
-![jupyter_server.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563341527122-326cddb2-b2b2-4ccf-8b01-f2c03cca27e2.png#align=left&display=inline&height=577&name=jupyter_server.png&originHeight=577&originWidth=829&size=27393&status=done&width=829)
+![jupyter_server.png](https://note.bioitee.com/yuque/0/2019/png/126032/1563341527122-326cddb2-b2b2-4ccf-8b01-f2c03cca27e2.png#align=left&display=inline&height=577&name=jupyter_server.png&originHeight=577&originWidth=829&size=27393&status=done&width=829)
 
 以上就是远程 Jupter Notebook 服务安装与配置的全部内容，下一篇我们介绍一下如何在  Jupyter Notebook  中使用不同内核（Kernel）实现支持包括 python2、python3、R 在的多种不同编程环境。## 6. 其他问题
 

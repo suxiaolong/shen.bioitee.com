@@ -59,7 +59,7 @@ ipython kernel install --user
 - IPython kernel spec 安装可以使用 `python -m ipykernel install` ，也可以使用 `ipython-kernel-install`  命令，两者是一样的。
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563351954924-9deae7b8-600e-423f-9fce-497337ef6696.png#align=left&display=inline&height=388&originHeight=388&originWidth=626&size=0&status=done&width=626)## 实战
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1563351954924-9deae7b8-600e-423f-9fce-497337ef6696.png#align=left&display=inline&height=388&originHeight=388&originWidth=626&size=0&status=done&width=626)## 实战
 
 使用 `--prefix` 指定 IPython kernel spec 安装路径：
 ```
@@ -91,7 +91,7 @@ Available kernels:
   python3    /Bio/Anaconda2.5/share/jupyter/kernels/python3
 ```
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563351954918-bad06ed0-2a67-494a-84a5-0a9e07a064be.png#align=left&display=inline&height=326&originHeight=326&originWidth=596&size=0&status=done&width=596)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1563351954918-bad06ed0-2a67-494a-84a5-0a9e07a064be.png#align=left&display=inline&height=326&originHeight=326&originWidth=596&size=0&status=done&width=596)
 
 1. 在 python2 和 python3 环境中分别安装 ipykernel。
 1. 手动为当前用户( `--user`  )，或者指定路径( ` --prefix`  )安装 IPython kernel spec。其中 ` --user` 与 `--prefix` 不能同时使用。

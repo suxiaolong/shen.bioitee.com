@@ -13,7 +13,7 @@ published: true
 
 **原文：**[https://www.dataschool.io/cloud-services-for-jupyter-notebook/](https://www.dataschool.io/cloud-services-for-jupyter-notebook/)
 
-![1_oj36TMqOkHmi6u3kCSsr7Q.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1561014512583-882c390f-13af-4823-821e-1f8f991ab433.png#align=left&display=inline&height=615&name=1_oj36TMqOkHmi6u3kCSsr7Q.png&originHeight=615&originWidth=999&size=64145&status=done&width=999)
+![1_oj36TMqOkHmi6u3kCSsr7Q.png](https://note.bioitee.com/yuque/0/2019/png/126032/1561014512583-882c390f-13af-4823-821e-1f8f991ab433.png#align=left&display=inline&height=615&name=1_oj36TMqOkHmi6u3kCSsr7Q.png&originHeight=615&originWidth=999&size=64145&status=done&width=999)
 
 有许多方法可以与其他人共享静态 Jupyter 笔记本，例如把它发布在 GitHub 上或通过 nbviewer 链接进行分享。 但是，如果接收人已经安装了 Jupyter Notebook 环境，那么他们只能通过笔记本文件进行交互。
 
@@ -45,7 +45,7 @@ published: true
 - **性能升级：** 您是否可以为此服务付费以获取更多计算资源？
 - **文档和技术支持：** 该服务是否有详细记录？ 如果遇到问题，你可以与某人取得联系吗？## 1. Binder
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092377-90245040-4088-45c2-9dff-1bcfb01c6d1a.png#align=left&display=inline&height=586&originHeight=586&originWidth=746&size=0&status=done&width=746)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562212092377-90245040-4088-45c2-9dff-1bcfb01c6d1a.png#align=left&display=inline&height=586&originHeight=586&originWidth=746&size=0&status=done&width=746)
 
 [Binde](https://mybinder.org/)r 是 Binder 项目提供的服务，它是 Project Jupyter 开源生态系统的一员。它允许您输入任何公共 Git 存储库的 URL，它将在本机的 Jupyter Notebook 界面中打开该存储库。您可以在存储库中运行任何笔记本，但您所做的任何更改都不会保存回存储库。您不必使用 Binder 创建帐户，也不需要是存储库的所有者，但你所使用的存储库必须包含指定其软件包要求的配置文件。
 
@@ -97,7 +97,7 @@ Binder 有大量[文档](https://mybinder.readthedocs.io/en/latest/)。它通过
 
 如果您的笔记本已经存储在公共 GitHub 中，Binder 是让其他人与它们进行交互的最简单方法。用户不必创建帐户，如果他们已经知道如何使用 Jupyter Notebook，他们会感到宾至如归。但是，您需要牢记 Binder 的性能限制和用户限制！## 2. Kaggle Kernels
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092440-e46cb2ef-d051-46aa-811b-a57c91035a31.png#align=left&display=inline&height=586&originHeight=586&originWidth=746&size=0&status=done&width=746)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562212092440-e46cb2ef-d051-46aa-811b-a57c91035a31.png#align=left&display=inline&height=586&originHeight=586&originWidth=746&size=0&status=done&width=746)
 
 [Kaggle](https://www.kaggle.com/) 是最着名的数据科学竞赛平台。但是，他们还提供可以独立于竞争对手使用，名为 [Kernels](https://www.kaggle.com/kernels) 的免费服务。创建 Kaggle 帐户（或使用 Google 或 Facebook 登录）后，您可以创建一个使用笔记本或脚本界面的内核，但我更专注于下面提到的的笔记本界面信息。
 
@@ -151,7 +151,7 @@ Kaggle** **预先安装了数百个软件包，您可以使用 pip 或通过指
 
 只要您对稍微混乱的界面（在重新设计中已得到改进）感到满意，您就可以访问高性能环境，在该环境中可以轻松使用数据集并公开分享您的工作 （或保持私密）。Kaggle 包含的版本控制和协作功能也是很好的功能补充，但两者都不是功能很齐全。## 3. Google Colaboratory (Colab)
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092472-b9efd4a2-5e77-4631-b257-f3caf130a36d.png#align=left&display=inline&height=583&originHeight=583&originWidth=746&size=0&status=done&width=746)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562212092472-b9efd4a2-5e77-4631-b257-f3caf130a36d.png#align=left&display=inline&height=583&originHeight=583&originWidth=746&size=0&status=done&width=746)
 
 [Google Colaboratory](https://colab.research.google.com/)，通常称为"Google Colab"，适用于拥有 Google 帐户的任何人。只要您已登录 Google，就可以快速开始创建空笔记本，上传现有笔记本或从任何公共 GitHub 存储库导入笔记本。您的 Colab 笔记本会自动保存 在Google 云端硬盘中的特殊文件夹中，您甚至可以直接从云端硬盘创建新笔记本。
 
@@ -219,7 +219,7 @@ Colab 拥有很少的文档，这些文档都包含在 [FAQ 页面](https://res
 
 Colab 的最大优势在于它易于上手，因为大多数人已经拥有 Google 帐户，并且共享笔记本很容易，因为共享功能与 Google Docs 相同。然而，繁琐的键盘快捷键和使用数据集的困难是显著的缺点。在同一笔记本上进行协作的能力很有用，但由于您没有共享环境，因此协作能力的作用也会有所降低。## 4. Microsoft Azure Notebooks
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092289-14f579c6-072e-45ab-be67-7dd87bb76b59.png#align=left&display=inline&height=588&originHeight=588&originWidth=746&size=0&status=done&width=746)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562212092289-14f579c6-072e-45ab-be67-7dd87bb76b59.png#align=left&display=inline&height=588&originHeight=588&originWidth=746&size=0&status=done&width=746)
 
 要开始使用 [Azure 笔记本](https://notebooks.azure.com/)，请先使用 Microsoft 或 Outlook 帐户登录（或创建一个帐户）。然后是创建一个 "项目"，其结构与 GitHub 存储库相同：它可以包含一个或多个笔记本、Markdown 文件、数据集以及您要创建或上传的任何其他文件，所有这些都可以组织到文件夹中。与 GitHub 一样，您可以使用 README 文件初始化项目，该文件将自动显示在项目页面上。如果您的工作已存储在 GitHub 上，则可以将整个存储库直接导入到项目中。
 
@@ -274,7 +274,7 @@ Azure 提供了大量的[文档](https://docs.microsoft.com/en-us/azure/notebook
 
 Azure Notebooks 的最大优势在于它的易用性：项目结构（从 GitHub 借用）使得使用多个笔记本和数据集变得简单，并且使用原生 Jupyter 界面意味着现有的 Jupyter 用户将拥有一个简单的过渡。但是，RAM 和磁盘空间并不是特别慷慨，缺乏协作是功能上的一个巨大差距。## 5. CoCalc
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092694-f4d33ad5-1ca8-4c4e-8a5b-94ce251a8144.png#align=left&display=inline&height=588&originHeight=588&originWidth=746&size=0&status=done&width=746)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562212092694-f4d33ad5-1ca8-4c4e-8a5b-94ce251a8144.png#align=left&display=inline&height=588&originHeight=588&originWidth=746&size=0&status=done&width=746)
 
 [CoCalc](https://cocalc.com/)，是 "collaborative calculation" 的缩写，是用于 Python，R，Julia 和许多其他语言计算的在线工作空间。 它允许您创建和编辑 Jupyter 笔记本，Sage 工作表和 LaTeX 文档。创建 CoCalc 帐户后，第一步是创建一个 "项目"，其中可以包含一个或多个笔记本、Markdown 文件、数据集以及您要创建或上传的任何其他文件，并且所有这些文件都可以组织到文件夹中。项目界面起初有点让人应接不暇，但是一旦你创建或打开笔记本，它看起来就会更加熟悉。
 
@@ -334,7 +334,7 @@ CoCalc 拥有[大量文档](https://doc.cocalc.com/)。用户可通过电子邮�
 
 使用 CoCalc 的最有吸引力是它的实时协作和 "time travel" 版本控制功能，以及课程管理功能（如果您是教练）。 虽然界面有点混乱，但现有的 Jupyter 用户可以相对轻松地过渡到 CoCalc。但是，免费计划确实存在一些重要的限制（无法安装其他软件包或访问 Internet），另外，免费计划的性能也不高。## 6. Datalore
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092356-94a5aab3-a5c7-46a9-b2a8-db8d26c5b4c8.png#align=left&display=inline&height=587&originHeight=587&originWidth=746&size=0&status=done&width=746)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562212092356-94a5aab3-a5c7-46a9-b2a8-db8d26c5b4c8.png#align=left&display=inline&height=587&originHeight=587&originWidth=746&size=0&status=done&width=746)
 
 [Datalore](https://datalore.io/) 是由 JetBrains，一个制作 PyCharm（一种流行的 Python IDE）的公司创建的。它的入门就像创建帐户或使用 Google 或 JetBrains 帐户登录一样简单。您可以创建新的 Datalore "工作簿(workbook)" 或上传现有的 Jupyter Notebook。 Datalore 工作簿以专有格式存储，但它支持导入和导出标准 `.ipynb` 文件格式。
 
@@ -479,4 +479,4 @@ Kernels 和 Colab 都可以免费访问 GPU。 Azure 访问和（很快）Datalo
 
 话虽如此，这些服务也在不断变化，而且未来可能会有一些信息过时。如果您认为本文中的内容不再正确，请在下面留言，我很乐意考虑更新该文章。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562212092205-466d65de-bb0e-4444-a0b0-31d753aabaaf.png#align=left&display=inline&height=500&originHeight=500&originWidth=900&size=0&status=done&width=900)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562212092205-466d65de-bb0e-4444-a0b0-31d753aabaaf.png#align=left&display=inline&height=500&originHeight=500&originWidth=900&size=0&status=done&width=900)

@@ -9,7 +9,7 @@ published: true
 
 在 bioconductor 的官网里面可以查找到 "**OrgDb**" 的包大约有 20 个，基本上跨越了我们生物信息分析中最常用的物种啦！
 
-![Bioconductor-BiocViews.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1574738466531-b38e6d4d-03c3-449f-bdf2-a2660e28c373.png#align=left&display=inline&height=926&name=Bioconductor-BiocViews.png&originHeight=926&originWidth=621&size=93293&status=done&width=621)
+![Bioconductor-BiocViews.png](https://note.bioitee.com/yuque/0/2019/png/126032/1574738466531-b38e6d4d-03c3-449f-bdf2-a2660e28c373.png#align=left&display=inline&height=926&name=Bioconductor-BiocViews.png&originHeight=926&originWidth=621&size=93293&status=done&width=621)
 
 完整链接：[`http://bioconductor.org/packages/release/BiocViews.html#___OrgDb`](http://bioconductor.org/packages/release/BiocViews.html#___OrgDb)
 

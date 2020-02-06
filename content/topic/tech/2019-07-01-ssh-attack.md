@@ -17,7 +17,7 @@ published: true
 
 `last` 查看的是 /var/log/wtmp 中的内容，而  /var/log/wtmp 也是一个二进制的文件；
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1558494813715-1f830322-dafc-423d-9bf6-8c0c1923ddb3.png#align=left&display=inline&height=517&name=image.png&originHeight=517&originWidth=706&size=78294&status=done&width=706#align=left&display=inline&height=517&originHeight=517&originWidth=706&status=done&width=706)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1558494813715-1f830322-dafc-423d-9bf6-8c0c1923ddb3.png#align=left&display=inline&height=517&name=image.png&originHeight=517&originWidth=706&size=78294&status=done&width=706#align=left&display=inline&height=517&originHeight=517&originWidth=706&status=done&width=706)
 
 东北大学收集的发动 SSH 攻击的 IP 地址列表：[http://antivirus.neu.edu.cn/scan/ssh.php](http://antivirus.neu.edu.cn/scan/ssh.php)
 

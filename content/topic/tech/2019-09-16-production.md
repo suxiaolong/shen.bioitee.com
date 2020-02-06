@@ -117,7 +117,7 @@ PATH_TO_GALAXY_LOG_FILES {
 - location 文件中的注释，说明了该工具所需要的数据格式，设置前可以参考。
 - [Data Integration](https://galaxyproject.org/admin/data-integration/) 文档解释了如何获取、创建或重新编写许多常见数据和索引。有关更多详细信息，请参见各个Tool Shed 存储库的文档。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1568612403485-e662cfe2-2030-4742-a9de-ded2dac688a5.png#align=left&display=inline&height=268&name=image.png&originHeight=268&originWidth=962&size=32957&status=done&width=962)### 通过 FTP 启用上传
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1568612403485-e662cfe2-2030-4742-a9de-ded2dac688a5.png#align=left&display=inline&height=268&name=image.png&originHeight=268&originWidth=962&size=32957&status=done&width=962)### 通过 FTP 启用上传
 
 由于快速提升的测序技术，文件大小已经变得非常大，并且通过浏览器上传这些文件并不总是可行的。值得庆幸的是，一个简单的解决方案是允许 Galaxy 用户通过 FTP 上传它们并将这些文件导入其历史记录中。详细的的配置请参考 [File Upload via FTP page](https://docs.galaxyproject.org/en/master/admin/special_topics/ftp.html) 中的说明。## 高级配置### 负载平衡和 Web 应用程序扩展
 

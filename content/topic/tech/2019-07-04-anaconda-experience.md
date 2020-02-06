@@ -218,11 +218,11 @@ install_github("jokergoo/ComplexHeatmap")
 
 对于 Anaconda(conda) 软件安装以及依赖解决的原理，我对这个黑盒子表示一头雾水。真实的情况是，如果在一个环境中安装了几百个软件(包)，再去新装软件，这时候 Anaconda 常常会卡在 Collecting package metadata 和 Solving environment 过程中，甚至一个晚上都没法解决环境的依赖。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562893289384-0a32c390-b76f-4a4c-bf36-63ed998de07c.png#align=left&display=inline&height=359&name=image.png&originHeight=479&originWidth=856&size=81664&status=done&width=642)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562893289384-0a32c390-b76f-4a4c-bf36-63ed998de07c.png#align=left&display=inline&height=359&name=image.png&originHeight=479&originWidth=856&size=81664&status=done&width=642)
 
 conda 官方说他们在 conda-4.7 中花了很多的精力去提升了 conda 的速度（参考官方文章：《[How We Made Conda Faster in 4.7](https://www.anaconda.com/how-we-made-conda-faster-4-7/)》），但从 4.6 升级到 4.7 过程很容易导致环境崩溃，修复起来极其麻烦（反正我折腾了一个晚上都没能把我的 base 给恢复回来，吐血的经历）！
 
-![image3-768x475.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562894737005-07511220-673c-4ad2-9849-3917b72725ef.png#align=left&display=inline&height=238&name=image3-768x475.png&originHeight=475&originWidth=768&size=14993&status=done&width=384)![i2-768x475.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562894770827-e7dc8bbc-18f8-4fe0-a3e7-d3b2c16a1947.png#align=left&display=inline&height=238&name=i2-768x475.png&originHeight=475&originWidth=768&size=25596&status=done&width=384)
+![image3-768x475.png](https://note.bioitee.com/yuque/0/2019/png/126032/1562894737005-07511220-673c-4ad2-9849-3917b72725ef.png#align=left&display=inline&height=238&name=image3-768x475.png&originHeight=475&originWidth=768&size=14993&status=done&width=384)![i2-768x475.png](https://note.bioitee.com/yuque/0/2019/png/126032/1562894770827-e7dc8bbc-18f8-4fe0-a3e7-d3b2c16a1947.png#align=left&display=inline&height=238&name=i2-768x475.png&originHeight=475&originWidth=768&size=25596&status=done&width=384)
 
 对于新手而言，Anaconda 的确是非常简单易用，如果对于多用户的服务器端，或者是提供公共使用的软件库是否需要采用 Anaconda，个人觉得的确需要慎重考虑一下，最起码需要考虑：
 

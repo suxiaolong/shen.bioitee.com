@@ -17,14 +17,14 @@ CODING 个人版有几点不太友好的体检经历：
 
 - CODING 个人版个人主页，公开的项目却显示的是仓库名称！这样，在仓库中设置项目名称的意义是什么？
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1564793985315-6612949f-73ef-469b-8012-c472298ce266.png#align=left&display=inline&height=401&name=image.png&originHeight=401&originWidth=1085&size=56337&status=done&width=1085)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1564793985315-6612949f-73ef-469b-8012-c472298ce266.png#align=left&display=inline&height=401&name=image.png&originHeight=401&originWidth=1085&size=56337&status=done&width=1085)
 
 
 - 注销账号， CODING 只提供账号锁定功能！！！
 
 《电信和互联网用户个人信息保护规定》（工业和信息化部令第24号）第九款第四款规定：“电信业务经营者、互联网信息服务提供者在用户终止使用电信服务或者互联网信息服务后，应当停止对用户个人信息的收集和使用，并为用户提供注销号码或账号的服务。”
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1563852053671-7278912c-a49c-4ef0-aed4-5efece0ca413.png#align=left&display=inline&height=556&name=image.png&originHeight=556&originWidth=1111&size=87681&status=done&width=1111)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1563852053671-7278912c-a49c-4ef0-aed4-5efece0ca413.png#align=left&display=inline&height=556&name=image.png&originHeight=556&originWidth=1111&size=87681&status=done&width=1111)
 
 最后只想说，如果不是出于墙内网络的考虑，很多人应该都会选择 Github、Gitlab 的代码托管服务。当然，或许也有些人出于对 Github 账户/开源项目是否会受到美国出口管理条例管制的担心，或者追求更高的速度体验，而转向国内的代码托管服务。
 

@@ -9,7 +9,7 @@ published: true
 
 参考：[更换系统盘（公共镜像）](https://help.aliyun.com/document_detail/50134.html?spm=a2c4g.11186623.2.8.6a6447a0NgnzZM#concept-n4k-x3j-ydb)
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569222859005-68ee5efd-ae82-4c8b-884d-c9c8cb337c76.png#align=left&display=inline&height=438&name=image.png&originHeight=438&originWidth=1125&size=72056&status=done&width=1125)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1569222859005-68ee5efd-ae82-4c8b-884d-c9c8cb337c76.png#align=left&display=inline&height=438&name=image.png&originHeight=438&originWidth=1125&size=72056&status=done&width=1125)
 
 <a name="h2-url-3"></a>
 ## 操作步骤

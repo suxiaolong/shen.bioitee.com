@@ -397,4 +397,4 @@ $ ldd /Bioinfo/SoftWare/R-3.5.0/lib64/R/library/stats/libs/stats.so
 - 不死不灭，《[R-3.3.1源码安装](http://kuxingseng2016.blog.51cto.com/1374617/1846326)》，51CTO
 - R 官方文档，《[R Installation and Administration](https://cran.r-project.org/doc/manuals/r-release/R-admin.html)》
 
-![默认标题_横版二维码_2019.06.01.png](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559899789708-8643c293-0711-46d8-92b6-5cd94023175b.png#align=left&display=inline&height=500&name=%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98_%E6%A8%AA%E7%89%88%E4%BA%8C%E7%BB%B4%E7%A0%81_2019.06.01.png&originHeight=500&originWidth=900&size=67641&status=done&width=900#align=left&display=inline&height=500&originHeight=500&originWidth=900&status=done&style=none&width=900)
+![默认标题_横版二维码_2019.06.01.png](https://note.bioitee.com/yuque/0/2019/png/126032/1559899789708-8643c293-0711-46d8-92b6-5cd94023175b.png#align=left&display=inline&height=500&name=%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98_%E6%A8%AA%E7%89%88%E4%BA%8C%E7%BB%B4%E7%A0%81_2019.06.01.png&originHeight=500&originWidth=900&size=67641&status=done&width=900#align=left&display=inline&height=500&originHeight=500&originWidth=900&status=done&style=none&width=900)

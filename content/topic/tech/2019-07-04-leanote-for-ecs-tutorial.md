@@ -203,7 +203,7 @@ Mongodb 安装完成后，我们通常通过 `mongod --dbpath /usr/local/mongo/d
 $ mongod --fork --dbpath=/data/LeaNote/mongodb/data --logpath=/data/LeaNote/mongodb/logs/mongodb.log --logappend
 ```
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1559373749331-aa4b3166-1138-41ae-864d-be9c59a43310.png#align=left&display=inline&height=84&originHeight=84&originWidth=812&size=0&status=done&width=812#align=left&display=inline&height=84&originHeight=84&originWidth=812&status=done&width=812)### 7.3 Mongodb设置开机启动
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1559373749331-aa4b3166-1138-41ae-864d-be9c59a43310.png#align=left&display=inline&height=84&originHeight=84&originWidth=812&size=0&status=done&width=812#align=left&display=inline&height=84&originHeight=84&originWidth=812&status=done&width=812)### 7.3 Mongodb设置开机启动
 
 当我们把服务器关闭，重启之后，发现 mongodb 又停止了，有没有开机就启动的方法呢？我们把上面代码放到 /etc/rc.local，中，就可以了。
 

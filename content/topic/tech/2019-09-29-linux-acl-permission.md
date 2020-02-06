@@ -32,7 +32,7 @@ $ grep -i acl /boot/config*
 
 从下方的截屏可以看到，文件系统类型是 ext4，并且从 CONFIG_EXT4_FS_POSIX_ACL=y 选项可以发现内核是支持 POSIX ACL 的。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569745829455-a573f66d-20b2-41f4-bd8e-d0d9a3d8f16e.png#align=left&display=inline&height=307&originHeight=307&originWidth=604&size=0&status=done&width=604)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1569745829455-a573f66d-20b2-41f4-bd8e-d0d9a3d8f16e.png#align=left&display=inline&height=307&originHeight=307&originWidth=604&size=0&status=done&width=604)
 
 
 **1.2. 查看文件系统（分区）挂载时是否使用了 ACL 选项。**
@@ -41,7 +41,7 @@ $ grep -i acl /boot/config*
 $ tune2fs -l /dev/vda1 | grep acl
 ```
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569745829438-43deb4f6-8bc6-44a3-8e31-8733a247c5a7.png#align=left&display=inline&height=51&originHeight=51&originWidth=603&size=0&status=done&width=603)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1569745829438-43deb4f6-8bc6-44a3-8e31-8733a247c5a7.png#align=left&display=inline&height=51&originHeight=51&originWidth=603&size=0&status=done&width=603)
 
 通过上边的输出可以发现，默认的挂载项目中已经对 ACL 进行了支持。如果发现结果不如所愿，你可以通过以下命令对指定分区（此例中使用 /dev/sda3）开启 ACL 的支持）。
 
@@ -65,7 +65,7 @@ $ setfacl -m user:shenweiyan:rwx /data/share
 $ getfacl /data/share
 ```
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1569745829441-d24feecd-ed3f-4b11-a4c9-e59ccd56bf35.png#align=left&display=inline&height=407&originHeight=407&originWidth=604&size=0&status=done&width=604)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1569745829441-d24feecd-ed3f-4b11-a4c9-e59ccd56bf35.png#align=left&display=inline&height=407&originHeight=407&originWidth=604&size=0&status=done&width=604)
 
 在上方的截屏中，通过输出结果的第二行 getfacl 命令可以发现，用户 shenweiyan 已经成功的被赋予了 /data/share 目录的读写权限。
 

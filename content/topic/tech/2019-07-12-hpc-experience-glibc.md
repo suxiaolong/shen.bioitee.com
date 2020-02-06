@@ -78,44 +78,44 @@ Linux下用光盘进行 rescue 模式的方法，需要注意的是实体机跟�
 
 如果不理会就会进入以下界面：
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562972531584-74fee520-6c7c-4783-9f32-32ccdcb40295.png#align=left&display=inline&height=591&originHeight=591&originWidth=794&size=0&status=done&width=794)### 2.2. rescue 模式步骤
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562972531584-74fee520-6c7c-4783-9f32-32ccdcb40295.png#align=left&display=inline&height=591&originHeight=591&originWidth=794&size=0&status=done&width=794)### 2.2. rescue 模式步骤
 
 ① 选择 rescue 模式
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562972531556-9cf2b06c-5166-40b0-92aa-de59e70ff603.png#align=left&display=inline&height=356&originHeight=474&originWidth=634&size=0&status=done&width=476)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562972531556-9cf2b06c-5166-40b0-92aa-de59e70ff603.png#align=left&display=inline&height=356&originHeight=474&originWidth=634&size=0&status=done&width=476)
 
 ② 选择语言
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562972531590-28af51c6-044c-4a07-a38d-a824fcd4af4b.png#align=left&display=inline&height=302&originHeight=402&originWidth=720&size=0&status=done&width=540)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562972531590-28af51c6-044c-4a07-a38d-a824fcd4af4b.png#align=left&display=inline&height=302&originHeight=402&originWidth=720&size=0&status=done&width=540)
 
 ③ 选择键盘
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562972531542-39f10346-41f6-4784-9fc4-76f311ae7da4.png#align=left&display=inline&height=302&originHeight=403&originWidth=723&size=0&status=done&width=542)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562972531542-39f10346-41f6-4784-9fc4-76f311ae7da4.png#align=left&display=inline&height=302&originHeight=403&originWidth=723&size=0&status=done&width=542)
 
 ④ 我们选择不启用网络，因为启用也没用。
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562972531568-4a080c21-88ed-428d-9012-94ffef2de3f8.png#align=left&display=inline&height=303&originHeight=404&originWidth=722&size=0&status=done&width=542)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562972531568-4a080c21-88ed-428d-9012-94ffef2de3f8.png#align=left&display=inline&height=303&originHeight=404&originWidth=722&size=0&status=done&width=542)
 
 ⑤ 选择继续（continue）
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562972531588-436dee73-dacb-4a83-9420-e42340208097.png#align=left&display=inline&height=303&originHeight=404&originWidth=717&size=0&status=done&width=538)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562972531588-436dee73-dacb-4a83-9420-e42340208097.png#align=left&display=inline&height=303&originHeight=404&originWidth=717&size=0&status=done&width=538)
 
 ⑥ 选择 OK
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562972531583-cc3a57b3-2f00-429d-8032-a6cf6b042845.png#align=left&display=inline&height=300&originHeight=400&originWidth=721&size=0&status=done&width=541)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562972531583-cc3a57b3-2f00-429d-8032-a6cf6b042845.png#align=left&display=inline&height=300&originHeight=400&originWidth=721&size=0&status=done&width=541)
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562972531581-6f39a1c6-a252-4163-aee7-043f51f01098.png#align=left&display=inline&height=305&originHeight=406&originWidth=719&size=0&status=done&width=539)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562972531581-6f39a1c6-a252-4163-aee7-043f51f01098.png#align=left&display=inline&height=305&originHeight=406&originWidth=719&size=0&status=done&width=539)
 
 ⑦ 选择回车键，打开 shell
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562972531728-197a6422-10a4-4760-8f46-65892f6395b9.png#align=left&display=inline&height=309&originHeight=412&originWidth=724&size=0&status=done&width=543)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562972531728-197a6422-10a4-4760-8f46-65892f6395b9.png#align=left&display=inline&height=309&originHeight=412&originWidth=724&size=0&status=done&width=543)
 
 ⑧ 进入模式后，我们就可以进行命令行操作了，此时会把硬盘的文件系统挂载在 `/mnt/sysimage` 目录下，如果未挂载使用如下命令挂载:
 ```
@@ -124,7 +124,7 @@ chroot /mnt/sysimage
 
 此时我们进入到 `/mnt/sysimage`，这里其实就是原系统的根目录，我们进行一些补救操作即可。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1562972531590-f69460d9-bdd6-4c02-a7a0-84f9729077b2.png#align=left&display=inline&height=279&originHeight=279&originWidth=768&size=0&status=done&width=768)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562972531590-f69460d9-bdd6-4c02-a7a0-84f9729077b2.png#align=left&display=inline&height=279&originHeight=279&originWidth=768&size=0&status=done&width=768)
 
 ⑨ 重启后重新进入系统一切正常。
 

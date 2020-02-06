@@ -9,7 +9,7 @@ published: true
 
 这里对 Redhat/CentOS/Fedora 之间以及与其他 Linux 发行版关系做一个基本的介绍。给新手选择一个 Linux 发行版提供指导和帮助。
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1564018188751-ddfd3568-4d40-4ccd-9220-0d05efdaa1c6.png#align=left&display=inline&height=764&originHeight=764&originWidth=593&size=0&status=done&width=593)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1564018188751-ddfd3568-4d40-4ccd-9220-0d05efdaa1c6.png#align=left&display=inline&height=764&originHeight=764&originWidth=593&size=0&status=done&width=593)
 
 **Fedora**
 

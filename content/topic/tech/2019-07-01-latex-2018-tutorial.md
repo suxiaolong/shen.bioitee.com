@@ -12,7 +12,7 @@ published: true
 前两天在自己的 Jupyter 服务器上想要把 notebook(.ipynb) 导出为 pdf 时发现 xelatex 没有安装：
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1548653466526-645be58b-5a23-43d2-b82a-895bc7500d15.png#align=left&display=inline&height=685&originHeight=709&originWidth=772&size=0&width=746)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1548653466526-645be58b-5a23-43d2-b82a-895bc7500d15.png#align=left&display=inline&height=685&originHeight=709&originWidth=772&size=0&width=746)
 
 500 : Internal Server Error 如下：
 ```
@@ -296,7 +296,7 @@ $ tlmgr install pkgname
 你好，TeX Live 2018！
 \end{document}
 ```
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1548653863498-04986e41-7e3d-4edf-b8f8-47feaa60720c.png#align=left&display=inline&height=566&originHeight=566&originWidth=633&size=0&width=633)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1548653863498-04986e41-7e3d-4edf-b8f8-47feaa60720c.png#align=left&display=inline&height=566&originHeight=566&originWidth=633&size=0&width=633)
 
 ---
 

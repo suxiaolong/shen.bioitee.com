@@ -179,7 +179,7 @@ sub_dir
 以下是目录列表功能：
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550397843454-63fde9bf-a1b5-485f-8460-6ba588c98ee2.png#align=left&display=inline&height=154&originHeight=154&originWidth=647&size=0&width=647)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1550397843454-63fde9bf-a1b5-485f-8460-6ba588c98ee2.png#align=left&display=inline&height=154&originHeight=154&originWidth=647&size=0&width=647)
 
 这些函数返回了一个包含了目录中所有内容的列表，包括子目录。这些操作可能并不总是您想要的。下一节我们将介绍如何从目录列表中进行结果过滤。
 
@@ -399,7 +399,7 @@ file2.txt       Last modified:  17 Sep 2018
 我们编写的程序需要创建目录以便在其中存储数据时，可以参考`os`和`pathlib`中包含用于创建目录的函数。
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550397843470-77c25738-ab61-4cba-869f-ad50bf258665.png#align=left&display=inline&height=160&originHeight=160&originWidth=606&size=0&width=606)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1550397843470-77c25738-ab61-4cba-869f-ad50bf258665.png#align=left&display=inline&height=160&originHeight=160&originWidth=606&size=0&width=606)
 
 
 ## 创建单个目录
@@ -683,7 +683,7 @@ docs.pdf
 回顾一下，这是我们在本节中介绍的功能表：
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550397843462-b90098df-da27-41a2-b1b3-f5e7ce9d796e.png#align=left&display=inline&height=448&originHeight=539&originWidth=897&size=0&width=746)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1550397843462-b90098df-da27-41a2-b1b3-f5e7ce9d796e.png#align=left&display=inline&height=448&originHeight=539&originWidth=897&size=0&width=746)
 
 
 # 遍历目录和文件
@@ -972,7 +972,7 @@ for dirpath, dirnames, files in os.walk('.', topdown=False):
 下表列出了本节中涉及的功能：
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550397843476-f90912e9-33a2-4041-b686-30cbfb2c4b56.png#align=left&display=inline&height=427&originHeight=502&originWidth=878&size=0&width=746)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1550397843476-f90912e9-33a2-4041-b686-30cbfb2c4b56.png#align=left&display=inline&height=427&originHeight=502&originWidth=878&size=0&width=746)
 
 
 # 文件和目录复制，移动及重命名
@@ -1219,7 +1219,7 @@ with tarfile.open('example.tar', 'r') as tar_file:
 使用 "r"，"w" 或 "a" 模式分别打开未压缩的 TAR 文件以进行读取，写入和追加。要打开压缩的 TAR 文件，需要将模式参数传递给`tarfile.open()`，其格式为`filemode [:compression]`。下表列出了可以打开 TAR 文件的可能模式：
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550397843495-6df8d21a-b14c-4afd-baf1-5257f3aa2afa.png#align=left&display=inline&height=483&originHeight=566&originWidth=875&size=0&width=746)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1550397843495-6df8d21a-b14c-4afd-baf1-5257f3aa2afa.png#align=left&display=inline&height=483&originHeight=566&originWidth=875&size=0&width=746)
 
 `.open()` 默认以 'r' 模式打开文件。要读取未压缩的 TAR 文件并检索其中的文件名，可以使用`.getnames()`：
 ```python

@@ -16,7 +16,7 @@ R 每年（通常是 4 月中旬）在 'x.y.z' 中发布一个 '.y' 版本，但
 Bioconductor 与 R 各自对应的版本如下：（参考：[Bioconductor releases](https://bioconductor.org/about/release-announcements/)）
 
 
-![](https://qiniu.bioinit.com/yuque/0/2019/png/126032/1550202460103-7ec215b0-d738-41a2-8290-ddb85bdc94d3.png#align=left&display=inline&height=463&originHeight=463&originWidth=625&size=0&status=done&width=625)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1550202460103-7ec215b0-d738-41a2-8290-ddb85bdc94d3.png#align=left&display=inline&height=463&originHeight=463&originWidth=625&size=0&status=done&width=625)
 
 ---
 
