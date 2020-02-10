@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>LaTeX 折腾系列 | Linux 字体安装的一点记录</title>
+      <link>https://shen.bioitee.com/topic/tech/2020-02-10-linux-install-fonts/</link>
+      <pubDate>Mon, 10 Feb 2020 09:00:51 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2020-02-10-linux-install-fonts/</guid>
+      <description>在使用 LaTeX 进行中文字体编译排版过程中，发现 CentOS 6.5 中缺乏很大一部分中文字体，以至于在编译过程中频繁抛出缺乏字体的错误。 现在基于 windows 的 ttf 字体，以 “微软</description>
+    </item>
+    
+    <item>
       <title>吐槽一下微信公众号的赞赏号</title>
       <link>https://shen.bioitee.com/topic/life/2020-01-16-pct5pb/</link>
       <pubDate>Thu, 16 Jan 2020 02:02:00 +0000</pubDate>

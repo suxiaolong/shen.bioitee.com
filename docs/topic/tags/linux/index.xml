@@ -6,10 +6,19 @@
     <description>Recent content in Linux on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Sun, 29 Sep 2019 08:28:52 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Feb 2020 09:00:51 +0000</lastBuildDate>
     
 	<atom:link href="https://shen.bioitee.com/topic/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LaTeX 折腾系列 | Linux 字体安装的一点记录</title>
+      <link>https://shen.bioitee.com/topic/tech/2020-02-10-linux-install-fonts/</link>
+      <pubDate>Mon, 10 Feb 2020 09:00:51 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2020-02-10-linux-install-fonts/</guid>
+      <description>在使用 LaTeX 进行中文字体编译排版过程中，发现 CentOS 6.5 中缺乏很大一部分中文字体，以至于在编译过程中频繁抛出缺乏字体的错误。 现在基于 windows 的 ttf 字体，以 “微软</description>
+    </item>
     
     <item>
       <title>在 Linux 上给用户赋予指定目录的读写权限</title>
