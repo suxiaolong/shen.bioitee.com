@@ -6,10 +6,19 @@
     <description>Recent content in 编程 on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Thu, 05 Dec 2019 08:58:14 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Feb 2020 06:20:04 +0000</lastBuildDate>
     
 	<atom:link href="https://shen.bioitee.com/topic/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>shell 编程 | shift 命令用法笔记</title>
+      <link>https://shen.bioitee.com/topic/tech/2020-02-13-shell-shift-note/</link>
+      <pubDate>Thu, 13 Feb 2020 06:20:04 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2020-02-13-shell-shift-note/</guid>
+      <description>特殊变量 首先来看几个特殊变量： #!/bin/bash echo $0 # 当前脚本的文件名（间接运行时还包括绝对路径）。 echo $n # 传递给脚本或函数的参数。n 是一个数字，表示第几个参</description>
+    </item>
     
     <item>
       <title>R 常用函数汇总</title>

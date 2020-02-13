@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>shell 编程 | shift 命令用法笔记</title>
+      <link>https://shen.bioitee.com/topic/tech/2020-02-13-shell-shift-note/</link>
+      <pubDate>Thu, 13 Feb 2020 06:20:04 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2020-02-13-shell-shift-note/</guid>
+      <description>特殊变量 首先来看几个特殊变量： #!/bin/bash echo $0 # 当前脚本的文件名（间接运行时还包括绝对路径）。 echo $n # 传递给脚本或函数的参数。n 是一个数字，表示第几个参</description>
+    </item>
+    
+    <item>
       <title>LaTeX 折腾系列 | Linux 字体安装的一点记录</title>
       <link>https://shen.bioitee.com/topic/tech/2020-02-10-linux-install-fonts/</link>
       <pubDate>Mon, 10 Feb 2020 09:00:51 +0000</pubDate>
