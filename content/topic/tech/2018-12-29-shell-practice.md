@@ -1,5 +1,5 @@
 ---
-title: shell 命令实战合集
+title: bash shell 编程与命令笔记
 type: post
 topic/tags: ["Shell", "编程"]
 date: 2018-12-29T09:21:11.000Z
@@ -11,7 +11,9 @@ published: true
 
 ```bash
 #!/bin/sh
-START=$(date +'%Y-%m-%d %H:%M:%S');echo "Start: $START" >/data/database/onekp/nucl-v2/memo/log
+START=$(date +'%Y-%m-%d %H:%M:%S');
+echo "Start: $START" >/home/shenweiyan/log.txt
+
 for i in `find /data/database/onekp/nucl-v2/samples/ -name "*.fa"`;
 do
     dir=`dirname $i`;
@@ -19,7 +21,7 @@ do
     cd $dir; makeblastdb -in $fa -dbtype nucl;
     echo $i >>/data/database/onekp/nucl-v2/memo/log;
 done 
-END=$(date);echo "End: $END" >>/data/database/onekp/nucl-v2/memo/log
+END=$(date);echo "End: $END" >>/home/shenweiyan/log.txt
 ```
 
 - linux 下使用命令排除当前行及下一行的内容

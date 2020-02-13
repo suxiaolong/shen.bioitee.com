@@ -15,8 +15,8 @@
     
     
     
-    <title>shell 命令实战合集 - Steven Shen | 沈维燕</title> 
-    <meta property="og:title" content="shell 命令实战合集 - Steven Shen | 沈维燕">
+    <title>bash shell 编程与命令笔记 - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="bash shell 编程与命令笔记 - Steven Shen | 沈维燕">
     
 
     
@@ -146,7 +146,7 @@
 
 
 
-<h1>shell 命令实战合集</h1>
+<h1>bash shell 编程与命令笔记</h1>
 
 
 
@@ -178,7 +178,9 @@
 </ul>
 
 <pre><code class="language-bash">#!/bin/sh
-START=$(date +'%Y-%m-%d %H:%M:%S');echo &quot;Start: $START&quot; &gt;/data/database/onekp/nucl-v2/memo/log
+START=$(date +'%Y-%m-%d %H:%M:%S');
+echo &quot;Start: $START&quot; &gt;/home/shenweiyan/log.txt
+
 for i in `find /data/database/onekp/nucl-v2/samples/ -name &quot;*.fa&quot;`;
 do
     dir=`dirname $i`;
@@ -186,7 +188,7 @@ do
     cd $dir; makeblastdb -in $fa -dbtype nucl;
     echo $i &gt;&gt;/data/database/onekp/nucl-v2/memo/log;
 done 
-END=$(date);echo &quot;End: $END&quot; &gt;&gt;/data/database/onekp/nucl-v2/memo/log
+END=$(date);echo &quot;End: $END&quot; &gt;&gt;/home/shenweiyan/log.txt
 </code></pre>
 
 <ul>
