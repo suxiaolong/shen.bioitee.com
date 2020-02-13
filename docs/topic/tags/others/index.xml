@@ -6,10 +6,19 @@
     <description>Recent content in Others on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Thu, 16 Jan 2020 02:02:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Feb 2020 06:20:04 +0000</lastBuildDate>
     
 	<atom:link href="https://shen.bioitee.com/topic/tags/others/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>shell 编程 | shift 命令用法笔记</title>
+      <link>https://shen.bioitee.com/topic/tech/2020-02-13-szuc7i/</link>
+      <pubDate>Thu, 13 Feb 2020 06:20:04 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2020-02-13-szuc7i/</guid>
+      <description>shift 命令用于对参数的移动(左移)，通常用于在不知道传入参数个数的情况下依次遍历每个参数然后进行相应处理,常见于 Linux 中各种程序的启动脚本。 1. 每次移</description>
+    </item>
     
     <item>
       <title>吐槽一下微信公众号的赞赏号</title>

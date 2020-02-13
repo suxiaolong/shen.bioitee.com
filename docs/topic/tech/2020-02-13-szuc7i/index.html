@@ -15,8 +15,8 @@
     
     
     
-    <title>LaTeX 折腾系列 | Linux 字体安装的一点记录 - Steven Shen | 沈维燕</title> 
-    <meta property="og:title" content="LaTeX 折腾系列 | Linux 字体安装的一点记录 - Steven Shen | 沈维燕">
+    <title>shell 编程 | shift 命令用法笔记 - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="shell 编程 | shift 命令用法笔记 - Steven Shen | 沈维燕">
     
 
     
@@ -126,7 +126,7 @@
 
 
 
-<li class="pattern"><a href="https://github.com/shenweiyan/shen.bioitee.com/edit/master/content/topic/tech/2020-02-10-linux-install-fonts.md" target="_blank">编辑</a></li>
+<li class="pattern"><a href="https://github.com/shenweiyan/shen.bioitee.com/edit/master/content/topic/tech/2020-02-13-szuc7i.md" target="_blank">编辑</a></li>
 
 
 <li class="pattern"><a href="../../../topic/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
@@ -146,7 +146,7 @@
 
 
 
-<h1>LaTeX 折腾系列 | Linux 字体安装的一点记录</h1>
+<h1>shell 编程 | shift 命令用法笔记</h1>
 
 
 
@@ -154,7 +154,7 @@
 
 
 <h3>
-2020-02-10</h3> 
+2020-02-13</h3> 
 
 
    
@@ -173,53 +173,133 @@
   
   
 
-  <p>在使用 LaTeX 进行中文字体编译排版过程中，发现 CentOS 6.5 中缺乏很大一部分中文字体，以至于在编译过程中频繁抛出缺乏字体的错误。 现在基于 windows 的 ttf 字体，以 <strong>“微软雅黑”</strong> 体为例，简单记录一下 Linux 下如何安装 windows 字体。</p>
+  
 
-<p>1 . 首先获得一套”微软雅黑”字体库( Google 去下载，或者去 <code>C:\Windows\Fonts</code> 下直接复制)，包含两个文件 msyh.ttf （普通）、 msyhbd.ttf （加粗）；</p>
+<p>shift 命令用于对参数的移动(左移)，通常用于在不知道传入参数个数的情况下依次遍历每个参数然后进行相应处理,常见于 Linux 中各种程序的启动脚本。</p>
 
-<p>2 . 在 <code>/usr/share/fonts</code> 目录下建立一个子目录，例如 <code>win</code> ，命令如下：</p>
+<h2 id="1-每次移动一个参数">1. 每次移动一个参数</h2>
 
-<pre><code class="language-bash">$ mkdir /usr/share/fonts/win
+<p>示例：依次读取输入的参数并打印参数个数</p>
+
+<ul>
+<li>shift1.sh
+<code>shell
+#!/bin/bash
+while [ $# != 0 ]
+do
+echo -e &quot;参数值为 $1, 参数个数为 $#&quot;
+shift
+done
+</code></li>
+<li>输入如下命令运行：
+<code>bash
+$ sh shift1.sh a b c  d
+参数值为 a, 参数个数为 4
+参数值为 b, 参数个数为 3
+参数值为 c, 参数个数为 2
+参数值为 d, 参数个数为 1
+</code></li>
+</ul>
+
+<p><strong>每次运行 shift(不带参数的)，销毁一个参数（变量的个数($#)减一），后面的参数前移（不管参数之间相隔一个或者多个空格）。</strong>**</p>
+
+<h2 id="2-每次移动多个参数">2. 每次移动多个参数</h2>
+
+<p>shift 命令一次移动参数的个数由其所带的参数指定。例如，现在有 $1, $2, $3, &hellip;，$9 个参数，当 shell 程序处理完前 4 个命令行参数后(即还剩下后面 5 个参数)，可以使用 <code>shift 4</code> 命令把 $9 移到 $1。</p>
+
+<p>示例：自定义 shift 每次移动的参数个数。</p>
+
+<ul>
+<li><p>shift2.sh</p>
+
+<pre><code class="language-bash">#!/bin/bash
+while [ $# -gt 5 ]
+do
+echo -e &quot;参数值为 $1, 参数个数为 $#&quot;
+shift
+done
+shift 4
+echo -e &quot;参数值为 $1, 参数个数为 $#&quot;
 </code></pre>
 
-<ol>
-<li>将 <code>msyh.ttf</code> 和 <code>msyhbd.ttf</code> 复制到该目录下，例如这两个文件放在 <code>/home/shenweiyan</code> 下，使用命令：</li>
-</ol>
+<p>**</p></li>
 
-<pre><code class="language-bash">$ cd /home/shenweiyan
-$ cp msyh.ttf msyhbd.ttf  /usr/share/fonts/win/
+<li><p>输入如下命令运行</p>
+
+<pre><code class="language-bash">$ sh shift2.sh a1 b2 c3 d4 e5 f6 g7 h8 i9
+参数值为 a1, 参数个数为 9
+参数值为 b2, 参数个数为 8
+参数值为 c3, 参数个数为 7
+参数值为 d4, 参数个数为 6
+参数值为 i9, 参数个数为 1
 </code></pre>
 
-<p>4 . 建立字体索引信息，更新字体缓存：</p>
+<p>**## 3. 常与 case 条件配合使用</p></li>
+</ul>
 
-<pre><code class="language-bash">$ cd /usr/share/fonts/win
-$ mkfontscale
-$ mkfontdir
-$ fc-cache
+<p><code>case ..... esac</code>  和 <code>if ... then ... fi</code> 一样，都是条件判断式的语句结构，它们用倒序的字母单词和正序的单词配对，比如 if 语句，结束时用 fi 来配对&lt;esac 和 case 配对，是多路分支的语句，类似于 C 中的 switch/case 语句，大致形式如下：</p>
+
+<pre><code class="language-bash">case $参数变量 in   # 以关键字 case 作为开始
+&quot;变量值1&quot;）         # 变量值用双引号括起来，关键字用小括号括起来
+    程序段1         # 对应的逻辑
+    ;;              # 每个类别结尾使用两个连续的分号来处理
+&quot;变量值2&quot;）
+    程序段2
+    ;;
+&quot;变量值3&quot;）   
+    程序段3   
+    ;;  
+*)                 # 最后一个位置参数值会用*来代替所有其他值
+    程序段4 
+    ;;
+esac               # 关键字 esac(case 的反写) 结束
 </code></pre>
 
-<p>至此，字体已经安装完毕！如果想要查看本机器所安装的中文字体，可通过 <code>fc-list</code> 命令查看：</p>
+<p>shift 操作经常与 case &hellip; esac 条件分支配合使用。</p>
 
-<pre><code class="language-bash">shenweiyan@localhost 14:23:19 ~ 
-$ fc-list :lang=zh-cn
-AR PL UMing TW:style=Light
-AR PL UMing HK:style=Light
-AR PL UMing CN:style=Light
-Microsoft YaHei,微软雅黑:style=Regular,Normal,obyčejné,Standard,Κανονικά,Normaali,Normál,Normale,Standaard,Normalny,Обычный,Normálne,Navadno,Arrunta
-Microsoft YaHei UI,Microsoft YaHei UI Light:style=Light,Regular
-AR PL UKai TW MBE:style=Book
-AR PL UKai CN:style=Book
-AR PL UKai HK:style=Book
-AR PL UKai TW:style=Book
-Microsoft YaHei UI:style=Regular,Normal,obyčejné,Standard,Κανονικά,Normaali,Normál,Normale,Standaard,Normalny,Обычный,Normálne,Navadno,Arrunta
-Microsoft YaHei,微软雅黑,Microsoft YaHei Light,微软雅黑 Light:style=Light,Regular
-WenQuanYi Zen Hei,文泉驛正黑,文泉驿正黑:style=Regular
-Microsoft YaHei UI:style=Bold,Negreta,tučné,fed,Fett,Έντονα,Negrita,Lihavoitu,Gras,Félkövér,Grassetto,Vet,Halvfet,Pogrubiony,Negrito,Полужирный,Fet,Kalın,Krepko,Lodia
-Microsoft YaHei,微软雅黑:style=Bold,Negreta,tučné,fed,Fett,Έντονα,Negrita,Lihavoitu,Gras,Félkövér,Grassetto,Vet,Halvfet,Pogrubiony,Negrito,Полужирный,Fet,Kalın,Krepko,Lodia
-WenQuanYi Zen Hei Mono,文泉驛等寬正黑,文泉驿等宽正黑:style=Regular
-AR PL UMing TW MBE:style=Light
-WenQuanYi Zen Hei Sharp,文泉驛點陣正黑,文泉驿点阵正黑:style=Regular
-</code></pre>
+<p>示例：shift 搭配 case &hellip; esac 实现 shell 脚本手动传递参数处理</p>
+
+<ul>
+<li><p>shift3.sh</p>
+
+<pre><code class="language-bash">while [ -n &quot;$1&quot; ]  
+do  
+case &quot;$1&quot; in   
+-a)  
+    echo &quot;发现 -a 选项&quot;  
+    ;;  
+-b)  
+    echo &quot;发现 -b 选项&quot;  
+    echo &quot;-b 选项的参数值是：$2&quot;   
+    shift  
+    ;;  
+-c)  
+    echo &quot;发现 -c 选项&quot;  
+    echo &quot;-c 选项的参数值是：$2&quot;  
+    shift  
+    ;;  
+*)  
+    echo &quot;$1 是一个未知选项&quot;  
+    ;;  
+esac  
+shift  
+done
+</code></pre></li>
+
+<li><p>输入如下命令运行</p>
+
+<pre><code class="language-bash">$ sh shift3.sh -a -b 200 -c 300 -d 400
+发现 -a 选项
+发现 -b 选项
+-b 选项的参数值是：200
+发现 -c 选项
+-c 选项的参数值是：300
+-d 是一个未知选项
+400 是一个未知选项
+</code></pre></li>
+</ul>
+
+<p>在 bash shell 中解析命令行参数的方法有很多，网络上介绍的各种方法中，都可以看到它们与 shift 命令搭配使用的身影，因此在深入这一部分编程前，很有必要先了解一下 shift 的作用。这里只是抛砖引玉简单介绍一下，更多技巧还请大家不断去实践理解。</p>
 
 
   <footer>
@@ -227,14 +307,11 @@ WenQuanYi Zen Hei Sharp,文泉驛點陣正黑,文泉驿点阵正黑:style=Regula
 <nav class="post-nav">
   <span class="nav-prev">
       
-      <a href="../../../topic/tech/2020-01-14-ublsz7/">R 语言中的 X11 相关问题</a>
+      <a href="../../../topic/tech/2020-02-10-linux-install-fonts/">LaTeX 折腾系列 | Linux 字体安装的一点记录</a>
       <br/>&larr;&nbsp;
       
   </span>
   <span class="nav-next">
-      
-      <a href="../../../topic/tech/2020-02-13-szuc7i/">shell 编程 | shift 命令用法笔记</a>
-      <br/>&nbsp;&rarr;
       
   </span>
 </nav>
@@ -244,11 +321,9 @@ document.addEventListener('keyup', function(e) {
   var url = false;
   if (e.which == 37) {  
     
-    url = '\/topic\/tech\/2020-01-14-ublsz7\/';
+    url = '\/topic\/tech\/2020-02-10-linux-install-fonts\/';
     
   } else if (e.which == 39) {  
-    
-    url = '\/topic\/tech\/2020-02-13-szuc7i\/';
     
   }
   if (url) window.location = url;
