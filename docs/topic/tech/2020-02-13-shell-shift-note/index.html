@@ -269,7 +269,7 @@ D
 E
 ```## shift 使用
 
-shift 命令用于对参数的移动(左移)，通常用于在不知道传入参数个数的情况下依次遍历每个参数然后进行相应处理,常见于 Linux 中各种程序的启动脚本。
+`shift` 命令用于对参数的移动(左移)，通常用于在不知道传入参数个数的情况下依次遍历每个参数然后进行相应处理,常见于 Linux 中各种程序的启动脚本。
 
 
 ### 1. 每次移动一个参数
@@ -297,9 +297,7 @@ $ sh shift1.sh a b c  d
 </code></li>
 </ul>
 
-<p><strong>每次运行 shift(不带参数的)，销毁一个参数（变量的个数($#)减一），后面的参数前移（不管参数之间相隔一个或者多个空格）。</strong>**</p>
-
-<h3 id="2-每次移动多个参数">2. 每次移动多个参数</h3>
+<p><strong>每次运行 shift(不带参数的)，销毁一个参数（变量的个数($#)减一），后面的参数前移（不管参数之间相隔一个或者多个空格）。</strong>### 2. 每次移动多个参数</p>
 
 <p>shift 命令一次移动参数的个数由其所带的参数指定。例如，现在有 $1, $2, $3, &hellip;，$9 个参数，当 shell 程序处理完前 4 个命令行参数后(即还剩下后面 5 个参数)，可以使用 <code>shift 4</code> 命令把 $9 移到 $1。</p>
 
@@ -316,24 +314,20 @@ shift
 done
 shift 4
 echo -e &quot;参数值为 $1, 参数个数为 $#&quot;
-</code></pre>
+</code></pre></li>
 
-<p>**</p></li>
-
-<li><p>输入如下命令运行</p>
-
-<pre><code class="language-bash">$ sh shift2.sh a1 b2 c3 d4 e5 f6 g7 h8 i9
+<li><p>输入如下命令运行
+<code>bash
+$ sh shift2.sh a1 b2 c3 d4 e5 f6 g7 h8 i9
 参数值为 a1, 参数个数为 9
 参数值为 b2, 参数个数为 8
 参数值为 c3, 参数个数为 7
 参数值为 d4, 参数个数为 6
 参数值为 i9, 参数个数为 1
-</code></pre>
-
-<p>**### 3. 常与 case 条件配合使用</p></li>
+</code>### 3. 常与 case 条件配合使用</p></li>
 </ul>
 
-<p><code>case ..... esac</code>  和 <code>if ... then ... fi</code> 一样，都是条件判断式的语句结构，它们用倒序的字母单词和正序的单词配对，比如 if 语句，结束时用 fi 来配对&lt;esac 和 case 配对，是多路分支的语句，类似于 C 中的 switch/case 语句，大致形式如下：</p>
+<p><code>case ..... esac</code>  和 <code>if ... then ... fi</code> 一样，都是条件判断式的语句结构，它们用倒序的字母单词和正序的单词配对，比如 <code>if</code> 语句，结束时用 <code>fi</code> 来配对， <code>esac</code> 和 <code>case</code> 配对，是多路分支的语句，类似于 C 中的 <code>switch/case</code> 语句，大致形式如下：</p>
 
 <pre><code class="language-bash">case $参数变量 in   # 以关键字 case 作为开始
 &quot;变量值1&quot;）         # 变量值用双引号括起来，关键字用小括号括起来
@@ -351,9 +345,9 @@ echo -e &quot;参数值为 $1, 参数个数为 $#&quot;
 esac               # 关键字 esac(case 的反写) 结束
 </code></pre>
 
-<p>shift 操作经常与 case &hellip; esac 条件分支配合使用。</p>
+<p><code>shift</code> 操作经常与 <code>case ... esac</code> 条件分支配合使用。</p>
 
-<p>示例：shift 搭配 case &hellip; esac 实现 shell 脚本手动传递参数处理</p>
+<p>示例： <code>shift</code> 搭配 <code>case ... esac</code> 实现 shell 脚本手动传递参数处理</p>
 
 <ul>
 <li><p>shift3.sh</p>
@@ -395,7 +389,7 @@ $ sh shift3.sh -a -b 200 -c 300 -d 400
 </code>## 简单总结</p></li>
 </ul>
 
-<p>在 bash shell 中解析命令行参数的方法有很多，网络上介绍的各种方法中，都可以看到它们与 shift 命令搭配使用的身影，因此在深入这一部分编程前，很有必要先了解一下 shift 的作用。这里只是抛砖引玉简单介绍一下，更多技巧还请大家不断去实践理解。</p>
+<p>在 bash shell 中解析命令行参数的方法有很多，网络上介绍的各种方法中，都可以看到它们与 <code>shift</code> 命令搭配使用的身影，因此在深入这一部分编程前，很有必要先了解一下 <code>shift</code> 的作用。这里只是抛砖引玉简单介绍一下，更多技巧还请大家不断去实践理解。</p>
 
 <p>本篇文章的部分内容和代码来源于网络，但都经本人一一验证过，如有侵权或者其他问题，欢迎留言。</p>
 
