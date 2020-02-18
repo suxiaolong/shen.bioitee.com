@@ -15,8 +15,8 @@
     
     
     
-    <title>编程 - Steven Shen | 沈维燕</title> 
-    <meta property="og:title" content="编程 - Steven Shen | 沈维燕">
+    <title>Python Excel 操作 | xlrd 模块笔记 - Steven Shen | 沈维燕</title> 
+    <meta property="og:title" content="Python Excel 操作 | xlrd 模块笔记 - Steven Shen | 沈维燕">
     
 
     
@@ -25,8 +25,6 @@
 
     
 
-    
-    <link href="../../../topic/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="alternate" type="application/rss+xml" title="编程" />
     
   
     <link rel="stylesheet" href="https://shen.bioitee.com/css/style.css"/>
@@ -124,6 +122,18 @@
           
           
 
+<li class="pattern">&nbsp;&nbsp;</li>
+
+
+
+<li class="pattern"><a href="https://github.com/shenweiyan/shen.bioitee.com/edit/master/content/topic/tech/2020-02-18-vygicp.md" target="_blank">编辑</a></li>
+
+
+<li class="pattern"><a href="../../../topic/index.xml" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li class="pattern"><a href="../../../declare/" title="声明">声明</a></li>
+
+
         </ul>
       </nav>
     </div>
@@ -136,10 +146,15 @@
 
 
 
+<h1>Python Excel 操作 | xlrd 模块笔记</h1>
 
 
-<h1>Tags 标签</h1>
 
+
+
+
+<h3>
+2020-02-18</h3> 
 
 
    
@@ -150,176 +165,62 @@
       </header>
 
 
+  
+  
+  
 
+  
+  
+  
 
+  
 
+<h2 id="1-excel-文件处理">1. Excel 文件处理</h2>
 
+<ul>
+<li>打开 excel 文件</li>
+</ul>
 
+<pre><code class="language-python">excel = xlrd.open_workbook(&quot;data.xlsx&quot;)  
+</code></pre>
 
-<div class="archive">
-  
-  <h2 class="archive-title">2020</h2>
-  
-  
-  <ul>
-    <li>
-      <span>2020/02/18</span>
-      <a href="../../../topic/tech/2020-02-18-vygicp/">Python Excel 操作 | xlrd 模块笔记</a>
-    </li>
-  </ul>
-  
-  
-  
-  <ul>
-    <li>
-      <span>2020/02/13</span>
-      <a href="../../../topic/tech/2020-02-13-shell-shift-note/">shell 编程 | shift 命令用法笔记</a>
-    </li>
-  </ul>
-  
-  
-  
-  <h2 class="archive-title">2019</h2>
-  
-  
-  <ul>
-    <li>
-      <span>2019/12/05</span>
-      <a href="../../../topic/tech/2019-12-05-lwsgg0/">R 常用函数汇总</a>
-    </li>
-  </ul>
-  
-  
-  
-  <ul>
-    <li>
-      <span>2019/10/19</span>
-      <a href="../../../topic/tech/2019-10-19-uoepud/">R 语言中的高级图像处理包</a>
-    </li>
-  </ul>
-  
-  
-  
-  <ul>
-    <li>
-      <span>2019/10/16</span>
-      <a href="../../../topic/tech/2019-10-16-pcfnsd/">Cool New Features in Python 3.8</a>
-    </li>
-  </ul>
-  
-  
-  
-  <ul>
-    <li>
-      <span>2019/09/20</span>
-      <a href="../../../topic/tech/2019-09-20-how-to-use-datetime-in-python/">Python 日期和时间函数使用指南</a>
-    </li>
-  </ul>
-  
-  
-  
-  <ul>
-    <li>
-      <span>2019/09/19</span>
-      <a href="../../../topic/tech/2019-09-19-xu2eg5/">Python 文件下载并显示下载进度条</a>
-    </li>
-  </ul>
-  
-  
-  
-  <ul>
-    <li>
-      <span>2019/09/18</span>
-      <a href="../../../topic/tech/2019-09-18-ygzmzn/">GO 学习资料</a>
-    </li>
-  </ul>
-  
-  
-  
-  <ul>
-    <li>
-      <span>2019/07/01</span>
-      <a href="../../../topic/tech/2019-07-01-python-file-directory-toturial/">Python 文件与目录操作方法总结</a>
-    </li>
-  </ul>
-  
-  <ul>
-    <li>
-      <span>2019/07/01</span>
-      <a href="../../../topic/tech/2019-07-01-r-packages-guide/">R 包初学者指南</a>
-    </li>
-  </ul>
-  
-  <ul>
-    <li>
-      <span>2019/07/01</span>
-      <a href="../../../topic/tech/2019-07-01-jupyter-notebook-tutorial/">数据科学工具 Jupyter Notebook 教程</a>
-    </li>
-  </ul>
-  
-  
-  
-  <ul>
-    <li>
-      <span>2019/06/11</span>
-      <a href="../../../topic/tech/2019-06-11-iddn10/">Python 读取大文件</a>
-    </li>
-  </ul>
-  
-  
-  
-  <ul>
-    <li>
-      <span>2019/05/21</span>
-      <a href="../../../topic/tech/2019-05-21-kzicg7/">Python 执行 shell 命令</a>
-    </li>
-  </ul>
-  
-  
-  
-  <ul>
-    <li>
-      <span>2019/05/18</span>
-      <a href="../../../topic/tech/2019-05-18-python-sorted/">利用 python 的 sorted 函数对字典按 key 排序和按 value 排序</a>
-    </li>
-  </ul>
-  
-  <ul>
-    <li>
-      <span>2019/05/18</span>
-      <a href="../../../topic/tech/2019-05-18-python-match/">Python 正则匹配总结</a>
-    </li>
-  </ul>
-  
-  <ul>
-    <li>
-      <span>2019/05/18</span>
-      <a href="../../../topic/tech/2019-05-18-python-os-path/">python3 中 os.path 模块常用用法总结</a>
-    </li>
-  </ul>
-  
-  
-  
-  <h2 class="archive-title">2018</h2>
-  
-  
-  <ul>
-    <li>
-      <span>2018/12/29</span>
-      <a href="../../../topic/tech/2018-12-29-shell-practice/">bash shell 编程与命令笔记</a>
-    </li>
-  </ul>
-  
-  
-  
-</div>
+<ul>
+<li>获取并操作 sheet 工作表</li>
+</ul>
 
+<pre><code class="language-python">sheets = excel.sheet_names()  # 获取工作表 sheet 名称数组, ['Sheet1', 'Sheet2', 'Sheet3']
+sheet = excel.sheet_by_index(0) #根据下标获取对应的 sheet 表
+
+sheet.row_values(0) #获取第一行的数据
+sheet.col_values(0) #获取第一列的数据
+sheet.nrows         #获取总共的行数
+sheet.ncols         #获取总共的列数
+</code></pre>
+
+<ul>
+<li>遍历所有行</li>
+</ul>
+
+<pre><code class="language-python">for i in range(0, sheet.nrows):
+    row_list = sheet.row_values(i) # 每一行的数据在row_list 数组里
+```## 2. 日期处理
+
+```python
+import datetime
+from xlrd import xldate_as_datetime
+
+xldate_as_datetime(43346.0, 0).strftime('%Y/%m/%d') 
+# '2018/09/03'
+</code></pre>
 
 
   <footer>
   
 <nav class="post-nav">
   <span class="nav-prev">
+      
+      <a href="../../../topic/tech/2020-02-13-shell-shift-note/">shell 编程 | shift 命令用法笔记</a>
+      <br/>&larr;&nbsp;
       
   </span>
   <span class="nav-next">
@@ -332,6 +233,8 @@ document.addEventListener('keyup', function(e) {
   var url = false;
   if (e.which == 37) {  
     
+    url = '\/topic\/tech\/2020-02-13-shell-shift-note\/';
+    
   } else if (e.which == 39) {  
     
   }
@@ -340,6 +243,16 @@ document.addEventListener('keyup', function(e) {
 </script>
 
 
+
+<section class="comments">
+<script src="https://utteranc.es/client.js"
+        repo="shenweiyan/issues"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
 
 
 
