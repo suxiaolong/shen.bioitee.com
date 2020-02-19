@@ -6,19 +6,10 @@
     <description>Recent content in Others on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Tue, 18 Feb 2020 08:06:39 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jan 2020 02:02:00 +0000</lastBuildDate>
     
 	<atom:link href="https://shen.bioitee.com/topic/tags/others/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Python Excel 操作 | xlrd 模块笔记</title>
-      <link>https://shen.bioitee.com/topic/tech/2020-02-18-vygicp/</link>
-      <pubDate>Tue, 18 Feb 2020 08:06:39 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tech/2020-02-18-vygicp/</guid>
-      <description>1. Excel 文件处理 打开 excel 文件 excel = xlrd.open_workbook(&amp;quot;data.xlsx&amp;quot;) 获取并操作 sheet 工作表 sheets = excel.sheet_names() # 获取工作表 sheet 名称数组, [&#39;Sheet1&#39;, &#39;Sheet2&#39;, &#39;Sheet3&#39;] sheet = excel.sheet_by_index(0) #根据下标获取对应的 sheet 表 sheet.row_values(0) #获取第一行的数据 sheet.col_values(0) #获取</description>
-    </item>
     
     <item>
       <title>吐槽一下微信公众号的赞赏号</title>
