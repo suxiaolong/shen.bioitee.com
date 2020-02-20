@@ -1,5 +1,6 @@
 ---
 title: Fedora Redhat Centos 有什么区别和关系？
+author: 沈维燕
 type: post
 topic/tags: ["RedHat", "CentOS", "运维"]
 date: 2019-07-25T01:29:15.000Z

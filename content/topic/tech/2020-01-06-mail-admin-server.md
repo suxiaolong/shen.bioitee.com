@@ -1,5 +1,6 @@
 ---
 title: Galaxy 生信平台（四）：邮件与管理员配置
+author: 沈维燕
 type: post
 topic/tags: ["others", "tech"]
 date: 2020-01-06T07:25:19.000Z

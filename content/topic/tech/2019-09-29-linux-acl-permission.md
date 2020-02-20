@@ -1,5 +1,6 @@
 ---
 title: 在 Linux 上给用户赋予指定目录的读写权限
+author: 沈维燕
 type: post
 topic/tags: ["Linux", "运维"]
 date: 2019-09-29T08:28:52.000Z

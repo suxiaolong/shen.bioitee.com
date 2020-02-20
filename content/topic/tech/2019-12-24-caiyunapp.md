@@ -1,5 +1,6 @@
 ---
 title: 一款英文文章阅读翻译精品工具
+author: 沈维燕
 type: post
 topic/tags: ["others", "工具"]
 date: 2019-12-24T03:07:46.000Z

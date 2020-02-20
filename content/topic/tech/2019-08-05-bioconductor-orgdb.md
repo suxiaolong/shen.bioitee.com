@@ -1,5 +1,6 @@
 ---
 title: Bioconductor org.Xx.eg.db 系列包
+author: 沈维燕
 type: post
 topic/tags: ["others", "生信"]
 date: 2019-08-05T06:17:11.000Z

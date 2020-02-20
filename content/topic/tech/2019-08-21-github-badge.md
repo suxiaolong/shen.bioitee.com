@@ -1,5 +1,6 @@
 ---
 title: GitHub 的项目徽章
+author: 沈维燕
 type: post
 topic/tags: ["GitHub", "开发"]
 date: 2019-08-21T01:54:31.000Z

@@ -1,5 +1,6 @@
 ---
 title: 基于云的六大 Jupyter Notebook 平台测评
+author: 沈维燕
 type: post
 topic/tags: ["Jupyter", "开发"]
 date: 2019-07-01T03:50:35.000Z

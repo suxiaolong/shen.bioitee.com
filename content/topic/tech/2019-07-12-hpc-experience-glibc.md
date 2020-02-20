@@ -1,5 +1,6 @@
 ---
 title: 一次"胆战心惊"的真实集群运维经历
+author: 沈维燕
 type: post
 topic/tags: ["others", "运维"]
 date: 2019-07-12T23:02:05.000Z

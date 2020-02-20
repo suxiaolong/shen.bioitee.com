@@ -1,5 +1,6 @@
 ---
 title: Jupyter Notebook 教程(三)：多语言编程环境配置
+author: 沈维燕
 type: post
 topic/tags: ["Jupyter", "开发"]
 date: 2019-07-17T08:25:34.000Z

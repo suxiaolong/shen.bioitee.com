@@ -1,5 +1,6 @@
 ---
 title: Python 中 tkinter 中文乱码
+author: 沈维燕
 type: post
 topic/tags: ["others", "工具"]
 date: 2019-07-01T03:50:35.000Z

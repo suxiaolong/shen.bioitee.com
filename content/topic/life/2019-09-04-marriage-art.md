@@ -1,5 +1,6 @@
 ---
 title: 修养
+author: 沈维燕
 type: post
 topic/tags: ["others", "乱弹"]
 date: 2019-09-04T01:30:05.000Z

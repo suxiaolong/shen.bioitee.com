@@ -1,5 +1,6 @@
 ---
 title: CentOS Linux 7 配置 nginx 支持 CGI
+author: 沈维燕
 type: post
 topic/tags: ["CentOS", "运维"]
 date: 2019-07-01T03:50:35.000Z

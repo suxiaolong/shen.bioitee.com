@@ -1,5 +1,6 @@
 ---
 title: 基于 gulp 的 fancybox 源码压缩
+author: 沈维燕
 type: post
 topic/tags: ["others", "开发"]
 date: 2019-12-26T00:51:34.000Z

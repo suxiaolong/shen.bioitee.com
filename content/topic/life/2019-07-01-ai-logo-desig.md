@@ -1,5 +1,6 @@
 ---
 title: 推荐一个由 AI 生成 LOGO 的网站
+author: 沈维燕
 type: post
 topic/tags: ["others", "乱弹"]
 date: 2019-07-01T03:47:48.000Z

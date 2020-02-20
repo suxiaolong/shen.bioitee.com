@@ -1,5 +1,6 @@
 ---
 title: 基于 ggplot2 的解剖图和组织模块可视化
+author: 沈维燕
 type: post
 topic/tags: ["R", "生信"]
 date: 2019-07-01T03:50:35.000Z

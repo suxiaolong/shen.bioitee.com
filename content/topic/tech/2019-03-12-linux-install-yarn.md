@@ -1,5 +1,6 @@
 ---
 title: 从 Galaxy Project 聊一聊 Linux 下安装 Yarn
+author: 沈维燕
 type: post
 topic/tags: ["Linux", "tech"]
 date: 2019-03-12T02:51:24.000Z

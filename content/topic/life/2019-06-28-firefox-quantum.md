@@ -1,5 +1,6 @@
 ---
 title: Firefox Quantum 向左，Google Chrome 向右
+author: 沈维燕
 type: post
 topic/tags: ["others", "乱弹"]
 date: 2019-06-28T08:23:08.000Z

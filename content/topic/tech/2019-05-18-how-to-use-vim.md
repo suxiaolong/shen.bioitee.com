@@ -1,5 +1,6 @@
 ---
 title: vim 使用的一些小技巧
+author: 沈维燕
 type: post
 topic/tags: ["vim", "工具"]
 date: 2019-05-18T12:47:11.000Z

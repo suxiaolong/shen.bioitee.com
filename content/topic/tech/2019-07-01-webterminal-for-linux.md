@@ -1,5 +1,6 @@
 ---
 title: 基于 Web 的 Linux 终端 WebTerminal
+author: 沈维燕
 type: post
 topic/tags: ["Linux", "工具"]
 date: 2019-07-01T03:50:35.000Z

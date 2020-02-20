@@ -1,5 +1,6 @@
 ---
 title: Jupyter Notebook 教程(二)：服务器搭建
+author: 沈维燕
 type: post
 topic/tags: ["Jupyter", "开发"]
 date: 2019-07-17T07:48:42.000Z

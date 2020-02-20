@@ -1,5 +1,6 @@
 ---
 title: 从 Blast2GO 到 MySQL 源码编译安装
+author: 沈维燕
 type: post
 topic/tags: ["others", "工具"]
 date: 2019-07-01T03:50:35.000Z

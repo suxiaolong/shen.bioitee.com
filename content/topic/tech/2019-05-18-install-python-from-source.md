@@ -1,5 +1,6 @@
 ---
 title: 生物信息学 Python 入门之源码安装
+author: 沈维燕
 type: post
 topic/tags: ["Python", "工具"]
 date: 2019-05-18T12:10:10.000Z

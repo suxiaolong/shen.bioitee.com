@@ -1,5 +1,6 @@
 ---
 title: Anaconda 使用的一些体验与困惑
+author: 沈维燕
 type: post
 topic/tags: ["Anaconda", "工具"]
 date: 2019-07-04T06:20:26.000Z

@@ -1,5 +1,6 @@
 ---
 title: 各个平台下 Perl 源码安装教程
+author: 沈维燕
 type: post
 topic/tags: ["Perl", "工具"]
 date: 2019-07-01T03:50:35.000Z

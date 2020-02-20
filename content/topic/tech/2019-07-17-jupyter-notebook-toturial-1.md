@@ -1,5 +1,6 @@
 ---
 title: Jupyter Notebook 教程(一)：本地安装与使用
+author: 沈维燕
 type: post
 topic/tags: ["Jupyter", "开发"]
 date: 2019-07-17T03:38:57.000Z

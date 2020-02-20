@@ -1,5 +1,6 @@
 ---
 title: 语雀图片的同步迁移解决方案
+author: 沈维燕
 type: post
 topic/tags: ["others", "开发"]
 date: 2019-08-08T03:44:11.000Z

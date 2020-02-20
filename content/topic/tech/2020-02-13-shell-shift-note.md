@@ -1,5 +1,6 @@
 ---
 title: shell 编程 | shift 命令用法笔记
+author: 沈维燕
 type: post
 topic/tags: ["Shell", "编程"]
 date: 2020-02-13T06:20:04.000Z

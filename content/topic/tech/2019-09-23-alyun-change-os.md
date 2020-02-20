@@ -1,5 +1,6 @@
 ---
 title: 阿里云 ECS 更换操作系统
+author: 沈维燕
 type: post
 topic/tags: ["others", "运维"]
 date: 2019-09-23T07:04:36.000Z

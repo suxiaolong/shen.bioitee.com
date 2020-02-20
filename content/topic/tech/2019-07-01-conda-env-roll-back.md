@@ -1,5 +1,6 @@
 ---
 title: 让你的 conda "回滚" 到以前版本的环境
+author: 沈维燕
 type: post
 topic/tags: ["conda", "工具"]
 date: 2019-07-01T03:50:35.000Z

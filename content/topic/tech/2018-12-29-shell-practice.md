@@ -1,5 +1,6 @@
 ---
 title: bash shell 编程与命令笔记
+author: 沈维燕
 type: post
 topic/tags: ["Shell", "编程"]
 date: 2018-12-29T09:21:11.000Z

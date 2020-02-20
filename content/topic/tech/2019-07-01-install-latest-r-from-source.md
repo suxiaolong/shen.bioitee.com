@@ -1,5 +1,6 @@
 ---
 title: 手把手教你在 Linux 源码安装最新版本的 R
+author: 沈维燕
 type: post
 topic/tags: ["R", "运维"]
 date: 2019-07-01T03:50:35.000Z

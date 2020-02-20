@@ -1,5 +1,6 @@
 ---
 title: Galaxy 生信平台（二）：生产环境部署
+author: 沈维燕
 type: post
 topic/tags: ["others", "tech"]
 date: 2019-09-16T01:43:11.000Z

@@ -1,5 +1,6 @@
 ---
 title: 基于 pypiserver 的 PyPI 私有仓库搭建实践
+author: 沈维燕
 type: post
 topic/tags: ["others", "开发"]
 date: 2019-06-01T07:06:47.000Z

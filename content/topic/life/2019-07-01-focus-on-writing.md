@@ -1,5 +1,6 @@
 ---
 title: 只要能坚持下来就是好博客
+author: 沈维燕
 type: post
 topic/tags: ["others", "乱弹"]
 date: 2019-07-01T03:55:23.000Z

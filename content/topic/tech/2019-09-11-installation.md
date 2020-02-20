@@ -1,5 +1,6 @@
 ---
 title: Galaxy 生信平台（一）：安装
+author: 沈维燕
 type: post
 topic/tags: ["others", "tech"]
 date: 2019-09-11T02:05:25.000Z

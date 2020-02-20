@@ -1,5 +1,6 @@
 ---
 title: 使用 RSS 打造你的科研资讯头条
+author: 沈维燕
 type: post
 topic/tags: ["others", "工具"]
 date: 2019-07-01T03:50:35.000Z

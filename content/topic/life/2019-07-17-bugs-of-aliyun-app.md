@@ -1,5 +1,6 @@
 ---
 title: 发现了阿里云 APP 的一个小 BUG
+author: 沈维燕
 type: post
 topic/tags: ["others", "乱弹"]
 date: 2019-07-17T06:26:57.000Z

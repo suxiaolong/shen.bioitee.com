@@ -1,5 +1,6 @@
 ---
 title: R 包初学者指南
+author: 沈维燕
 type: post
 topic/tags: ["R", "编程"]
 date: 2019-07-01T03:50:35.000Z

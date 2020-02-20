@@ -1,5 +1,6 @@
 ---
 title: 如何同步更新 Github 上 Fork 的项目？
+author: 沈维燕
 type: post
 topic/tags: ["GitHub", "开发"]
 date: 2019-09-12T02:05:22.000Z

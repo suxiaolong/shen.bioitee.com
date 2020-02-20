@@ -1,5 +1,6 @@
 ---
 title: chrome 超详细使用教程
+author: 沈维燕
 type: post
 topic/tags: ["Chrome", "工具"]
 date: 2019-05-18T12:29:57.000Z
