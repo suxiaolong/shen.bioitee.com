@@ -17,6 +17,8 @@ published: true
 - 修复原博客 url 的一些 bug，shen.bioinit.com 部分链接被直接写死，想要复用的需要重新定义。
 
 ---
+
+
 ### CentOS 7 安装 Go
 
 ```bash
@@ -33,6 +35,8 @@ export PATH=$PATH:$GOROOT/bin                  #go语言一些常用的命令引
 $ go env 		# 查看 Go 的一些环境配置
 ```
 
+
+
 ### CentOS 7 安装 Hugo
 
 ```bash
@@ -41,6 +45,8 @@ $ tar zvxf hugo_0.54.0_Linux-64bit.tar.gz -C /usr/local/software/hugo-0.54.0
 $ echo "export PATH=/usr/local/software/hugo-0.54.0:\$PATH" >>~/.bashrc
 $ source ~/.bashrc
 ```
+
+
 
 ### 启动 hugo 博客服务
 
@@ -64,6 +70,8 @@ Total in 203 ms
 
 $ hugo server --baseUrl=120.77.xx.xx --bind=0.0.0.0		# 启动本地预览服务
 ```
+
+
 
 ### 一些问题
 
@@ -96,6 +104,8 @@ WARN 2019/08/13 09:03:08 Page's .RSSLink is deprecated and will be removed in a 
     <link href="{{ .RelPermalink | relURL }}" rel="alternate" type="application/rss+xml" title="{{ $.Title }}" />
 {{ end }}
 ```
+
+
 ### 一些资料
 
 记录一下，搭建部署过程中参考的一些资料：

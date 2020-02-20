@@ -11,6 +11,8 @@ published: true
 
 版本: 1.35.1 (user setup)
 
+
+
 ### 1. 通过配置文件设置
 
 VS Code 的配置文件默认为：settings.json，我们可以通过下面的方式打开该文件进行自定义配置：
@@ -40,6 +42,8 @@ VS Code 的配置文件默认为：settings.json，我们可以通过下面的�
     "workbench.editor.tabSizing": "shrink"
 }
 ```
+
+
 ### 2. 编辑器选项卡
 当 vscode 打开很多文件，如果 "**设置→工作台→编辑器管理→Tab Sizing**" 为 "**fit**"，编辑器选项卡将使用滚动隐藏的方式显示，想要显示打开的编辑器可以使用 `edt` 的命令或者设置 "**Show All Editors**" 的快捷键。
 

@@ -50,6 +50,8 @@ Open multiple files using the fileinput module
 
 ---
 
+
+
 # Python 读写数据到文件
 
 使用 Python 读取和写入文件数据非常简单。 为此，我们必须首先以适当的模式打开文件。 以下是如何打开文本文件并读取其内容的示例：
@@ -68,6 +70,8 @@ with open('data.txt', 'w') as f:
 在上面的示例中，`open()` 打开用于读取或写入的文件，并返回文件句柄（在本例中为 `f`），该句柄提供可用于读取或写入文件数据的方法。 更多有关如何读取和写入文件的更多信息，参考：[Working With File I/O in Python ](https://dbader.org/blog/python-file-io)。
 
 ---
+
+
 
 # 获取目录列表
 
@@ -88,6 +92,8 @@ with open('data.txt', 'w') as f:
 ```
 
 内置的`os`模块有许多有用的功能，可用于列出目录内容并过滤结果。 要获取文件系统中特定目录下的所有文件和文件夹的列表，请在旧版本的 Python 中使用`os.listdir()`；或在 Python 3.x 中使用`os.scandir()`。 如果你还想获取文件和目录属性（如文件大小和修改日期），则`os.scandir()`是首选方法。
+
+
 ## 在传统 Python 版本中获取目录列表
 
 在 Python 3 之前的 Python 版本中，`os.listdir()` 是用于获取目录列表的方法：
@@ -116,6 +122,8 @@ file3.txt
 file2.csv
 sub_dir
 ```
+
+
 ## 在现代 Python 版本中的获取目录列表
 
 在现代版本的 Python 中，`os.listdir()`的替代方法是使用`os.scandir()`和`pathlib.Path()`。
@@ -182,6 +190,8 @@ sub_dir
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1550397843454-63fde9bf-a1b5-485f-8460-6ba588c98ee2.png#align=left&display=inline&height=154&originHeight=154&originWidth=647&size=0&width=647)
 
 这些函数返回了一个包含了目录中所有内容的列表，包括子目录。这些操作可能并不总是您想要的。下一节我们将介绍如何从目录列表中进行结果过滤。
+
+
 ## 列出目录中的所有文件
 
 本节将向您展示如何使用`os.listdir()`，`os.scandir()`和`pathlib.Path()`打印出目录中文件的名称。 如果我们要过滤目录并仅列出由`os.listdir()`得到的目录列表中的文件，请使用`os.path`：
@@ -253,6 +263,8 @@ for item in files_in_basepath:
 ```
 
 这将产生与之前的示例完全相同的输出。本节展示了使用`os.scandir()`和`pathlib.Path()`过滤文件或目录，它们比使用`os.listdir()`和`os.path`更直观，看起来更干净。
+
+
 ## 列出子目录
 
 要列出子目录而不是文件，请使用以下方法之一。
@@ -311,6 +323,8 @@ sub_dir_c
 sub_dir_b
 sub_dir
 ```
+
+
 # 获取文件属性
 
 Python 可以轻松检索文件大小和修改时间等文件属性。这是通过`os.stat()`，`os.scandir()`或`pathlib.Path()`完成的。
@@ -386,12 +400,16 @@ file2.txt       Last modified:  17 Sep 2018
 ```
 
 将日期和时间转换为字符串的语法可能非常混乱。要了解更多信息，请查看相关的[官方文档](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior)。或者参考另一个更易于记忆的方法：[http://strftime.org/](http://strftime.org/)。
+
+
 # 创建目录
 
 我们编写的程序需要创建目录以便在其中存储数据时，可以参考`os`和`pathlib`中包含用于创建目录的函数。
 
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1550397843470-77c25738-ab61-4cba-869f-ad50bf258665.png#align=left&display=inline&height=160&originHeight=160&originWidth=606&size=0&width=606)
+
+
 ## 创建单个目录
 
 要创建单个目录，请将目录路径作为参数传递给`os.mkdir()`：
@@ -442,6 +460,8 @@ p.mkdir(exist_ok=True)
 ```
 
 这样一来，如果目录已存在，则不会引发错误。
+
+
 ## 创建多个目录
 
 `os.makedirs()`类似于`os.mkdir()`。两者之间的区别在于，`os.makedirs()`不仅可以创建单独的目录，还可以用于创建目录树。换句话说，它可以创建任何必要的中间文件夹，以确保存在完整路径。
@@ -502,6 +522,8 @@ p.mkdir(parents=True)
 ```
 
 我更喜欢在创建目录时使用`pathlib`，因为我可以使用相同的函数来创建单个或嵌套目录。
+
+
 # 文件名模式匹配
 
 使用上述方法之一获取目录中的文件列表后，您很可能希望搜索与特定模式匹配的文件。
@@ -541,6 +563,8 @@ $ touch data_{01..03}.txt data_{01..03}_backup.txt admin.py tests.py
 ```
 
 这将创建 some_directory/ 目录，进入该目录，然后创建 sub_dir。第 4 行是在 sub_dir 中创建 file1.py 和 file2.py，最后一行使用扩展创建所有其他文件。 要了解有关 shell 扩展的更多信息，请访问此[站点](http://linuxcommand.org/lc3_lts0080.php)。
+
+
 ## 使用字符串方法
 
 Python 有几种用于修改和操作字符串的内置方法。当您在文件名中使用搜索模式时，其中两个方法`.startswith()` 和`.endswith()`非常有用。为此，首先获取目录列表，然后迭代它：
@@ -562,6 +586,8 @@ data_02_backup.txt
 data_02.txt
 data_01_backup.txt
 ```
+
+
 ## 使用 fnmatch 进行简单文件名模式匹配
 
 字符串方法的匹配能力有限。但 `fnmatch` 具有更高级的模式匹配功能和方法。 `fnmatch.fnmatch()` 是一个支持使用 * 和 ？ 等通配符的函数。例如，要使用`fnmatch`查找目录中的所有`.txt`文件：
@@ -575,6 +601,8 @@ data_01_backup.txt
 ```
 
 这将迭代`some_directory`中的文件列表，并使用`.fnmatch()`对具有`.txt`扩展名的文件执行通配符搜索。
+
+
 ## 更高级的模式匹配
 
 假设我们要查找符合特定条件的`.txt`文件。例如，我们可能只想查找包含单词`data`的`.txt`文件，匹配一组下划线之间的数字，或者文件名中的包含单词 `backup`。 类似于`data_01_backup`，`data_02_backup`或`data_03_backup`的东西。
@@ -591,6 +619,8 @@ data_03_backup.txt
 data_02_backup.txt
 data_01_backup.txt
 ```
+
+
 ## 使用 glob 的文件名模式匹配
 
 模式匹配的另一个有用模块是 `glob`。
@@ -662,6 +692,8 @@ docs.pdf
 
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1550397843462-b90098df-da27-41a2-b1b3-f5e7ce9d796e.png#align=left&display=inline&height=448&originHeight=539&originWidth=897&size=0&width=746)
+
+
 # 遍历目录和文件
 
 遍历目录树并处理树中的文件是最常见的编程任务之一。 让我们来探索如何使用内置的 Python 函数 `os.walk()` 来实现这一点。`os.walk()`用于通过从上到下或从下到上的遍历来生成目录树中的文件名。出于本节的目的，我们将操作以下目录树：
@@ -738,6 +770,8 @@ test2.txt
 ```
 
 如我们所见，程序通过在列出根目录的内容之前列出子目录的内容来启动。 这在我们想要递归删除文件和目录的情况下非常有用(我们将在下面章节部分中学习如何执行此操作)。默认情况下，`os.walk`不会向下走到符号链接文件所指向的目录中。 我们可以通过使用`followlinks = True`参数调用此行为来覆盖此行为
+
+
 # 创建临时文件和目录
 
 Python 提供了一个名为 `tempfile` 方便的模块，用于创建临时文件和目录。
@@ -802,9 +836,13 @@ False
 调用`tempfile.TemporaryDirectory()`会在文件系统中创建一个临时目录，并返回一个表示该目录的对象。在上面的示例中，使用上下文管理器创建目录，目录的名称存储在`tmpdir`中。第三行打印出临时目录的名称，`os.path.exists(tmpdir)`确认目录是否实际在文件系统中创建。
 
 在上下文管理器退出上下文后，临时目录将被删除，并且对`os.path.exists(tmpdir)`的调用将返回 False，这意味着该目录已成功删除。
+
+
 # 删除文件和目录
 
 我们可以使用`os`，`shutil`和`pathlib`模块中的方法删除单个文件，目录和整个目录树。以下部分介绍如何删除不再需要的文件和目录。
+
+
 ## 在 Python 中删除文件
 
 要删除单个文件，请使用`pathlib.Path.unlink()`，`os.remove()`  或者`os.unlink()`。
@@ -868,6 +906,8 @@ except IsADirectoryError as e:
 ```
 
 上面的代码将创建一个名为`data_file`的 Path 对象，该对象指向文件。在`data_file上`调用`.remove()`将删除`home/data.txt`。 如果`data_file`指向目录，则引发`IsADirectoryError`。值得注意的是，上面的 Python 程序与运行它的用户具有相同的权限。如果用户没有删除文件的权限，则会引发`PermissionError`。
+
+
 ## 删除目录
 
 Python 的标准库提供以下删除目录的功能：
@@ -908,6 +948,8 @@ except OSError as e:
 ```
 
 在这里，我们创建一个指向要删除的目录的 Path 对象。如果目录为空，则在 Path 对象上调用`.rmdir()`将它删除。
+
+
 ## 删除整个目录树
 
 要删除非空目录和整个目录树，Python 提供了`shutil.rmtree()`：
@@ -939,9 +981,13 @@ for dirpath, dirnames, files in os.walk('.', topdown=False):
 
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1550397843476-f90912e9-33a2-4041-b686-30cbfb2c4b56.png#align=left&display=inline&height=427&originHeight=502&originWidth=878&size=0&width=746)
+
+
 # 文件和目录复制，移动及重命名
 
 Python 附带的`shutil`模块，是 shell 实用程序的缩写。它为文件提供了许多高级操作，以支持文件和目录的复制，存档和删除。在本节中，我们将学习如何移动和复制文件和目录。
+
+
 ## Python 中的文件复制
 
 `shutil` 提供了一些复制文件的功能。其中最常用的函数是`shutil.copy()`和`shutil.copy2()`。要使用`shutil.copy()`将文件从一个位置复制到另一个位置，请执行以下操作：
@@ -965,6 +1011,8 @@ shutil.copy2(src, dst)
 ```
 
 使用`.copy2()`可保留有关文件的详细信息，例如上次访问时间，权限位，上次修改时间和标志。
+
+
 ## Python 中的目录复制
 
 虽然`shutil.copy()`只复制单个文件，但`shutil.copytree()`可以将复制整个目录及其中包含的所有内容。`shutil.copytree(src, dest)`有两个参数：源目录；将文件和文件夹复制到的目标目录。
@@ -977,6 +1025,8 @@ shutil.copy2(src, dst)
 ```
 
 在此示例中，`.copytree()` 将 `data_1` 的内容复制到新位置 `data1_backup` 并返回目标目录。如果目标目录不存在，它以及其缺少的父目录将被一起创建。`shutil.copytree()`是备份文件的好方法。
+
+
 ## 移动文件和目录
 
 要将文件或目录移动到其他位置，请使用`shutil.move(src, dst)`，其中 src 是要移动的文件或目录，dst 是目标文件或者目录：
@@ -987,6 +1037,8 @@ shutil.copy2(src, dst)
 ```
 
 如果`backup/`存在，`shutil.move('dir_1/', 'backup/')`将会把`dir_1/`移动到`backup/`目录；如果`backup/`目录不存在，则`dir_1/`将重命名为`backup`。
+
+
 ## 重命名文件和目录
 
 Python 内置的`os.rename(src, dst)`可用于文件和目录的重命名：
@@ -1005,9 +1057,13 @@ Python 内置的`os.rename(src, dst)`可用于文件和目录的重命名：
 ```
 
 要使用`pathlib`重命名文件，首先要创建一个`pathlib.Path()`对象，该对象包含要替换的文件的路径。下一步是在路径对象上调用`rename()`并为我们要重命名的文件或目录传递新文件名。
+
+
 # 归档
 
 归档是将多个文件打包成一个文件的便捷方式。两种最常见的存档类型是 ZIP 和 TAR。我们编写的 Python 程序可以从归档中创建，读取和提取数据。我们将在本节中学习如何从两种存档格式文件中读取和写入数据。
+
+
 ## 读取 ZIP 文件
 
 `zipfile`模块是一个低级模块，是 Python 标准库的一部分。`zipfile`具有可以轻松打开和提取 ZIP 文件的功能。要读取 ZIP 文件的内容，我们首先要做的是创建一个 ZipFile 对象。ZipFile 对象类似于使用 `open()`创建的文件对象。ZipFile 同时也是一个上下文管理器，因此支持 `with` 语句：
@@ -1073,6 +1129,8 @@ with zipfile.ZipFile('data.zip', 'r') as zipobj:
 - 第一行显示了如何检索文件的上次修改日期。下一行显示了如何在压缩后获取文件的大小。最后一行显示了存档中 bar.py 的完整路径。
 
 `ZipFile` 支持上下文管理器协议，这就是我们可以将它与 `with` 语句一起使用的原因。完成后，执行此操作会自动关闭 ZipFile 对象。如果我们尝试从已关闭的 ZipFile 对象中打开或提取文件将导致错误。
+
+
 ## 提取 ZIP 归档
 
 `zipfile`模块允许我们通过`.extract()`和`.extractall()`从 ZIP 压缩文件中提取一个或多个文件。
@@ -1111,6 +1169,8 @@ with zipfile.ZipFile('data.zip', 'r') as zipobj:
 接下来，在读取模式下打开`data.zip`并调用`.extract()`从中提取`file1.py`。 `.extract()`返回解压缩文件的完整文件路径。 由于没有指定路径，`.extract()`会将 `file1.py` 提取到当前目录。
 
 下一行代码打印一个目录列表，显示当前目录除原始存档之外的解压缩文件。之后的行显示了如何将整个存档解压缩到`zip_extract`目录中。 `.extractall()` 创建 `extract_dir` 并将 `data.zip` 的内容提取到其中。最后一行关闭 ZIP 存档。
+
+
 ## 从受密码保护的归档中提取数据
 
 `zipfile`支持提取受密码保护的 ZIP。要提取受密码保护的 ZIP 文件，请将密码作为参数传递给`.extract()`或`.extractall()`方法：
@@ -1123,6 +1183,8 @@ with zipfile.ZipFile('data.zip', 'r') as zipobj:
 ```
 
 这将以读取模式打开 secret.zip 存档。接下来，把密码提供给`.extractall()`，存档内容被提取到`extract_dir`。由于 with 语句，在完成提取后，存档会自动关闭。
+
+
 ## 创建新的 ZIP 存档
 
 要创建新的 ZIP 存档，请以写入模式（w）打开 `ZipFile` 对象并添加要存档的文件：
@@ -1146,6 +1208,8 @@ with zipfile.ZipFile('data.zip', 'r') as zipobj:
 ```
 
 在这里，我们打开在上一个示例中以追加模式创建的 new.zip 存档。在追加模式下打开`ZipFile`对象允许您将新文件添加到 ZIP 文件而不删除其当前内容。将文件添加到 ZIP 文件后，`with` 语句将脱离上下文并关闭 ZIP 文件。
+
+
 ## 打开 TAR 归档
 
 TAR 文件是 ZIP 等未压缩文件的存档。它们可以使 用 gzip，bzip2 和 lzma 压缩方法进行压缩。`TarFile` 类允许读取和写入 TAR 存档。
@@ -1197,6 +1261,8 @@ app.py
 ```
 
 在此示例中，循环遍历`.getmembers()`返回的文件列表，并打印出每个文件的属性。`.getmembers()`返回的对象具有可以通过编程方式访问的属性，例如归档中每个文件的名称，大小和上次修改时间。在读取或写入存档后，我们必须关闭它以释放系统资源。
+
+
 ## 从 TAR 存档中提取文件
 
 在本节中，我们学习一下如何使用下面的方法从 TAR 存档中提取文件：
@@ -1245,6 +1311,8 @@ app.py  CONTRIBUTING.rst  README.md
 ```
 
 打开的存档文件应在读取或写入后始终关闭。要关闭存档，需要在存档文件句柄上调用`.close()`，或在创建`1tarfile`对象时使用`with`语句，以便在完成后自动关闭存档。这将释放系统资源，并把我们对存档所做的任何更改写入文件系统。
+
+
 ## 创建新的 TAR 存档
 
 创建新的 TAR 存档，可以参考下面的做法：
@@ -1288,6 +1356,8 @@ foo.bar
 ```
 
 在追加模式（'a'）下打开存档允许我们向其添加新文件而不删除其中已存在的文件。
+
+
 ## 处理压缩归档
 
 `tarfile`还可以使用`gzip`，`bzip2`和`lzma` 来读取和写入 TAR 的压缩文件。要读取或写入压缩存档，请使用`tarfile.open()`，为压缩类型传递适当的模式。
@@ -1309,9 +1379,13 @@ tests.py
 ```
 
 'w：gz' 可以以 gzip 压缩写入的方式打开压缩的存档文件，'r：gz' 模式则可以以 gzip 压缩读取的方式打开压缩的存档文件。需要注意的是，我们无法在追加模式下打开压缩的存档。要将文件添加到压缩存档，我们必须创建新存档。
+
+
 # 创建归档更简单的方法
 
 Python 标准库还支持使用`shutil`模块中的高级方法创建 TAR 和 ZIP 存档。`shutil`中的归档实用程序允许我们创建，读取和提取 ZIP 和 TAR 归档文件。这些实用程序依赖于较低级别的`tarfile`和`zipfile`模块。
+
+
 ## 使用 `shutil.make_archive()` 处理存档
 
 `shutil.make_archive()`至少有两个参数：归档的名称和归档格式。
@@ -1332,6 +1406,8 @@ shutil.unpack_archive('backup.tar', 'extract_dir/')
 ```
 
 这行代码调用了`.unpack_archive()`并传入存档名称和目标目录，它会将 `backup.tar` 的内容提取到 `extract_dir/` 中。 ZIP 存档也可以以相同的方式创建和提取。
+
+
 # 读取多个文件
 
 Python 支持通过 `fileinput`  模块从多个输入流或文件列表中读取数据。此模块允许我们快速轻松地循环遍历一个或多个文本文件的内容。以下是使用 `fileinput` 的典型方法：
@@ -1342,6 +1418,8 @@ for line in fileinput.input()
 ```
 
 `fileinput` 默认从传递给 `sys.argv` 的命令行参数中获取其输入。
+
+
 ## 使用 `fileinput` 循环遍历多个文件
 
 让我们使用 `fileinput` 构建一个普通的 UNIX 实用程序 `cat` 的原始版本。`cat` 实用程序将按顺序读取文件，将它们写入标准输出。当在命令行参数中给出多个文件时，`cat` 将连接文本文件并在终端中显示结果：
@@ -1377,6 +1455,8 @@ $ python3 fileinput-example.py bacon.txt cupcake.txt
 ```
 
 `fileinput` 允许我们检索有关每一行的更多信息，例如它是否是第一行(`.isfirstline()`)，行号(`.lineno()`) 和文件名(`.filename()`)。 更多关于 `fileinput` 的内容，我们可以点击[这里](https://docs.python.org/3/library/fileinput.html)查看。
+
+
 # 总结
 
 现在我们已经知道如何使用 Python 对文件和文件组执行最常见的操作。同时也已经了解了用于读取，查找和操作它们的不同内置模块。

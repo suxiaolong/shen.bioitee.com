@@ -8,11 +8,15 @@ published: true
 ---
 
 前不久，处理生信分析网页版自动化报告的时候就使用过 fancybox，今天在优化个人博客，为博文增加图片缩放效果，解决一些滚动条问题时，才从 fancybox 的 Github 源码中接触到 gulp —— 一个基于流的前端自动化构建工具，记录一下学习的过程。
+
+
 ## 1. fancybox 简单介绍
 
 关于 fancybox，其官网的介绍是：JavaScript lightbox library for presenting various types of media. Responsive, touch-enabled and customizable. 翻译过来就是，Fancybox 是一个 JavaScript 库，用于以优雅的方式呈现图像，视频和任何 HTML 内容。它具有您期望的所有功能——触摸启用，响应和完全可定制。我们来看一下 fancybox 官网提供的 demo 效果。
 
 ![fancybox-demo-86.gif](https://note.bioitee.com/yuque/0/2019/gif/126032/1577342995252-03959fe5-5bd2-4584-b37a-e50091119cf7.gif#align=left&display=inline&height=240&name=fancybox-demo-86.gif&originHeight=240&originWidth=320&size=8977538&status=done&style=none&width=320)
+
+
 
 ## 2. fancybox 的安装使用
 
@@ -33,6 +37,8 @@ published: true
 <a data-fancybox="gallery" href="big_1.jpg"><img src="small_1.jpg"></a>
 <a data-fancybox="gallery" href="big_2.jpg"><img src="small_2.jpg"></a>
 ```
+
+
 ## 3. fancybox 的一些问题
 
 在网上看到部分网友说，fancybox3 在打开或关闭遮罩层的时候，页面会自动返回顶部的 bug，目前我使用的 fancybox@3.5.7 暂时没发现这个问题。
@@ -51,6 +57,8 @@ published: true
 fancybox 是基于 GPLv3 进行源码开放的，它的源吗托管在 github 上，我们可以直接在 `fancybox/dist/jquery.fancybox.js` 源码中把 `hideScrollbar: true`，更改成 `hideScrollbar: false`，然后把修改后的 `jquery.fancybox.js` 应用到你的图片页面，以达到显示滚动条的效果。
 
 细心的童鞋可能发现了，fancybox 默认使用的 js 文件是 `jquery.fancybox.min.js` ，相比源码文件 `jquery.fancybox.js`  多了一个 **min** 后缀！所以，我们怎么才能把 `jquery.fancybox.js`  变成 `jquery.fancybox.min.js` ？
+
+
 
 ## 4. Gulp 简单介绍
 
@@ -78,6 +86,8 @@ Gulp 在官网的 title 是：用自动化构建工具增强你的工作流程�
 
 
 接下来，我们以 fancybox 的源码的为例，简单了解一下 Gulp 的安装和使用。
+
+
 ## 5. Gulp 安装与使用
 
 首先，gulp 是基于 node.js 的工具，所以，在安装 Gulp 前我们需要先安装 node.js 和 npm。node.js 的安装大家可以自行谷歌一下怎么安装，这里不细说。
@@ -139,6 +149,8 @@ $ ./node_modules/gulp/bin/gulp.js
 
 最后，把编译后的 `dist/jquery.fancybox.min.js` 文件应用到博客或者其他网站页面，完成最后设置。
 
+
+
 ## 6. 几点总结
 
 - 正常情况下的 `gulp` 可以使用 `npm install -g gulp` 进行全局安装，或者 `npm install --save-dev gulp` 在当前项目(目录)中安装 `gulp` 。区别是， `-g` 参数会把 `gulp` 安装在 `node` 默认的 `bin` 路径下，即全局安装；而不加 `-g` 参数， 则会把 `gulp` 默认安装到当前目录的 `node_modules/gulp/bin` 下。
@@ -165,6 +177,8 @@ $ ./node_modules/gulp/bin/gulp.js
 
 - 它们真正的区别是， `npm` 自己的文档说 `dependencies` 是运行时依赖， `devDependencies` 是开发时的依赖。即 `devDependencies` 下列出的模块，是我们开发时用的，比如我们安装 js 的压缩包 `gulp-uglify` 时，我们采用的是 `npm install –save-dev gulp-uglify` 命令安装，因为我们在发布后用不到它，而只是在我们开发才用到它。 `dependencies` 下的模块，则是我们发布后还需要依赖的模块，譬如像 jQuery 库或者 Angular 框架类似的，我们在开发完后后肯定还要依赖它们，否则就运行不了。
 - 对于已经存在 `package.json` 配置文件(定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）)的目录，我们可以直接在当前目录执行 `npm install` 进行安装， `npm install` 命令根据这个配置文件，自动下载所需的模块，也就是配置项目所需的运行和开发环境。
+
+
 
 ## 7. 参考资料
 

@@ -9,6 +9,7 @@ published: true
 
 
 
+
 ## 背景
 
 前几天，在不同的 CentOS 7 服务器上尝试部署同一个发行版本的 Galaxy 生物信息分析平台（[Galaxy Project](https://galaxyproject.org/)：云计算背景下诞生的一个生物信息学可视化分析开源项目）的时候，发现在执行 sh run.sh 部署时，出现了由于网络限制导致的 requirements.txt 包安装 ReadTimeoutError。
@@ -45,6 +46,8 @@ ReadTimeoutError: HTTPSConnectionPool(host='wheels.galaxyproject.org', port=443)
 第二，由于这两个 pypi 库位于国外，国内服务器想要下载里面的包可能会出现网络超时。
 
 从 `https://wheels.galaxyproject.org/` 的首页介绍，可以知道这是 Galaxy 基于 pypiserver-1.2.1 搭建的一个 PyPI 源（This instance is running version 1.2.1 of the pypiserver software.）。为了解决文章开头的 ReadTimeoutError，我们借着这个机会来学习一下如何使用 pypiserver 快速搭建一个属于自己的离线 PyPI 仓库(本文章使用 pip==18.1)。
+
+
 ## PyPI 私有源
 
 PyPI (Python Package Index，[https://pypi.org/](https://pypi.org/)) 是 Python 官方的第三方库的仓库，所有人都可以下载第三方库或上传自己开发的库到 PyPI。
@@ -69,9 +72,13 @@ EOF
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1559372822643-02a74b05-1151-4f09-846d-7244b79a8a23.png#align=left&display=inline&height=423&originHeight=423&originWidth=525&size=0&status=done&width=525)##
 
 这里选择 pypiserver，除了 Galaxy 的原因外，最重要的是因为它最小而且使用简单。
+
+
 ## pypiserver 简介
 
 > pypiserver is a minimal PyPI compatible server for pip or easy_install. It is based on bottle and serves packages from regular directories. Wheels, bdists, eggs and accompanying PGP-signatures can be uploaded either with pip, setuptools, twine, pypi-uploader, or simply copied with scp.
+
+
 
 ## pypiserver 服务端配置
 
@@ -107,6 +114,8 @@ $ pip download -d /home/shenweiyan/packages mako
 # 启动 pypiserver 服务
 $ pypi-server -p 8080 ~/packages &
 ```
+
+
 ## pypiserver 客户端配置
 
 ```
@@ -136,6 +145,8 @@ extra-index-url = https://mirrors.aliyun.com/pypi/simple/
 trusted-host = 120.77.xx.xx
 EOF
 ```
+
+
 ## requirements.txt 离线 PyPI 仓库
 
 一般 Python 项目使用 pip 安装的包，都可以通过 pip freeze >requirements.txt 导出环境中已有的模块。搭建 requirements.txt 离线 PyPI 仓库，我们首先需要把 requirements.txt 所有的模块安装包下载到本地。
@@ -192,6 +203,8 @@ Successfully installed bdbag-1.2.4 beaker-1.9.1 ...... warlock-1.2.0 webob-1.4.2
 - 对于特定项目的第三方 PyPI 源，可考虑 pypiserver 实现离线本地化。
 
 pypiserver 的一些高级用法，如基于 systemd 和 supervisor 的自动化启动管理；基于 Docker 技术的部署与使用；基于 Nginx 反向代理的 pypiserver 运行等等，我们后面有时间再进行介绍。有需要的童鞋也可参考 pypiserver 的 GitHub 说明文档：https://github.com/pypiserver/pypiserver。
+
+
 ## 参考资料
 
 1. [如何搭建自己的pypi私有源服务器](https://www.aliyun.com/jiaocheng/439913.html)，阿里云教程中心

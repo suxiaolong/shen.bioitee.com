@@ -177,18 +177,20 @@
 
 <p>iPython Notebook 是一个基于浏览器的 python 数据分析工具，使用起来非常方便，具有极强的交互方式和富文本的展示效果。Jupyter 是它的升级版，它的安装也非常方便，一般 Anaconda 安装包中会自带。安装好以后直接输入 jupyter notebook 便可以在浏览器中使用。</p>
 
-<p>关于为什么使用 jupyter 进行分析，而不是用 python 脚本或仅仅利用 excel，这里列举知乎中的两点回答：
-&gt; <strong>1、基于过程</strong>
-&gt;
-&gt;
-&gt; 数据分析和传统的 MVC 软件开发的最大区别在于，数据分析存在一个 data flow, 我们是在不断的做计算，并且画图。这里存在一个大致的 &ldquo;顺序&rdquo;，比如：
-&gt;
-&gt; 1. 先对数据进行处理，去掉有问题的数据 (Data Wrangling)
-&gt; 1. 从各个角度看一个这个数据各个维度的分布情况 (Data Exploration)
-&gt; 1. 根据自己的想法、要求，做具体的分析，计算
-&gt; 1. 对计算结果做进一部分的分析</p>
+<p>关于为什么使用 jupyter 进行分析，而不是用 python 脚本或仅仅利用 excel，这里列举知乎中的两点回答：</p>
 
 <blockquote>
+<p><strong>1、基于过程</strong></p>
+
+<p>数据分析和传统的 MVC 软件开发的最大区别在于，数据分析存在一个 data flow, 我们是在不断的做计算，并且画图。这里存在一个大致的 &ldquo;顺序&rdquo;，比如：</p>
+
+<ol>
+<li>先对数据进行处理，去掉有问题的数据 (Data Wrangling)</li>
+<li>从各个角度看一个这个数据各个维度的分布情况 (Data Exploration)</li>
+<li>根据自己的想法、要求，做具体的分析，计算</li>
+<li>对计算结果做进一部分的分析</li>
+</ol>
+
 <p>这有点类似做应用题。而这是传统的 IDE (e.g. PyCharm) 没有办法做到的。假如全部都写脚本+输出，那么你 <strong>每张图可能都要保存下来，然后再单独点进去看</strong>，很麻烦。而 Notebook 做这个要更方便，结果直接产生在 Cell 下面。</p>
 </blockquote>
 

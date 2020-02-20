@@ -19,6 +19,7 @@ published: true
 ```bash
 $ mkdir -p /data/share
 ```
+
 **1. 使用 ACL 来为用户赋予目录的读写权限**
 
 **重要提示：**打算使用此方法的话，您需要确认您的 Linux 文件系统类型（如 ext3 和 ext4, NTFS, BTRFS）支持 ACL。
@@ -74,6 +75,7 @@ $ getfacl /data/share
 
 - [如何使用访问控制列表（ACL）为用户/组设置磁盘配额](http://www.tecmint.com/set-access-control-lists-acls-and-disk-quotas-for-users-groups/)
 - [如何使用访问控制列表（ACL）挂载网络共享](http://www.tecmint.com/rhcsa-exam-configure-acls-and-mount-nfs-samba-shares/)
+
 **2. 使用用户组来为用户赋予指定目录的读写权限**
 
 
@@ -118,6 +120,7 @@ $ ls -l /data/share
 ```
 
 ok，在 Linux 上给用户赋予指定目录的读写权限就介绍到这里 ！
+
 **参考资料：**
 
 - 高延斌，《[Linux ACL 体验](https://www.ibm.com/developerworks/cn/linux/l-acl/index.html)》，IBM Developer

@@ -242,8 +242,9 @@
 
 <p><a data-fancybox="gallery" href="https://note.bioitee.com/yuque/0/2019/png/126032/1565243547685-99f99f9c-3775-4c63-ad7d-cc04048bb9ef.png#align=left&amp;display=inline&amp;height=333&amp;name=image.png&amp;originHeight=333&amp;originWidth=847&amp;size=39662&amp;status=done&amp;style=none&amp;width=847"><img src="https://note.bioitee.com/yuque/0/2019/png/126032/1565243547685-99f99f9c-3775-4c63-ad7d-cc04048bb9ef.png#align=left&amp;display=inline&amp;height=333&amp;name=image.png&amp;originHeight=333&amp;originWidth=847&amp;size=39662&amp;status=done&amp;style=none&amp;width=847" alt=""></a></p>
 
-<p><strong>第二步</strong>，到你买域名的地方去配置。我是在阿里云上面买的，下面以阿里云为例：
-<strong><img src="https://note.bioitee.com/yuque/0/2019/png/126032/1565244440370-93369291-54fb-4a27-b379-f6bd6743c121.png#align=left&amp;display=inline&amp;height=467&amp;name=image.png&amp;originHeight=467&amp;originWidth=921&amp;size=52928&amp;status=done&amp;style=none&amp;width=921" alt="" /></strong></p>
+<p><strong>第二步</strong>，到你买域名的地方去配置。我是在阿里云上面买的，下面以阿里云为例：</p>
+
+<p><strong><img src="https://note.bioitee.com/yuque/0/2019/png/126032/1565244440370-93369291-54fb-4a27-b379-f6bd6743c121.png#align=left&amp;display=inline&amp;height=467&amp;name=image.png&amp;originHeight=467&amp;originWidth=921&amp;size=52928&amp;status=done&amp;style=none&amp;width=921" alt="" /></strong></p>
 
 <p>**做到这一步就算已经完成了。成功之后，回到七牛云对象存储，在存储空间的概览也可以看到 CNAME 状态显示为&rdquo;成功&rdquo;：</p>
 
@@ -290,11 +291,10 @@
 <ul>
 <li>第一个前缀实际上是一个判断条件，比如你访问 <code>https://bucketname.oss-endpoint.com/yuque/xxx</code> 就遵循这条规则，如果你访问 <code>https://bucketname.oss-endpoint.com/videos/xxx</code> 则不遵循这条规则，就不会回源了。</li>
 <li>第二个前缀实际上是一个 url 重写的条件，比如你访问 <code>bucketname.oss-endpoint.com/yuque/a.jpg</code> ，但是你的服务器上，实际上要通过 <code>note.bioitee.com/0/2019/png/yuque/a.jpg</code>  才能访问到这张图片，这个时候，就可以把 <code>0/2019/png</code> 当做前缀。这里我选择留空。</li>
-
-<li><p>你也可以针对不同格式、不同年份的文件设置粒度更细的镜像回源规则，详细可以参考：《<a href="https://help.aliyun.com/document_detail/31865.html">管理回源设置</a>》。</p>
-
-<h4 id="2-3-变更链接">2.3 变更链接</h4></li>
+<li>你也可以针对不同格式、不同年份的文件设置粒度更细的镜像回源规则，详细可以参考：《<a href="https://help.aliyun.com/document_detail/31865.html">管理回源设置</a>》。</li>
 </ul>
+
+<h4 id="2-3-变更链接">2.3 变更链接</h4>
 
 <p>上一步镜像回源的规则创建好，点击 &ldquo;确定&rdquo; 后，在博客中我们只需要把博客所有 <code>https://note.bioitee.com</code> 的域名都替换成你 oss 对应的外网访问 Bucket 域名（如， <code>https://bucketname.oss-endpoint.com</code> 即可），并检查图片是否正常显示。</p>
 

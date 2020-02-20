@@ -9,7 +9,9 @@ published: true
 
 iPython Notebook 是一个基于浏览器的 python 数据分析工具，使用起来非常方便，具有极强的交互方式和富文本的展示效果。Jupyter 是它的升级版，它的安装也非常方便，一般 Anaconda 安装包中会自带。安装好以后直接输入 jupyter notebook 便可以在浏览器中使用。
 
+
 关于为什么使用 jupyter 进行分析，而不是用 python 脚本或仅仅利用 excel，这里列举知乎中的两点回答：
+
 > **1、基于过程**
 > 
 > 
@@ -41,6 +43,8 @@ iPython Notebook 是一个基于浏览器的 python 数据分析工具，使用�
 > ![](https://note.bioitee.com/yuque/0/2019/jpeg/126032/1563349446691-7c04adc4-2f8e-45d7-88ff-89f23ad37c5a.jpeg#align=left&display=inline&height=429&originHeight=429&originWidth=805&size=0&status=done&width=805)
 
 
+
+
 # 安装
 
 正常情况下，Anaconda 安装包中已经自带了 jupyter、jupyter-notebook。对于 Miniconda，或者其他只安装了 python 的机器，需要借助 pip 安装：
@@ -55,6 +59,8 @@ conda install jupyter
 ```
 
 更多安装说明，请参考 [官网](http://jupyter.org/install.html)。
+
+
 
 # 启动
 
@@ -93,6 +99,8 @@ Known labextensions:
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1563350481111-cf547695-a543-48db-ae24-99be9d1e22ba.png#align=left&display=inline&height=342&originHeight=342&originWidth=807&size=0&status=done&width=807)
 
 
+
+
 # 使用
 
 在 Jupyter Notebook web 页面，我们可以点击 "New" → "Python2" 创建 python2 笔记。
@@ -113,7 +121,6 @@ $ cat ~/.jupyter/jupyter_notebook_config.json
   }
 }
 ```
-
 
 # 
 以上就是本地 Jupyter Notebook 安装与使用的一些简单介绍，下一篇我们介绍一下 Jupyter Notebook 远程服务安装和配置。

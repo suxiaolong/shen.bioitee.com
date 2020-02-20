@@ -18,6 +18,8 @@ published: true
 
 ![](https://note.bioitee.com/yuque/0/2020/png/126032/1579488913801-2f745d96-8d57-4b26-847d-9f06e3353f22.png#align=left&display=inline&height=316&name=image.png&originHeight=316&originWidth=576&size=16332&status=done&style=none&width=576)
 
+
+
 ## 1. 创建域名邮箱
 
 域名邮箱的主页是：[http://domain.mail.qq.com/](http://domain.mail.qq.com/)，这也是 QQ 域名邮箱直接登录的地址。我们直接在浏览器打开，在页面的左边栏就可以看到域名邮箱的创建入口。我们需要先通过 QQ 邮箱登陆。
@@ -27,6 +29,8 @@ published: true
 登录后，选择创建域名邮箱。
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1577080618503-c44d8f5c-80e3-445f-9205-7e2092e6e865.png#align=left&display=inline&height=458&name=image.png&originHeight=458&originWidth=851&size=60493&status=done&style=none&width=851)
+
+
 ## 2. 填写自己的域名
 
 
@@ -35,17 +39,23 @@ published: true
 点击下一步，出现下面的页面，选择我们域名的提供商。小编的邮箱如果是在阿里云注册，所以选择其他提供商。
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1577080800210-21a9926c-b022-4029-80ea-f6d5bf7b6499.png#align=left&display=inline&height=463&name=image.png&originHeight=463&originWidth=785&size=74346&status=done&style=none&width=785)
+
+
 ## 3. 添加 CNAME 和 Mx 记录
 
 
 点击下一步，会出现下面的页面，根据提示添加 CNAME 和 Mx 记录。
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1577081245774-bf5bd0a9-b21e-41a5-9f44-6818f9f6132d.png#align=left&display=inline&height=552&name=image.png&originHeight=552&originWidth=790&size=73999&status=done&style=none&width=790)
+
+
 ### 3.1 域名解析
 
 这里以阿里云为例，登陆阿里云账号，选择对应域名的解析，点击"**添加记录**"。
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1577081811908-b8fc34de-3c4a-4d78-9802-ef495dbfc1e5.png#align=left&display=inline&height=236&name=image.png&originHeight=236&originWidth=645&size=22161&status=done&style=none&width=645)
+
+
 
 
 ### 3.2 添加记录
@@ -57,6 +67,8 @@ published: true
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1577082913294-55807943-f3f0-41f9-b11e-aa679da49900.png#align=left&display=inline&height=478&name=image.png&originHeight=478&originWidth=587&size=20508&status=done&style=none&width=587)
 
 
+
+
 ## 4. 提交验证
 
 返回 qq 邮箱刚才界面，点击提交验证。
@@ -64,6 +76,8 @@ published: true
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1577083032992-2157d612-3ded-42ab-a8b1-29346e20b820.png#align=left&display=inline&height=280&name=image.png&originHeight=280&originWidth=787&size=35490&status=done&style=none&width=787)
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1577083122693-9071945e-9d0e-4342-be3d-c218c6005257.png#align=left&display=inline&height=275&name=image.png&originHeight=275&originWidth=706&size=18898&status=done&style=none&width=706)
+
+
 ## 5. 添加成员
 
 添加一个成员（注意，在添加新成员之前，需要首先设置域名邮箱的管理员），名字随便起，就跟你在别的平台注册邮箱一样。
@@ -82,6 +96,8 @@ published: true
 最后，我们再次回到新创建用户 qq 邮箱**设置 **–>**账户**–>**账号管理**，此时就会出现刚刚设置的域名邮箱。
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1577085255696-9c855e06-26c8-4a65-a679-809c9656e2d2.png#align=left&display=inline&height=242&name=image.png&originHeight=242&originWidth=888&size=27837&status=done&style=none&width=888)
+
+
 
 ## 6. 主显账号
 

@@ -216,11 +216,10 @@
 <ol>
 <li>ld 会去找 <code>gcc</code> / <code>g++</code>  命令中的参数 <code>-L</code> ；</li>
 <li>再找 gcc 的环境变量 <strong>LIBRARY_PATH</strong>，它指定程序静态链接库文件搜索路径；</li>
-
-<li><p>再找默认库目录 <code>/lib</code> ， <code>/usr/lib</code> ， <code>/usr/local/lib</code> ，这是当初 compile gcc 时写在程序内的。</p>
-
-<h1 id="环境变量文件加载顺序">环境变量文件加载顺序</h1></li>
+<li>再找默认库目录 <code>/lib</code> ， <code>/usr/lib</code> ， <code>/usr/local/lib</code> ，这是当初 compile gcc 时写在程序内的。</li>
 </ol>
+
+<h1 id="环境变量文件加载顺序">环境变量文件加载顺序</h1>
 
 <p>正常登录配置文件顺序加载过程，所谓正常登录指用户通过输入用户名和密码登录的状态。</p>
 

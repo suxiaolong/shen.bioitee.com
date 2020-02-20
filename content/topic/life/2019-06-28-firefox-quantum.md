@@ -11,12 +11,14 @@ published: true
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1562971605832-a24038e6-1bcd-49ae-900a-5a2f3d1f133e.png#align=left&display=inline&height=337&name=image.png&originHeight=421&originWidth=775&size=97090&status=done&width=620)
 
+
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1562971800315-42037b34-39fd-40cf-9357-ad1e08966bc2.png#align=left&display=inline&height=337&name=image.png&originHeight=421&originWidth=775&size=87032&status=done&width=620)
 
 
 总的来说，有几点体验：
 
 1. 在 [https://www.mozilla.org/zh-CN/firefox/](https://www.mozilla.org/zh-CN/firefox/) 下载国际版本的火狐（**Firefox Installer.exe**）是没办法自定义安装路径的，它会默认安装到 C 盘。
+
 2. 我们需要从[Firefox下载页](https://www.mozilla.org/firefox/new/?utm_medium=referral&utm_source=support.mozilla.org)的**高级安装选项与其他平台**链接下载 Windows 平台的完整离线 Firefox 安装程序（_Firefox Setup <version>.exe_ 文件），或者如果你想选择其他语言，请打开[用其他语言下载 Firefox](https://www.mozilla.org/firefox/all/) 页面。详细可以参考火狐官方文档：《[在 Windows 上自定义安装 Firefox](https://support.mozilla.org/zh-CN/kb/custom-installation-firefox-on-windows)》。![图片.png](https://note.bioitee.com/yuque/0/2019/png/126032/1561710652286-a6319d4f-7b12-4a17-b108-57e3f0876185.png#align=left&display=inline&height=581&name=%E5%9B%BE%E7%89%87.png&originHeight=581&originWidth=1305&size=67719&status=done&width=1305)
 
 3. 新版本的 Firefox Quantum 流畅性的确有很大的提升，不用翻墙的书签同步，开源与注重用户隐私这些都是吸引回归火狐的亮点。

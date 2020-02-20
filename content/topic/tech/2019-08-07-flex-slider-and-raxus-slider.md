@@ -9,6 +9,7 @@ published: true
 
 
 
+
 ## FlexSlider
 
 链接：[http://flexslider.woothemes.com/](http://flexslider.woothemes.com/)
@@ -50,6 +51,8 @@ $(window).load(function() {
 ```
 
 **FAQ01**：[如何使用flexslider设置多个滑块？](http://cn.voidcc.com/question/p-pumryoaf-hm.html)
+
+
 
 ## Raxus Slider
 

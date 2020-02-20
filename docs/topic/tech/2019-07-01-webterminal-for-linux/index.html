@@ -185,11 +185,10 @@
 <li>支持 Encrypted keys；</li>
 <li>支持全屏终端，且终端窗口可调整大小；</li>
 <li>自动检测系统默认编码；</li>
-
-<li><p>适用于 Python 2.7-3.6。</p>
-
-<h1 id="1-安装">1. 安装</h1></li>
+<li>适用于 Python 2.7-3.6。</li>
 </ul>
+
+<h1 id="1-安装">1. 安装</h1>
 
 <pre><code class="language-bash">pip install webssh
 </code></pre>
@@ -254,12 +253,13 @@ wssh --help
 
 <ul>
 <li>使用 Nginx 作为后台代理，并启用 SSL 访问，可以避免你的 ssh 证书被暴露。此外，你的浏览器和 Web 服务器之间的通信将使用安全的 Websockets 进行加密。</li>
+<li>尝试使用 reject policy 作为缺少主机密钥时的策略，以及经过验证的 known_hosts，可以防止中间人的攻击。其思路是，webssh 会依次检查系统主机密钥文件（&rdquo;~/.ssh/known_hosts&rdquo;）和应用程序主机密钥文件（&rdquo;./known_hosts&rdquo;），如果 ssh 服务器的主机名（hostname）没有被发现或者密钥不匹配，连接将被中止。</li>
+</ul>
 
-<li><p>尝试使用 reject policy 作为缺少主机密钥时的策略，以及经过验证的 known_hosts，可以防止中间人的攻击。其思路是，webssh 会依次检查系统主机密钥文件（&rdquo;~/.ssh/known_hosts&rdquo;）和应用程序主机密钥文件（&rdquo;./known_hosts&rdquo;），如果 ssh 服务器的主机名（hostname）没有被发现或者密钥不匹配，连接将被中止。</p>
+<h1 id="5-参考资料">5. 参考资料</h1>
 
-<h1 id="5-参考资料">5. 参考资料</h1></li>
-
-<li><p><a href="https://www.oschina.net/p/webterminal">https://www.oschina.net/p/webterminal</a></p></li>
+<ul>
+<li><a href="https://www.oschina.net/p/webterminal">https://www.oschina.net/p/webterminal</a></li>
 </ul>
 
 

@@ -18,6 +18,8 @@ published: true
 
 在本教程中，我们将介绍 python 的 `datetime` 模块以及如何使用它来处理日期、时间，以及日期时间的格式化处理。 它包含各种实用示例，可帮助您通过 python 函数更加快捷高效进行日期和时间处理。 一般来说，日期类型列不容易操作，因为它带来很多挑战，例如处理闰年，一个月中的不同天数，不同的日期和时间格式，或者日期值是否以字符串（字符）格式存储等等。
 
+
+
 ### 1. datatime 模块
 
 它是一个 python 模块，它提供了几个处理日期和时间的函数。它有以下四个类，在本文的后半部分将解释这些类是如何工作的。
@@ -34,6 +36,8 @@ published: true
 1. 识别在过去 6 个月内进行多笔交易的客户；
 1. 从时间戳值中提取日期。
 
+
+
 #### 导入 `datetime` 模块
 
 您可以使用以下命令导入或加载 `datetime` 模块：
@@ -43,6 +47,8 @@ import datetime
 ```
 
 您不需要安装此模块，因为它与 python 软件的安装捆绑在一起。
+
+
 
 ### 2. Dates
 
@@ -61,6 +67,8 @@ datetime.date(2019, 9, 10)
 2019-09-10
 ```
 
+
+
 #### 2.1 创建 Date 对象
 
 日期类遵循如下所示的语法：`**date(year, month, day)**`
@@ -70,6 +78,8 @@ datetime.date(2019, 9, 10)
 >>> print(dt)
 2019-10-20
 ```
+
+
 
 #### 2.2 从 date 值中提取 day, month 和 year 
 
@@ -82,6 +92,8 @@ datetime.date(2019, 9, 10)
 >>> dt.year
 2019
 ```
+
+
 
 #### 2.3 自定义日期格式
 
@@ -134,6 +146,8 @@ datetime.date(2019, 9, 10)
 'Sunday, October 20, 2019'
 ```
 
+
+
 ### 3. Time
 
 时间值使用 `datetime.time` 类定义。它遵循如下所示的语法：
@@ -145,6 +159,8 @@ datetime.date(2019, 9, 10)
 >>> print(t)
 21:02:03
 ```
+
+
 
 #### 3.1 从时间值获取小时，分钟和秒
 
@@ -159,6 +175,8 @@ datetime.date(2019, 9, 10)
 >>> t.microsecond
 0
 ```
+
+
 
 #### 3.2 将时间转换为 AM PM 格式
 
@@ -175,6 +193,8 @@ datetime.date(2019, 9, 10)
 >>> t.strftime("%I:%M %p")
 '09:02 PM'
 ```
+
+
 
 ### 4. 同时处理 Dates 和 Time
 
@@ -203,6 +223,8 @@ datetime.date(2019, 9, 10)
 'Tuesday September 10 10:45'
 ```
 
+
+
 #### 4.1 创建 datetime 对象
 
 `datetime` 类的语法如下：
@@ -218,6 +240,8 @@ datetime.date(2019, 9, 10)
 '20-07-2019 10-51'
 ```
 
+
+
 #### 4.2 在 python 中将字符串转换为 datetime
 
 ```python
@@ -227,6 +251,8 @@ datetime.date(2019, 9, 10)
 ```
 
 
+
+
 ### 5. 如何获取当前的时间？
 
 我们可以使用我们在上一节中使用的相同函数，并使用 `time()` 方法从返回值中提取时间。
@@ -234,6 +260,8 @@ datetime.date(2019, 9, 10)
 ```python
 print(dt.time())
 ```
+
+
 
 
 ### 6. 如何获得当前周的天？
@@ -248,6 +276,8 @@ print(dt.time())
 >>> dt.isoweekday()
 2
 ```
+
+
 
 
 ### 7. 计算未来或过去的日期
@@ -314,6 +344,8 @@ from dateutil.relativedelta import *
 2020-07-20 10:51:00
 ```
 
+
+
 #### 7.1 考虑闰年
 
 
@@ -323,6 +355,8 @@ from dateutil.relativedelta import *
 >>> print(datetime.date(2000, 2, 29)+ relativedelta(years=+1))
 2001-02-28
 ```
+
+
 
 
 ### 8. 两个日期之间的差异
@@ -336,6 +370,8 @@ from dateutil.relativedelta import *
 >>> diff.days
 305
 ```
+
+
 
 #### 8.1 如何计算两个日期之间的月数
 
@@ -352,6 +388,8 @@ from dateutil.relativedelta import *
 **注意：** 
 
 假设您要计算 31/10/2018 和 01/11/2018 之间的月数，上面建议的方法将返回 1，因为两个日期位于月差异中。您可能会发现它不正确，因为两个日期之间的天数是1。您是否知道 SAS 软件中的 INTCK 功能（默认设置）也会返回1？ 返回 1 的用法是什么？ 当您需要将时间序列数据排序到箱中时，它非常有用。例如，每日数据可以累积到月度数据，以作为月度系列进行处理。如果您希望 0 作为月数，则可以使用上面“_Not full-proof Solution_”下面显示的代码。
+
+
 
 
 ### 9. 如何使用 pandas 数据框上的日期？
@@ -401,6 +439,8 @@ dtype: object
 2 2019-07-03 2019-10-01  90
 ```
 
+
+
 #### 9.1 获取过去 3 个月的日期
 
 纯粹的 pythonic 方法是在 lambda 中定义函数，它在所有行上运行。
@@ -420,12 +460,16 @@ dtype: object
 df['D1'] = df['B'] - pd.DateOffset(months=3)
 ```
 
+
+
 #### 9.2 按日期过滤数据框
 
 假设您只想选择列 B 的值大于 2019 年 5 月 1 日的那些行。
 ```python
 df[df['B']>datetime.datetime(2019,5,1)]
 ```
+
+
 
 #### 9.3 选择两个日期之间的数据
 
@@ -437,6 +481,8 @@ df[df.B.between(datetime.datetime(2019,5,1), datetime.datetime(2019,9,30))]
 # OR
 df[(df['B'] > datetime.datetime(2019,5,1)) & (df['B'] < datetime.datetime(2019,9,30))]
 ```
+
+
 
 
 ### 10. 如何使用不同的时区

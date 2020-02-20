@@ -8,6 +8,8 @@ published: true
 ---
 
 在上一篇文章中，我们介绍了适合单个用户进行使用和开发的 Galaxy 在线平台，今天我们来聊一下在为多用户生产环境设置 Galaxy 时，我们应采取的一些可以让 Galaxy 获得最佳性能的额外步骤。
+
+
 ## 原因
 
 默认情况下的 Galaxy 会启用下面的服务：
@@ -18,6 +20,8 @@ published: true
 - 在单个进程中运行，这是 CPython 中的性能问题。
 
 Galaxy 附带以上的默认配置，以确保在进行基本开发时可以实现最简单，最防错的配置。正如您很快就会看到的，目标是尽可能多地从 Galaxy 流程中删除工作，因为这样做会大大加快其剩余职责的执行速度。这是由于Python全局解释器锁（GIL），详细说明可以参考 [Galaxy 的](https://docs.galaxyproject.org/en/master/admin/production.html#advanced-configuration)[高级配置部分文档](https://docs.galaxyproject.org/en/master/admin/production.html#advanced-configuration)。
+
+
 
 ## 基础
 
@@ -38,9 +42,13 @@ nate@weyerbacher% sh run.sh
 
 - Galaxy 可以放在一个集群/网络文件系统中（它已经过 NFS 和 GPFS 测试），如果你要在集群上运行它，可以参考：[https://docs.galaxyproject.org/en/master/admin/cluster.html](https://docs.galaxyproject.org/en/master/admin/cluster.html)。
 
+
+
 ### 基础配置
 
 安装 Galaxy 的步骤大多遵循常规说明的步骤（[regular instructions](http://getgalaxy.org/)）。不同之处在于，在执行上述基础工作之后，您应该初始化配置文件（ `cp config/galaxy.yml.sample config/galaxy.yml` ）并在启动服务器之前按照下面的描述对其进行修改。如果在服务器运行时对此配置文件进行任何更改，则必须重新启动服务器才能使更改生效。
+
+
 
 ### 禁用开发人员设置
 
@@ -51,6 +59,8 @@ nate@weyerbacher% sh run.sh
 - 禁用 `filter-with:gzip` 。启用 gzip 过滤器将导致 UI 失败，因为一旦 `debug` 设置为 `False` ，模板就会流式传输。您仍然可以（并且鼓励）在代理服务器中启用 `gzip` 。
 
 在部署期间，您可能会遇到失败作业的问题。默认情况下，Galaxy 会删除与作业执行相关的文件。您可以指示 Galaxy 保留失败作业的文件： `cleanup_job:onsuccess` 
+
+
 
 ### 切换到数据库服务器
 
@@ -84,6 +94,8 @@ mysql:///mydatabase?unix_socket=/var/run/mysqld/mysqld.sock
 
 如果您使用 [MySQL](https://dev.mysql.com/) 和 [MyISAM 表引擎](https://dev.mysql.com/doc/refman/8.0/en/myisam-storage-engine.html)，当 Galaxy 处于多进程配置时，工作流程步骤可能出现无序执行（[get executed out of order](http://dev.list.galaxyproject.org/Job-execution-order-mixed-up-tt4662488.html)）并失败。请改用 [InnoDB](https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html) 引擎或切换到 [PostgreSQL](https://www.postgresql.org/)。
 
+
+
 ### 使用代理服务器
 
 Galaxy 包含了一个独立的 Web 服务器，可以直接向客户端提供所有内容。但是，某些任务（例如提供静态内容）可以负载到更有效地处理这些任务的专用服务器。代理服务器还允许您使用代理支持的任何方法（例如，Kerberos 或 LDAP）在外部对用户进行身份验证，指示浏览器缓存内容以及压缩出站数据。此外，Galaxy 的内置 Web 服务器不支持字节范围请求（许多外部显示应用程序所需），但可以将此功能负载到代理服务器。除了释放 GIL 之外，压缩和缓存还可以减少页面加载的时间。
@@ -95,6 +107,8 @@ Galaxy 官方提供了提供了基于 Apache 和 Nginx 以下的配置示例：
 - [Apache](https://docs.galaxyproject.org/en/master/admin/apache.html)，具有成熟代理功能，且广泛部署的通用 Web 服务器。
 - [Nginx](https://docs.galaxyproject.org/en/master/admin/nginx.html)，一种高性能的反向代理，公共 Galaxy 网站目前在使用中。
 
+
+
 ### 使用计算集群
 
 Galaxy 是一个运行命令行工具的框架，如果配置正确，可以在计算群集上运行这些工具。如果没有群集，您将受限于服务器中的核心数量，减去运行 Galaxy 本身所需的核心数量。Galaxy 目前支持 **TORQUE PBS**，**PBS Pro**，**Platform LSF** 和 **Sun Grid Engine** 集群，不需要专用或特殊的集群配置。只要在该平台上可以使用运行这些工具所需的依赖，Galaxy 的工具甚至可以在异构集群节点（不同的操作系统）上运行。
@@ -103,9 +117,13 @@ Galaxy 是一个运行命令行工具的框架，如果配置正确，可以在�
 
 设置群集后，Galaxy 的配置并不困难。详细的集群相关配置信息，可以参考 [Galaxy cluster page](https://docs.galaxyproject.org/en/master/admin/cluster.html)。
 
+
+
 ### 清理数据集
 
 从历史记录或库中删除数据集时，只会将其标记为已删除但未实际删除，因为以后可以取消删除。为了释放磁盘空间，可以运行一组脚本（例如， `cron/` 目录相关脚本）以删除本地策略指定的数据文件。有关说明，请参阅“[清除历史记录和数据集](https://galaxyproject.org/admin/config/performance/purge-histories-and-datasets/)”页面。
+
+
 
 ### 日志切换
 
@@ -121,6 +139,8 @@ PATH_TO_GALAXY_LOG_FILES {
 }
 ```
 
+
+
 ### 本地数据
 
 要开始设置本地数据，请参考：[Data Integration](https://galaxyproject.org/admin/data-integration/)。
@@ -135,17 +155,25 @@ PATH_TO_GALAXY_LOG_FILES {
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1568612403485-e662cfe2-2030-4742-a9de-ded2dac688a5.png#align=left&display=inline&height=268&name=image.png&originHeight=268&originWidth=962&size=32957&status=done&width=962)
 
+
+
 ### 通过 FTP 启用上传
 
 由于快速提升的测序技术，文件大小已经变得非常大，并且通过浏览器上传这些文件并不总是可行的。值得庆幸的是，一个简单的解决方案是允许 Galaxy 用户通过 FTP 上传它们并将这些文件导入其历史记录中。详细的的配置请参考 [File Upload via FTP page](https://docs.galaxyproject.org/en/master/admin/special_topics/ftp.html) 中的说明。
 
+
+
 ## 高级配置
+
+
 
 ### 负载平衡和 Web 应用程序扩展
 
 如前所述，由于 Python 全局解释器锁（GIL，[Global Interpreter Lock](https://docs.python.org/c-api/init.html#thread-state-and-the-global-interpreter-lock)），从 Galaxy 进程中 unloading work 非常重要。GIL 是 Python 确保线程安全的方式，它通过一次只允许一个线程控制执行来实现这一点。这意味着无论服务器中的核心数量如何，Galaxy 都只能使用一个核心。但是，有一个解决方案：运行多个 Galaxy 进程并使用代理服务器来平衡所有这些进程。实际上，Galaxy 分为作业处理程序和 Web 服务器进程。作业处理程序不直接通过 Web 为任何用户请求提供服务。相反，他们会在数据库中查看新作业，并在找到它们后，处理它们的准备，监视，运行和完成。同样，Web 服务器进程可以自由处理服务内容和文件到 Web 客户端。
 
 有关如何配置扩展和负载平衡的完整详细信息，请参阅 [the scaling](https://docs.galaxyproject.org/en/master/admin/scaling.html)[ ](https://docs.galaxyproject.org/en/master/admin/scaling.html)文档。
+
+
 
 ### 调整数据库
 
@@ -157,9 +185,13 @@ PostgreSQL 可以比 Galaxy 更有效地存储结果，从而减少 Galaxy 的�
 
 最后，如果您使用的是 Galaxy <= release_2014.06.02，我们建议您指示 Galaxy 为每个线程使用一个数据库连接，以避免连接开销和过度使用。这可以通过 `database_engine_option_strategy:threadlocal` 启用。
 
+
+
 ### 使代理处理上传和下载
 
 默认情况下，Galaxy 从代理服务器接收文件流上传，然后将此文件写入磁盘。同样，它将文件作为流发送到代理服务器。这占据了 Galaxy 流程中的 GIL，并且会降低该流程中其他操作的响应能力。要解决此问题，您可以将代理服务器配置为直接提供下载，仅涉及授权用户有权读取数据集的任务。如果使用 nginx 作为代理，您可以将其配置为接收上传的文件并将其写入磁盘本身，只有在完成后才通知 Galaxy。有关如何配置这些内容的所有详细信息都可以在 [Apache](https://docs.galaxyproject.org/en/master/admin/apache.html) 和[ nginx ](https://docs.galaxyproject.org/en/master/admin/nginx.html)代理指令页面上找到。
+
+
 
 ## 总结
 

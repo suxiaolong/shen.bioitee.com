@@ -17,6 +17,8 @@ published: true
 | gcc | gcc version 4.4.7 20120313 (Red Hat 4.4.7-4) (GCC) |
 
 
+
+
 # 一、CentOS 安装 R-3.6.0
 
 ```bash
@@ -39,6 +41,8 @@ $ ./configure --prefix=/Bioinfo/SoftWare/R-3.6.0  --enable-R-shlib --enable-BLAS
 - R 编译的过程中，必须选择 `--enable-R-shlib` 选项，将 R 编译成 lib 模式，在此模式下，会生成 `path-to-R/lib/libR.so` 库；
 - 同时，确保同目录下 `libRblas.so`、`libRlapack.so` 两个链接库也被正确生成，这两个库默认会生成，如果没有，需要添加参数：`--enable-BLAS-shlib` `--with-blas` `--with-lapack`；
 - 如果不编译生成 `libR.so`，在安装 rpy2（python 中的 R 语言接口模块） 时就无法正确编译。
+
+
 
 # 二、各种库和依赖解决
 
@@ -75,6 +79,8 @@ $ ./configure --prefix=/Bioinfo/SoftWare/R-3.6.0  --enable-R-shlib LDFLAGS="-L/B
     checking whether bzip2 support suffices... configure: error: bzip2 library and headers are required
     ## zlib 版本已经符合要求，bzip2 版本要求 >= 1.0.6
 ```
+
+
 
 ## bzip2 or libbz2
 
@@ -146,6 +152,8 @@ $ ./configure --prefix=/Bioinfo/SoftWare/R-3.6.0  --enable-R-shlib LDFLAGS="-L/B
     # 需要安装 curl >= 7.28.0
 ```
 
+
+
 ## curl or libcurl
 
 在《[R Installation and Administration: A.1 Essential programs and libraries](https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Essential-programs-and-libraries)》要求，libcurl 大于或等于 7.22.0 版本。Library `libcurl` (version 7.22.0 or later) is required, with at least 7.28.0 being desirable.
@@ -194,6 +202,8 @@ $ make
 $ make install PREFIX=/Bioinfo/SoftWare/NewLibs/bzip2-1.0.6
 ```
 
+
+
 ## liblzma
 
 在编译过程中发现："**configure: error: "liblzma library and headers are required"**"，需要安装 **xz**，对应主页：[https://tukaani.org/xz/](https://tukaani.org/xz/)，安装如下：
@@ -205,6 +215,8 @@ $ ./configure --prefix=/Bioinfo/SoftWare/NewLibs/xz-5.2.3
 $ make -j3
 $ make install
 ```
+
+
 
 ## libtiff
 
@@ -239,6 +251,8 @@ $ ./configure --prefix=/Bioinfo/SoftWare/R-3.6.0 --enable-R-shlib --with-libtiff
 export LD_LIBRARY_PATH=/Bioinfo/SoftWare/NewLibs/tiff-4.0.9/lib:$LD_LIBRARY_PATH
 export PKG_CONFIG_PATH=/Bioinfo/SoftWare/NewLibs/tiff-4.0.9/lib/pkgconfig:$PKG_CONFIG_PATH
 ```
+
+
 
 ## libjpeg and libpng16
 
@@ -287,6 +301,8 @@ $ make install
 
 - [http://libjpeg.sourceforge.net/](http://libjpeg.sourceforge.net/)
 
+
+
 # 三、完整编译安装命令
 
 如果使用了自定义安装的 gcc/c++ 进行编译，需要在 configure 时候使用 CC/CXX 进行指定，否则使用系统默认的 gcc/c++。由于 CentOS-6.5 默认的 gcc==4.4.7，该版本的 gcc 会导致 R>=3.5.0 编译出现各种错误，非 root 用户手动升级 gcc 可以参考：[https://www.yuque.com/shenweiyan/cookbook/r-centos-update-gcc](https://www.yuque.com/shenweiyan/cookbook/r-centos-update-gcc)。
@@ -320,6 +336,8 @@ $ make install
 ```
 
 - `--with-x`，`--with-cairo` 是开启 X11 图形化的参数，应该增加一下。
+
+
 
 # 四、设置环境变量
 
@@ -408,6 +426,8 @@ $ ldd /Bioinfo/SoftWare/R-3.5.0/lib64/R/library/stats/libs/stats.so
 
 
 以上就是普通用户源码编译安装最新版本 R 的全部内容，总的一句话就是缺什么安装什么，从最基本的 gcc 编译器开始到 R 所需要的各种依赖库，直至最终安装完成。
+
+
 # 五、参考资料
 
 - 不死不灭，《[R-3.3.1源码安装](http://kuxingseng2016.blog.51cto.com/1374617/1846326)》，51CTO

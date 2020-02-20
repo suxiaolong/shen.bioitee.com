@@ -27,19 +27,24 @@ published: true
 
 
 下面具体介绍一下这两种方案的一些具体操作。
+
+
 ## 一、使用七牛云的镜像存储
+
+
 ### 1.1 注册，并新建对象存储的存储空间
 
 七牛云注册，实名认证，这里不细说，很简单。新建对象存储的存储空间也很简单：
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1565242056691-50655e8f-e816-441a-8247-758f47f90256.png#align=left&display=inline&height=496&name=image.png&originHeight=496&originWidth=1016&size=52609&status=done&style=none&width=1016)
 
-
 ### 1.2 增加镜像存储的镜像源
 
 在创建好的对象存储空间（note-db）中，选择 "镜像存储"，添加语雀镜像源地址：
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1565242263407-a2d8c1cd-ae81-476f-bc31-310e1087b1c5.png#align=left&display=inline&height=428&name=image.png&originHeight=428&originWidth=1037&size=40000&status=done&style=none&width=1037)
+
+
 
 ### 1.3 绑定域名
 
@@ -50,11 +55,15 @@ published: true
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1565242719591-d4555868-0b16-4e55-98c2-39ce30758439.png#align=left&display=inline&height=198&name=image.png&originHeight=198&originWidth=596&size=26242&status=done&style=none&width=596)
 
 所以我们需要用我们自己的二级域名来绑定七牛云进行访问（最好不用 www 开头的二级域名来绑定，因为 www 开头的域名，我们都是作为主域名的），具体绑定步骤如下。
+
+
 #### 1.3.1 绑定域名
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1565243055488-63b61899-032c-4eeb-84d4-a61eb45f0d0a.png#align=left&display=inline&height=371&name=image.png&originHeight=371&originWidth=1026&size=56497&status=done&style=none&width=1026)
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1565243411951-6cccd7e7-2b8a-4c3c-81b8-1f8617bff7bc.png#align=left&display=inline&height=519&name=image.png&originHeight=519&originWidth=1046&size=66813&status=done&style=none&width=1046)
+
+
 #### 1.3.2 配置 CNAME
 
 **首先**，上面 3.1 步骤，点击 "确认" 完成后，即可看到新增加域名的 CNAME 信息：
@@ -62,6 +71,7 @@ published: true
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1565243547685-99f99f9c-3775-4c63-ad7d-cc04048bb9ef.png#align=left&display=inline&height=333&name=image.png&originHeight=333&originWidth=847&size=39662&status=done&style=none&width=847)
 
 **第二步**，到你买域名的地方去配置。我是在阿里云上面买的，下面以阿里云为例：
+
 **![](https://note.bioitee.com/yuque/0/2019/png/126032/1565244440370-93369291-54fb-4a27-b379-f6bd6743c121.png#align=left&display=inline&height=467&name=image.png&originHeight=467&originWidth=921&size=52928&status=done&style=none&width=921)**
 
 **做到这一步就算已经完成了。成功之后，回到七牛云对象存储，在存储空间的概览也可以看到 CNAME 状态显示为"成功"：
@@ -78,7 +88,9 @@ HTTPS 配置中的 SSL 证书可以选择申请七牛与的免费证书；也可
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1565245903884-c498b8b9-7305-4413-afa6-c605853ed817.png#align=left&display=inline&height=344&name=image.png&originHeight=344&originWidth=1168&size=74764&status=done&style=none&width=1168)
 
+
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1565246118194-c1d76ebf-f8ae-4917-b37d-de0c159c8587.png#align=left&display=inline&height=283&name=image.png&originHeight=283&originWidth=636&size=29947&status=done&style=none&width=636)
+
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1565245579390-7de4e039-e6e3-4f7a-bb9c-e4a015fb4472.png#align=left&display=inline&height=505&name=image.png&originHeight=505&originWidth=674&size=68177&status=done&style=none&width=674)
 
@@ -88,14 +100,20 @@ HTTPS 配置中的 SSL 证书可以选择申请七牛与的免费证书；也可
 
 **最后**，在博客中把博客所有 [https://note.bioitee.com](https://note.bioitee.com/) 的域名都替换成 [https://qiniu.bioinit.com](http://qiniu.bioinit.com/)，并检查图片是否正常显示。
 
+
+
 ## 二、使用对象存储的镜像回源
 
 关于对象存储的镜像回源，我们以阿里云的 oss 对象存储为例。
+
+
 #### 2.1 创建 bucket，选择镜像回源
 
 我们可以在 oss 的 bucket 中选择 "**基础设置**" 页面的  "**镜像回源**" 设置。
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1574992536009-e86ccc81-941c-472b-b165-a97b2a4bd711.png#align=left&display=inline&height=300&name=image.png&originHeight=300&originWidth=751&size=35056&status=done&style=none&width=751)
+
+
 #### 2.2 添加镜像回源规则
 
 在 "**镜像回源**" 设置中 "**添加规则**"，添加规则时，会问你是否需要镜像，如果不镜像，就不会自动备份迁移一个到 OSS中，下次访问的时候，虽然还会回源，但不一定正常显示图片，因此这里选择"**镜像**"。
@@ -107,13 +125,18 @@ HTTPS 配置中的 SSL 证书可以选择申请七牛与的免费证书；也可
 - 第一个前缀实际上是一个判断条件，比如你访问 `https://bucketname.oss-endpoint.com/yuque/xxx` 就遵循这条规则，如果你访问 `https://bucketname.oss-endpoint.com/videos/xxx` 则不遵循这条规则，就不会回源了。
 - 第二个前缀实际上是一个 url 重写的条件，比如你访问 `bucketname.oss-endpoint.com/yuque/a.jpg` ，但是你的服务器上，实际上要通过 `note.bioitee.com/0/2019/png/yuque/a.jpg`  才能访问到这张图片，这个时候，就可以把 `0/2019/png` 当做前缀。这里我选择留空。
 - 你也可以针对不同格式、不同年份的文件设置粒度更细的镜像回源规则，详细可以参考：《[管理回源设置](https://help.aliyun.com/document_detail/31865.html)》。
+
+
 #### 2.3 变更链接
 
 上一步镜像回源的规则创建好，点击 "确定" 后，在博客中我们只需要把博客所有 `https://note.bioitee.com` 的域名都替换成你 oss 对应的外网访问 Bucket 域名（如， `https://bucketname.oss-endpoint.com` 即可），并检查图片是否正常显示。
+
+
 
 ## 三、个人博客
 
 最后，附上与语雀文章同步更新，基于 Hugo 的个人博客。
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1574990483243-a5e54493-68c5-460e-8e18-9dc5b0660b21.png#align=left&display=inline&height=659&name=image.png&originHeight=659&originWidth=786&size=111153&status=done&style=none&width=786)
+
 

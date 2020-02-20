@@ -19,6 +19,8 @@ Bioconductor 与 R 各自对应的版本如下：（参考：[Bioconductor relea
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1550202460103-7ec215b0-d738-41a2-8290-ddb85bdc94d3.png#align=left&display=inline&height=463&originHeight=463&originWidth=625&size=0&status=done&width=625)
 
 ---
+
+
 # biocLite
 
 在 R-3.5（Bioconductor-3.7） 前，Bioconductor 都是通过 biocLite 安装相关的 R 包：
@@ -31,6 +33,8 @@ biocLite(pkg_name)
 但是，从 R-3.5（Bioconductor-3.8）起，Bioconductor 更改了 R 包的安装方式：它们通过发布在 CRAN 的 [`BiocManager`](https://cran.r-project.org/web/packages/BiocManager/index.html) 包来对 Bioconductor 的包进行安装和管理——通过 CRAN 安装 `BiocManager`，再通过这个包来安装 Bioconductor 的包。
 
 ---
+
+
 # BiocManager
 
 - **安装 BiocManager 包**
@@ -152,6 +156,8 @@ BiocManager::available("BSgenome.Hsapiens")
 ```
 
 ---
+
+
 # Bioconductor 中安装旧版本的 R 包
 
 对于 R >= 3.5，Bioconductor-3.8 可以使用 BiocManager 安装相关与版本匹配的 R 包。那么使用 3.5 以下 R 版本的用户是继续使用 biocLite，还是 BiocManager，还是其他的方法安装匹配相关版本的 R 包呢？
@@ -185,6 +191,8 @@ BiocInstaller::biocLite(c("GenomicFeatures", "AnnotationDbi"))
 其次，对于 R < 3.5.0，如果可以使用 biocLite 或者 BiocManager 安装对应的 R 包，请使用 biocLite 或者 BiocManager。
 
 ---
+
+
 # 实战操作实例：clusterProfiler
 
 在 R-3.4（Bioconductor-3.6）中安装最新版本的 clusterProfiler：

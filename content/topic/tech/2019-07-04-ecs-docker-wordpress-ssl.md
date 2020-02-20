@@ -8,6 +8,7 @@ published: true
 ---
 
 虽然已经入手 leanote，开启了以笔记+博客的方式记录学习生活琐事，但当手上有个续费了三年的 ECS，总想折腾点事情。于是想着在阿里云 ECS 上，使用 docker+wordpress 搭建个人博客，并基于 nginx 实现 ssl 证书的 https 访问。
+
 在阿里云上搭建使用个人博客主要分为以下几个步骤：
 
 1. 购买阿里云 ECS 主机
@@ -18,6 +19,8 @@ published: true
 6. 安装 SSL 证书开启 https 访问
 
 ---
+
+
 
 
 # 1. 购买ECS主机
@@ -35,11 +38,15 @@ published: true
 百度上有详细的购买流程，这不重复造轮子了，实在不明白可以留言。
 
 
+
+
 # 2. 购买域名
 
 这个没什么说的，直接进网站找自己喜欢域名，支付就 OK。
 
 万网：[https://wanwang.aliyun.com/](https://wanwang.aliyun.com/)
+
+
 
 
 # 3. 申请备案
@@ -49,6 +56,8 @@ published: true
 需要提醒大家的是，如果你买了阿里云的服务器，并且想要通过域名访问，那域名是必须要备案的，总结一句：必须先将域名备案，才能通过域名访问阿里云的服务器。
 
 一提到备案，可能你会觉得备案这个事情很麻烦，各种流程啊，手续啊。其实没这么麻烦，因为阿里云已经提供了一条龙服务，通过阿里云的代备案系统，一些都会变得容易很多，不管是个人网站的备案，还是企业网站的备案，都只是时间上的问题，一般备案审核需要二十天左右。
+
+
 
 
 # 4. 环境配置
@@ -89,7 +98,11 @@ docker run -itd --name wordpress -p 127.0.0.1:8090:80 --link mysql:mysql -v /hom
 到这里，docker+wordpress 就安装完成了。这时候尚不能打开网页，因为是配置在 127.0.0.1 上的，只有本机可以访问。
 
 
+
+
 # 5. 域名解析
+
+
 
 ## 5.1 安装并启动 nginx
 
@@ -97,6 +110,8 @@ docker run -itd --name wordpress -p 127.0.0.1:8090:80 --link mysql:mysql -v /hom
 yum install nginx
 systemctl start nginx
 ```
+
+
 
 ## 5.2 配置 nginx.conf
 
@@ -120,6 +135,8 @@ http {
 }
 ```
 
+
+
 ## 5.3 配置 wordpress.conf
 
 ```
@@ -139,29 +156,41 @@ server {
 }
 ```
 
+
+
 ## 5.4 添加域名解析
 
 登入阿里域名解析：https://netcn.console.aliyun.com/core/domain/list，点击相应域名的 "解析" 链接，根据提示添加域名的 A 记录，解析到你的服务器 ip 下。
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1559373255882-d5b2c908-7053-4474-bd71-4aa011f41e6b.png#align=left&display=inline&height=384&originHeight=384&originWidth=713&size=0&status=done&width=713#align=left&display=inline&height=384&originHeight=384&originWidth=713&status=done&width=713)
 
+
+
 ## 5.5 安装 wordpress
 
 添加完域名解析后，打开浏览器，输入 http://youdomain.com，然后就可以看到 WordPress 了。按照提示输入用户名等信息，然后安装 WordPress。等到它提示安装完成，那么 WordPress 的安装就算大功告成了。
 
 
+
+
 # 6. 安装 SSL 证书开启 https 访问
+
+
 ## 6.1 单域名免费证书申请
 
 登入阿里域名解析：https://netcn.console.aliyun.com/core/domain/list，点击相应域名的 "SSL证书" 链接，设置单域名免费证书。
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1559373255815-7ac27782-8249-43a6-9e7d-98a053b6eee2.png#align=left&display=inline&height=336&originHeight=336&originWidth=729&size=0&status=done&width=729#align=left&display=inline&height=336&originHeight=336&originWidth=729&status=done&width=729)
 
+
+
 ## 6.2 SSL 证书下载
 
 单域名免费证书提交申请后，一般十分钟就会审批下来。这时候，我们登陆 "[CA证书服务（数据安全）](https://yundun.console.aliyun.com/?spm=5176.2020520163.aliyun_sidebar.24.4eb62b7auFTPPK&p=cas#/cas/home)"，在 "我的订单" 中找到已经签发的域名证书，点击 "下载" 链接，通过 "下载证书for Nginx" 下载证书。
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1559373255775-88b7ae35-3ef8-4737-a5c4-ff1997f36fa2.png#align=left&display=inline&height=453&originHeight=453&originWidth=835&size=0&status=done&width=835#align=left&display=inline&height=453&originHeight=453&originWidth=835&status=done&width=835)
+
+
 
 ## 6.3 SSL 证书安装
 
@@ -213,6 +242,8 @@ systemctl restart nginx
 
 请按照 6.4 方法修改，本人亲测，wordpress4.9.1-4.9.2 完美解决。
 
+
+
 ## 6.4 全站开启 https
 
 **1、系统文件修改**
@@ -257,7 +288,11 @@ https://wordpress.org/plugins/really-simple-ssl/
 至此，真正意义上解决 wordpress 全站开启 https 的 ssl 证书问题。
 
 
+
+
 # 7. 填坑总结
+
+
 
 ## 7.1. 更换域名无法登陆后台
 

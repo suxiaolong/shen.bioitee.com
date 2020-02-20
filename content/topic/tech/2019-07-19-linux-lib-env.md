@@ -9,6 +9,8 @@ published: true
 
 最近这几天在处理集群软件的过程中，遇到各种各样的库和环境变量的问题，被虐的不清！趁此机会，整理了一下 Linux 下静态库、动态库（共享库）和环境变量的一些知识，与大家共享一下。
 
+
+
 # 库的种类
 
 Linux 下的库有两种：**静态库**和**动态库**（共享库）。
@@ -19,6 +21,8 @@ Linux 下的库有两种：**静态库**和**动态库**（共享库）。
 
 为了在同一系统中使用不同版本的库，可以在库文件名后加上版本号为后缀,例如： `libhello.so.1.0` ，由于程序连接默认以 `.so` 为文件后缀名。所以为了使用这些库，通常使用建立符号连接的方式。
 
+
+
 # 库的环境变量
 
 **LIBRARY_PATH**
@@ -26,6 +30,8 @@ Linux 下的库有两种：**静态库**和**动态库**（共享库）。
 
 **LD_LIBRARY_PATH**
 环境变量：指定程序动态链接库文件搜索路径。
+
+
 
 # 库的搜索顺序
 
@@ -46,6 +52,8 @@ Linux 下的库有两种：**静态库**和**动态库**（共享库）。
 1. ld 会去找 `gcc` / `g++`  命令中的参数 `-L` ；
 1. 再找 gcc 的环境变量 **LIBRARY_PATH**，它指定程序静态链接库文件搜索路径；
 1. 再找默认库目录 `/lib` ， `/usr/lib` ， `/usr/local/lib` ，这是当初 compile gcc 时写在程序内的。
+
+
 # 环境变量文件加载顺序
 
 正常登录配置文件顺序加载过程，所谓正常登录指用户通过输入用户名和密码登录的状态。
@@ -88,6 +96,8 @@ echo "/etc/profile goes start"
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1563514034328-0b7fdc31-638d-4c3a-8681-bce631eac7d4.png#align=left&display=inline&height=456&name=image.png&originHeight=456&originWidth=840&size=51052&status=done&width=840)
 
+
+
 # 常用环境变量
 
 我们可以使用 `env` 命令查看当前用户的所有环境变量设置：
@@ -108,7 +118,11 @@ HISTTIMEFORMAT=%F %T
 _=/usr/bin/env
 ```
 
+
+
 # **用户环境变量常用设置方法**
+
+
 ## 系统级别设置
 
 - /etc/profile：
@@ -118,6 +132,8 @@ _=/usr/bin/env
 - /etc/bashrc：
 
 bash shell 全局环境变量。
+
+
 
 ## 用户级别设置
 
@@ -132,10 +148,14 @@ shell 的 bash 信息，当登录时以及每次打开新的 shell
 每个用户都可使用该文件输入专用于自己使用的 shell 信息，当用户使用 login
 shell 模式登陆时，该文件仅仅执行一次。
 
+
+
 ## **用户临时（当前 shell 对话框）环境变量设置**
 
 export
 命令：用于/bin/bash shell类型
+
+
 ## 用户级别 .bashrc 示例
 
 ```bash
