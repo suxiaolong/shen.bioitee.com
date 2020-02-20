@@ -9,7 +9,9 @@ published: true
 
 PyClone 是一种用于推断癌症中克隆种群结构的统计模型。 它是一种贝叶斯聚类方法，用于将深度测序的体细胞突变集分组到假定的克隆簇中，同时估计其细胞流行率（prevalences）并解释由于分段拷贝数变化（segmental copy-number changes）和正常细胞污染（normal-cell contamination）引起的等位基因失衡。 单细胞测序验证证明了 PyClone 的准确性。
 
-> The input data for PyClone consists of a set read counts from a deep sequencing experiment, the copy number of the genomic region containing the mutation and an estimate of tumour content.# 简易安装
+> The input data for PyClone consists of a set read counts from a deep sequencing experiment, the copy number of the genomic region containing the mutation and an estimate of tumour content.
+
+# 简易安装
 
 官方推荐使用 [MiniConda](https://conda.io/miniconda.html) 来安装 PyClone。为了保证环境的稳定，可为 PyClone 单独建立一个环境，因为 PyClone 基于 Python2.7。在这里，我们使用 Anaconda3(conda 4.5.11) 来安装 PyClone。
 ```
@@ -95,8 +97,6 @@ pip install --no-binary pandas -I pandas
 # 方法二（推荐使用）
 conda install numpy==1.14.5 --yes
 ```
-
-
 # 手动安装
 
 要手动安装 PyClone，请确保安装了必要的库（如下所列）。 之后就可以像任何其他 Python 包一样通过 `python setup.py install` 安装 PyClone。

@@ -143,7 +143,7 @@
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
       <guid>https://shen.bioitee.com/topic/tech/2019-07-01-windows-ports/</guid>
-      <description>1. 问题将项目部署到 Windows server 2008 服务器上，开启了 http/https 之后，在用服务器本身的浏览器访问：http://domain.com 就可以访问，可是在外用其他电脑</description>
+      <description>1. 问题 将项目部署到 Windows server 2008 服务器上，开启了 http/https 之后，在用服务器本身的浏览器访问：http://domain.com 就可以访问，可是在外用其他电脑</description>
     </item>
     
     <item>

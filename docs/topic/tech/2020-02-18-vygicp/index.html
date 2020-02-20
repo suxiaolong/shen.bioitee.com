@@ -213,35 +213,38 @@ sheet.ncols         #获取总共的列数
 
 <pre><code class="language-python">for i in range(0, sheet.nrows):
     row_list = sheet.row_values(i) # 每一行的数据在row_list 数组里
-```### 1.2 日期处理
+</code></pre>
 
-```python
-import datetime
+<h3 id="1-2-日期处理">1.2 日期处理</h3>
+
+<pre><code class="language-python">import datetime
 from xlrd import xldate_as_datetime
 
 xldate_as_datetime(43346.0, 0).strftime('%Y/%m/%d') 
 # '2018/09/03'
-```## 2. xlwt 模块
+</code></pre>
 
+<h2 id="2-xlwt-模块">2. xlwt 模块</h2>
 
-### 2.1 创建 Book 工作簿(即 excel 工作簿)
+<h3 id="2-1-创建-book-工作簿-即-excel-工作簿">2.1 创建 Book 工作簿(即 excel 工作簿)</h3>
 
-```python
-import xlwt
+<pre><code class="language-python">import xlwt
 workbook = xlwt.Workbook(encoding = 'utf-8')	# 创建一个workbook并设置编码形式
 </code></pre>
 
 <h3 id="2-2-添加-sheet-工作表">2.2 添加 sheet 工作表</h3>
 
-<p><code>python
-worksheet = workbook.add_sheet('My Worksheet')  # 创建一个worksheet
-</code>### 2.3 向工作表中添加数据并保存</p>
+<pre><code class="language-python">worksheet = workbook.add_sheet('My Worksheet')  # 创建一个worksheet
+</code></pre>
 
-<p>```python
-worksheet.write(1,0, label = &lsquo;this is test&rsquo;) # 参数对应行, 列, 值</p>
+<h3 id="2-3-向工作表中添加数据并保存">2.3 向工作表中添加数据并保存</h3>
 
-<p>workbook.save(&lsquo;save_excel.xls&rsquo;)  # 保存
-```### 2.4 设置宽度</p>
+<pre><code class="language-python">worksheet.write(1,0, label = 'this is test') # 参数对应行, 列, 值
+
+workbook.save('save_excel.xls')  # 保存
+</code></pre>
+
+<h3 id="2-4-设置宽度">2.4 设置宽度</h3>
 
 <p>xlwt 中列宽的值表示方法：默认字体 0 的 <sup>1</sup>&frasl;<sub>256</sub> 为衡量单位。</p>
 

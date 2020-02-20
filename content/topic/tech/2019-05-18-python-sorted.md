@@ -8,8 +8,6 @@ published: true
 ---
 
 我们知道 Python 的内置 dictionary 数据类型是无序的，通过 key 来获取对应的 value。可是有时我们需要对 dictionary 中的 item 进行排序输出，可能根据 key，也可能根据 value 来排。到底有多少种方法可以实现对 dictionary 的内容进行排序输出呢？下面摘取了使用 sorted 函数实现对 dictionary 的内容进行排序输出一些精彩的解决办法。
-
-
 ## 1. sorted函数按key值对字典排序
 
 先基本介绍一下 sorted 函数，`sorted(iterable,key,reverse)`，sorted一共有 `iterable`,`key`,`reverse` 这三个参数。
@@ -27,8 +25,6 @@ Out[2]: ['lilee', 'liquan', 'lisi', 'wangyuan', 'zhangsan']
 ```
 
 直接使用 `sorted(d.keys())` 就能按 key 值对字典排序，这里是按照顺序对 key 值排序的，如果想按照倒序排序的话，则只要将 reverse 置为 true 即可。
-
-
 ## 2. sorted函数按value值对字典排序
 
 在 python2.4 前，sorted() 和 list.sort() 函数没有提供 key 参数，但是提供了 cmp 参数来让用户指定比较函数。此方法在其他语言中也普遍存在。

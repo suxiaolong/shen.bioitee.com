@@ -71,7 +71,7 @@
       <pubDate>Mon, 30 Dec 2019 02:24:21 +0000</pubDate>
       
       <guid>https://shen.bioitee.com/topic/tech/2019-12-30-opodb3/</guid>
-      <description>JupyterLab is a next-generation web-based user interface for Project Jupyter. ## 安装 JupyterLab 可以通过 conda, pip, pipenv or docker 的方式安装。 JupyterLab 需要 4.3 版本以上的 notebook，如果 notebook 没有安装需要先安装 notebook。 conda install</description>
+      <description>JupyterLab is a next-generation web-based user interface for Project Jupyter. 安装 JupyterLab 可以通过 conda, pip, pipenv or docker 的方式安装。 JupyterLab 需要 4.3 版本以上的 notebook，如果 notebook 没有安装需要先安装 notebook。 conda install notebook</description>
     </item>
     
     <item>
@@ -134,7 +134,7 @@
       <pubDate>Wed, 04 Dec 2019 06:16:59 +0000</pubDate>
       
       <guid>https://shen.bioitee.com/topic/tech/2019-12-04-coding-pages/</guid>
-      <description>在 cong.net 部署静态博客，跟 github 是不一样的，这里简单记录一下。以谢益辉的 hugo-xmag 博客主题为例。 1. 创建项目，进入代码浏览 ## 2. 在服务器中生成网站，并推送 shenweiyan@ecs-steven 14:25:22 /home/shenweiyan $</description>
+      <description>在 cong.net 部署静态博客，跟 github 是不一样的，这里简单记录一下。以谢益辉的 hugo-xmag 博客主题为例。 1. 创建项目，进入代码浏览 2. 在服务器中生成网站，并推送 shenweiyan@ecs-steven 14:25:22 /home/shenweiyan $ mkdir</description>
     </item>
     
     <item>
@@ -539,7 +539,7 @@
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
       
       <guid>https://shen.bioitee.com/topic/tech/2019-07-01-windows-ports/</guid>
-      <description>1. 问题将项目部署到 Windows server 2008 服务器上，开启了 http/https 之后，在用服务器本身的浏览器访问：http://domain.com 就可以访问，可是在外用其他电脑</description>
+      <description>1. 问题 将项目部署到 Windows server 2008 服务器上，开启了 http/https 之后，在用服务器本身的浏览器访问：http://domain.com 就可以访问，可是在外用其他电脑</description>
     </item>
     
     <item>
@@ -692,7 +692,7 @@
       <pubDate>Fri, 21 Jun 2019 03:58:08 +0000</pubDate>
       
       <guid>https://shen.bioitee.com/topic/tech/2019-06-21-vscode-usage/</guid>
-      <description>版本: 1.35.1 (user setup)### 1. 通过配置文件设置 VS Code 的配置文件默认为：settings.json，我们可以通过下面的方式打开该文件进行自定义配置： { &amp;quot;editor.minimap.enabled&amp;quot;: false, &amp;quot;editor.fontSize&amp;quot;: 12, &amp;quot;workbench.statusBar.feedback.visible&amp;quot;:</description>
+      <description>版本: 1.35.1 (user setup) 1. 通过配置文件设置 VS Code 的配置文件默认为：settings.json，我们可以通过下面的方式打开该文件进行自定义配置： { &amp;quot;editor.minimap.enabled&amp;quot;: false, &amp;quot;editor.fontSize&amp;quot;: 12, &amp;quot;workbench.statusBar.feedback.visible&amp;quot;:</description>
     </item>
     
     <item>
@@ -836,7 +836,7 @@
       <pubDate>Sat, 18 May 2019 12:39:52 +0000</pubDate>
       
       <guid>https://shen.bioitee.com/topic/tech/2019-05-18-redhat-install-pyqt-4/</guid>
-      <description>目的： RedHat 6.5 HPC 环境下安装生物信息 STAMP 软件。## 服务器环境 系统： Red Hat Enterprise 6.5 gcc version 4.8.5 (GCC) Anaconda 2.5： conda 4.4.4 x86_64-conda_cos6-linux-gn</description>
+      <description>目的： RedHat 6.5 HPC 环境下安装生物信息 STAMP 软件。 服务器环境 系统： Red Hat Enterprise 6.5 gcc version 4.8.5 (GCC) Anaconda 2.5： conda 4.4.4 x86_64-conda_cos6-linux-gnu-</description>
     </item>
     
     <item>
@@ -881,7 +881,7 @@
       <pubDate>Fri, 10 May 2019 03:54:24 +0000</pubDate>
       
       <guid>https://shen.bioitee.com/topic/tech/2019-05-10-git-usage/</guid>
-      <description>本地创建分支 $ git branch v-1.2 $ git branch * master v-1.2 ```### 切换本地分支 ```shell $ git branch * master v-1.2 $ git checkout v-1.2 Switched to branch &#39;v-1.2&#39; $ git branch master * v-1.2 ```### 删除本地分支 ```shell $ git branch -D v-1.2 ```### 把本地分支提交到远程分支</description>
+      <description>本地创建分支 $ git branch v-1.2 $ git branch * master v-1.2 切换本地分支 $ git branch * master v-1.2 $ git checkout v-1.2 Switched to branch &#39;v-1.2&#39; $ git branch master * v-1.2 删除本地分支 $ git branch -D v-1.2 把本地分支提交到远程分支仓库 $ git add</description>
     </item>
     
     <item>

@@ -40,7 +40,9 @@ Linux 上的很多命令都是依赖 libc.so.6 的动态链接库，如果您不
 
 - 已经退出 root 登录：重装系统或者使用 Linux rescue 模式修复。
 
-作为 HPC 整个集群的 log 节点，不到万不得已是不会轻易重装系统的，于是我们选择了使用 Linux rescue 模式修复，以下是一些记录。## 1. U 盘启动盘制作
+作为 HPC 整个集群的 log 节点，不到万不得已是不会轻易重装系统的，于是我们选择了使用 Linux rescue 模式修复，以下是一些记录。
+
+## 1. U 盘启动盘制作
 
 由于原来的 log 节点是 rhel-server-6.5-x86_64 的操作系统，所以我们需要制作与之相对应的启动 U 盘。
 
@@ -69,16 +71,18 @@ SHA-256: a51b90f3dd4585781293ea08adde60eeb9cfa94670943bd99e9c07f13a259539
 
 其次，将启动文件写入 u 盘。以 UltraISO 软碟通为例，打开 UltraISO 软件，菜单 “文件” 打开 rhel-server-6.5-x86_64-boot.iso ，菜单 “启动” ==> “写入硬盘映像”，弹出对话框，点击 “格式化”，格式化完成点击 “写入”。
 
-最后，将安装光盘镜像 rhel-server-6.5-x86_64-dvd.iso  拷贝到 u 盘根目录。## 2. Linux rescue模式
+最后，将安装光盘镜像 rhel-server-6.5-x86_64-dvd.iso  拷贝到 u 盘根目录。
 
-
+## 2. Linux rescue模式
 ### 2.1. 说明
 
 Linux下用光盘进行 rescue 模式的方法，需要注意的是实体机跟虚拟机还是有很大差别的，在实体机中通过光盘启动，可能会自动进入到安装界面，所有我们需要在进入安装界面前（会提示 press any key 之类）快速按键盘上的按键（只有三秒钟需要关注。）
 
 如果不理会就会进入以下界面：
 
-![](https://note.bioitee.com/yuque/0/2019/png/126032/1562972531584-74fee520-6c7c-4783-9f32-32ccdcb40295.png#align=left&display=inline&height=591&originHeight=591&originWidth=794&size=0&status=done&width=794)### 2.2. rescue 模式步骤
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1562972531584-74fee520-6c7c-4783-9f32-32ccdcb40295.png#align=left&display=inline&height=591&originHeight=591&originWidth=794&size=0&status=done&width=794)
+
+### 2.2. rescue 模式步骤
 
 ① 选择 rescue 模式
 
@@ -128,7 +132,9 @@ chroot /mnt/sysimage
 
 ⑨ 重启后重新进入系统一切正常。
 
-⑩ 作为集群，需要重新执行一些必须的挂载、开启必要服务，在这里不详述。## 3. 总结
+⑩ 作为集群，需要重新执行一些必须的挂载、开启必要服务，在这里不详述。
+
+## 3. 总结
 
 1. 对于系统的库文件，一定不要轻易去修改，特别是在使用 root 权限下。
 1. HPC 软件安装最好使用非 root 进行安装，如 conda；对于必须要使用 root 安装的软件，应进一步评估该软件使用的必要性，同时应该明确每一步的文件改动所带来的后果。

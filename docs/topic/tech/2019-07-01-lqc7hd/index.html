@@ -173,18 +173,24 @@
   
   
 
-  <p>我们知道，关于 GCC 在 CentOS 下通过 yum 安装默认版本号，CentOS 5 是 4.1.2；CentOS 6 是 4.4.7；CentOS 7 是 4.8.3。很多时候在编译安装软件都需要高版本的 GCC，否则就会报错。那么如何升级 GCC 的版本呢？</p>
+  
+
+<p>我们知道，关于 GCC 在 CentOS 下通过 yum 安装默认版本号，CentOS 5 是 4.1.2；CentOS 6 是 4.4.7；CentOS 7 是 4.8.3。很多时候在编译安装软件都需要高版本的 GCC，否则就会报错。那么如何升级 GCC 的版本呢？</p>
 
 <p>首先要确认升级到的 GCC 版本号。目前 GCC 的最新版已经到了 9.1（2019-05-03），而 CentOS 7 则依然使用其 4.8，所以基于兼容性考虑，可以选择升级到 4.8.5。GCC 官网：<a href="https://gcc.gnu.org/">https://gcc.gnu.org</a>。</p>
 
-<p>需要注意，编译安装 GCC 内存不小于 1GB，Swap 不小于 1GB，硬盘最低不小于 10GB，否则极有可能会中途报错退出。编译安装完后，目录 gcc-4.8.5 将会有 5GB 之多。## 1. 下载源码</p>
+<p>需要注意，编译安装 GCC 内存不小于 1GB，Swap 不小于 1GB，硬盘最低不小于 10GB，否则极有可能会中途报错退出。编译安装完后，目录 gcc-4.8.5 将会有 5GB 之多。</p>
+
+<h2 id="1-下载源码">1. 下载源码</h2>
 
 <pre><code class="language-shell">$ wget ftp://ftp.gnu.org/gnu/gcc/gcc-4.8.5/gcc-4.8.5.tar.gz
-```## 2. 下载依赖包
+</code></pre>
 
-编译安装 GCC 需要依赖 mpc，mpfr，gmp，isl 包。前四个包是 GNU 软件，使用 GCC 源码里自带脚本可以轻松下载；最后一个 isl 不是 GNU 项目，需要我们手动去下载。
-```shell
-$ tar zxf gcc-4.8.5.tar.gz
+<h2 id="2-下载依赖包">2. 下载依赖包</h2>
+
+<p>编译安装 GCC 需要依赖 mpc，mpfr，gmp，isl 包。前四个包是 GNU 软件，使用 GCC 源码里自带脚本可以轻松下载；最后一个 isl 不是 GNU 项目，需要我们手动去下载。</p>
+
+<pre><code class="language-shell">$ tar zxf gcc-4.8.5.tar.gz
 $ cd gcc-4.8.5
 $ ./contrib/download_prerequisites
 --2019-06-06 16:18:09--  ftp://gcc.gnu.org/pub/gcc/infrastructure/mpfr-2.4.2.tar.bz2
@@ -237,7 +243,9 @@ $ tar zvxf isl-0.14.tar.gz
 $ ln -s lsl isl-0.14
 </code></pre>
 
-<p>在此脚本里可以看到依赖包的版本号依次是 mpc-0.8.1，mpfr-2.4.2，gmp-4.3.2；另外我们下载 isl-0.14。## 3. 编译安装</p>
+<p>在此脚本里可以看到依赖包的版本号依次是 mpc-0.8.1，mpfr-2.4.2，gmp-4.3.2；另外我们下载 isl-0.14。</p>
+
+<h2 id="3-编译安装">3. 编译安装</h2>
 
 <p>为了避免在编译过程中，受原来系统自定义的一堆环境影响，建议先 unset 这些环境设置：</p>
 
@@ -279,11 +287,13 @@ more information, such as the ld(1) and ld.so(8) manual pages.
 <p>如果需要重新 configure 或在 make 中途出错需要退出，最好把当前目录下的所有东西都删除干净。可以执行下面指令清空 编译目录下的相关文件，包括 makefile：</p>
 
 <pre><code class="language-shell">$ make distclean
-```## 4. 配置环境变量
+</code></pre>
 
-GCC 安装完成后，需要包新安装的 gcc 添加到 `PATH` 个人相应的 `LD_LIBRARY_PATH` ：
-```shell
-export PATH=/Bioinfo/SoftWare/gcc-4.8.5/bin:$PATH
+<h2 id="4-配置环境变量">4. 配置环境变量</h2>
+
+<p>GCC 安装完成后，需要包新安装的 gcc 添加到 <code>PATH</code> 个人相应的 <code>LD_LIBRARY_PATH</code> ：</p>
+
+<pre><code class="language-shell">export PATH=/Bioinfo/SoftWare/gcc-4.8.5/bin:$PATH
 export LD_LIBRARY_PATH=/Bioinfo/SoftWare/gcc-4.8.5/lib64:$LD_LIBRARY_PATH
 </code></pre>
 
@@ -295,7 +305,9 @@ export LD_LIBRARY_PATH=/Bioinfo/SoftWare/gcc-4.8.5/lib64:$LD_LIBRARY_PATH
 <li><p>或者在软件编译安装时直接在编译参数中添加 gcc/g++ 和其动态库的路径就可以。</p></li>
 </ul>
 
-<p>到这里新版本的 GCC 就已经安装完了，在下一篇文章中我们将会跟大家分享一下怎么使用新版本的 GCC 在 Linux 下源码编译安装最新版本的 R-3.6.0。## 5. 参考资料</p>
+<p>到这里新版本的 GCC 就已经安装完了，在下一篇文章中我们将会跟大家分享一下怎么使用新版本的 GCC 在 Linux 下源码编译安装最新版本的 R-3.6.0。</p>
+
+<h2 id="5-参考资料">5. 参考资料</h2>
 
 <ol>
 <li>秋水逸冰，《<a href="https://teddysun.com/432.html">在CentOS下编译安装GCC</a>》，WorldPress 博客</li>

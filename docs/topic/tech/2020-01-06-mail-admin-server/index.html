@@ -188,13 +188,16 @@
 <li><code>lib/galaxy/util/__init__.py</code></li>
 </ul>
 
-<p>所以，在设置 Galaxy 邮箱服务前，我们先来了解一下如何在 Python 中基于 <code>email</code> 和 <code>smtplib</code> 库进行 QQ 邮件的发送。## 2. 基于 Python 的邮件收发</p>
+<p>所以，在设置 Galaxy 邮箱服务前，我们先来了解一下如何在 Python 中基于 <code>email</code> 和 <code>smtplib</code> 库进行 QQ 邮件的发送。</p>
+
+<h2 id="2-基于-python-的邮件收发">2. 基于 Python 的邮件收发</h2>
 
 <p>首先我们要知道用 python 代理登录 qq 邮箱发邮件，是需要更改自己 qq 邮箱设置的。在这里大家需要做两件事情：邮箱开启 SMTP 功能 、获得授权码，步骤如下。</p>
 
 <p>首先，在打开的 QQ 邮箱中,进入<strong>&ldquo;设置&rdquo;。</strong></p>
 
-<p><strong><img src="https://note.bioitee.com/yuque/0/2020/png/126032/1578292378668-8948f35d-2b3e-4afd-b944-c127f2f50a57.png#align=left&amp;display=inline&amp;height=195&amp;name=image.png&amp;originHeight=195&amp;originWidth=821&amp;size=24711&amp;status=done&amp;style=none&amp;width=821" alt="" /></strong>第二，在邮箱设置界面,打开<strong>“帐户”</strong>。</p>
+<p><strong><img src="https://note.bioitee.com/yuque/0/2020/png/126032/1578292378668-8948f35d-2b3e-4afd-b944-c127f2f50a57.png#align=left&amp;display=inline&amp;height=195&amp;name=image.png&amp;originHeight=195&amp;originWidth=821&amp;size=24711&amp;status=done&amp;style=none&amp;width=821" alt="" /></strong>
+第二，在邮箱设置界面,打开<strong>“帐户”</strong>。</p>
 
 <p><a data-fancybox="gallery" href="https://note.bioitee.com/yuque/0/2020/png/126032/1578292437426-d3419a60-6375-4c0d-9862-660f3c69da2c.png#align=left&amp;display=inline&amp;height=349&amp;name=image.png&amp;originHeight=349&amp;originWidth=972&amp;size=39686&amp;status=done&amp;style=none&amp;width=972"><img src="https://note.bioitee.com/yuque/0/2020/png/126032/1578292437426-d3419a60-6375-4c0d-9862-660f3c69da2c.png#align=left&amp;display=inline&amp;height=349&amp;name=image.png&amp;originHeight=349&amp;originWidth=972&amp;size=39686&amp;status=done&amp;style=none&amp;width=972" alt=""></a></p>
 
@@ -265,10 +268,13 @@ smtp.quit()
     email_from: 'shenweiyan@bioitee.com'
 </code></pre>
 
-<p>配置完成后，重启 Galaxy 服务即可。## 4. 管理员与强制登录</p>
+<p>配置完成后，重启 Galaxy 服务即可。</p>
 
-<p>如果你只想把你个人部署的 Galaxy 提供给特定的人使用，例如同一个实验室的其他小伙伴，你可以把 Galaxy 的注册功能关闭，并设置只能通过管理员创建新账号。<code>yaml
-galaxy:
+<h2 id="4-管理员与强制登录">4. 管理员与强制登录</h2>
+
+<p>如果你只想把你个人部署的 Galaxy 提供给特定的人使用，例如同一个实验室的其他小伙伴，你可以把 Galaxy 的注册功能关闭，并设置只能通过管理员创建新账号。</p>
+
+<pre><code class="language-yaml">galaxy:
     # 设置 Galaxy 管理员账号，如有多个管理员，请用逗号分隔
     admin_users: 'shenweiyan@bioitee.com'
     # 强制所有用户均需要注册登录才能使用
@@ -283,10 +289,13 @@ galaxy:
     allow_user_deletion: true
     # 允许管理员模拟其他用户登录，进行问题追踪
     allow_user_impersonation: true
-</code>
- </p>
+</code></pre>
 
-<p><img src="https://note.bioitee.com/yuque/0/2020/png/126032/1578300288534-b06fda6b-f5fe-442b-a90e-c5e957f27a87.png#align=left&amp;display=inline&amp;height=689&amp;name=image.png&amp;originHeight=689&amp;originWidth=1006&amp;size=107517&amp;status=done&amp;style=none&amp;width=1006" alt="" />## 5. 一些测试</p>
+<p> </p>
+
+<p><a data-fancybox="gallery" href="https://note.bioitee.com/yuque/0/2020/png/126032/1578300288534-b06fda6b-f5fe-442b-a90e-c5e957f27a87.png#align=left&amp;display=inline&amp;height=689&amp;name=image.png&amp;originHeight=689&amp;originWidth=1006&amp;size=107517&amp;status=done&amp;style=none&amp;width=1006"><img src="https://note.bioitee.com/yuque/0/2020/png/126032/1578300288534-b06fda6b-f5fe-442b-a90e-c5e957f27a87.png#align=left&amp;display=inline&amp;height=689&amp;name=image.png&amp;originHeight=689&amp;originWidth=1006&amp;size=107517&amp;status=done&amp;style=none&amp;width=1006" alt=""></a></p>
+
+<h2 id="5-一些测试">5. 一些测试</h2>
 
 <p>配置好了 Galaxy 邮箱服务，我们来测试一下注册激活验证和重置密码。</p>
 

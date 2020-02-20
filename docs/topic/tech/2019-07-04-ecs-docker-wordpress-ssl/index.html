@@ -175,7 +175,8 @@
 
   
 
-<p>虽然已经入手 leanote，开启了以笔记+博客的方式记录学习生活琐事，但当手上有个续费了三年的 ECS，总想折腾点事情。于是想着在阿里云 ECS 上，使用 docker+wordpress 搭建个人博客，并基于 nginx 实现 ssl 证书的 https 访问。在阿里云上搭建使用个人博客主要分为以下几个步骤：</p>
+<p>虽然已经入手 leanote，开启了以笔记+博客的方式记录学习生活琐事，但当手上有个续费了三年的 ECS，总想折腾点事情。于是想着在阿里云 ECS 上，使用 docker+wordpress 搭建个人博客，并基于 nginx 实现 ssl 证书的 https 访问。
+在阿里云上搭建使用个人博客主要分为以下几个步骤：</p>
 
 <ol>
 <li>购买阿里云 ECS 主机</li>
@@ -253,78 +254,84 @@ docker run -itd --name wordpress -p 127.0.0.1:8090:80 --link mysql:mysql -v /hom
 
 <p>到这里，docker+wordpress 就安装完成了。这时候尚不能打开网页，因为是配置在 127.0.0.1 上的，只有本机可以访问。</p>
 
-<h1 id="5-域名解析-5-1-安装并启动-nginx">5. 域名解析## 5.1 安装并启动 nginx</h1>
+<h1 id="5-域名解析">5. 域名解析</h1>
+
+<h2 id="5-1-安装并启动-nginx">5.1 安装并启动 nginx</h2>
 
 <pre><code>yum install nginx
 systemctl start nginx
-```## 5.2 配置 nginx.conf
-
-进入服务器 nginx 安装路径，进入 conf 文件夹，编辑 nginx.conf，加入一行 `include sites-available/*.conf`。
-
 </code></pre>
 
-<p>user  nobody;
+<h2 id="5-2-配置-nginx-conf">5.2 配置 nginx.conf</h2>
+
+<p>进入服务器 nginx 安装路径，进入 conf 文件夹，编辑 nginx.conf，加入一行 <code>include sites-available/*.conf</code>。</p>
+
+<pre><code>user  nobody;
 worker_processes  1;
-&hellip;&hellip;
+......
 http {
     include       mime.types;
     default_type  application/octet-stream;
-    &hellip;&hellip;
+    ......
     server {
         listen       80;
         server_name  localhost;
-        &hellip;&hellip;
+        ......
     }
-    &hellip;&hellip;
+    ......
     include sites-available/*.conf;
-}</p>
-
-<pre><code class="language-##">
+}
 </code></pre>
 
-<p>server {
+<h2 id="5-3-配置-wordpress-conf">5.3 配置 wordpress.conf</h2>
+
+<pre><code>server {
     listen       80;
     server_name  youdomain.com;
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</p>
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 
-<pre><code>location / {
-    proxy_pass http://127.0.0.1:8090;
+    location / {
+        proxy_pass http://127.0.0.1:8090;
+    }
+
+    access_log  logs/wordpress_access.log;
+    error_log   logs/wordpress_error.log;
 }
-
-access_log  logs/wordpress_access.log;
-error_log   logs/wordpress_error.log;
 </code></pre>
 
-<p>}</p>
+<h2 id="5-4-添加域名解析">5.4 添加域名解析</h2>
 
-<pre><code class="language-##">
-登入阿里域名解析：https://netcn.console.aliyun.com/core/domain/list，点击相应域名的 &quot;解析&quot; 链接，根据提示添加域名的 A 记录，解析到你的服务器 ip 下。
+<p>登入阿里域名解析：<a href="https://netcn.console.aliyun.com/core/domain/list，点击相应域名的">https://netcn.console.aliyun.com/core/domain/list，点击相应域名的</a> &ldquo;解析&rdquo; 链接，根据提示添加域名的 A 记录，解析到你的服务器 ip 下。</p>
 
-![](https://note.bioitee.com/yuque/0/2019/png/126032/1559373255882-d5b2c908-7053-4474-bd71-4aa011f41e6b.png#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;size=0&amp;status=done&amp;width=713#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;status=done&amp;width=713)## 5.5 安装 wordpress
+<p><a data-fancybox="gallery" href="https://note.bioitee.com/yuque/0/2019/png/126032/1559373255882-d5b2c908-7053-4474-bd71-4aa011f41e6b.png#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;size=0&amp;status=done&amp;width=713#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;status=done&amp;width=713"><img src="https://note.bioitee.com/yuque/0/2019/png/126032/1559373255882-d5b2c908-7053-4474-bd71-4aa011f41e6b.png#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;size=0&amp;status=done&amp;width=713#align=left&amp;display=inline&amp;height=384&amp;originHeight=384&amp;originWidth=713&amp;status=done&amp;width=713" alt=""></a></p>
 
-添加完域名解析后，打开浏览器，输入 http://youdomain.com，然后就可以看到 WordPress 了。按照提示输入用户名等信息，然后安装 WordPress。等到它提示安装完成，那么 WordPress 的安装就算大功告成了。
-# 6. 安装 SSL 证书开启 https 访问
+<h2 id="5-5-安装-wordpress">5.5 安装 wordpress</h2>
 
+<p>添加完域名解析后，打开浏览器，输入 <a href="http://youdomain.com，然后就可以看到">http://youdomain.com，然后就可以看到</a> WordPress 了。按照提示输入用户名等信息，然后安装 WordPress。等到它提示安装完成，那么 WordPress 的安装就算大功告成了。</p>
 
-## 6.1 单域名免费证书申请
+<h1 id="6-安装-ssl-证书开启-https-访问">6. 安装 SSL 证书开启 https 访问</h1>
 
-登入阿里域名解析：https://netcn.console.aliyun.com/core/domain/list，点击相应域名的 &quot;SSL证书&quot; 链接，设置单域名免费证书。
+<h2 id="6-1-单域名免费证书申请">6.1 单域名免费证书申请</h2>
 
-![](https://note.bioitee.com/yuque/0/2019/png/126032/1559373255815-7ac27782-8249-43a6-9e7d-98a053b6eee2.png#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;size=0&amp;status=done&amp;width=729#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;status=done&amp;width=729)## 6.2 SSL 证书下载
+<p>登入阿里域名解析：<a href="https://netcn.console.aliyun.com/core/domain/list，点击相应域名的">https://netcn.console.aliyun.com/core/domain/list，点击相应域名的</a> &ldquo;SSL证书&rdquo; 链接，设置单域名免费证书。</p>
 
-单域名免费证书提交申请后，一般十分钟就会审批下来。这时候，我们登陆 &quot;[CA证书服务（数据安全）](https://yundun.console.aliyun.com/?spm=5176.2020520163.aliyun_sidebar.24.4eb62b7auFTPPK&amp;p=cas#/cas/home)&quot;，在 &quot;我的订单&quot; 中找到已经签发的域名证书，点击 &quot;下载&quot; 链接，通过 &quot;下载证书for Nginx&quot; 下载证书。
+<p><a data-fancybox="gallery" href="https://note.bioitee.com/yuque/0/2019/png/126032/1559373255815-7ac27782-8249-43a6-9e7d-98a053b6eee2.png#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;size=0&amp;status=done&amp;width=729#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;status=done&amp;width=729"><img src="https://note.bioitee.com/yuque/0/2019/png/126032/1559373255815-7ac27782-8249-43a6-9e7d-98a053b6eee2.png#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;size=0&amp;status=done&amp;width=729#align=left&amp;display=inline&amp;height=336&amp;originHeight=336&amp;originWidth=729&amp;status=done&amp;width=729" alt=""></a></p>
 
-![](https://note.bioitee.com/yuque/0/2019/png/126032/1559373255775-88b7ae35-3ef8-4737-a5c4-ff1997f36fa2.png#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;size=0&amp;status=done&amp;width=835#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;status=done&amp;width=835)## 6.3 SSL 证书安装
+<h2 id="6-2-ssl-证书下载">6.2 SSL 证书下载</h2>
 
-( 1 ) 在 Nginx 的安装目录下创建 cert 目录，并且将下载的全部文件拷贝到 cert 目录中。
+<p>单域名免费证书提交申请后，一般十分钟就会审批下来。这时候，我们登陆 &ldquo;<a href="https://yundun.console.aliyun.com/?spm=5176.2020520163.aliyun_sidebar.24.4eb62b7auFTPPK&amp;p=cas#/cas/home">CA证书服务（数据安全）</a>&ldquo;，在 &ldquo;我的订单&rdquo; 中找到已经签发的域名证书，点击 &ldquo;下载&rdquo; 链接，通过 &ldquo;下载证书for Nginx&rdquo; 下载证书。</p>
 
-( 2 ) 将 wordpress.conf 修改为：
+<p><a data-fancybox="gallery" href="https://note.bioitee.com/yuque/0/2019/png/126032/1559373255775-88b7ae35-3ef8-4737-a5c4-ff1997f36fa2.png#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;size=0&amp;status=done&amp;width=835#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;status=done&amp;width=835"><img src="https://note.bioitee.com/yuque/0/2019/png/126032/1559373255775-88b7ae35-3ef8-4737-a5c4-ff1997f36fa2.png#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;size=0&amp;status=done&amp;width=835#align=left&amp;display=inline&amp;height=453&amp;originHeight=453&amp;originWidth=835&amp;status=done&amp;width=835" alt=""></a></p>
 
-</code></pre>
+<h2 id="6-3-ssl-证书安装">6.3 SSL 证书安装</h2>
 
-<p>server {
+<p>( 1 ) 在 Nginx 的安装目录下创建 cert 目录，并且将下载的全部文件拷贝到 cert 目录中。</p>
+
+<p>( 2 ) 将 wordpress.conf 修改为：</p>
+
+<pre><code>server {
     listen 80;
     listen 443;
     server_name site.shenweiyan.cn;
@@ -336,96 +343,91 @@ error_log   logs/wordpress_error.log;
     ssl_session_timeout 5m;
     ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-    ssl_prefer_server_ciphers on;</p>
+    ssl_prefer_server_ciphers on;
 
-<pre><code>location / {
-    proxy_pass http://127.0.0.1:8090;
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    location / {
+        proxy_pass http://127.0.0.1:8090;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    access_log  logs/wordpress_access.log;
+    error_log   logs/wordpress_error.log;
 }
-
-access_log  logs/wordpress_access.log;
-error_log   logs/wordpress_error.log;
 </code></pre>
 
-<p>}</p>
+<p>( 3 )重启 nginx 服务</p>
 
-<pre><code>
-( 3 )重启 nginx 服务
-
+<pre><code>systemctl restart nginx
 </code></pre>
 
-<p>systemctl restart nginx</p>
+<p>进行到这一步，你已经弄好了 ssl 证书，在服务器导入并且绑定好了 443 端口，也已开启 https 跳转了，正常情况下你可以使用 <a href="https://site.shenwieyan.cn">https://site.shenwieyan.cn</a> 访问你的 wordpress。</p>
 
-<pre><code>
-进行到这一步，你已经弄好了 ssl 证书，在服务器导入并且绑定好了 443 端口，也已开启 https 跳转了，正常情况下你可以使用 [https://site.shenwieyan.cn](https://site.shenwieyan.cn) 访问你的 wordpress。
+<p>但是，你会遇到如下的情况：</p>
 
-但是，你会遇到如下的情况：
+<ol>
+<li>wordpress 样式错乱，图片打不开；</li>
+<li>wordpress/wp-admin 后台进不去，登录无反应；</li>
+<li>百度找了很多解决方法，却依然没有解决，甚至搞的连网站都打不开了；</li>
+<li>等等。。。</li>
+</ol>
 
-1. wordpress 样式错乱，图片打不开；
-2. wordpress/wp-admin 后台进不去，登录无反应；
-3. 百度找了很多解决方法，却依然没有解决，甚至搞的连网站都打不开了；
-4. 等等。。。
+<p>请按照 6.4 方法修改，本人亲测，wordpress4.9.1-4.9.2 完美解决。</p>
 
-请按照 6.4 方法修改，本人亲测，wordpress4.9.1-4.9.2 完美解决。## 6.4 全站开启 https
+<h2 id="6-4-全站开启-https">6.4 全站开启 https</h2>
 
-**1、系统文件修改**
+<p><strong>1、系统文件修改</strong></p>
 
-</code></pre>
-
-<p>路径：网站根目录（/home/shenweiyan/wordpress）/wp-includes/functions.php
-找到代码：require( ABSPATH . WPINC . &lsquo;/option.php&rsquo; );
+<pre><code>路径：网站根目录（/home/shenweiyan/wordpress）/wp-includes/functions.php
+找到代码：require( ABSPATH . WPINC . '/option.php' );
 在下方添加：
-add_filter(&lsquo;script_loader_src&rsquo;, &lsquo;agnostic_script_loader_src&rsquo;, 20,2); function agnostic_script_loader_src($src, $handle) { return preg_replace(&lsquo;/^(http|https):/&lsquo;, &ldquo;, $src); } add_filter(&lsquo;style_loader_src&rsquo;, &lsquo;agnostic_style_loader_src&rsquo;, 20,2); function agnostic_style_loader_src($src, $handle) { return preg_replace(&lsquo;/^(http|https):/&lsquo;, &ldquo;, $src); }</p>
-
-<pre><code>
-**2、后台文件修改**
-
+add_filter('script_loader_src', 'agnostic_script_loader_src', 20,2); function agnostic_script_loader_src($src, $handle) { return preg_replace('/^(http|https):/', '', $src); } add_filter('style_loader_src', 'agnostic_style_loader_src', 20,2); function agnostic_style_loader_src($src, $handle) { return preg_replace('/^(http|https):/', '', $src); }
 </code></pre>
 
-<p>路径：网站根目录（/home/shenweiyan/wordpress）/wp-config.php
-找到代码：</p>
+<p><strong>2、后台文件修改</strong></p>
 
-<p>*
+<pre><code>路径：网站根目录（/home/shenweiyan/wordpress）/wp-config.php
+找到代码：
+
+*
 * @package WordPress
-*/</p>
+*/
 
-<p>在下方添加如下代码：
-_SERVER[&lsquo;HTTPS&rsquo;] = &lsquo;on&rsquo;;
-define(&lsquo;FORCE_SSL_LOGIN&rsquo;, true);
-define(&lsquo;FORCE_SSL_ADMIN&rsquo;, true);</p>
-
-<pre><code>
-**3、安装插件**
-
-完成以上两步操作后，可以正常访问 https 开头的网站和后台，下载这个叫 &quot;really-simple-ssl&quot; 的 wordpress 插件：
-
+在下方添加如下代码：
+_SERVER['HTTPS'] = 'on';
+define('FORCE_SSL_LOGIN', true);
+define('FORCE_SSL_ADMIN', true);
 </code></pre>
 
-<p><a href="https://wordpress.org/plugins/really-simple-ssl/">https://wordpress.org/plugins/really-simple-ssl/</a></p>
+<p><strong>3、安装插件</strong></p>
 
-<pre><code>
-登录后台安装此插件。
+<p>完成以上两步操作后，可以正常访问 https 开头的网站和后台，下载这个叫 &ldquo;really-simple-ssl&rdquo; 的 wordpress 插件：</p>
 
-或者登陆 wordpress 后台，在&quot;设置&quot;→ &quot;常规&quot; 中设置 &quot;WordPress地址（URL）&quot; 和 &quot;站点地址（URL）&quot;为 https 链接地址。
-
-![](https://note.bioitee.com/yuque/0/2019/png/126032/1559373255781-a5c5bd01-df19-43a5-869d-bb1b54e0bfc3.png#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;size=0&amp;status=done&amp;width=971#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;status=done&amp;width=971)
-
-至此，真正意义上解决 wordpress 全站开启 https 的 ssl 证书问题。
-# 7. 填坑总结## 7.1. 更换域名无法登陆后台
-
-在后台—设置—常规—WordPress 地址或者网站域名处设置了别的域名，结果导致后台无法登录了，这是一种情况；还有一种情况就是网站搬家了，或者是换域名了，也会出现这类问题，那么就需要重新配置下当前域名才能使得网站正常运行。
-
-方法：修改 wp-config.php 文件
-
-第一步：在网站根目录找到 wp-config.php 文件，在其中添加以下两行内容：
-
+<pre><code>https://wordpress.org/plugins/really-simple-ssl/
 </code></pre>
 
-<p>define(&lsquo;WP_HOME, &lsquo;http://要修改的域名&rsquo;);
-define(&lsquo;WP_SITEURL&rsquo;, &lsquo;http://要修改的域名&rsquo;);
-```</p>
+<p>登录后台安装此插件。</p>
+
+<p>或者登陆 wordpress 后台，在&rdquo;设置&rdquo;→ &ldquo;常规&rdquo; 中设置 &ldquo;WordPress地址（URL）&rdquo; 和 &ldquo;站点地址（URL）&rdquo;为 https 链接地址。</p>
+
+<p><a data-fancybox="gallery" href="https://note.bioitee.com/yuque/0/2019/png/126032/1559373255781-a5c5bd01-df19-43a5-869d-bb1b54e0bfc3.png#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;size=0&amp;status=done&amp;width=971#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;status=done&amp;width=971"><img src="https://note.bioitee.com/yuque/0/2019/png/126032/1559373255781-a5c5bd01-df19-43a5-869d-bb1b54e0bfc3.png#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;size=0&amp;status=done&amp;width=971#align=left&amp;display=inline&amp;height=188&amp;originHeight=188&amp;originWidth=971&amp;status=done&amp;width=971" alt=""></a></p>
+
+<p>至此，真正意义上解决 wordpress 全站开启 https 的 ssl 证书问题。</p>
+
+<h1 id="7-填坑总结">7. 填坑总结</h1>
+
+<h2 id="7-1-更换域名无法登陆后台">7.1. 更换域名无法登陆后台</h2>
+
+<p>在后台—设置—常规—WordPress 地址或者网站域名处设置了别的域名，结果导致后台无法登录了，这是一种情况；还有一种情况就是网站搬家了，或者是换域名了，也会出现这类问题，那么就需要重新配置下当前域名才能使得网站正常运行。</p>
+
+<p>方法：修改 wp-config.php 文件</p>
+
+<p>第一步：在网站根目录找到 wp-config.php 文件，在其中添加以下两行内容：</p>
+
+<pre><code>define('WP_HOME, 'http://要修改的域名');
+define('WP_SITEURL', 'http://要修改的域名');
+</code></pre>
 
 <p>第二步：登录后台—设置—常规—重新输入新博客地址（WordPressAddress(URL)）和安装地址（SiteAddress(URL)），修改完毕后删除上面在wp-config.php文件中添加的内容（如何一切正常，不删除也可以，具体情况，具体操作）。</p>
 

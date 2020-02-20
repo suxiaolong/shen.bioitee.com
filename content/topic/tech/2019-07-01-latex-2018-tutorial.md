@@ -8,6 +8,7 @@ published: true
 ---
 
 
+
 # 一、背景
 前两天在自己的 Jupyter 服务器上想要把 notebook(.ipynb) 导出为 pdf 时发现 xelatex 没有安装：
 
@@ -20,8 +21,6 @@ nbconvert failed: xelatex not found on PATH, if you have not installed xelatex y
 ```
 
 另外一点就是，对于经常做生信分析的童鞋而言，LaTeX，或者 Html+wkhtmltopdf 也许是当前生信报告生成与交付的两种主要解决方案（或许还有其他更好的，欢迎留言交流）。因此对于生信分析而言，LaTeX 也许并不陌生，但真正熟悉和掌握它的人却寥寥无几。
-
-
 # 二、概念
 
 TEX 是诞生于 20 世纪 70 年代末到 80 年代初的一款计算机排版软件，而且是命令行格式的，用来排版高质量的书籍，特别是包含有数学公式的书籍。TEX 以追求高质量为目标，很早就实现了矢量描述的计算机字体、细致的分页断行算法和数学排版功能，因其数学排版能力得到了学术界的广泛使用，也启发了后来复杂的商业计算机排版软件。
@@ -43,7 +42,8 @@ TEXLive 是 Tex 的一种比较流行的发行版，它是由 TUG（TEX User Gro
 |  | ConTeXt | 和 LaTeX 相比，它更加灵活和自由。 |
 |  | ctex | 小写的 ctex 是可以很好支持中文的宏包。 |
 |  | ...... | ...... |
-| 发行版 | **TeX Live** | 国际 TeX 用户组织 TUG 开发，支持不同的操作系统。 |
+| 
+发行版 | **TeX Live** | 国际 TeX 用户组织 TUG 开发，支持不同的操作系统。 |
 |  | MiKTeX | Windows 下广泛使用的一个 TeX 发行版。 |
 |  | ConTeXt Minimals | 它包含了最新版本的 ConTeXt。 |
 |  | teTeX | 一个 Unix 下的 TeX 发行版，现在已经停止更新且并入 TeXLive。 |
@@ -52,12 +52,8 @@ TEXLive 是 Tex 的一种比较流行的发行版，它是由 TUG（TEX User Gro
 |  | ...... | ...... |
 
 [CTeX](http://www.ctex.org/CTeX) 中文套装是基于 Windows 下的 [MiKTeX](http://www.ctex.org/MiKTeX) 系统，集成了编辑器 [WinEdt](http://www.ctex.org/WinEdt) 和 [PostScript](http://www.ctex.org/PostScript/edit) 处理软件 Ghostscript 和 GSview 等主要工具。 [CTeX](http://www.ctex.org/CTeX) 中文套装在 [MiKTeX](http://www.ctex.org/MiKTeX) 的基础上增加了对中文的完整支持。 [CTeX](http://www.ctex.org/CTeX) 中文套装支持 CJK, xeCJK, CCT, TY 等多种中文 [TeX](http://www.ctex.org/TeX) 处理方式。
-
-
 # 三、安装
 TEXLive 常用有两种安装方式：从 TEXLive 光盘进行安装和从网络在线安装。这里我们介绍第二种。
-
-
 ## 1. 镜像文件下载
 
 TexLive 历史版本下载地址：[ftp://tug.org/historic/systems/texlive/]()
@@ -66,8 +62,6 @@ TexLive 历史版本下载地址：[ftp://tug.org/historic/systems/texlive/]()
 TexLive 的镜像文件下载推荐使用 [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/)，国内下载速度极快。
 
 [https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2018.iso](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2018.iso)
-
-
 ## 2. 镜像挂载
 TEXLive 镜像文件下载完之后，推荐使用 root 用户进行安装。
 ```bash
@@ -84,8 +78,6 @@ mount: /dev/loop0 is write-protected, mounting read-only
 ```bash
 $ sudo mount -o loop texlive2018.iso /mnt/textlive -o ro
 ```
-
-
 ## 3. 镜像安装
 TEXLive 镜像的安装有两种方法：一是可以启动安装程序的图形化界面进行安装配置；二是直接在命令行中进行。这里主要介绍一下命令行下的安装。
 ```bash
@@ -234,8 +226,6 @@ $ sudo umount /mnt/textlive/
 ```
 
 Texlive2017 有一个[详细指南](https://www.tug.org/texlive/doc/texlive-zh-cn/texlive-zh-cn.pdf)，其中也有详细介绍各平台各种安装方法。
-
-
 # 四、设置环境变量
 
 将 texlive 部分目录添加到环境变量(~/.bashrc)，编辑完记得 source 刷新一下：
@@ -244,8 +234,6 @@ export PATH=/usr/local/software/texlive/2018/bin/x86_64-linux:$PATH
 export MANPATH=/usr/local/software/texlive/2018/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/software/texlive/2018/texmf-dist/doc/info:$INFOPATH
 ```
-
-
 # 五、使用与测试
 
 编辑一个 tex-test.tex 文件：
@@ -260,8 +248,6 @@ Hello \LaTeX! 你好，这是一个测试文档。
 ```
 xelatex tex-test.tex
 ```
-
-
 # 六、中文支持
 
 LaTeX 默认是不支持中文的，想要支持中文排版，这里需要引入一个"宏包" 的概念。关于宏包，我们可以理解为一些指令的集合，用于专门处理某个特定的专题（如排版，字体等方面的细节问题），使用者可以方便地根据需要选用某个宏包。
@@ -299,8 +285,6 @@ $ tlmgr install pkgname
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1548653863498-04986e41-7e3d-4edf-b8f8-47feaa60720c.png#align=left&display=inline&height=566&originHeight=566&originWidth=633&size=0&width=633)
 
 ---
-
-
 # 七、参考资料
 
 - CTAN，[xecjk – Support for CJK documents in XeLaTeX](https://ctan.org/pkg/xecjk)
@@ -308,4 +292,5 @@ $ tlmgr install pkgname
 - [CTEX.ORG](http://CTEX.ORG)，《[xeCJK 宏包（中文文档）](http://mirrors.sjtug.sjtu.edu.cn/ctan/macros/xetex/latex/xecjk/xeCJK.pdf)》
 - CTAN，[xecjk – Support for CJK documents in XELATEX](https://ctan.org/pkg/xecjk)
 - Jiedong Hao，jdhao blog，[LaTeX 中如何使用中文](https://jdhao.github.io/2018/03/29/latex-chinese.zh/)
+
 

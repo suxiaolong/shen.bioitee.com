@@ -8,6 +8,7 @@ published: true
 ---
 
 
+
 ### Github Fork 过程概述
 
 在 Github 上有很多优秀的开源项目，相信每一位热衷于技术的朋友都会在 Github 上 Fork 一些感兴趣的项目，然后在本地修改并提交。本文以 Galaxy Project 下的 galaxy 仓库为例，在 Github 上 Fork 该项目，更新提交的一个完整过程如下图所示：
@@ -29,7 +30,9 @@ published: true
 
 ![2-galaxyproject-master.png](https://note.bioitee.com/yuque/0/2019/png/126032/1568266793800-04ac5f39-8799-4aa4-9147-b400fb32c785.png#align=left&display=inline&height=579&name=2-galaxyproject-master.png&originHeight=579&originWidth=914&size=73717&status=done&width=914)
 
-下面我们简单介绍一下，如何同被 fork 的项目保持同步更新，将以 galaxyproject/galaxy 项目为例。### fork 同步更新步骤
+下面我们简单介绍一下，如何同被 fork 的项目保持同步更新，将以 galaxyproject/galaxy 项目为例。
+
+### fork 同步更新步骤
 
 1. 打开自己的 github 中 fork 的项目，打开 Code 选项卡，点击下面的 **"New pull request"** 创建一个新的 pull 请求；
 
@@ -68,8 +71,6 @@ published: true
 ![8-galaxy-master-fork.png](https://note.bioitee.com/yuque/0/2019/png/126032/1568269828163-02d1c211-267c-4dde-a970-0b50489f1e20.png#align=left&display=inline&height=590&name=8-galaxy-master-fork.png&originHeight=590&originWidth=811&size=77984&status=done&width=811)
 
 ![2-galaxyproject-master.png](https://note.bioitee.com/yuque/0/2019/png/126032/1568269855554-a39806aa-11f7-4acd-a1c8-617be6f31c61.png#align=left&display=inline&height=579&name=2-galaxyproject-master.png&originHeight=579&originWidth=914&size=73717&status=done&width=914)
-
-
 ### 总结
 
 本文讲解了同步更新 Github 上 Fork 项目的其中一种方法，还有其他的方法比如可以删除个人 github 中 fork 的该项目然后重新 fork，这种方式不能合并自己已更新的代码；还有另外一种方式是在本地建立两个仓库，把两个远程库都 clone 到本地，然后拉取原 fork 项目更新到本地，合并更新，最后 push 到你个人的 github 即可。

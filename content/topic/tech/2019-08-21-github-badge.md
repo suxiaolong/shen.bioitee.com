@@ -13,17 +13,20 @@ GitHub 徽标的官方网站是 [http://shields.io/](http://shields.io/)，我�
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1566372610540-403c6104-d739-4a28-9141-5ead8d8fed77.png#align=left&display=inline&height=99&name=image.png&originHeight=99&originWidth=679&size=4679&status=done&width=679)
 
+
 ### 生成已有的标签
 
 - 打开 GitHub 徽标的官方网站 [http://shields.io/](http://shields.io/)，输入你在 Github 的 repo URL，即可看到 issues、forks、stars 相关的图标及代码。
 
-![galaxy-badges.png](https://note.bioitee.com/yuque/0/2019/png/126032/1566738475988-cc06f341-eb6d-4fa2-bfc9-5d84e0ed5670.png#align=left&display=inline&height=793&name=galaxy-badges.png&originHeight=793&originWidth=1364&size=93070&status=done&width=1364)- 点击图标或者代码，即可进入设置页，设置图标的颜色、样式等属性，最后选择你想要的 markdown 或者 URL 代码到 README.md 或者项目的文档页面即可。
+![galaxy-badges.png](https://note.bioitee.com/yuque/0/2019/png/126032/1566738475988-cc06f341-eb6d-4fa2-bfc9-5d84e0ed5670.png#align=left&display=inline&height=793&name=galaxy-badges.png&originHeight=793&originWidth=1364&size=93070&status=done&width=1364)
+- 点击图标或者代码，即可进入设置页，设置图标的颜色、样式等属性，最后选择你想要的 markdown 或者 URL 代码到 README.md 或者项目的文档页面即可。
 
 ![galaxy-star.png](https://note.bioitee.com/yuque/0/2019/png/126032/1566738487674-6f8b7ecf-106f-4d82-b5df-8e173d25f300.png#align=left&display=inline&height=999&name=galaxy-star.png&originHeight=999&originWidth=1363&size=58871&status=done&width=1363)
 
 - 一些常见比较好玩的 Badges
 
 ![](https://note.bioitee.com/yuque/0/2019/png/126032/1566354267965-1cce470f-faf8-48c0-a3db-361da2dae48e.png#align=left&display=inline&height=551&name=image.png&originHeight=551&originWidth=675&size=34739&status=done&width=675)
+
 
 ### 生成自定义徽章标签
 

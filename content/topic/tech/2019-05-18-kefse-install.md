@@ -8,6 +8,7 @@ published: true
 ---
 
 
+
 ## 问题
 
 源码下载的 LEfSe，或者使用 `conda install -c bioconda lefse` 安装完成后，执行分析出现报错：
@@ -36,8 +37,6 @@ Traceback (most recent call last):
     raise AttributeError('Unknown property %s' % k)
 AttributeError: Unknown property axis_bgcolor
 ```
-
-
 ## 原因
 
 出现报错主要原因是 matplotlib==2.2.0 起把部分功能函数移除了，我们需要回退 matplotlib 版本。
@@ -54,15 +53,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 '2.2.2'
 >>>
 ```
-
-
 ## 解决
 
 ```
 $ conda install matplotlib==2.1.1
 ```
-
-
 ## 重新测试
 
 ```

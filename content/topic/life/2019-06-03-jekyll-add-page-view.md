@@ -8,6 +8,7 @@ published: true
 ---
 
 
+
 ## Google Analysis
 
 谷歌分析是谷歌提供的免费网络分析服务，用于跟踪和报告网站流量。将谷歌分析添加到Jekyll网站十分简单。登录 [谷歌分析](https://www.google.com/intl/zh-CN/analytics/) 并新建一个媒体资源，以获取网站的跟踪ID。可在`管理 > 媒体资源 > 跟踪信息 > 跟踪代码`下找到跟踪ID。
@@ -70,7 +71,9 @@ galite('send', 'pageview');
 </script>
 ```
 
-[ga-lite](https://github.com/jehna/ga-lite) 不仅解决了谷歌分析跟踪代码在中国大陆影响加载速度的问题，还解决了官方脚本只缓存2个小时的问题。## 不蒜子
+[ga-lite](https://github.com/jehna/ga-lite) 不仅解决了谷歌分析跟踪代码在中国大陆影响加载速度的问题，还解决了官方脚本只缓存2个小时的问题。
+
+## 不蒜子
 
 官网：[https://busuanzi.ibruce.info/](https://busuanzi.ibruce.info/)
 

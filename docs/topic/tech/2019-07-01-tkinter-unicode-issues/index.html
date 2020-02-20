@@ -233,10 +233,10 @@ top.mainloop()
 
 <li><p>python 的 PyPI 仓库中是没有 tkinter 包的，想要使用 <code>pip install tkinter</code> 卸载或者重装都是行不通的。</p></li>
 
-<li><p>网上也有人说可以使用 <code>yum install python3-tk/python-tk</code> 解决，但对于本人来说，没用。</p>
-
-<h1 id="什么是-tcl-tk-tkinter">什么是 tcl, tk, tkinter</h1></li>
+<li><p>网上也有人说可以使用 <code>yum install python3-tk/python-tk</code> 解决，但对于本人来说，没用。</p></li>
 </ol>
+
+<h1 id="什么是-tcl-tk-tkinter">什么是 tcl, tk, tkinter</h1>
 
 <blockquote>
 <p>The <a href="https://docs.python.org/3.6/library/tkinter.html#module-tkinter">tkinter</a> package (“Tk interface”) is the standard Python interface to the Tk GUI toolkit. Both Tk and <a href="https://docs.python.org/3.6/library/tkinter.html#module-tkinter">tkinter</a> are available on most Unix platforms, as well as on Windows systems. (Tk itself is not part of Python; it is maintained at ActiveState.)</p>
@@ -264,7 +264,8 @@ top.mainloop()
 
 <p>参考下载链接：<a href="https://www.activestate.com/products/activetcl/downloads/">https://www.activestate.com/products/activetcl/downloads/</a></p>
 
-<p>参考安装教程：<a href="https://tkdocs.com/tutorial/install.html">https://tkdocs.com/tutorial/install.html</a>以下为 CentOS 7 下 **ActiveTcl-8.6.8.0 **的一些安装记录，仅作参考。</p>
+<p>参考安装教程：<a href="https://tkdocs.com/tutorial/install.html">https://tkdocs.com/tutorial/install.html</a>
+以下为 CentOS 7 下 **ActiveTcl-8.6.8.0 **的一些安装记录，仅作参考。</p>
 
 <pre><code class="language-bash">$ wget https://downloads.activestate.com/ActiveTcl/releases/8.6.8.0/ActiveTcl-8.6.8.0-x86_64-linux-glibc-2.5.tar.gz
 $ tar zvxf ActiveTcl-8.6.8.0-x86_64-linux-glibc-2.5.tar.gz
@@ -331,14 +332,15 @@ Do you want to download a free trial of Komodo IDE? [Y/n]
 <p>ActiveTcl 安装完成后，需要把 path 添加至环境变量（~/.bashrc）:</p>
 
 <pre><code>export PATH=&quot;/usr/local/software/ActiveTcl-8.6/bin:$PATH&quot;
-```# Python 重新编译安装
+</code></pre>
 
-想要在 Python 2.7 安装 Tkinter，需要在编译过程中通过 `--with-tcltk-includes` 和 `--with-tcltk-libs` 中指定 ActiveTcl 的头文件以及库所在路径。
+<h1 id="python-重新编译安装">Python 重新编译安装</h1>
 
-如果在执行编译安装过程中，出现无法找到 libXss.so.1 共享动态库报错：
+<p>想要在 Python 2.7 安装 Tkinter，需要在编译过程中通过 <code>--with-tcltk-includes</code> 和 <code>--with-tcltk-libs</code> 中指定 ActiveTcl 的头文件以及库所在路径。</p>
 
-```bash
-$ tar zvxf Python-2.7.15.tgz
+<p>如果在执行编译安装过程中，出现无法找到 libXss.so.1 共享动态库报错：</p>
+
+<pre><code class="language-bash">$ tar zvxf Python-2.7.15.tgz
 $ cd Python-2.7.15
 $ ./configure --prefix=/usr/local/software/python-2.7 --with-tcltk-includes='-I/usr/local/software/ActiveTcl-8.6/include' --with-tcltk-libs='/usr/local/software/ActiveTcl-8.6/lib/libtcl8.6.so /usr/local/software/ActiveTcl-8.6/lib/libtk8.6.so' --enable-optimizations
 $ make
@@ -367,9 +369,10 @@ running build_scripts
 
 <p>CentOS 下请参考以下解决方法：</p>
 
-<p><code>
-$ sudo yum install libXScrnSaver libXScrnSaver-devel
-</code># 调用 Tkinter</p>
+<pre><code>$ sudo yum install libXScrnSaver libXScrnSaver-devel
+</code></pre>
+
+<h1 id="调用-tkinter">调用 Tkinter</h1>
 
 <p>Python 2 重新编译完后，执行 <code>python2 -m Tkinter</code> 显示 Tk 的 ui 界面，以及相应的 Tcl/Tk 版本。</p>
 
@@ -379,7 +382,9 @@ $ sudo yum install libXScrnSaver libXScrnSaver-devel
 
 <p><a data-fancybox="gallery" href="https://note.bioitee.com/yuque/0/2018/png/126032/1543220938974-7d71cd19-ca4a-433c-ae27-8557c98b75d2.png#width=418"><img src="https://note.bioitee.com/yuque/0/2018/png/126032/1543220938974-7d71cd19-ca4a-433c-ae27-8557c98b75d2.png#width=418" alt=""></a></p>
 
-<p>&mdash;# 参考资料</p>
+<hr />
+
+<h1 id="参考资料">参考资料</h1>
 
 <ul>
 <li><p>Download And Install Tcl: ActiveTcl，<a href="https://www.activestate.com/products/activetcl/downloads/">https://www.activestate.com/products/activetcl/downloads/</a></p></li>

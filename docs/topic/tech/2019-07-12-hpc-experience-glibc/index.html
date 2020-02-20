@@ -210,7 +210,9 @@ ls: error while loading shared libraries: libc.so.6: cannot open shared object f
 <li><p>已经退出 root 登录：重装系统或者使用 Linux rescue 模式修复。</p></li>
 </ul>
 
-<p>作为 HPC 整个集群的 log 节点，不到万不得已是不会轻易重装系统的，于是我们选择了使用 Linux rescue 模式修复，以下是一些记录。## 1. U 盘启动盘制作</p>
+<p>作为 HPC 整个集群的 log 节点，不到万不得已是不会轻易重装系统的，于是我们选择了使用 Linux rescue 模式修复，以下是一些记录。</p>
+
+<h2 id="1-u-盘启动盘制作">1. U 盘启动盘制作</h2>
 
 <p>由于原来的 log 节点是 rhel-server-6.5-x86_64 的操作系统，所以我们需要制作与之相对应的启动 U 盘。</p>
 
@@ -235,7 +237,9 @@ ls: error while loading shared libraries: libc.so.6: cannot open shared object f
 
 <p>其次，将启动文件写入 u 盘。以 UltraISO 软碟通为例，打开 UltraISO 软件，菜单 “文件” 打开 rhel-server-6.5-x86_64-boot.iso ，菜单 “启动” ==&gt; “写入硬盘映像”，弹出对话框，点击 “格式化”，格式化完成点击 “写入”。</p>
 
-<p>最后，将安装光盘镜像 rhel-server-6.5-x86_64-dvd.iso  拷贝到 u 盘根目录。## 2. Linux rescue模式</p>
+<p>最后，将安装光盘镜像 rhel-server-6.5-x86_64-dvd.iso  拷贝到 u 盘根目录。</p>
+
+<h2 id="2-linux-rescue模式">2. Linux rescue模式</h2>
 
 <h3 id="2-1-说明">2.1. 说明</h3>
 
@@ -243,7 +247,9 @@ ls: error while loading shared libraries: libc.so.6: cannot open shared object f
 
 <p>如果不理会就会进入以下界面：</p>
 
-<p><img src="https://note.bioitee.com/yuque/0/2019/png/126032/1562972531584-74fee520-6c7c-4783-9f32-32ccdcb40295.png#align=left&amp;display=inline&amp;height=591&amp;originHeight=591&amp;originWidth=794&amp;size=0&amp;status=done&amp;width=794" alt="" />### 2.2. rescue 模式步骤</p>
+<p><a data-fancybox="gallery" href="https://note.bioitee.com/yuque/0/2019/png/126032/1562972531584-74fee520-6c7c-4783-9f32-32ccdcb40295.png#align=left&amp;display=inline&amp;height=591&amp;originHeight=591&amp;originWidth=794&amp;size=0&amp;status=done&amp;width=794"><img src="https://note.bioitee.com/yuque/0/2019/png/126032/1562972531584-74fee520-6c7c-4783-9f32-32ccdcb40295.png#align=left&amp;display=inline&amp;height=591&amp;originHeight=591&amp;originWidth=794&amp;size=0&amp;status=done&amp;width=794" alt=""></a></p>
+
+<h3 id="2-2-rescue-模式步骤">2.2. rescue 模式步骤</h3>
 
 <p>① 选择 rescue 模式</p>
 
@@ -286,7 +292,9 @@ ls: error while loading shared libraries: libc.so.6: cannot open shared object f
 
 <p>⑨ 重启后重新进入系统一切正常。</p>
 
-<p>⑩ 作为集群，需要重新执行一些必须的挂载、开启必要服务，在这里不详述。## 3. 总结</p>
+<p>⑩ 作为集群，需要重新执行一些必须的挂载、开启必要服务，在这里不详述。</p>
+
+<h2 id="3-总结">3. 总结</h2>
 
 <ol>
 <li>对于系统的库文件，一定不要轻易去修改，特别是在使用 root 权限下。</li>

@@ -421,21 +421,26 @@ node1:~ # mmchconfig trace=DEFAULT -i
 <p>有些时候，在截获跟踪信息的同时，还需要通过额外的设置产生一些 internaldump 文件来帮助分析 GPFS 相关的问题。默认情况下，是不会生成 internaldump 文件的。命令如下：</p>
 
 <pre><code class="language-bash">mmchconfig traceGenDump=yes -i
-```## 案例分析
+</code></pre>
 
-在基于 Linux 操作系统平台、GPFS 文件系统的集群运行过程中，出现了问题。该集群环境信息如下：
+<h2 id="案例分析">案例分析</h2>
 
-- 有 3 个节点，分别命名为：node1, node2, node3；
-- 有 3 个 GPFS 文件系统，分别命名为：/col1, /col2, /col3；
-- 在 CNFS 客户机上有 9 个挂载点，NFS 客户端通过 CNFS IP 同时往 3 个 GPFS 文件系统中传送数据；
+<p>在基于 Linux 操作系统平台、GPFS 文件系统的集群运行过程中，出现了问题。该集群环境信息如下：</p>
 
+<ul>
+<li>有 3 个节点，分别命名为：node1, node2, node3；</li>
+<li>有 3 个 GPFS 文件系统，分别命名为：/col1, /col2, /col3；</li>
 
-## 诊断过程
+<li><p>在 CNFS 客户机上有 9 个挂载点，NFS 客户端通过 CNFS IP 同时往 3 个 GPFS 文件系统中传送数据；</p>
 
-1. 首先查看各节点状态 :
+<h2 id="诊断过程">诊断过程</h2></li>
+</ul>
 
-```bash
-node1:~ # mmgetstate -a 
+<ol>
+<li>首先查看各节点状态 :</li>
+</ol>
+
+<pre><code class="language-bash">node1:~ # mmgetstate -a 
 Node number  Node name        GPFS state 
 ------------------------------------------------------------------ 
       1      node3          arbitrating 
@@ -557,9 +562,12 @@ Mon Aug  9 21:13:21.929 2010: rax    0x0000000000000000
 <li>重现问题并截获跟踪信息：</li>
 </ol>
 
-<p>重新把系统运行起来直到 GPFS 再次遇到问题。此时在节点上执行 <code>mmtrace stop</code> 命令，这样就可以捕获到当问题发生时的详细的跟踪信息。## 结束语</p>
+<p>重新把系统运行起来直到 GPFS 再次遇到问题。此时在节点上执行 <code>mmtrace stop</code> 命令，这样就可以捕获到当问题发生时的详细的跟踪信息。</p>
 
-<p>根据上面介绍的 GPFS 常见问题的诊断方法，我们可以在 GPFS 发生问题后进行相应检查，尽快查到问题所在恢复或者提供给相应技术人员更快解决，保证 GPFS 能够健康工作。原文：<a href="https://www.ibm.com/developerworks/cn/linux/l-cn-gpfs-ts/index.html">https://www.ibm.com/developerworks/cn/linux/l-cn-gpfs-ts/index.html</a></p>
+<h2 id="结束语">结束语</h2>
+
+<p>根据上面介绍的 GPFS 常见问题的诊断方法，我们可以在 GPFS 发生问题后进行相应检查，尽快查到问题所在恢复或者提供给相应技术人员更快解决，保证 GPFS 能够健康工作。
+原文：<a href="https://www.ibm.com/developerworks/cn/linux/l-cn-gpfs-ts/index.html">https://www.ibm.com/developerworks/cn/linux/l-cn-gpfs-ts/index.html</a></p>
 
 <p><a data-fancybox="gallery" href="https://note.bioitee.com/yuque/0/2019/png/126032/1560497428081-bef4f7dd-c60a-4501-9e54-5a39ec8396fa.png#align=left&amp;display=inline&amp;height=500&amp;name=%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98_%E6%A8%AA%E7%89%88%E4%BA%8C%E7%BB%B4%E7%A0%81_2019.06.01.png&amp;originHeight=500&amp;originWidth=900&amp;size=67641&amp;status=done&amp;width=900"><img src="https://note.bioitee.com/yuque/0/2019/png/126032/1560497428081-bef4f7dd-c60a-4501-9e54-5a39ec8396fa.png#align=left&amp;display=inline&amp;height=500&amp;name=%E9%BB%98%E8%AE%A4%E6%A0%87%E9%A2%98_%E6%A8%AA%E7%89%88%E4%BA%8C%E7%BB%B4%E7%A0%81_2019.06.01.png&amp;originHeight=500&amp;originWidth=900&amp;size=67641&amp;status=done&amp;width=900" alt="默认标题_横版二维码_2019.06.01.png"></a></p>
 

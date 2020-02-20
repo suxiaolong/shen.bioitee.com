@@ -17,13 +17,13 @@ webSSH 是 Python 语言写的一个基于 tornado 和 paramiko 包的 web 应�
 - 支持全屏终端，且终端窗口可调整大小；
 - 自动检测系统默认编码；
 - 适用于 Python 2.7-3.6。
-
-
 # 1. 安装
 
 ```bash
 pip install webssh
 ```
+
+
 # 2. 启动
 
 webssh 安装完成，我们可以通过 wssh 命令进行启动
@@ -45,6 +45,8 @@ $ wssh --address='0.0.0.0' --port=8000
 ![webt.png](https://note.bioitee.com/yuque/0/2019/png/126032/1557796843233-f8bfb6ab-eb70-4cef-8abc-a48ee9c7421e.png#align=left&display=inline&height=396&name=webt.png&originHeight=396&originWidth=783&size=48775&status=done&width=783)
 
 ![webt-2.png](https://note.bioitee.com/yuque/0/2019/png/126032/1557796855288-8e6be73e-0d6d-4771-8eef-d30b387bd673.png#align=left&display=inline&height=395&name=webt-2.png&originHeight=395&originWidth=784&size=77127&status=done&width=784)
+
+
 # 3. 参数
 
 wssh 的一些主要参数如下
@@ -64,6 +66,8 @@ wssh --log-file-prefix=main.log
 #更多参数说明
 wssh --help
 ```
+
+
 # 4. Nginx
 
 wssh 可以使用 Nginx 作为后台代理，以及启用 SSL 访问，参考配置文件
@@ -82,8 +86,6 @@ location / {
 
 - 使用 Nginx 作为后台代理，并启用 SSL 访问，可以避免你的 ssh 证书被暴露。此外，你的浏览器和 Web 服务器之间的通信将使用安全的 Websockets 进行加密。
 - 尝试使用 reject policy 作为缺少主机密钥时的策略，以及经过验证的 known_hosts，可以防止中间人的攻击。其思路是，webssh 会依次检查系统主机密钥文件（"~/.ssh/known_hosts"）和应用程序主机密钥文件（"./known_hosts"），如果 ssh 服务器的主机名（hostname）没有被发现或者密钥不匹配，连接将被中止。
-
-
 # 5. 参考资料
 
 - [https://www.oschina.net/p/webterminal](https://www.oschina.net/p/webterminal)

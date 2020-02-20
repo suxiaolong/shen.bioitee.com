@@ -183,11 +183,13 @@
 
 <pre><code class="language-bash">os : CentOS Linux release 6.5 (x86_64) 
 gcc: 4.8.5 20150623
-```## 2. 安装步骤
+</code></pre>
 
-如果您拥有 root 权限，请执以下依赖安装：
-```bash
-yum install zlib
+<h2 id="2-安装步骤">2. 安装步骤</h2>
+
+<p>如果您拥有 root 权限，请执以下依赖安装：</p>
+
+<pre><code class="language-bash">yum install zlib
 yum install zlib-devel
 yum install openssl
 yum install openssl-devel
@@ -227,8 +229,10 @@ source $HOME/.bashrc
 
 <ol>
 <li><strong>openssl </strong>编译（config）的时候 <strong>必须要加上 shared 参数</strong>，否者源码安装 Python 即使添加了 <code>--with-openssl</code> 的自定义路径，依然会导致 <code>Could not build the ssl module!</code> 报错！</li>
-<li>从 <a href="https://www.openssl.org/source/">https://www.openssl.org/source/</a> 下载的源码 openssl-1.0.2s、openssl-1.0.2m，包括 CentOS-7.5 使用 <code>yum</code> 安装的最高版本的 openssl-1.0.2k 目前发现依然会导致 <code>Could not build the ssl module</code> ，建议从 <a href="https://www.openssl.org/source/old/">https://www.openssl.org/source/old/</a> 下载 1.1.1 的源码编译安装。### 2.2 ctypes</li>
+<li>从 <a href="https://www.openssl.org/source/">https://www.openssl.org/source/</a> 下载的源码 openssl-1.0.2s、openssl-1.0.2m，包括 CentOS-7.5 使用 <code>yum</code> 安装的最高版本的 openssl-1.0.2k 目前发现依然会导致 <code>Could not build the ssl module</code> ，建议从 <a href="https://www.openssl.org/source/old/">https://www.openssl.org/source/old/</a> 下载 1.1.1 的源码编译安装。</li>
 </ol>
+
+<h3 id="2-2-ctypes">2.2 ctypes</h3>
 
 <p>在 CentOS 6.x 安装 <code>libffi-devel</code> 的时候出现以下问题：</p>
 
@@ -260,10 +264,11 @@ $ tar zvxf libffi-3.2.1.tar.gz
 $ ./configure --prefix=/Bioinfo/Pipeline/SoftWare/LibDependence/libffi-3.2.1
 $ make 
 $ make install 
-```### 2.3 pygraphviz
+</code></pre>
 
-```bash
-$ /Bioinfo/Pipeline/SoftWare/Python-3.7.3/bin/pip3 install pygraphviz
+<h3 id="2-3-pygraphviz">2.3 pygraphviz</h3>
+
+<pre><code class="language-bash">$ /Bioinfo/Pipeline/SoftWare/Python-3.7.3/bin/pip3 install pygraphviz
 Collecting pygraphviz
   Using cached https://files.pythonhosted.org/packages/7e/b1/d6d849ddaf6f11036f9980d433f383d4c13d1ebcfc3cd09bc845bda7e433/pygraphviz-1.5.zip
 Installing collected packages: pygraphviz
@@ -335,12 +340,13 @@ Collecting pygraphviz
 Installing collected packages: pygraphviz
   Running setup.py install for pygraphviz ... done
 Successfully installed pygraphviz-1.5
-```### 2.4 编译安装
+</code></pre>
 
-第一，下载 Python 源码，解压。
+<h3 id="2-4-编译安装">2.4 编译安装</h3>
 
-```bash
-# 官网下载地址 https://www.python.org/downloads
+<p>第一，下载 Python 源码，解压。</p>
+
+<pre><code class="language-bash"># 官网下载地址 https://www.python.org/downloads
 wget https://www.python.org/ftp/python/2.7.15/Python-2.7.15.tgz
 wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
 
@@ -424,14 +430,18 @@ echo &quot;export PATH=/Bioinfo/Pipeline/SoftWare/Python-3.7.3/bin:$PATH&quot; &
 source ~/.bashrc
 </code></pre>
 
-<p>运行命令 <code>python -V</code> ，查看是否出现 3.7.3 的版本，出现即为安装成功。## 3. 安装 pip+setuptools</p>
+<p>运行命令 <code>python -V</code> ，查看是否出现 3.7.3 的版本，出现即为安装成功。</p>
+
+<h2 id="3-安装-pip-setuptools">3. 安装 pip+setuptools</h2>
 
 <pre><code class="language-bash"># 下载 setuptools 和 pip 安装程序
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
 </code></pre>
 
-<p>至此，CentOS Linux release 6.5 下的 python-3.7.3 全部安装完成。如果在安装过程中出现其他的报错，建议把 error 关键信息直接复制到 Google 进行检索，参考其他人的解决方法。## 4. 参考资料</p>
+<p>至此，CentOS Linux release 6.5 下的 python-3.7.3 全部安装完成。如果在安装过程中出现其他的报错，建议把 error 关键信息直接复制到 Google 进行检索，参考其他人的解决方法。</p>
+
+<h2 id="4-参考资料">4. 参考资料</h2>
 
 <ol>
 <li>行者无疆-ITer,《<a href="https://www.cnblogs.com/ITer-jack/p/8305912.html">python2.7 源码编译安装</a>》, 博客园</li>

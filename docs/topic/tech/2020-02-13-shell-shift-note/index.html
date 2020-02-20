@@ -267,37 +267,40 @@ B
 B
 D
 E
-```## shift 使用
-
-`shift` 命令用于对参数的移动(左移)，通常用于在不知道传入参数个数的情况下依次遍历每个参数然后进行相应处理,常见于 Linux 中各种程序的启动脚本。
-
-
-### 1. 每次移动一个参数
-
-示例：依次读取输入的参数并打印参数个数
-
-- shift1.sh
-```shell
-#!/bin/bash
-while [ $# != 0 ]
-do
-    echo -e &quot;参数值为 $1, 参数个数为 $#&quot;
-    shift
-done
 </code></pre>
 
+<h2 id="shift-使用">shift 使用</h2>
+
+<p><code>shift</code> 命令用于对参数的移动(左移)，通常用于在不知道传入参数个数的情况下依次遍历每个参数然后进行相应处理,常见于 Linux 中各种程序的启动脚本。</p>
+
+<h3 id="1-每次移动一个参数">1. 每次移动一个参数</h3>
+
+<p>示例：依次读取输入的参数并打印参数个数</p>
+
 <ul>
-<li>输入如下命令运行：
-<code>bash
-$ sh shift1.sh a b c  d
+<li><p>shift1.sh</p>
+
+<pre><code class="language-shell">#!/bin/bash
+while [ $# != 0 ]
+do
+echo -e &quot;参数值为 $1, 参数个数为 $#&quot;
+shift
+done
+</code></pre></li>
+
+<li><p>输入如下命令运行：</p>
+
+<pre><code class="language-bash">$ sh shift1.sh a b c  d
 参数值为 a, 参数个数为 4
 参数值为 b, 参数个数为 3
 参数值为 c, 参数个数为 2
 参数值为 d, 参数个数为 1
-</code></li>
+</code></pre></li>
 </ul>
 
-<p><strong>每次运行 shift(不带参数的)，销毁一个参数（变量的个数($#)减一），后面的参数前移（不管参数之间相隔一个或者多个空格）。</strong>### 2. 每次移动多个参数</p>
+<p><strong>每次运行 shift(不带参数的)，销毁一个参数（变量的个数($#)减一），后面的参数前移（不管参数之间相隔一个或者多个空格）。</strong></p>
+
+<h3 id="2-每次移动多个参数">2. 每次移动多个参数</h3>
 
 <p>shift 命令一次移动参数的个数由其所带的参数指定。例如，现在有 $1, $2, $3, &hellip;，$9 个参数，当 shell 程序处理完前 4 个命令行参数后(即还剩下后面 5 个参数)，可以使用 <code>shift 4</code> 命令把 $9 移到 $1。</p>
 
@@ -316,16 +319,18 @@ shift 4
 echo -e &quot;参数值为 $1, 参数个数为 $#&quot;
 </code></pre></li>
 
-<li><p>输入如下命令运行
-<code>bash
-$ sh shift2.sh a1 b2 c3 d4 e5 f6 g7 h8 i9
+<li><p>输入如下命令运行</p>
+
+<pre><code class="language-bash">$ sh shift2.sh a1 b2 c3 d4 e5 f6 g7 h8 i9
 参数值为 a1, 参数个数为 9
 参数值为 b2, 参数个数为 8
 参数值为 c3, 参数个数为 7
 参数值为 d4, 参数个数为 6
 参数值为 i9, 参数个数为 1
-</code>### 3. 常与 case 条件配合使用</p></li>
+</code></pre></li>
 </ul>
+
+<h3 id="3-常与-case-条件配合使用">3. 常与 case 条件配合使用</h3>
 
 <p><code>case ..... esac</code>  和 <code>if ... then ... fi</code> 一样，都是条件判断式的语句结构，它们用倒序的字母单词和正序的单词配对，比如 <code>if</code> 语句，结束时用 <code>fi</code> 来配对， <code>esac</code> 和 <code>case</code> 配对，是多路分支的语句，类似于 C 中的 <code>switch/case</code> 语句，大致形式如下：</p>
 
@@ -376,9 +381,9 @@ shift
 done
 </code></pre></li>
 
-<li><p>输入如下命令运行
-<code>bash
-$ sh shift3.sh -a -b 200 -c 300 -d 400
+<li><p>输入如下命令运行</p>
+
+<pre><code class="language-bash">$ sh shift3.sh -a -b 200 -c 300 -d 400
 发现 -a 选项
 发现 -b 选项
 -b 选项的参数值是：200
@@ -386,8 +391,10 @@ $ sh shift3.sh -a -b 200 -c 300 -d 400
 -c 选项的参数值是：300
 -d 是一个未知选项
 400 是一个未知选项
-</code>## 简单总结</p></li>
+</code></pre></li>
 </ul>
+
+<h2 id="简单总结">简单总结</h2>
 
 <p>在 bash shell 中解析命令行参数的方法有很多，网络上介绍的各种方法中，都可以看到它们与 <code>shift</code> 命令搭配使用的身影，因此在深入这一部分编程前，很有必要先了解一下 <code>shift</code> 的作用。这里只是抛砖引玉简单介绍一下，更多技巧还请大家不断去实践理解。</p>
 

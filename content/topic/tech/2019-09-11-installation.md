@@ -21,7 +21,9 @@ CyberScience at Penn State, and Johns Hopkins University.
 
 从今天开始我们来介绍一下 Ggalaxy 生物信息分析平台从安装、部署，到开发的一些知识。
 
----### 1. 环境准备
+---
+
+### 1. 环境准备
 
 Galaxy 在 release_18.09 前的版本都是基于 Python 2.7.x 进行安装部署，虽然官方在 [release_18.09](https://docs.galaxyproject.org/en/master/releases/18.09_announce.html) 中说明已经支持 python3（beta），但安装起来比较复杂，尤其与结合 conda 集合情况下的安装，并且不方便管理。
 
@@ -35,19 +37,19 @@ Galaxy 在 release_18.09 前的版本都是基于 Python 2.7.x 进行安装部�
 
 > Galaxy is currently supported on Python 2.7 and >=3.5 . To run Galaxy, please install a supported Python version. If a supported version is already installed but is not your default, https://galaxyproject.org/admin/python/ contains instructions on how to force Galaxy to use a different version.
 > From: [https://github.com/galaxyproject/galaxy/blob/release_19.09/scripts/check_python.py](https://github.com/galaxyproject/galaxy/blob/release_19.09/scripts/check_python.py)
+
+
 #### 1.1 conda 和 virtualenv
 
 
 Galaxy 提供了 `conda` 和 `virtualenv` 环境下的 Galaxy 安装，它们之间的区别，具体可以参考：《[Galaxy Admin Documentation: Framework Dependencies](https://docs.galaxyproject.org/en/master/admin/framework_dependencies.html#conda)》。喜欢 conda 的用户可以参考文档一步一步进行操作，这里不细述。我们重点介绍一下基于 virtualenv 环境的 Galaxy 安装。
-
-
 #### 1.2 Python
 
 基于 virtualenv 环境安装 Galaxy，我们只需要安装好 **Python>=3.5** 即可，因为 galaxy 在执行 run.sh 安装程序时会自动检测 virtualenv 是否安装，没有安装则会自动 pip 安装。
 
-关于 Python-3 源码安装的具体方法，请参考：《[Linux 下 Python 源码编译安装](https://www.yuque.com/shenweiyan/cookbook/install-python-from-source)》。### 2. 源码与安装
+关于 Python-3 源码安装的具体方法，请参考：《[Linux 下 Python 源码编译安装](https://www.yuque.com/shenweiyan/cookbook/install-python-from-source)》。
 
-
+### 2. 源码与安装
 #### 2.1 源码下载
 
 **第一次安装。**第一次安装 Galaxy 的用户可以通过下面的方法下载对应版本的代码库。
@@ -63,7 +65,9 @@ $ git fetch origin && git checkout release_19.09 && git pull --ff-only origin re
 **开发版本。**要获取 Galaxy 进行开发，请在克隆后使用默认分支： `dev` 。
 ```bash
 $ git clone https://github.com/galaxyproject/galaxy.git
-```#### 2.2 启动
+```
+
+#### 2.2 启动
 
 有了源码后，下一步我们就可以启动 Galaxy。Galaxy 的启动需要运行一些东西：virtualenv，配置文件和依赖的 Python 模块。幸运的是，首次启动 Galaxy 服务器将根据需要创建并获取这些内容。要启动 Galaxy，只需在终端窗口中运行以下命令：
 
@@ -144,23 +148,27 @@ cd client && yarn install --network-timeout 300000 --check-files
 $ sh run.sh --skip-client-build
 ```
 
-- 上面的东西安装完成后，Galaxy 接着会执行一个 conda 安装，安装目录默认位于 `galaxy/database/dependencies/_conda` ，这是为方便以后管理员可以通过 Galaxy web 的管理员页面自动安装 Galaxy shed tools 工具。### 3. 基本配置
+- 上面的东西安装完成后，Galaxy 接着会执行一个 conda 安装，安装目录默认位于 `galaxy/database/dependencies/_conda` ，这是为方便以后管理员可以通过 Galaxy web 的管理员页面自动安装 Galaxy shed tools 工具。
 
-
+### 3. 基本配置
 #### 3.1 配置文件
 
 从 releases_18.01 起，Galaxy 可以在没有显式配置文件的情况下正常运行，但如果要修改其设置，则需要创建一个配置文件。推荐的做法是，复制模板配置文件并将其重命名为 `galaxy.yml` 。我们可以使用此命令执行此操作：
 
 ```bash
 $ cp config/galaxy.yml.sample config/galaxy.yml
-```#### 3.2 网络
+```
+
+#### 3.2 网络
 
 Galaxy 默认通过本机 localhost 进行访问，要通过网络访问 Galaxy，需要在 `config/galaxy.yml` 文件中更改 http 设置。通过更改它，Galaxy 将绑定到任何可用的网络接口而不是 localhost：
 
 ```bash
 # Use ':8080' to listen on all available network interfaces.
 http: :8080
-```#### 3.3 管理员
+```
+
+#### 3.3 管理员
 
 要通过 UI 控制 Galaxy（安装工具，管理用户，创建组等），用户必须成为管理员。只有注册用户才能成为管理员。 要授予用户管理员权限，请将用户的 Galaxy 登录电子邮件添加到配置文件 `config/galaxy.yml` 中。配置示例如下所示：
 

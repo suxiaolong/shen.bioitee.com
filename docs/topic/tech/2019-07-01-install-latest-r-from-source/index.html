@@ -221,8 +221,10 @@ $ ./configure --prefix=/Bioinfo/SoftWare/R-3.6.0  --enable-R-shlib --enable-BLAS
 <ul>
 <li>R 编译的过程中，必须选择 <code>--enable-R-shlib</code> 选项，将 R 编译成 lib 模式，在此模式下，会生成 <code>path-to-R/lib/libR.so</code> 库；</li>
 <li>同时，确保同目录下 <code>libRblas.so</code>、<code>libRlapack.so</code> 两个链接库也被正确生成，这两个库默认会生成，如果没有，需要添加参数：<code>--enable-BLAS-shlib</code> <code>--with-blas</code> <code>--with-lapack</code>；</li>
-<li>如果不编译生成 <code>libR.so</code>，在安装 rpy2（python 中的 R 语言接口模块） 时就无法正确编译。# 二、各种库和依赖解决</li>
+<li>如果不编译生成 <code>libR.so</code>，在安装 rpy2（python 中的 R 语言接口模块） 时就无法正确编译。</li>
 </ul>
+
+<h1 id="二-各种库和依赖解决">二、各种库和依赖解决</h1>
 
 <p><a name="zlib"></a></p>
 
@@ -255,11 +257,13 @@ $ ./configure --prefix=/Bioinfo/SoftWare/R-3.6.0  --enable-R-shlib LDFLAGS=&quot
     checking if bzip2 version &gt;= 1.0.6... no
     checking whether bzip2 support suffices... configure: error: bzip2 library and headers are required
     ## zlib 版本已经符合要求，bzip2 版本要求 &gt;= 1.0.6
-```## bzip2 or libbz2
+</code></pre>
 
-根据《[R Installation and Administration: A.1 Essential programs and libraries](https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Essential-programs-and-libraries)》官方文档，`libbz2` (version 1.0.6 or later: called **bzip2-libs**/**bzip2-devel** or **libbz2-1.0**/**libbz2-dev** by some Linux distributions)，至少需要 1.0.6 及以上版本。
-```bash
-$ wget http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz
+<h2 id="bzip2-or-libbz2">bzip2 or libbz2</h2>
+
+<p>根据《<a href="https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Essential-programs-and-libraries">R Installation and Administration: A.1 Essential programs and libraries</a>》官方文档，<code>libbz2</code> (version 1.0.6 or later: called <strong>bzip2-libs</strong>/<strong>bzip2-devel</strong> or <strong>libbz2-1.0</strong>/<strong>libbz2-dev</strong> by some Linux distributions)，至少需要 1.0.6 及以上版本。</p>
+
+<pre><code class="language-bash">$ wget http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz
 $ tar zvxf bzip2-1.0.6.tar.gz
 $ cd bzip2-1.0.6
 $ make -f Makefile-libbz2_so
@@ -323,11 +327,13 @@ $ ./configure --prefix=/Bioinfo/SoftWare/R-3.6.0  --enable-R-shlib LDFLAGS=&quot
     checking if libcurl is version 7 and &gt;= 7.28.0... no
     configure: error: libcurl &gt;= 7.28.0 library and headers are required with support for https
     # 需要安装 curl &gt;= 7.28.0
-```## curl or libcurl
+</code></pre>
 
-在《[R Installation and Administration: A.1 Essential programs and libraries](https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Essential-programs-and-libraries)》要求，libcurl 大于或等于 7.22.0 版本。Library `libcurl` (version 7.22.0 or later) is required, with at least 7.28.0 being desirable.
-```bash
-$ wget https://curl.haxx.se/download/curl-7.64.1.tar.gz --no-check-certificate
+<h2 id="curl-or-libcurl">curl or libcurl</h2>
+
+<p>在《<a href="https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Essential-programs-and-libraries">R Installation and Administration: A.1 Essential programs and libraries</a>》要求，libcurl 大于或等于 7.22.0 版本。Library <code>libcurl</code> (version 7.22.0 or later) is required, with at least 7.28.0 being desirable.</p>
+
+<pre><code class="language-bash">$ wget https://curl.haxx.se/download/curl-7.64.1.tar.gz --no-check-certificate
 $ tar zvxf curl-7.64.1.tar.gz
 $ cd curl-7.64.1
 $ ./configure --prefix=/Bioinfo/SoftWare/NewLibs/curl-7.64.1
@@ -369,21 +375,25 @@ BIGFILES=-D_FILE_OFFSET_BITS=64
 <pre><code class="language-bash">$ make clean
 $ make
 $ make install PREFIX=/Bioinfo/SoftWare/NewLibs/bzip2-1.0.6
-```## liblzma
+</code></pre>
 
-在编译过程中发现：&quot;**configure: error: &quot;liblzma library and headers are required&quot;**&quot;，需要安装 **xz**，对应主页：[https://tukaani.org/xz/](https://tukaani.org/xz/)，安装如下：
-```shell
-$ wget https://nchc.dl.sourceforge.net/project/lzmautils/xz-5.2.3.tar.gz
+<h2 id="liblzma">liblzma</h2>
+
+<p>在编译过程中发现：&rdquo;<strong>configure: error: &ldquo;liblzma library and headers are required&rdquo;</strong>&ldquo;，需要安装 <strong>xz</strong>，对应主页：<a href="https://tukaani.org/xz/">https://tukaani.org/xz/</a>，安装如下：</p>
+
+<pre><code class="language-shell">$ wget https://nchc.dl.sourceforge.net/project/lzmautils/xz-5.2.3.tar.gz
 $ tar zvxf xz-5.2.3.tar.gz
 $ cd xz-5.2.3/
 $ ./configure --prefix=/Bioinfo/SoftWare/NewLibs/xz-5.2.3
 $ make -j3
 $ make install
-```## libtiff
+</code></pre>
 
-R shell 中使用 capabilities() 可以查看 R 已经编译支持的功能，对于画图可以增加下面几个参数，使 R 支持对应格式的图片保存，与此同时要确保对应库已经安装。
-```bash
---with-cairo            use cairo (and pango) if available [yes]
+<h2 id="libtiff">libtiff</h2>
+
+<p>R shell 中使用 capabilities() 可以查看 R 已经编译支持的功能，对于画图可以增加下面几个参数，使 R 支持对应格式的图片保存，与此同时要确保对应库已经安装。</p>
+
+<pre><code class="language-bash">--with-cairo            use cairo (and pango) if available [yes]
 --with-libpng           use libpng library (if available) [yes]
 --with-jpeglib          use jpeglib library (if available) [yes]
 --with-libtiff          use libtiff library (if available) [yes]
@@ -409,11 +419,13 @@ $ make install
 
 <pre><code class="language-bash">export LD_LIBRARY_PATH=/Bioinfo/SoftWare/NewLibs/tiff-4.0.9/lib:$LD_LIBRARY_PATH
 export PKG_CONFIG_PATH=/Bioinfo/SoftWare/NewLibs/tiff-4.0.9/lib/pkgconfig:$PKG_CONFIG_PATH
-```## libjpeg and libpng16
+</code></pre>
 
-R 安装完以后，使用 plot 进行画图，如果出现如下错误：
-```r
-&gt; plot(1:0)
+<h2 id="libjpeg-and-libpng16">libjpeg and libpng16</h2>
+
+<p>R 安装完以后，使用 plot 进行画图，如果出现如下错误：</p>
+
+<pre><code class="language-r">&gt; plot(1:0)
 Error in (function (display = &quot;&quot;, width, height, pointsize, gamma, bg,  :
   X11 module cannot be loaded
 In addition: Warning message:
@@ -455,8 +467,10 @@ $ make install
 </code></pre>
 
 <ul>
-<li><a href="http://libjpeg.sourceforge.net/">http://libjpeg.sourceforge.net/</a># 三、完整编译安装命令</li>
+<li><a href="http://libjpeg.sourceforge.net/">http://libjpeg.sourceforge.net/</a></li>
 </ul>
+
+<h1 id="三-完整编译安装命令">三、完整编译安装命令</h1>
 
 <p>如果使用了自定义安装的 gcc/c++ 进行编译，需要在 configure 时候使用 CC/CXX 进行指定，否则使用系统默认的 gcc/c++。由于 CentOS-6.5 默认的 gcc==4.4.7，该版本的 gcc 会导致 R&gt;=3.5.0 编译出现各种错误，非 root 用户手动升级 gcc 可以参考：<a href="https://www.yuque.com/shenweiyan/cookbook/r-centos-update-gcc">https://www.yuque.com/shenweiyan/cookbook/r-centos-update-gcc</a>。</p>
 
@@ -488,8 +502,10 @@ $ make install
 </code></pre>
 
 <ul>
-<li><code>--with-x</code>，<code>--with-cairo</code> 是开启 X11 图形化的参数，应该增加一下。# 四、设置环境变量</li>
+<li><code>--with-x</code>，<code>--with-cairo</code> 是开启 X11 图形化的参数，应该增加一下。</li>
 </ul>
+
+<h1 id="四-设置环境变量">四、设置环境变量</h1>
 
 <p>最后，把安装完成的 R 添加至环境变量：</p>
 

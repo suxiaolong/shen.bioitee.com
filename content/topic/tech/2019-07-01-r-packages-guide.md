@@ -25,8 +25,6 @@ R 包是由社区开发（developed by the community）的功能（functions）�
 
 
 如果您是一位经验丰富的用户，您可以随时学习新内容（例如我在前一段中提到的三个软件包的名称）。 无论如何，欢迎阅读 R 包的介绍以及如何使用它们！
-
-
 # 1. 什么是包
 
 让我们从一些定义开始。 包是用于组织您自己工作的一种合适方式（a suitable way），如果您愿意，也可以与他人分享。 通常，包将包含代码（不仅仅 是 R 代码！），包及内部函数相关的文档，一些以检查一切是否正常工作的测试（some tests to check everything works as it should），以及数据集。
@@ -42,8 +40,6 @@ R 包是由社区开发（developed by the community）的功能（functions）�
 packageDescription("stats")
 help(package = "stats")
 ```
-
-
 # 2. 什么是存储库
 
 存储库（repository）是包所在的位置，因此您可以从存储库中安装 R 包。 虽然您或您的组织可能拥有本地存储库，但通常它们是在线并且可供所有人访问的。 R 软件包最受欢迎的三个存储库是：
@@ -52,9 +48,9 @@ help(package = "stats")
 
 - [Bioconductor](https://www.bioconductor.org/)：这是一个专题库，用于生物信息学的开源软件。 作为 CRAN，它有自己的 [提交和审核流程](https://www.bioconductor.org/developers/package-submission/)，其社区非常活跃，每年举行多次会议。
 
-- [Github](https://github.com/)：虽然这不是 R 特有的，但 github 可能是开源项目中最受欢迎的存储库。 它的受欢迎程度来自于开源的无限空间，与 git 的集成，版本控制软件以及与其他人共享和协作的便利性。 但请注意，没有与之相关的审核流程。# 3. 如何安装 R 包
+- [Github](https://github.com/)：虽然这不是 R 特有的，但 github 可能是开源项目中最受欢迎的存储库。 它的受欢迎程度来自于开源的无限空间，与 git 的集成，版本控制软件以及与其他人共享和协作的便利性。 但请注意，没有与之相关的审核流程。
 
-
+# 3. 如何安装 R 包
 ## 从 CRAN 安装
 
 如何安装软件包取决于它的位置。 因此，对于公开可用的包，这意味着它属于哪个存储库。 最常见的方法是使用 CRAN 存储库，然后只需要包的名称并使用命令 `install.packages（"package"）`。
@@ -108,8 +104,6 @@ The downloaded source packages are in
 ```
 install.packages(c("vioplot", "MASS"))
 ```
-
-
 ## 从 CRAN 镜像中安装
 
 请记住，CRAN 是一个服务器网络（每个服务器称为"镜像（mirror）"），因此您可以指定要使用的服务器。 如果您通过 RGui 接口使用 R，则可以通过从使用 `install.packages()`命令后出现的列表中选择它来完成。 在 RStudio 上，默认情况下已选择镜像。
@@ -120,8 +114,6 @@ install.packages(c("vioplot", "MASS"))
 ```
 install.packages("vioplot", repo = "https://lib.ugent.be/CRAN/")
 ```
-
-
 ## 安装 Bioconductor 包
 
 对于 Bioconductor，安装包的标准方法是首先执行以下脚本：
@@ -138,8 +130,6 @@ biocLite()
 ```
 biocLite(c("GenomicFeatures", "AnnotationDbi"))
 ```
-
-
 ## 通过 devtools 安装
 
 如上所述，每个存储库都有自己的方法安装各自对应的包，因此，如果您经常使用来自不同来源的包，这可能会有点令人沮丧。 更有效的方法可能是使用 devtools 包来简化此过程，因为它包含了每个存储库的特定功能，包括 CRAN。
@@ -171,8 +161,6 @@ biocLite(c("GenomicFeatures", "AnnotationDbi"))
 ```
 devtools::install_github("hadley/babynames")
 ```
-
-
 # 4. 如何更新，删除和检查已安装的软件包
 
 在你花费更多时间使用 R 之后，你每周甚至每天都会使用`install.packages()` 几次是正常的，考虑到 R 软件包的开发速度，你可能需要更新或者更换你心爱的 R 包。 在本节中，您将找到一些可以帮助您管理集合的功能。
@@ -206,8 +194,6 @@ update.packages()
 ```
 install.packages("vioplot")
 ```
-
-
 # 5. 是否有用于安装包的用户界面
 
 如果您更喜欢图形用户界面来安装包，则 RStudio 和 RGui 都包含它们。 在 RStudio 中，您可以在"工具" -> "安装包"中找到它，然后您将在弹出窗口中键入要安装的包：
@@ -217,8 +203,6 @@ install.packages("vioplot")
 在 RGui 中，您将在"包（Packages）"菜单下找到实用程序。
 
 ![](https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/content_rgui1.png/bioinit#width=)
-
-
 # 6. 如何加载程序包
 
 安装软件包后，您就可以使用其功能了。 如果您只需要在包中偶尔使用一些函数或数据，则可以使用符号 `packagename::functionname()` 来访问它们。 例如，由于您已安装 `babynames` 包，因此可以浏览其中一个数据集。
@@ -271,8 +255,6 @@ install.packages("vioplot")
 您可能已经听说过 `require()` 函数：确实可以使用此函数加载包，但区别在于如果未安装包，它不会引发错误。所以请仔细使用此功能！
 
 提示：[这里](https://yihui.name/en/2014/07/library-vs-require/) 强烈推荐一篇关于此主题的文章。
-
-
 # 7. Package 和 Library 的区别
 
 说到 `library()` 函数，有时候包和库之间会有混淆，有时候你可以返现人们会把库（libraries）也叫成包（packages）。
@@ -290,28 +272,20 @@ install.packages("vioplot")
 ```
 library()
 ```
-
-
 # 8. 如何一次加载多个包
 
 虽然您可以在 `install.packages()` 函数中输入一组名称向量来同时安装多个包，但在 `library()` 函数的情况下，这是不可能的。 您可以一次加载一组软件包，或者如果您愿意，可以使用 R 用户开发的众多解决方法之一。
 
 您可以在 [this Stack Overflow discussion](https://stackoverflow.com/questions/8175912/load-multiple-packages-at-once)，[this R package](https://cran.r-project.org/web/packages/easypackages/README.html) 和 [this GitHub repository](https://gist.github.com/stevenworthington/3178163) 中找到示例。
-
-
 # 9. 如何卸除已加载的包
 
 要卸除已加载的包，可以使用 `detach()` 函数。
 ```
 detach("package:babynames", unload=TRUE)
 ```
-
-
 # 10. 有什么文档和帮助的替代来源
 
 正如您在上面的部分中所读到的那样，DESCRIPTION 文件包含有关包的基本信息，即使该信息非常有用，也无法帮助您使用此包进行分析。 然后，您将需要另外两个文档源：帮助文件和小品文（vignettes）。
-
-
 ## Help Files
 
 与基础的 R一样，命令 `?()` 和 `help()` 是开始使用软件包时的第一个文档源。 你可能记得你可以使用 `help(package = "packagename") 来获得包的一般概述，但是如果尚未加载包得情况下，每个函数都可以通过`help("name of the function")`或`help(function, package = "package")` 来单独探讨，您通常会在其中找到函数及其参数的描述以及应用程序示例。
@@ -327,8 +301,6 @@ help(vioplot, package = "vioplot")
 > ls("package:babynames")
 [1] "applicants" "babynames"  "births"     "lifetables"
 ```
-
-
 ## Vignettes
 
 大多数软件包中包含的另一个非常有用的帮助来源是小品文（Vignettes），这些小文件是作者以更详细的方式显示其软件包的一些功能的文档。跟随着小品文是一个可以让你手把手去熟悉 R 包常见用途的好方法，所以在做您自己的分析之前，这是一个开始使用它的完美方法。
@@ -358,8 +330,6 @@ vignette("ggplot2-specs")
 在 RStudio 上，这将显示在右侧的 "帮助" 选项卡上，而在 RGui 或命令行中，这将打开带有 vignette 的浏览器窗口。
 
 在 [此链接](https://www.r-project.org/help.html) 上，您可以找到更多有关从 R 获得帮助的选项。
-
-
 # 11. 如何选择合适的 R 包
 
 此时，你应该可以安装并从你的 R 包中获得最大的收益，但仍然有一个最后的问题：你在哪里找到你需要的软件包？
@@ -449,7 +419,9 @@ help(vioplot)
 ```
 ![](https://note-db.oss-cn-shenzhen.aliyuncs.com/2018/09/29-Sat/topics_vioplot.png/bioinit#width=)
 
-- [RDocumentation API](https://www.rdocumentation.org/docs/)。最后，RDocumentation 不仅是一个网站和一个 R包，还是一个 API。 对于需要更多灵活性的更高级用户，[RDocumentation.org](http://RDocumentation.org) 提供了具有其网页功能的 JSON API。# 总结
+- [RDocumentation API](https://www.rdocumentation.org/docs/)。最后，RDocumentation 不仅是一个网站和一个 R包，还是一个 API。 对于需要更多灵活性的更高级用户，[RDocumentation.org](http://RDocumentation.org) 提供了具有其网页功能的 JSON API。
+
+# 总结
 
 本文章涵盖了广泛的通过使用包来从 R 中获得最大收益的相关技术（techniques）和功能（functions）。 像往常一样，在 R 中执行某项任务的方法不止一种，管理包也不例外。
 
