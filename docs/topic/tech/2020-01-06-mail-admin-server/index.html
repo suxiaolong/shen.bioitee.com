@@ -175,7 +175,13 @@
 
   
 
-<p>我在《QQ 邮箱设置自定义域名邮箱》中给大家展示了，如何通过自己申请的域名+ QQ 邮箱打造一个高端大气的个人专业邮箱。今天来了一下如何把自定义的 QQ 域名邮箱应用到 Galaxy 生信分析平台中。</p>
+<blockquote>
+<p>前几天看到中山大学和国家基因库合作开发的 Translatome Workbench 翻译组学可视化在线数据分析平台(<a href="https://db.cngb.org/galaxy/">db.cngb.org/galaxy/</a>) 的推送信息，也上去看了一下，工具和教程都做的非常用心，这也算是国内为数不多的 Galaxy 研究中的一抹亮色了。</p>
+
+<p>本文章作为 Galaxy 生信平台的第四篇，继续来带大家学习了解一下这个开源平台，希望大家有所收获。</p>
+</blockquote>
+
+<p>我在《<a href="https://www.yuque.com/shenweiyan/cookbook/domain-mail-qq-setting">QQ 邮箱设置自定义域名邮箱</a>》中给大家展示了，如何通过自己申请的域名+ QQ 邮箱打造一个高端大气的个人专业邮箱。今天来了一下如何把自定义的 QQ 域名邮箱应用到 Galaxy 生信分析平台中。</p>
 
 <h2 id="1-galaxy-邮箱与管理员">1. Galaxy 邮箱与管理员</h2>
 
@@ -184,8 +190,9 @@
 <p>Galaxy 收发邮件的核心代码主要位于以下两个程序，其核心模块则是 <code>util.send_mail</code>，一个基于 <code>email</code> 和 <code>smtplib</code> 库进行封装的函数，具体源码，感兴趣的可以去研究一下。</p>
 
 <ul>
-<li><code>lib/galaxy/webapps/galaxy/controllers/user.py</code></li>
-<li><code>lib/galaxy/util/__init__.py</code></li>
+<li><code>$GALAXY_ROOT/lib/galaxy/util/__init__.py</code></li>
+<li><code>$GALAXY_ROOT/lib/galaxy/managers/users.py</code></li>
+<li><code>$GALAXY_ROOT/lib/galaxy/webapps/galaxy/controllers/user.py</code></li>
 </ul>
 
 <p>所以，在设置 Galaxy 邮箱服务前，我们先来了解一下如何在 Python 中基于 <code>email</code> 和 <code>smtplib</code> 库进行 QQ 邮件的发送。</p>
@@ -194,11 +201,11 @@
 
 <p>首先我们要知道用 python 代理登录 qq 邮箱发邮件，是需要更改自己 qq 邮箱设置的。在这里大家需要做两件事情：邮箱开启 SMTP 功能 、获得授权码，步骤如下。</p>
 
-<p>首先，在打开的 QQ 邮箱中,进入<strong>&ldquo;设置&rdquo;。</strong></p>
+<p>首先，在打开的 QQ 邮箱中，进入<strong>&ldquo;设置&rdquo;</strong>。</p>
 
 <p><strong><img src="https://note.bioitee.com/yuque/0/2020/png/126032/1578292378668-8948f35d-2b3e-4afd-b944-c127f2f50a57.png#align=left&amp;display=inline&amp;height=195&amp;name=image.png&amp;originHeight=195&amp;originWidth=821&amp;size=24711&amp;status=done&amp;style=none&amp;width=821" alt="" /></strong></p>
 
-<p>第二，在邮箱设置界面,打开<strong>“帐户”</strong>。</p>
+<p>第二，在邮箱设置界面，打开<strong>“帐户”</strong>。</p>
 
 <p><a data-fancybox="gallery" href="https://note.bioitee.com/yuque/0/2020/png/126032/1578292437426-d3419a60-6375-4c0d-9862-660f3c69da2c.png#align=left&amp;display=inline&amp;height=349&amp;name=image.png&amp;originHeight=349&amp;originWidth=972&amp;size=39686&amp;status=done&amp;style=none&amp;width=972"><img src="https://note.bioitee.com/yuque/0/2020/png/126032/1578292437426-d3419a60-6375-4c0d-9862-660f3c69da2c.png#align=left&amp;display=inline&amp;height=349&amp;name=image.png&amp;originHeight=349&amp;originWidth=972&amp;size=39686&amp;status=done&amp;style=none&amp;width=972" alt=""></a></p>
 
@@ -218,7 +225,7 @@
 
 <p><a data-fancybox="gallery" href="https://note.bioitee.com/yuque/0/2020/png/126032/1578293143597-dff55415-2710-4e96-8765-f2afbd3341f3.png#align=left&amp;display=inline&amp;height=331&amp;name=image.png&amp;originHeight=331&amp;originWidth=881&amp;size=40621&amp;status=done&amp;style=none&amp;width=881"><img src="https://note.bioitee.com/yuque/0/2020/png/126032/1578293143597-dff55415-2710-4e96-8765-f2afbd3341f3.png#align=left&amp;display=inline&amp;height=331&amp;name=image.png&amp;originHeight=331&amp;originWidth=881&amp;size=40621&amp;status=done&amp;style=none&amp;width=881" alt=""></a></p>
 
-<p>SMTP 服务和授权码都有了，接下来我们要基于 python3 的 <strong>email </strong>和 <strong>smtplib </strong>库实现一个简单的发邮件功能。</p>
+<p>SMTP 服务和授权码都有了，接下来我们要基于 python3 的 <code>email</code> 和 <code>smtplib</code><strong> </strong>库实现一个简单的发邮件功能。</p>
 
 <pre><code class="language-python">from email.mime.text import MIMEText
 from email.header import Header
@@ -306,7 +313,9 @@ smtp.quit()
 
 <p><a data-fancybox="gallery" href="https://note.bioitee.com/yuque/0/2020/png/126032/1578303303678-1b26f86f-7743-4ee9-a75a-014a19c139bb.png#align=left&amp;display=inline&amp;height=347&amp;name=image.png&amp;originHeight=347&amp;originWidth=994&amp;size=37096&amp;status=done&amp;style=none&amp;width=994"><img src="https://note.bioitee.com/yuque/0/2020/png/126032/1578303303678-1b26f86f-7743-4ee9-a75a-014a19c139bb.png#align=left&amp;display=inline&amp;height=347&amp;name=image.png&amp;originHeight=347&amp;originWidth=994&amp;size=37096&amp;status=done&amp;style=none&amp;width=994" alt=""></a></p>
 
-<p>到这里，Galaxy 的邮件服务和管理员设置就完成了，如果想要更改 Galaxy 默认的邮件内容，可以仔细去研究一下它的源码。最后总结一句，就是，QQ 域名邮箱的本质还是 QQ 邮箱，因此，它收发邮箱的服务器设置依然是 qq.com。</p>
+<p>到这里，Galaxy 的邮件服务和管理员设置就完成了，如果想要更改 Galaxy 默认的邮件内容（例如把英文改成中文，或者增删邮件发送内容），可以仔细去研究一下它的源码，也欢迎留言或者添加作者微信交流。最后总结一句，就是，QQ 域名邮箱的本质还是 QQ 邮箱，因此，它收发邮箱的服务器设置依然是 qq.com，不管您最终选择 QQ 邮箱还是 QQ 域名邮箱，他们的配置原理都是一样。</p>
+
+<p><a data-fancybox="gallery" href="https://note.bioitee.com/yuque/0/2020/gif/126032/1582265431630-ba329384-3613-4a71-ba73-945d2333813a.gif#align=left&amp;display=inline&amp;height=157&amp;name=comment.gif&amp;originHeight=157&amp;originWidth=164&amp;size=29605&amp;status=done&amp;style=none&amp;width=164"><img src="https://note.bioitee.com/yuque/0/2020/gif/126032/1582265431630-ba329384-3613-4a71-ba73-945d2333813a.gif#align=left&amp;display=inline&amp;height=157&amp;name=comment.gif&amp;originHeight=157&amp;originWidth=164&amp;size=29605&amp;status=done&amp;style=none&amp;width=164" alt="comment.gif"></a></p>
 
 
   <footer>
