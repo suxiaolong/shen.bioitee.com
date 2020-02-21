@@ -6,10 +6,19 @@
     <description>Recent content in Others on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Tue, 18 Feb 2020 08:06:39 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Feb 2020 07:47:47 +0000</lastBuildDate>
     
 	<atom:link href="https://shen.bioitee.com/topic/tags/others/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>tar 打包的一些注意问题</title>
+      <link>https://shen.bioitee.com/topic/tech/2020-02-21-tar-issues-note/</link>
+      <pubDate>Fri, 21 Feb 2020 07:47:47 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2020-02-21-tar-issues-note/</guid>
+      <description>对于需要打包压缩的目录、文件，如果该目录或者文件不可读，将会引发 Permission denied 的错误。 如果需要检查一个目录打包是否出现因为权限导致的异常，可以检查 log 日</description>
+    </item>
     
     <item>
       <title>Python Excel 操作 | xlrd&#43;xlwt 模块笔记</title>

@@ -6,10 +6,19 @@
     <description>Recent content in 运维 on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Mon, 10 Feb 2020 09:00:51 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Feb 2020 07:47:47 +0000</lastBuildDate>
     
 	<atom:link href="https://shen.bioitee.com/topic/tags/%E8%BF%90%E7%BB%B4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>tar 打包的一些注意问题</title>
+      <link>https://shen.bioitee.com/topic/tech/2020-02-21-tar-issues-note/</link>
+      <pubDate>Fri, 21 Feb 2020 07:47:47 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2020-02-21-tar-issues-note/</guid>
+      <description>对于需要打包压缩的目录、文件，如果该目录或者文件不可读，将会引发 Permission denied 的错误。 如果需要检查一个目录打包是否出现因为权限导致的异常，可以检查 log 日</description>
+    </item>
     
     <item>
       <title>LaTeX 折腾系列 | Linux 字体安装的一点记录</title>
