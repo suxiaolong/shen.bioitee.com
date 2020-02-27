@@ -6,10 +6,19 @@
     <description>Recent content in Others on Steven Shen | 沈维燕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Fri, 21 Feb 2020 07:47:47 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 09:13:27 +0000</lastBuildDate>
     
 	<atom:link href="https://shen.bioitee.com/topic/tags/others/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>R 语言画图中英文字体解决方案</title>
+      <link>https://shen.bioitee.com/topic/tech/2020-02-27-csm98o/</link>
+      <pubDate>Thu, 27 Feb 2020 09:13:27 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2020-02-27-csm98o/</guid>
+      <description>在某些时候，需要在 R 画图中添加中文，但是默认情况下，R 对中文的支持不好。这里推荐一个 showtext 的 R 包。如果需要将含有中文字体的图形保存为 pdf 文件，可以</description>
+    </item>
     
     <item>
       <title>tar 打包的一些注意问题</title>
