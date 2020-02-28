@@ -18,7 +18,7 @@ CyberScience at Penn State, and Johns Hopkins University.
 
 从 2015 年起，Galaxy 源码从 bitbucket 转移至 GitHub 托管，截止 2019.09.11，Galaxy 在 GitHub 上一共有 636个 star，218 个贡献者，54 个发布的版本。
 
-![](https://note.bioitee.com/yuque/0/2019/png/126032/1568171961186-4c938202-5149-4af6-9804-4468b1d55c0a.png#align=left&display=inline&height=305&name=image.png&originHeight=305&originWidth=774&size=44884&status=done&width=774)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1568171961186-4c938202-5149-4af6-9804-4468b1d55c0a.png#align=left&display=inline&height=305&name=image.png&originHeight=305&originWidth=774&size=44884&status=done&style=none&width=774)
 
 从今天开始我们来介绍一下 Ggalaxy 生物信息分析平台从安装、部署，到开发的一些知识。
 
@@ -34,7 +34,7 @@ Galaxy 在 release_18.09 前的版本都是基于 Python 2.7.x 进行安装部�
 > 
 > From: [https://docs.galaxyproject.org/en/master/releases/18.09_announce.html](https://docs.galaxyproject.org/en/master/releases/18.09_announce.html)
 
-![](https://note.bioitee.com/yuque/0/2019/png/126032/1568169612966-492007f5-561f-4594-9982-c0cf58edbb91.png#align=left&display=inline&height=273&name=image.png&originHeight=273&originWidth=766&size=63379&status=done&width=766)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1568169612966-492007f5-561f-4594-9982-c0cf58edbb91.png#align=left&display=inline&height=273&name=image.png&originHeight=273&originWidth=766&size=63379&status=done&style=none&width=766)
 
 从 release_19.05 起，Galaxy 对 Python 3 提供了比较好的支持（**Galaxy is currently supported on Python 2.7 and >=3.5**），在本教程我们将以 release_19.09 最新版本的 Galaxy 为基础，进行一系列安装、部署和简单开发说明。
 
@@ -113,7 +113,7 @@ serving on http://localhost:8080
 galaxy.model.database_heartbeat DEBUG 2019-09-11 17:08:46,921 [p:11902,w:1,m:0] [database_heartbeart_main.web.1.thread] main.web.1 is config watcher
 ```
 
-![home-page.png](https://note.bioitee.com/yuque/0/2019/png/126032/1568293214413-3f04b1e2-415e-4f8d-b487-e94f70606f00.png#align=left&display=inline&height=1042&name=home-page.png&originHeight=1042&originWidth=1920&size=128944&status=done&width=1920)
+![home-page.png](https://note.bioitee.com/yuque/0/2019/png/126032/1568293214413-3f04b1e2-415e-4f8d-b487-e94f70606f00.png#align=left&display=inline&height=1042&name=home-page.png&originHeight=1042&originWidth=1920&size=128944&status=done&style=none&width=1920)
 
 **注意与提示：**
 
@@ -199,3 +199,6 @@ admin_users: ishenweiyan@qq.com,user2@example.com
 ```
 
 到这里，Galaxy 的本地化安装就全部完成了。下一章节，我们将介绍一下如何在生产环境中部署一个满足多用户使用的 Galaxy 在线分析平台。
+
+
+![comment.gif](https://note.bioitee.com/yuque/0/2020/gif/126032/1582856852147-6ed11b57-4ae6-4501-8835-ba6f34a07f29.gif#align=left&display=inline&height=157&name=comment.gif&originHeight=157&originWidth=164&size=29605&status=done&style=none&width=164)
