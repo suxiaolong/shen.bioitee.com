@@ -5,7 +5,7 @@ type: post
 topic/tags: ["others", "工具"]
 date: 2019-07-01T03:50:35.000Z
 category: 工具
-published: true
+published: false
 ---
 
 Bioconductor 是一个基于 R 语言的生物信息软件包，主要用于生物数据的注释、分析、统计、以及可视化 （[http://www.bioconductor.org](http://www.bioconductor.org) ）。
