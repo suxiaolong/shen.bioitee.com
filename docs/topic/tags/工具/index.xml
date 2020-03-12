@@ -75,6 +75,15 @@
     </item>
     
     <item>
+      <title>Bioconductor 中的 R 包安装方法总结</title>
+      <link>https://shen.bioitee.com/topic/tech/2019-07-01-bioconductor-packages/</link>
+      <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>
+      
+      <guid>https://shen.bioitee.com/topic/tech/2019-07-01-bioconductor-packages/</guid>
+      <description>Bioconductor 是一个基于 R 语言的生物信息软件包，主要用于生物数据的注释、分析、统计、以及可视化 （http://www.bioconductor.org ）</description>
+    </item>
+    
+    <item>
       <title>LaTeX 2018 安装与使用教程</title>
       <link>https://shen.bioitee.com/topic/tech/2019-07-01-latex-2018-tutorial/</link>
       <pubDate>Mon, 01 Jul 2019 03:50:35 +0000</pubDate>

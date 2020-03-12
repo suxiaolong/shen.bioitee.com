@@ -5,7 +5,7 @@ type: post
 topic/tags: ["others", "工具"]
 date: 2019-07-01T03:50:35.000Z
 category: 工具
-published: false
+published: true
 ---
 
 Bioconductor 是一个基于 R 语言的生物信息软件包，主要用于生物数据的注释、分析、统计、以及可视化 （[http://www.bioconductor.org](http://www.bioconductor.org) ）。
@@ -17,12 +17,12 @@ R 每年（通常是 4 月中旬）在 'x.y.z' 中发布一个 '.y' 版本，但
 Bioconductor 与 R 各自对应的版本如下：（参考：[Bioconductor releases](https://bioconductor.org/about/release-announcements/)）
 
 
-![](https://note.bioitee.com/yuque/0/2019/png/126032/1550202460103-7ec215b0-d738-41a2-8290-ddb85bdc94d3.png#align=left&display=inline&height=463&originHeight=463&originWidth=625&size=0&status=done&width=625)
+![](https://note.bioitee.com/yuque/0/2019/png/126032/1550202460103-7ec215b0-d738-41a2-8290-ddb85bdc94d3.png#align=left&display=inline&height=463&originHeight=463&originWidth=625&size=0&status=done&style=none&width=625)
 
 ---
 
 
-# biocLite
+# biocLite 使用
 
 在 R-3.5（Bioconductor-3.7） 前，Bioconductor 都是通过 biocLite 安装相关的 R 包：
 
@@ -33,34 +33,87 @@ biocLite(pkg_name)
 
 但是，从 R-3.5（Bioconductor-3.8）起，Bioconductor 更改了 R 包的安装方式：它们通过发布在 CRAN 的 [`BiocManager`](https://cran.r-project.org/web/packages/BiocManager/index.html) 包来对 Bioconductor 的包进行安装和管理——通过 CRAN 安装 `BiocManager`，再通过这个包来安装 Bioconductor 的包。
 
----
 
 
-# BiocManager
 
-- **安装 BiocManager 包**
+# BiocManager 安装与使用
+
+
+### 1. 镜像，镜像，镜像！
+
+重要的事情说三遍！很多安装 CRAN 和 Bioconductor 包的童鞋都会发现自己的包下载不完整，以至于出现各种神奇的报错！所以国内的用户推荐参考下面的用法，设置国内镜像，改善包下载速度慢的问题。
+
+- Bioconductor 镜像
+
+Bioconductor 镜像源配置文件之一是 `.Rprofile` (linux 下位于 `~/.Rprofile` )。
+
+在文末添加如下语句：
+
+
 ```r
-chooseCRANmirror()
-install.packages("BiocManager")
+options(BioC_mirror="https://mirrors.tuna.tsinghua.edu.cn/bioconductor")
 ```
 
-- **安装 Bioconductor (or CRAN) 的 R 包**
+
+打开 R 即可使用该 Bioconductor 镜像源安装 Bioconductor 软件包。
+
+- CRAN 镜像与 R 包安装
+
+R 在线安装包，设置全局镜像（选择中国的镜像），加快安装进度，可以参考以下方法：
+
+```r
+#设置清华大学镜像
+local({
+    r <- getOption("repos")  
+    r["CRAN"] <- "http://mirrors.tuna.tsinghua.edu.cn/CRAN/"   
+    options(repos=r)
+}) 
+
+#然后在安装需要的包
+install.packages("ggplot2")
+```
+
+
+或者直接在安装方法中指定 repos，指定国内的镜像地址，安装会快很多：
+
+
+```r
+install.packages("ggplot2",repos="http://mirrors.tuna.tsinghua.edu.cn/CRAN/")
+```
+
+
+
+### 2. 安装 BiocManager 包
+
+```r
+chooseCRANmirror()							 # 选择 CRAN 的镜像
+install.packages("BiocManager")  # 安装 BiocManager 包
+```
+
+
+### 3. 安装 Bioconductor 的 R 包
+
 ```r
 BiocManager::install(c("GenomicRanges", "Organism.dplyr"))
 ```
 
-- **更新所有已经安装的 R 包到最新版本**
-```r
-BiocManager::install()
-```
 
-- **查看 Bioconductor 的版本**
+### 4. 查看 Bioconductor 的版本
+
 ```r
 BiocManager::version()
 ## '3.8'
 ```
 
-- **旧和意外版本的 R 包**
+
+### 5. 更新所有已经安装的 R 包
+
+```r
+BiocManager::install()  # 更新到最新版本
+```
+
+
+### 6. 旧和意外版本的 R 包
 
 当 Bioconductor 的包都来自同一版本时，它们的效果最佳。 使用 `valid()` 来查看过期（out-of-date）或意外版本（unexpected versions）的 R 包。
 ```r
@@ -135,7 +188,8 @@ ff  "2.2-13"  "3.5.0" "2.2-14" "https://cran.rstudio.com/src/contrib"
 >
 ```
 
-- **适用的 R 包**
+
+### 7. 适用的 R 包
 
 可以使用 `available()` 发现适用于我们的 Bioconductor 版本的软件包; 第一个参数是可用于根据正则表达式过滤包名称，例如，可用于 Homo sapiens 的 'BSgenome' 包：
 ```r
@@ -156,7 +210,6 @@ BiocManager::available("BSgenome.Hsapiens")
 ## [10] "BSgenome.Hsapiens.UCSC.hg38.masked"
 ```
 
----
 
 
 # Bioconductor 中安装旧版本的 R 包
