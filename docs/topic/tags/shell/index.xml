@@ -20,14 +20,5 @@
       <description>特殊变量 首先来看几个特殊变量： #!/bin/bash echo $0 # 当前脚本的文件名（间接运行时还包括绝对路径）。 echo $n # 传递给脚本或函数的参数。n 是一个数字，表示第几个参</description>
     </item>
     
-    <item>
-      <title>bash shell 编程与命令笔记</title>
-      <link>https://shen.bioitee.com/topic/tech/2018-12-29-shell-practice/</link>
-      <pubDate>Sat, 29 Dec 2018 09:21:11 +0000</pubDate>
-      
-      <guid>https://shen.bioitee.com/topic/tech/2018-12-29-shell-practice/</guid>
-      <description>shell 示例脚本 #!/bin/sh START=$(date +&#39;%Y-%m-%d %H:%M:%S&#39;); echo &amp;quot;Start: $START&amp;quot; &amp;gt;/home/shenweiyan/log.txt for i in `find /data/database/onekp/nucl-v2/samples/ -name &amp;quot;*.fa&amp;quot;`; do dir=`dirname $i`; fa=`basename $i`; cd $dir; makeblastdb -in $fa -dbtype nucl; echo $i &amp;gt;&amp;gt;/data/database/onekp/nucl-v2/memo/log; done END=$(date);echo &amp;quot;End: $END&amp;quot; &amp;gt;&amp;gt;/home/shenweiyan/log.txt linux 下使用命令排除当前行及下一行的内容 sed &#39;/关键字/,+1d&#39;</description>
-    </item>
-    
   </channel>
 </rss>
