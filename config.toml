@@ -31,12 +31,15 @@ publishDir = "docs"
 [[menu.main]]
     name = "彩蛋"
     url = "https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioitee/bioitee.png"
-    weight = 6
+    weight = 4
 [[menu.main]]
     name = "语雀"
     url = "https://www.yuque.com/shenweiyan"
-    weight = 7
-
+    weight = 5
+[[menu.main]]
+    name = "留言"
+    url = "/feedback/"
+    weight = 6
 
 [params]
     siteurl = "https://shen.bioitee.com"
