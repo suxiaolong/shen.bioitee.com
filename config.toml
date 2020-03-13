@@ -26,7 +26,7 @@ publishDir = "docs"
     weight = 2
 [[menu.main]]
     name = "博文"
-    url = "/topic/latest/"
+    url = "/articles/"
     weight = 3
 [[menu.main]]
     name = "彩蛋"
@@ -36,31 +36,6 @@ publishDir = "docs"
     name = "语雀"
     url = "https://www.yuque.com/shenweiyan"
     weight = 7
-
-[[menu.topic]]
-    name = "首页"
-    url = "/"
-    weight = 1
-[[menu.topic]]
-    name = "技术"
-    url = "/topic/tech/"
-    weight = 2
-[[menu.topic]]
-    name = "生活"
-    url = "/topic/life/"
-    weight = 3
-[[menu.topic]]
-    name = "读书"
-    url = "/topic/read/"
-    weight = 5
-[[menu.topic]]
-    name = "标签"
-    url = "/topic/tags/"
-    weight = 8
-[[menu.topic]]
-    name = "归档"
-    url = "/topic/archives/"
-    weight = 9
 
 
 [params]
