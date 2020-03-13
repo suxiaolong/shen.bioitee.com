@@ -71,7 +71,6 @@ disable_comments: true
 - 2019-08-07 [FlexSlider 和 RaxusSlider 插件相关参数](https://www.yuque.com/shenweiyan/cookbook/flex-slider-and-raxus-slider)
 - 2019-08-05 [一些好玩又有趣的开源项目](https://www.yuque.com/shenweiyan/cookbook/rgvbqq)
 - 2019-08-05 [Bioconductor org.Xx.eg.db 系列包](https://www.yuque.com/shenweiyan/cookbook/bioconductor-orgdb)
-- 2019-07-29 [关于](https://www.yuque.com/shenweiyan/cookbook/about)
 - 2019-07-25 [Fedora Redhat Centos 有什么区别和关系？](https://www.yuque.com/shenweiyan/cookbook/fedora-redhat-centos)
 - 2019-07-23 [不提供账号注销等于耍流氓](https://www.yuque.com/shenweiyan/cookbook/coding-cancel-account)
 - 2019-07-19 [Linux 磁盘管理：LVM 逻辑卷管理器](https://www.yuque.com/shenweiyan/cookbook/linux-lvm)
