@@ -23,7 +23,6 @@ disable_comments: true
 - 微信：ishenweiyan
 - 地址：广州市黄埔区科学城科学大道182号创新大厦
 - 邮箱：<ishenwieyan@qq.com>
-- wiki：<https://www.bioinit.com>
 
 
 ### 其他信息
@@ -46,6 +45,10 @@ disable_comments: true
 <br/>
 
 **本博客更新历史：**
+
+- **2020.03.13：**
+    1. 把所有博文更换成了蚂蚁金服旗下 [语雀平台](https://www.yuque.com/shenweiyan) 的链接，点击博文链接即可跳转至语雀原文进行阅读。
+    2. 本博客不再进行博文内容编写与显示，所有博文将在语雀进行编辑和修改。语雀的文章列表会每天更新至本博客。
 
 - **2019.12.25：**
     1. 更新 topic/latest 页面, 禁用该页面 nav-next、nav-prev。调整部分导航与页面内容。
