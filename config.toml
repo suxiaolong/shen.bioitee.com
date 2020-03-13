@@ -55,7 +55,7 @@ publishDir = "docs"
     dateFormat = "2019-01-01" # "2019-01-01, Mon, "
 
 [params.footer]
-    home = "<br/><br/>Powered by [Hugo](https://gohugo.io) and [Blogdown](https://bookdown.org/yihui/blogdown/) &copy; [Steven Shen](/) 2018 - 2019 <br/><br/>[<i class='fas fa-crow fa-1x'></i>](https://www.yuque.com/shenweiyan) &middot; [<i class='far fa-envelope fa-1x'></i>](mailto:ishenweiyan@qq.com) &middot; [<i class='fab fa-github fa-1x'></i>](https://github.com/shenweiyan) &middot; [<i class='fab fa-stack-overflow fa-1x'></i>](https://stackoverflow.com/users/9701168/steven-shen) &middot; [<i class='fab fa-zhihu fa-1x'></i>](https://www.zhihu.com/people/shenweiyan) &middot; [<i class='fab fa-weixin fa-1x'></i>](https://weixin.sogou.com/weixin?type=1&query=bioinit) &middot; [<i class='fas fa-cloud fa-1x'></i>](https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=mx65q35j)"
+    home = "<br/><br/>Powered by [Hugo](https://gohugo.io) and [Blogdown](https://bookdown.org/yihui/blogdown/) &copy; [Steven Shen](/) 2018 - 2020 <br/><br/>[<i class='fas fa-crow fa-1x'></i>](https://www.yuque.com/shenweiyan) &middot; [<i class='far fa-envelope fa-1x'></i>](mailto:ishenweiyan@qq.com) &middot; [<i class='fab fa-github fa-1x'></i>](https://github.com/shenweiyan) &middot; [<i class='fab fa-stack-overflow fa-1x'></i>](https://stackoverflow.com/users/9701168/steven-shen) &middot; [<i class='fab fa-zhihu fa-1x'></i>](https://www.zhihu.com/people/shenweiyan) &middot; [<i class='fab fa-weixin fa-1x'></i>](https://weixin.sogou.com/weixin?type=1&query=bioinit) &middot; [<i class='fas fa-cloud fa-1x'></i>](https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=mx65q35j)"
 
 [params.author]
     en = "Steven Shen"
