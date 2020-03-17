@@ -18,7 +18,7 @@ publishDir = "docs"
 
 [[menu.main]]
     name = "首页"
-    url = "/"
+    url = "https://shen.bioitee.com"
     weight = 1
 [[menu.main]]
     name = "关于"
