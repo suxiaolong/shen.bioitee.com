@@ -15,6 +15,7 @@ disable_comments: true
 
 ## 2020
 
+- 2020-03-23 [我们能从加缪的《鼠疫》中学到什么](https://www.yuque.com/shenweiyan/readings/pohz4g)
 - 2020-03-20 [手续费和年利率](https://www.yuque.com/shenweiyan/mind/amvh8c)
 - 2020-03-18 [R 函数 | cumsum 函数笔记](https://www.yuque.com/shenweiyan/cookbook/tallkr)
 - 2020-03-16 [大牛](https://www.yuque.com/shenweiyan/mind/rz7c3n)
