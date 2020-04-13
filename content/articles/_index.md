@@ -161,7 +161,7 @@ disable_comments: true
 - 2019-05-09 [国内 GitHub 访问加速](https://www.yuque.com/shenweiyan/cookbook/xpurpl)
 - 2019-04-29 [一些好玩的命名风格](https://www.yuque.com/shenweiyan/mind/funny-name)
 - 2019-03-12 [从 Galaxy Project 聊一聊 Linux 下安装 Yarn](https://www.yuque.com/shenweiyan/bio-cloud/linux-install-yarn)
-- 2019-03-01 [《皮囊》：一把人生冰冷的手术刀](https://www.yuque.com/shenweiyan/readings/180712)
+- 2019-03-01 [《皮囊》，一把人生冰冷的手术刀](https://www.yuque.com/shenweiyan/readings/180712)
 - 2019-03-01 [《必然》，凯文·凯利](https://www.yuque.com/shenweiyan/readings/180810)
 
 
