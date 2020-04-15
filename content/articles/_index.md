@@ -155,6 +155,7 @@ disable_comments: true
 - 2019-05-18 [chrome 超详细使用教程](https://www.yuque.com/shenweiyan/cookbook/chrome-tutorial)
 - 2019-05-18 [癌症中克隆种群结构统计推断分析软件PyClone安装小记](https://www.yuque.com/shenweiyan/cookbook/pyclone-install-1714572)
 - 2019-05-18 [聊一聊 Python 安装中的 --enable-shared](https://www.yuque.com/shenweiyan/cookbook/python-enable-shared)
+- 2019-05-18 [生物信息学 Python 入门之源码安装](https://www.yuque.com/shenweiyan/cookbook/install-python-from-source)
 - 2019-05-15 [扫描版与非扫描版 PDF 文字复制](https://www.yuque.com/shenweiyan/cookbook/pdf-copy)
 - 2019-05-10 [Git 的一些常用用法笔记](https://www.yuque.com/shenweiyan/cookbook/git-usage)
 - 2019-05-09 [国内 GitHub 访问加速](https://www.yuque.com/shenweiyan/cookbook/xpurpl)
