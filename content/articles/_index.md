@@ -141,7 +141,6 @@ disable_comments: true
 - 2019-06-11 [Python 读取大文件](https://www.yuque.com/shenweiyan/cookbook/iddn10)
 - 2019-06-03 [Jekyll 网站添加访问量统计分析](https://www.yuque.com/shenweiyan/cookbook/jekyll-add-page-view)
 - 2019-06-01 [基于 pypiserver 的 PyPI 私有仓库搭建实践](https://www.yuque.com/shenweiyan/cookbook/pypiserver-trial)
-- 2019-05-29 [生物信息学博客与论坛](https://www.yuque.com/shenweiyan/cookbook/bio-blogs-forums)
 - 2019-05-29 [一些博客与站点搜集](https://www.yuque.com/shenweiyan/mind/blogs-and-sites-collected)
 - 2019-05-27 [使用 conda 和 Jupyter 在 R 中实现数据科学分析](https://www.yuque.com/shenweiyan/cookbook/kgrnx4)
 - 2019-05-25 [R 软件如何升级](https://www.yuque.com/shenweiyan/cookbook/qznkyp)
