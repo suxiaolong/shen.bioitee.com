@@ -15,6 +15,7 @@ disable_comments: true
 
 ## 2020
 
+- 2020-04-17 [搜狗输入法的一些使用技巧](https://www.yuque.com/shenweiyan/cookbook/mc5bkg)
 - 2020-03-23 [我们能从加缪的《鼠疫》中学到什么](https://www.yuque.com/shenweiyan/readings/pohz4g)
 - 2020-03-20 [手续费和年利率](https://www.yuque.com/shenweiyan/mind/amvh8c)
 - 2020-03-19 [温故而知新，学习一下 ggplot2 饼图](https://www.yuque.com/shenweiyan/cookbook/ggplot2-piechart-note)
