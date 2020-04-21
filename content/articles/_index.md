@@ -15,6 +15,7 @@ disable_comments: true
 
 ## 2020
 
+- 2020-04-21 [MobaXterm 客户端安装说明](https://www.yuque.com/shenweiyan/cookbook/mobaxterm-installation)
 - 2020-04-17 [小技巧 | 使用 mv 重命名文件无需两次键入文件名称](https://www.yuque.com/shenweiyan/cookbook/mv-skill)
 - 2020-04-17 [搜狗输入法的一些使用技巧](https://www.yuque.com/shenweiyan/cookbook/mc5bkg)
 - 2020-03-23 [我们能从加缪的《鼠疫》中学到什么](https://www.yuque.com/shenweiyan/readings/pohz4g)
