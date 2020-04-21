@@ -47,7 +47,6 @@ disable_comments: true
 - 2019-12-23 [QQ 邮箱设置自定义域名邮箱](https://www.yuque.com/shenweiyan/cookbook/domain-mail-qq-setting)
 - 2019-12-13 [动了谁的奶酪](https://www.yuque.com/shenweiyan/mind/kblu4x)
 - 2019-12-05 [基因功能富集原理学习笔记](https://www.yuque.com/shenweiyan/cookbook/zf646e)
-- 2019-12-05 [GO 功能富集分析结果绘图 R 代码](https://www.yuque.com/shenweiyan/cookbook/nvi8vg)
 - 2019-12-05 [富集分析的几个区别](https://www.yuque.com/shenweiyan/cookbook/uhunvv)
 - 2019-12-05 [R 常用函数汇总](https://www.yuque.com/shenweiyan/cookbook/lwsgg0)
 - 2019-12-04 [CODING 静态网站](https://www.yuque.com/shenweiyan/cookbook/coding-pages)
