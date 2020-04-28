@@ -15,6 +15,7 @@ disable_comments: true
 
 ## 2020
 
+- 2020-04-28 [美国空军发现了平均数的缺陷](https://www.yuque.com/shenweiyan/readings/bbn0zx)
 - 2020-04-21 [MobaXterm 客户端安装说明](https://www.yuque.com/shenweiyan/cookbook/mobaxterm-installation)
 - 2020-04-17 [小技巧 | 使用 mv 重命名文件无需两次键入文件名称](https://www.yuque.com/shenweiyan/cookbook/mv-skill)
 - 2020-04-17 [搜狗输入法的一些使用技巧](https://www.yuque.com/shenweiyan/cookbook/mc5bkg)
