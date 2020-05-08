@@ -15,6 +15,11 @@ disable_comments: true
 
 ## 2020
 
+- 2020-05-08 [Galaxy 生信平台（三）：xlsx 上传与识别](https://www.yuque.com/shenweiyan/bio-cloud/rq27tw)
+- 2020-05-08 [Galaxy 生信平台（四）：邮件与管理员配置](https://www.yuque.com/shenweiyan/bio-cloud/fgpzkl)
+- 2020-05-08 [Galaxy 生信平台（二）：生产环境部署](https://www.yuque.com/shenweiyan/bio-cloud/fyr8z8)
+- 2020-05-08 [Galaxy 生信平台（一）：安装](https://www.yuque.com/shenweiyan/bio-cloud/zuisn2)
+- 2020-05-08 [从 Galaxy Project 聊一聊 Linux 下安装 Yarn](https://www.yuque.com/shenweiyan/bio-cloud/vfv8qd)
 - 2020-04-28 [美国空军发现了平均数的缺陷](https://www.yuque.com/shenweiyan/readings/bbn0zx)
 - 2020-04-21 [MobaXterm 客户端安装说明](https://www.yuque.com/shenweiyan/cookbook/mobaxterm-installation)
 - 2020-04-17 [小技巧 | 使用 mv 重命名文件无需两次键入文件名称](https://www.yuque.com/shenweiyan/cookbook/mv-skill)
@@ -24,7 +29,7 @@ disable_comments: true
 - 2020-03-19 [温故而知新，学习一下 ggplot2 饼图](https://www.yuque.com/shenweiyan/cookbook/ggplot2-piechart-note)
 - 2020-03-18 [R 函数 | cumsum 函数笔记](https://www.yuque.com/shenweiyan/cookbook/tallkr)
 - 2020-03-16 [大牛](https://www.yuque.com/shenweiyan/mind/rz7c3n)
-- 2020-03-13 [分类的纠结](https://www.yuque.com/shenweiyan/mind/whnegc)
+- 2020-03-13 [语雀知识库文档分类的纠结](https://www.yuque.com/shenweiyan/mind/whnegc)
 - 2020-03-05 [UpSetR 关联的 venneuler 包安装笔记](https://www.yuque.com/shenweiyan/cookbook/venneuler-installation)
 - 2020-03-03 [Linux 系统下 CPU 使用梳理](https://www.yuque.com/shenweiyan/cookbook/pt4yaz)
 - 2020-02-27 [R 语言画图中英文字体解决方案](https://www.yuque.com/shenweiyan/cookbook/csm98o)
@@ -35,8 +40,6 @@ disable_comments: true
 - 2020-01-16 [吐槽一下微信公众号的赞赏号](https://www.yuque.com/shenweiyan/mind/pct5pb)
 - 2020-01-14 [R 语言中的 X11 相关问题](https://www.yuque.com/shenweiyan/cookbook/ublsz7)
 - 2020-01-13 [Linux shell 编程笔记](https://www.yuque.com/shenweiyan/cookbook/sfpgok)
-- 2020-01-06 [Galaxy 生信平台（四）：邮件与管理员配置](https://www.yuque.com/shenweiyan/bio-cloud/mail-admin-server)
-- 2020-01-02 [Galaxy 生信平台（三）：xlsx 上传与识别](https://www.yuque.com/shenweiyan/bio-cloud/galaxy-xlsx-issues)
 
 
 ## 2019
@@ -70,9 +73,7 @@ disable_comments: true
 - 2019-09-20 [Python 日期和时间函数使用指南](https://www.yuque.com/shenweiyan/cookbook/how-to-use-datetime-in-python)
 - 2019-09-19 [Python 文件下载并显示下载进度条](https://www.yuque.com/shenweiyan/cookbook/xu2eg5)
 - 2019-09-18 [GO 学习资料](https://www.yuque.com/shenweiyan/cookbook/ygzmzn)
-- 2019-09-16 [Galaxy 生信平台（二）：生产环境部署](https://www.yuque.com/shenweiyan/bio-cloud/production)
 - 2019-09-12 [如何同步更新 Github 上 Fork 的项目？](https://www.yuque.com/shenweiyan/cookbook/github-fork-update)
-- 2019-09-11 [Galaxy 生信平台（一）：安装](https://www.yuque.com/shenweiyan/bio-cloud/installation)
 - 2019-09-06 [Gitbook 安装与使用笔记](https://www.yuque.com/shenweiyan/cookbook/ga7bft)
 - 2019-09-04 [婚姻修养](https://www.yuque.com/shenweiyan/mind/marriage-art)
 - 2019-08-28 [博客 | hugo 博客添加 disqus 评论系统](https://www.yuque.com/shenweiyan/cookbook/disqus-for-hugo)
@@ -163,7 +164,6 @@ disable_comments: true
 - 2019-05-10 [Git 的一些常用用法笔记](https://www.yuque.com/shenweiyan/cookbook/git-usage)
 - 2019-05-09 [国内 GitHub 访问加速](https://www.yuque.com/shenweiyan/cookbook/xpurpl)
 - 2019-04-29 [一些好玩的命名风格](https://www.yuque.com/shenweiyan/mind/funny-name)
-- 2019-03-12 [从 Galaxy Project 聊一聊 Linux 下安装 Yarn](https://www.yuque.com/shenweiyan/bio-cloud/linux-install-yarn)
 - 2019-03-01 [《皮囊》，一把人生冰冷的手术刀](https://www.yuque.com/shenweiyan/readings/180712)
 - 2019-03-01 [《必然》，凯文·凯利](https://www.yuque.com/shenweiyan/readings/180810)
 
