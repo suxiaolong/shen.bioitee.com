@@ -15,6 +15,7 @@ disable_comments: true
 
 ## 2020
 
+- 2020-05-09 [如何卸载 python setup.py install 安装的包？](https://www.yuque.com/shenweiyan/cookbook/wc3kp5)
 - 2020-05-08 [Galaxy 生信平台（三）：xlsx 上传与识别](https://www.yuque.com/shenweiyan/bio-cloud/rq27tw)
 - 2020-05-08 [Galaxy 生信平台（四）：邮件与管理员配置](https://www.yuque.com/shenweiyan/bio-cloud/fgpzkl)
 - 2020-05-08 [Galaxy 生信平台（二）：生产环境部署](https://www.yuque.com/shenweiyan/bio-cloud/fyr8z8)
