@@ -57,6 +57,7 @@ disable_comments: true
 - 2019-12-04 [广州萝岗大壮公寓出租](https://www.yuque.com/shenweiyan/mind/housing)
 - 2019-12-03 [Linux 服务器更换主板后，网卡识别失败的处理方法](https://www.yuque.com/shenweiyan/cookbook/zks7y7)
 - 2019-12-03 [听说 Notepad++ 在 Github 已经沦为战场了](https://www.yuque.com/shenweiyan/cookbook/mrxmae)
+- 2019-12-03 [为什么 Biopython 的在线 BLAST 这么慢？](https://www.yuque.com/shenweiyan/cookbook/ygnigy)
 - 2019-11-28 [鸡汤](https://www.yuque.com/shenweiyan/mind/chicken-soup)
 - 2019-11-18 [Centos 7 下编译安装 Nginx](https://www.yuque.com/shenweiyan/cookbook/aq99si)
 - 2019-11-13 [OBS 录屏的一些配置与使用](https://www.yuque.com/shenweiyan/cookbook/obs)
