@@ -15,7 +15,7 @@ disable_comments: true
 
 ## 2020
 
-- 2020-05-18 [远程挂载 NFS 共享目录引发死机问题](https://www.yuque.com/shenweiyan/cookbook/mz5v19)
+- 2020-05-18 [远程挂载 NFS 共享目录引发死机问题](https://www.yuque.com/shenweiyan/cookbook/nfs-umount)
 - 2020-05-09 [如何卸载 python setup.py install 安装的包？](https://www.yuque.com/shenweiyan/cookbook/uninstall-setup-py)
 - 2020-05-08 [Galaxy 生信平台（三）：xlsx 上传与识别](https://www.yuque.com/shenweiyan/bio-cloud/rq27tw)
 - 2020-05-08 [Galaxy 生信平台（四）：邮件与管理员配置](https://www.yuque.com/shenweiyan/bio-cloud/fgpzkl)
