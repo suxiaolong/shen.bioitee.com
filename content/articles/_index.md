@@ -15,7 +15,9 @@ disable_comments: true
 
 ## 2020
 
+- 2020-05-26 [为什么我不在微信公众号上写文章](https://www.yuque.com/shenweiyan/webdocs/qw325a)
 - 2020-05-25 [使用镜像加速 Rtools 下载与安装](https://www.yuque.com/shenweiyan/cookbook/rtools-install-mirrors)
+- 2020-05-25 [如何在 5 分钟内建立一个数据驱动的新型冠状病毒肺炎应用程序](https://www.yuque.com/shenweiyan/cookbook/covid-19-shiny-apps)
 - 2020-05-20 [ggplot2 调整绘图区域大小](https://www.yuque.com/shenweiyan/cookbook/ggplot_plot_margin)
 - 2020-05-18 [远程挂载 NFS 共享目录引发死机问题](https://www.yuque.com/shenweiyan/cookbook/nfs-umount)
 - 2020-05-09 [如何卸载 python setup.py install 安装的包？](https://www.yuque.com/shenweiyan/cookbook/uninstall-setup-py)
