@@ -15,6 +15,7 @@ disable_comments: true
 
 ## 2020
 
+- 2020-05-28 [顶级生物信息学 RSS 订阅源](https://www.yuque.com/shenweiyan/cookbook/bio-rss-feeds)
 - 2020-05-26 [为什么我不在微信公众号上写文章](https://www.yuque.com/shenweiyan/webdocs/qw325a)
 - 2020-05-25 [使用镜像加速 Rtools 下载与安装](https://www.yuque.com/shenweiyan/cookbook/rtools-install-mirrors)
 - 2020-05-25 [如何在 5 分钟内建立一个数据驱动的新型冠状病毒肺炎应用程序](https://www.yuque.com/shenweiyan/cookbook/covid-19-shiny-apps)
