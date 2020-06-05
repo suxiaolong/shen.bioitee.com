@@ -15,6 +15,7 @@ disable_comments: true
 
 ## 2020
 
+- 2020-06-05 [科学上网之部署使用详解](https://www.yuque.com/shenweiyan/cookbook/pizow4)
 - 2020-06-04 [RStudio Linux Server 安装配置说明](https://www.yuque.com/shenweiyan/cookbook/xxli8d)
 - 2020-06-03 [生信服务器入门级基本设置](https://www.yuque.com/shenweiyan/cookbook/bio-server-basic)
 - 2020-05-28 [顶级生物信息学 RSS 订阅源](https://www.yuque.com/shenweiyan/cookbook/bio-rss-feeds)
