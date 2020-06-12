@@ -120,7 +120,6 @@ disable_comments: true
 - 2019-07-01 [VSCode 中利用 Remote SSH 连接远程服务器](https://www.yuque.com/shenweiyan/cookbook/vscode-remote-ssh)
 - 2019-07-01 [基于云的六大 Jupyter Notebook 平台测评](https://www.yuque.com/shenweiyan/cookbook/cloud-services-for-jupyter-notebook)
 - 2019-07-01 [非 root 用户手动编译安装 GCC](https://www.yuque.com/shenweiyan/cookbook/lqc7hd)
-- 2019-07-01 [手把手教你在 Linux 源码安装最新版本的 R](https://www.yuque.com/shenweiyan/cookbook/install-latest-r-from-source)
 - 2019-07-01 [基于 ggplot2 的解剖图和组织模块可视化](https://www.yuque.com/shenweiyan/cookbook/r-gganatogram)
 - 2019-07-01 [一次 SSH 攻击与处理记录](https://www.yuque.com/shenweiyan/cookbook/ssh-attack)
 - 2019-07-01 [基于 Web 的 Linux 终端 WebTerminal](https://www.yuque.com/shenweiyan/cookbook/webterminal-for-linux)
