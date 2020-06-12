@@ -15,6 +15,7 @@ disable_comments: true
 
 ## 2020
 
+- 2020-06-11 [R 语言关于 SSL 证书异常处理笔记](https://www.yuque.com/shenweiyan/cookbook/r-ssl-certificate)
 - 2020-06-05 [科学上网之部署使用详解](https://www.yuque.com/shenweiyan/cookbook/pizow4)
 - 2020-06-04 [RStudio Linux Server 安装配置说明](https://www.yuque.com/shenweiyan/cookbook/xxli8d)
 - 2020-06-03 [生信服务器入门级基本设置](https://www.yuque.com/shenweiyan/cookbook/bio-server-basic)
@@ -119,7 +120,8 @@ disable_comments: true
 - 2019-07-04 [给自己定个读书小目标](https://www.yuque.com/shenweiyan/readings/reading-flags)
 - 2019-07-01 [VSCode 中利用 Remote SSH 连接远程服务器](https://www.yuque.com/shenweiyan/cookbook/vscode-remote-ssh)
 - 2019-07-01 [基于云的六大 Jupyter Notebook 平台测评](https://www.yuque.com/shenweiyan/cookbook/cloud-services-for-jupyter-notebook)
-- 2019-07-01 [非 root 用户手动编译安装 GCC](https://www.yuque.com/shenweiyan/cookbook/lqc7hd)
+- 2019-07-01 [非 root 用户手动编译安装 GCC](https://www.yuque.com/shenweiyan/cookbook/linux-gcc-install)
+- 2019-07-01 [手把手教你在 Linux 源码安装最新版本的 R](https://www.yuque.com/shenweiyan/cookbook/install-latest-r-from-source)
 - 2019-07-01 [基于 ggplot2 的解剖图和组织模块可视化](https://www.yuque.com/shenweiyan/cookbook/r-gganatogram)
 - 2019-07-01 [一次 SSH 攻击与处理记录](https://www.yuque.com/shenweiyan/cookbook/ssh-attack)
 - 2019-07-01 [基于 Web 的 Linux 终端 WebTerminal](https://www.yuque.com/shenweiyan/cookbook/webterminal-for-linux)
