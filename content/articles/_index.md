@@ -15,6 +15,8 @@ disable_comments: true
 
 ## 2020
 
+- 2020-06-19 [各个平台下 Perl 源码安装教程](https://www.yuque.com/shenweiyan/cookbook/cyv6em)
+- 2020-06-19 [各个平台下 Perl 模块安装总结](https://www.yuque.com/shenweiyan/cookbook/how-to-install-perl-modules)
 - 2020-06-17 [一款强大而实用的图片去水印神器](https://www.yuque.com/shenweiyan/cookbook/inpaint)
 - 2020-06-17 [三十岁以后的男人为什么喜欢钓鱼](https://www.yuque.com/shenweiyan/webdocs/qq8qo4)
 - 2020-06-16 [腾讯的背水一战](https://www.yuque.com/shenweiyan/webdocs/zuq0ws)
