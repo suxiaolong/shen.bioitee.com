@@ -15,6 +15,7 @@ disable_comments: true
 
 ## 2020
 
+- 2020-06-19 [R 语言 download.file 的 SSL connect error](https://www.yuque.com/shenweiyan/cookbook/vbvbso)
 - 2020-06-19 [各个平台下 Perl 模块安装总结](https://www.yuque.com/shenweiyan/cookbook/how-to-install-perl-modules)
 - 2020-06-17 [一款强大而实用的图片去水印神器](https://www.yuque.com/shenweiyan/cookbook/inpaint)
 - 2020-06-17 [三十岁以后的男人为什么喜欢钓鱼](https://www.yuque.com/shenweiyan/webdocs/qq8qo4)
