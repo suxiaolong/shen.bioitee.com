@@ -190,4 +190,4 @@ disable_comments: true
 
 ## 2018
 
-- 2018-12-29 [bash shell 编程与命令笔记](https://www.yuque.com/shenweiyan/cookbook/shell-practice)
+- 2018-12-29 [bash shell 实战笔记](https://www.yuque.com/shenweiyan/cookbook/shell-practice)
