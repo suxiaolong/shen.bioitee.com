@@ -16,6 +16,7 @@ disable_comments: true
 ## 2020
 
 - 2020-07-15 [CentOS 6/7 安装 codon-optimizer 笔记](https://www.yuque.com/shenweiyan/cookbook/tm90c2)
+- 2020-07-14 [吐槽一下公众号的那些事](https://www.yuque.com/shenweiyan/mind/vyymes)
 - 2020-07-09 [Galaxy Release_20.05 发布，新增多项可视化体验](https://www.yuque.com/shenweiyan/bio-cloud/galaxy-release-20-05)
 - 2020-07-07 [ImageMagick 图像处理学习笔记](https://www.yuque.com/shenweiyan/cookbook/learn-imagemagick)
 - 2020-07-03 [SCI 投稿中像素、DPI、图片分辨率的一些知识](https://www.yuque.com/shenweiyan/cookbook/xo4ieg)
