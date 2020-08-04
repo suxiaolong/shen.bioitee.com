@@ -15,6 +15,7 @@ disable_comments: true
 
 ## 2020
 
+- 2020-08-04 [一个小团队使用的知识管理方案与工具](https://www.yuque.com/shenweiyan/cookbook/zwtn5w)
 - 2020-07-15 [CentOS 6/7 安装 codon-optimizer 笔记](https://www.yuque.com/shenweiyan/cookbook/tm90c2)
 - 2020-07-14 [吐槽一下公众号的那些事](https://www.yuque.com/shenweiyan/mind/vyymes)
 - 2020-07-09 [Galaxy Release_20.05 发布，新增多项可视化体验](https://www.yuque.com/shenweiyan/bio-cloud/galaxy-release-20-05)
