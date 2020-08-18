@@ -15,6 +15,7 @@ disable_comments: true
 
 ## 2020
 
+- 2020-08-18 [推荐一部青春搞笑悬疑电竞网络剧](https://www.yuque.com/shenweiyan/mind/cf-2020)
 - 2020-08-17 [在 RedHat 使用 gdc-client 下载 TCGA 数据](https://www.yuque.com/shenweiyan/cookbook/gdc-client-for-redhat-centos)
 - 2020-08-04 [一个小团队使用的知识管理方案与工具](https://www.yuque.com/shenweiyan/cookbook/zwtn5w)
 - 2020-07-15 [CentOS 6/7 安装 codon-optimizer 笔记](https://www.yuque.com/shenweiyan/cookbook/tm90c2)
