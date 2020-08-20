@@ -90,7 +90,6 @@ disable_comments: true
 - 2019-10-31 [你转到朋友圈的文章，可能是15块买的（这篇不是）](https://www.yuque.com/shenweiyan/webdocs/ny150b)
 - 2019-10-19 [R 语言中的高级图像处理包](https://www.yuque.com/shenweiyan/cookbook/uoepud)
 - 2019-10-16 [Cool New Features in Python 3.8](https://www.yuque.com/shenweiyan/cookbook/pcfnsd)
-- 2019-10-16 [输入法](https://www.yuque.com/shenweiyan/mind/input)
 - 2019-10-12 [基于 Dash Bio 的生物信息学数据可视化](https://www.yuque.com/shenweiyan/cookbook/tp85x1)
 - 2019-09-30 [PostgreSQL 常用命令](https://www.yuque.com/shenweiyan/cookbook/pdag4c)
 - 2019-09-29 [在 Linux 上给用户赋予指定目录的读写权限](https://www.yuque.com/shenweiyan/cookbook/linux-acl-permission)
