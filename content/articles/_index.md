@@ -15,6 +15,7 @@ disable_comments: true
 
 ## 2020
 
+- 2020-08-21 [一个小清新的知识管理和问题讨论平台](https://www.yuque.com/shenweiyan/cookbook/dnp9gg)
 - 2020-08-20 [博客](https://www.yuque.com/shenweiyan/mind/qqmvht)
 - 2020-08-18 [推荐一部青春搞笑悬疑电竞网络剧](https://www.yuque.com/shenweiyan/mind/cf-2020)
 - 2020-08-17 [在 RedHat 使用 gdc-client 下载 TCGA 数据](https://www.yuque.com/shenweiyan/cookbook/gdc-client-for-redhat-centos)
