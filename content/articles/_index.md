@@ -15,6 +15,7 @@ disable_comments: true
 
 ## 2020
 
+- 2020-08-25 [一次 HPC 病毒感染与解决经历](https://www.yuque.com/shenweiyan/cookbook/xaosgp)
 - 2020-08-21 [一个小清新的知识管理和问题讨论平台](https://www.yuque.com/shenweiyan/cookbook/dnp9gg)
 - 2020-08-20 [博客](https://www.yuque.com/shenweiyan/mind/qqmvht)
 - 2020-08-18 [推荐一部青春搞笑悬疑电竞网络剧](https://www.yuque.com/shenweiyan/mind/cf-2020)
