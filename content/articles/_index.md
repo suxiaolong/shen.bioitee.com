@@ -15,6 +15,7 @@ disable_comments: true
 
 ## 2020
 
+- 2020-09-10 [Enembl VEP 安装备忘](https://www.yuque.com/shenweiyan/cookbook/yu6mtk)
 - 2020-09-09 [国家为什么要拿钱去帮助外国？](https://www.yuque.com/shenweiyan/webdocs/csb60h)
 - 2020-09-04 [Linux 中多终端同步 history 记录](https://www.yuque.com/shenweiyan/cookbook/vaiw4r)
 - 2020-08-27 [RepeatModeler 安装及使用](https://www.yuque.com/shenweiyan/cookbook/mb7tcg)
