@@ -90,7 +90,6 @@ disable_comments: true
 - 2019-12-03 [听说 Notepad++ 在 Github 已经沦为战场了](https://www.yuque.com/shenweiyan/cookbook/mrxmae)
 - 2019-12-03 [为什么 Biopython 的在线 BLAST 这么慢？](https://www.yuque.com/shenweiyan/cookbook/ygnigy)
 - 2019-11-28 [鸡汤](https://www.yuque.com/shenweiyan/mind/chicken-soup)
-- 2019-11-18 [Centos 7 下编译安装 Nginx](https://www.yuque.com/shenweiyan/cookbook/aq99si)
 - 2019-11-13 [OBS 录屏的一些配置与使用](https://www.yuque.com/shenweiyan/cookbook/obs)
 - 2019-11-06 [写作](https://www.yuque.com/shenweiyan/mind/writing)
 - 2019-10-31 [深夜十点，400万人在微博泪崩：如果人生太难，就去医院看看](https://www.yuque.com/shenweiyan/webdocs/qqa9er)
