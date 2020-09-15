@@ -69,7 +69,6 @@ disable_comments: true
 - 2020-02-13 [shell 编程 | shift 命令用法笔记](https://www.yuque.com/shenweiyan/cookbook/shell-shift-note)
 - 2020-02-10 [LaTeX 折腾系列 | Linux 字体安装的一点记录](https://www.yuque.com/shenweiyan/cookbook/linux-install-fonts)
 - 2020-01-16 [吐槽一下微信公众号的赞赏号](https://www.yuque.com/shenweiyan/mind/pct5pb)
-- 2020-01-14 [R 语言中的 X11 相关问题](https://www.yuque.com/shenweiyan/cookbook/ublsz7)
 - 2020-01-13 [Linux shell 编程笔记](https://www.yuque.com/shenweiyan/cookbook/sfpgok)
 
 
