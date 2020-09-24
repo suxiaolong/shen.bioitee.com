@@ -15,6 +15,7 @@ disable_comments: true
 
 ## 2020
 
+- 2020-09-24 [CentOS 7 下 Jekyll 环境搭建与应用](https://www.yuque.com/shenweiyan/cookbook/qm3vml)
 - 2020-09-10 [Enembl VEP 安装备忘](https://www.yuque.com/shenweiyan/cookbook/yu6mtk)
 - 2020-09-09 [国家为什么要拿钱去帮助外国？](https://www.yuque.com/shenweiyan/webdocs/csb60h)
 - 2020-09-04 [Linux 中多终端同步 history 记录](https://www.yuque.com/shenweiyan/cookbook/history-command)
