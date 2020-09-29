@@ -76,7 +76,6 @@ disable_comments: true
 
 ## 2019
 
-- 2019-12-30 [JupyterLab Server 搭建与使用备忘](https://www.yuque.com/shenweiyan/cookbook/opodb3)
 - 2019-12-26 [基于 gulp 的 fancybox 源码压缩](https://www.yuque.com/shenweiyan/cookbook/gulp-for-fancybox)
 - 2019-12-24 [博客 | Hugo 博客添加 utterances 评论](https://www.yuque.com/shenweiyan/cookbook/fl1z7t)
 - 2019-12-24 [一款英文文章阅读翻译精品工具](https://www.yuque.com/shenweiyan/cookbook/caiyunapp)
