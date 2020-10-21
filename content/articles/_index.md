@@ -7,7 +7,7 @@ disable_comments: true
 
 本页面的所有文章，都是作者关于生物信息学、互联网 IT、读书笔记，以及生活杂谈相关的文章。这些文章均发表和保存在蚂蚁金服旗下的语雀平台。
 
-任何想法和建议，欢迎在 [留言](https://shen.bioitee.com/feedback/) 页面向我反馈，或者点击每篇文章的链接，前往 [语雀平台](https://www.yuque.com/shenweiyan) 发表评论。
+任何想法和建议，欢迎在 [留言](https://shen.ncbix.com/feedback/) 页面向我反馈，或者点击每篇文章的链接，前往 [语雀平台](https://www.yuque.com/shenweiyan) 发表评论。
 
 -----------
 
