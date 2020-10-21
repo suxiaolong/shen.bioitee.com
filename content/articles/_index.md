@@ -198,8 +198,3 @@ disable_comments: true
 - 2019-04-29 [一些好玩的命名风格](https://www.yuque.com/shenweiyan/mind/funny-name)
 - 2019-03-01 [《皮囊》，一把人生冰冷的手术刀](https://www.yuque.com/shenweiyan/readings/180712)
 - 2019-03-01 [《必然》，凯文·凯利](https://www.yuque.com/shenweiyan/readings/180810)
-
-
-## 2018
-
-- 2018-12-29 [bash shell 实战笔记](https://www.yuque.com/shenweiyan/cookbook/shell-practice)
