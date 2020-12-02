@@ -1,7 +1,7 @@
 
 ---
 title: "博客文章"
-date: "2020-10-21"
+date: "2020-12-02"
 disable_comments: true
 ---
 
@@ -15,13 +15,14 @@ disable_comments: true
 
 ## 2020
 
+- 2020-11-18 [Galaxy Release_20.09 发布，新增多个数据上传组件](https://www.yuque.com/shenweiyan/bio-cloud/20.09_announce_user)
 - 2020-10-21 [腾讯云 cloudbase 云开发使用笔记](https://www.yuque.com/shenweiyan/cookbook/cloudbase-note)
 - 2020-09-24 [CentOS 7 下 Jekyll 环境搭建与应用](https://www.yuque.com/shenweiyan/cookbook/qm3vml)
 - 2020-09-10 [Enembl VEP 安装备忘](https://www.yuque.com/shenweiyan/cookbook/yu6mtk)
 - 2020-09-09 [国家为什么要拿钱去帮助外国？](https://www.yuque.com/shenweiyan/webdocs/csb60h)
 - 2020-09-04 [Linux 中多终端同步 history 记录](https://www.yuque.com/shenweiyan/cookbook/history-command)
 - 2020-08-27 [RepeatModeler 安装及使用](https://www.yuque.com/shenweiyan/cookbook/mb7tcg)
-- 2020-08-25 [一次 HPC 病毒感染与解决经历](https://www.yuque.com/shenweiyan/cookbook/xaosgp)
+- 2020-08-25 [一次 HPC 病毒感染与解决经历](https://www.yuque.com/shenweiyan/cookbook/hpc-autoru)
 - 2020-08-21 [一个小清新的知识管理和问题讨论平台](https://www.yuque.com/shenweiyan/cookbook/install-confluence-on-centos)
 - 2020-08-20 [博客](https://www.yuque.com/shenweiyan/mind/qqmvht)
 - 2020-08-18 [推荐一部青春搞笑悬疑电竞网络剧](https://www.yuque.com/shenweiyan/mind/cf-2020)
@@ -92,7 +93,7 @@ disable_comments: true
 - 2019-12-03 [听说 Notepad++ 在 Github 已经沦为战场了](https://www.yuque.com/shenweiyan/cookbook/mrxmae)
 - 2019-12-03 [为什么 Biopython 的在线 BLAST 这么慢？](https://www.yuque.com/shenweiyan/cookbook/ygnigy)
 - 2019-11-28 [鸡汤](https://www.yuque.com/shenweiyan/mind/chicken-soup)
-- 2019-11-18 [Centos 7 下编译安装 Nginx](https://www.yuque.com/shenweiyan/cookbook/aq99si)
+- 2019-11-18 [CentOS 7 下编译安装 Nginx](https://www.yuque.com/shenweiyan/cookbook/centos-install-nginx)
 - 2019-11-13 [OBS 录屏的一些配置与使用](https://www.yuque.com/shenweiyan/cookbook/obs)
 - 2019-11-06 [写作](https://www.yuque.com/shenweiyan/mind/writing)
 - 2019-10-31 [深夜十点，400万人在微博泪崩：如果人生太难，就去医院看看](https://www.yuque.com/shenweiyan/webdocs/qqa9er)
