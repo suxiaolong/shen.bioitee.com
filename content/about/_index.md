@@ -35,7 +35,7 @@ disable_comments: true
 
 如果你通过这个博客学到了一点东西，那么对我最好的奖赏就是请你也尝试教我些东西(可以通过邮箱、微信，或者其他社交平台和我联系)。希望所有读到此博客文章的读者都有所收获。希望我自己在学习工作生活中尽心尽力有所收获，于人于己问心无愧。
 
-欢迎关注我的个人微信公众号：**“生信科技爱好者（ID: bioitee）”**，期待有干货的小伙伴可以和我一起运营，也希望你们的来稿。
+欢迎关注我的个人微信公众号：**“BioIT爱好者（ID: bioitee）”**，期待有干货的小伙伴可以和我一起运营，也希望你们的来稿。
 <p style="text-align:center;"><img src="https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioitee/bioitee.png"/></p>
 
 ***
