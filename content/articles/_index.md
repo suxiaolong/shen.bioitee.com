@@ -1,7 +1,7 @@
 
 ---
 title: "博客文章"
-date: "2020-12-02"
+date: "2020-12-10"
 disable_comments: true
 ---
 
@@ -15,6 +15,9 @@ disable_comments: true
 
 ## 2020
 
+- 2020-12-08 [使用 Planemo 进行 Galaxy 工具开发](https://www.yuque.com/shenweiyan/bio-cloud/vuc4hn)
+- 2020-12-03 [Linux fuser 命令详解](https://www.yuque.com/shenweiyan/cookbook/xvwc74)
+- 2020-12-03 [NFS 挂载与异常处理知识整理](https://www.yuque.com/shenweiyan/cookbook/wek7vb)
 - 2020-11-18 [Galaxy Release_20.09 发布，新增多个数据上传组件](https://www.yuque.com/shenweiyan/bio-cloud/20.09_announce_user)
 - 2020-10-21 [腾讯云 cloudbase 云开发使用笔记](https://www.yuque.com/shenweiyan/cookbook/cloudbase-note)
 - 2020-09-24 [CentOS 7 下 Jekyll 环境搭建与应用](https://www.yuque.com/shenweiyan/cookbook/qm3vml)
