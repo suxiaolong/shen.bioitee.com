@@ -1,7 +1,7 @@
 
 ---
 title: "博客文章"
-date: "2020-12-10"
+date: "2020-12-21"
 disable_comments: true
 ---
 
@@ -15,10 +15,11 @@ disable_comments: true
 
 ## 2020
 
-- 2020-12-08 [使用 Planemo 进行 Galaxy 工具开发](https://www.yuque.com/shenweiyan/bio-cloud/vuc4hn)
+- 2020-12-15 [测序数据学习笔记：bcl2fastq 安装](https://www.yuque.com/shenweiyan/cookbook/bcl2fastq-install)
+- 2020-12-08 [使用 Planemo 进行 Galaxy 工具开发](https://www.yuque.com/shenweiyan/biocloud/vuc4hn)
 - 2020-12-03 [Linux fuser 命令详解](https://www.yuque.com/shenweiyan/cookbook/xvwc74)
 - 2020-12-03 [NFS 挂载与异常处理知识整理](https://www.yuque.com/shenweiyan/cookbook/wek7vb)
-- 2020-11-18 [Galaxy Release_20.09 发布，新增多个数据上传组件](https://www.yuque.com/shenweiyan/bio-cloud/20.09_announce_user)
+- 2020-11-18 [Galaxy Release_20.09 发布，新增多个数据上传组件](https://www.yuque.com/shenweiyan/biocloud/20.09_announce_user)
 - 2020-10-21 [腾讯云 cloudbase 云开发使用笔记](https://www.yuque.com/shenweiyan/cookbook/cloudbase-note)
 - 2020-09-24 [CentOS 7 下 Jekyll 环境搭建与应用](https://www.yuque.com/shenweiyan/cookbook/qm3vml)
 - 2020-09-10 [Enembl VEP 安装备忘](https://www.yuque.com/shenweiyan/cookbook/yu6mtk)
@@ -33,7 +34,7 @@ disable_comments: true
 - 2020-08-04 [一个小团队使用的知识管理方案与工具](https://www.yuque.com/shenweiyan/cookbook/zwtn5w)
 - 2020-07-15 [CentOS 6/7 安装 codon-optimizer 笔记](https://www.yuque.com/shenweiyan/cookbook/tm90c2)
 - 2020-07-14 [吐槽一下公众号的那些事](https://www.yuque.com/shenweiyan/mind/vyymes)
-- 2020-07-09 [Galaxy Release_20.05 发布，新增多项可视化体验](https://www.yuque.com/shenweiyan/bio-cloud/galaxy-release-20-05)
+- 2020-07-09 [Galaxy Release_20.05 发布，新增多项可视化体验](https://www.yuque.com/shenweiyan/biocloud/galaxy-release-20-05)
 - 2020-07-07 [ImageMagick 图像处理学习笔记](https://www.yuque.com/shenweiyan/cookbook/learn-imagemagick)
 - 2020-07-03 [SCI 投稿中像素、DPI、图片分辨率的一些知识](https://www.yuque.com/shenweiyan/cookbook/xo4ieg)
 - 2020-06-23 [生物信息学的一些开源学习资源](https://www.yuque.com/shenweiyan/cookbook/baatnb)
@@ -53,11 +54,11 @@ disable_comments: true
 - 2020-05-20 [ggplot2 调整绘图区域大小](https://www.yuque.com/shenweiyan/cookbook/ggplot_plot_margin)
 - 2020-05-18 [远程挂载 NFS 共享目录引发死机问题](https://www.yuque.com/shenweiyan/cookbook/nfs-umount)
 - 2020-05-09 [如何卸载 python setup.py install 安装的包？](https://www.yuque.com/shenweiyan/cookbook/uninstall-setup-py)
-- 2020-05-08 [Galaxy 生信平台（三）：xlsx 上传与识别](https://www.yuque.com/shenweiyan/bio-cloud/xlsx-datatype)
-- 2020-05-08 [Galaxy 生信平台（四）：邮件与管理员配置](https://www.yuque.com/shenweiyan/bio-cloud/fgpzkl)
-- 2020-05-08 [Galaxy 生信平台（二）：生产环境部署](https://www.yuque.com/shenweiyan/bio-cloud/production)
-- 2020-05-08 [Galaxy 生信平台（一）：安装](https://www.yuque.com/shenweiyan/bio-cloud/zuisn2)
-- 2020-05-08 [Galaxy 平台小知识：Linux 下安装 Yarn](https://www.yuque.com/shenweiyan/bio-cloud/vfv8qd)
+- 2020-05-08 [Galaxy 生信平台（三）：xlsx 上传与识别](https://www.yuque.com/shenweiyan/biocloud/xlsx-datatype)
+- 2020-05-08 [Galaxy 生信平台（四）：邮件与管理员配置](https://www.yuque.com/shenweiyan/biocloud/fgpzkl)
+- 2020-05-08 [Galaxy 生信平台（二）：生产环境部署](https://www.yuque.com/shenweiyan/biocloud/production)
+- 2020-05-08 [Galaxy 生信平台（一）：安装](https://www.yuque.com/shenweiyan/biocloud/zuisn2)
+- 2020-05-08 [Galaxy 平台小知识：Linux 下安装 Yarn](https://www.yuque.com/shenweiyan/biocloud/vfv8qd)
 - 2020-04-28 [美国空军发现了平均数的缺陷](https://www.yuque.com/shenweiyan/readings/bbn0zx)
 - 2020-04-21 [MobaXterm 客户端安装说明](https://www.yuque.com/shenweiyan/cookbook/mobaxterm-installation)
 - 2020-04-17 [小技巧 | 使用 mv 重命名文件无需两次键入文件名称](https://www.yuque.com/shenweiyan/cookbook/mv-skill)
