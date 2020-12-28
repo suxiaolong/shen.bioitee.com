@@ -1,7 +1,7 @@
 
 ---
 title: "博客文章"
-date: "2020-12-21"
+date: "2020-12-28"
 disable_comments: true
 ---
 
@@ -15,6 +15,8 @@ disable_comments: true
 
 ## 2020
 
+- 2020-12-23 [自定义 coding.net 静态网站域名](https://www.yuque.com/shenweiyan/cookbook/gtfxmg)
+- 2020-12-23 [使用 coding.net 发布你的个人博客](https://www.yuque.com/shenweiyan/cookbook/start-coding-pages)
 - 2020-12-15 [测序数据学习笔记：bcl2fastq 安装](https://www.yuque.com/shenweiyan/cookbook/bcl2fastq-install)
 - 2020-12-08 [使用 Planemo 进行 Galaxy 工具开发](https://www.yuque.com/shenweiyan/biocloud/vuc4hn)
 - 2020-12-03 [Linux fuser 命令详解](https://www.yuque.com/shenweiyan/cookbook/xvwc74)
