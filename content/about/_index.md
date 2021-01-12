@@ -35,12 +35,13 @@ disable_comments: true
 
 如果你通过这个博客学到了一点东西，那么对我最好的奖赏就是请你也尝试教我些东西(可以通过邮箱、微信，或者其他社交平台和我联系)。希望所有读到此博客文章的读者都有所收获。希望我自己在学习工作生活中尽心尽力有所收获，于人于己问心无愧。
 
-欢迎关注我的个人微信公众号：**“BioIT爱好者（ID: bioitee）”**，期待有干货的小伙伴可以和我一起运营，也希望你们的来稿。
+欢迎关注我的个人微信公众号：**“BioIT爱好者（ID: bioitee）”**，期待有兴趣的小伙伴一起交流学习和运营，也希望你们的来稿。
 <p style="text-align:center;"><img src="https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioitee/bioitee.png"/></p>
 
 ***
 
-本个人网站是参考 [ivy-hugo-theme](https://github.com/shenweiyan/ivy-hugo-theme) 和 [cupper-hugo-theme](https://github.com/shenweiyan/cupper-hugo-theme) 构建的，如果读者想搭建一样主题的网站，请移步[GitHub](https://github.com/shenweiyan/ivc-hugo-theme)下载并参考 Hugo 与 Blogdown 的使用方法，然后删改关于我的信息。
+本个人网站是参考 [ics-hugo-theme](https://shenweiyan.github.io/ics-hugo-theme/) 构建的，如果读者想搭建一样主题的网站，请移步[GitHub](https://github.com/shenweiyan/ics-hugo-theme)下载并参考 Hugo 与 Blogdown 的使用方法，然后删改关于我的信息。
+
 
 <br/>
 

@@ -30,7 +30,7 @@ publishDir = "docs"
     weight = 3
 [[menu.main]]
     name = "彩蛋"
-    url = "https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioitee/bioitee.png"
+    url = "/mp/"
     weight = 4
 [[menu.main]]
     name = "语雀"
