@@ -22,13 +22,13 @@ disable_comments: true
 
 - 微信：ishenweiyan
 - 地址：广州市黄埔区科学城科学大道182号创新大厦
-- 邮箱：<ishenwieyan@qq.com>
+- 邮箱：<ishenwieyan@foxmail.com>
 
 
 ### 其他信息
 
 - 参与 "[国家标准|GB/T 34798-2017 核酸数据库序列格式规范](http://std.samr.gov.cn/gb/search/gbDetailed?id=71F772D821E0D3A7E05397BE0A0AB82A)" 起草。
-- 参与《生物信息数据库建设使用与管理指南》一书编写。
+- 参与《[生物信息数据库建设使用与管理指南](https://book.sciencereading.cn/shop/book/Booksimple/show.do?id=BEE9317419FA94D37BBF7172536470FBC000)》一书编写。
 
 
 ### 交流学习
