@@ -18,6 +18,9 @@ body {
   .menu li:not([class]) a, a:hover, .copyright a {
     border-bottom: none;
   }
+  .copyright a { 
+    text-decoration: underline;
+  }
   .menu-extra {
     list-style: circle;
   }

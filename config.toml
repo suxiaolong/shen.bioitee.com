@@ -3,7 +3,7 @@ RelativeURLs=true
 CanonifyURLs=true
 languageCode = "zh-cmn-Hans"	                  # html的lang属性值
 DefaultContentLanguage = "zh-cmn-Hans"   	  # 默认内容语言用于选择i18n语言模板
-title = "Steven Shen | 沈维燕"
+title = "沈维燕 | BioIT 爱好者"
 theme = "hugo-ivy"
 #googleAnalytics = "UA-112592341-1"
 disqusShortname = "shen-bioinit"
@@ -55,7 +55,8 @@ publishDir = "docs"
     dateFormat = "2019-01-01" # "2019-01-01, Mon, "
 
 [params.footer]
-    home = "<br/><br/>Powered by [Hugo](https://gohugo.io) and [Blogdown](https://bookdown.org/yihui/blogdown/) &copy; [Steven Shen](/) 2018 - 2020 <br/><br/>[<i class='fas fa-crow fa-1x'></i>](https://www.yuque.com/shenweiyan) &middot; [<i class='far fa-envelope fa-1x'></i>](mailto:ishenweiyan@qq.com) &middot; [<i class='fab fa-github fa-1x'></i>](https://github.com/shenweiyan) &middot; [<i class='fab fa-stack-overflow fa-1x'></i>](https://stackoverflow.com/users/9701168/steven-shen) &middot; [<i class='fab fa-zhihu fa-1x'></i>](https://www.zhihu.com/people/shenweiyan) &middot; [<i class='fab fa-weixin fa-1x'></i>](https://weixin.sogou.com/weixin?type=1&query=bioinit) &middot; [<i class='fas fa-cloud fa-1x'></i>](https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=mx65q35j)"
+    copyright = "<br/><br/>&copy; Powered by [Hugo](https://gohugo.io) and [ICS-Hugo-Theme](https://github.com/shenweiyan/ics-hugo-theme) | [Bio IT 爱好者](https://www.bioitee.com/) 2018 - {year} | [粤ICP备16023717号](http://beian.miit.gov.cn/)<br/>"
+    moreinfo = "<br/><br/>[<i class='fas fa-crow fa-1x'></i>](https://www.yuque.com/shenweiyan) &nbsp; [<i class='far fa-envelope fa-1x'></i>](mailto:ishenweiyan@foxmail.com) &nbsp; [<i class='fab fa-github fa-1x'></i>](https://github.com/shenweiyan) &nbsp; [<i class='fab fa-zhihu fa-1x'></i>](https://www.zhihu.com/people/shenweiyan) &middot; [<i class='fab fa-weixin fa-1x'></i>](https://weixin.sogou.com/weixin?type=1&query=bioitee)"
 
 [params.author]
     en = "Steven Shen"
