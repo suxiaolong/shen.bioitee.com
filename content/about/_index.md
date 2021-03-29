@@ -15,7 +15,7 @@ disable_comments: true
 1. 熟悉 Python、R、Perl、LaTeX、Html .etc. 编程。
 2. 熟悉 Galaxy 生物信息学平台相关部署与定制化工具开发。
 3. 熟悉常用生物信息学数据分析与可视化，了解 web 相关应用开发。
-3. 擅长 Linux，尤其是 CentOS，熟悉 LSF、SGE 集群相关运维。
+3. 擅长 CentOS Linux，熟悉 LSF、SGE 等集群相关运维。
 
 
 ### 联系方式
@@ -35,7 +35,7 @@ disable_comments: true
 
 如果你通过这个博客学到了一点东西，那么对我最好的奖赏就是请你也尝试教我些东西(可以通过邮箱、微信，或者其他社交平台和我联系)。希望所有读到此博客文章的读者都有所收获。希望我自己在学习工作生活中尽心尽力有所收获，于人于己问心无愧。
 
-欢迎关注我的个人微信公众号：**“BioIT爱好者（ID: bioitee）”**，期待有兴趣的小伙伴一起交流学习和运营，也希望你们的来稿。
+欢迎关注我的个人微信公众号：**“BioIT爱好者（ID: bioitee）”**，期待有兴趣爱好分享的小伙伴们，一起学习和交流。
 <p style="text-align:center;"><img src="https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioitee/bioitee.png"/></p>
 
 ***
@@ -46,6 +46,10 @@ disable_comments: true
 <br/>
 
 **本博客更新历史：**
+
+- **2021.03.29：**
+    1. 更新 footer 样式，Copyright 自动获取当前年份。
+    2. 页脚的 footer 可直接通过 config.toml 进行更新。
 
 - **2020.03.13：**
     1. 把所有博文更换成了蚂蚁金服旗下 [语雀平台](https://www.yuque.com/shenweiyan) 的链接，点击博文链接即可跳转至语雀原文进行阅读。
