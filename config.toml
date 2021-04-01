@@ -56,7 +56,7 @@ publishDir = "docs"
 
 [params.footer]
     copyright = "<br/><br/>&copy; Powered by [Hugo](https://gohugo.io) and [ICS-Hugo-Theme](https://github.com/shenweiyan/ics-hugo-theme) | [Bio IT 爱好者](https://www.bioitee.com/) 2018 - {year} | [粤ICP备16023717号](http://beian.miit.gov.cn/)<br/>"
-    moreinfo = "<br/><br/>[<i class='fas fa-crow fa-1x'></i>](https://www.yuque.com/shenweiyan) &nbsp; [<i class='far fa-envelope fa-1x'></i>](mailto:ishenweiyan@foxmail.com) &nbsp; [<i class='fab fa-github fa-1x'></i>](https://github.com/shenweiyan) &nbsp; [<i class='fab fa-zhihu fa-1x'></i>](https://www.zhihu.com/people/shenweiyan) &middot; [<i class='fab fa-weixin fa-1x'></i>](https://weixin.sogou.com/weixin?type=1&query=bioitee)"
+    moreinfo = "<br/><br/>[![yuque](https://img.shields.io/badge/沈维燕-语雀知识库-blueviolet)](https://www.yuque.com/shenweiyan) [![wechat](https://img.shields.io/badge/沈维燕-微信公众号-important)](https://apps-db.oss-cn-shenzhen.aliyuncs.com/bioitee/bioitee.png) [![zhihu](https://img.shields.io/badge/沈维燕-知乎-blue)](https://www.zhihu.com/people/shenweiyan) [![bioitee](https://img.shields.io/badge/沈维燕-BioIT爱好者-green)](https://www.bioitee.com/)"
 
 [params.author]
     en = "Steven Shen"
