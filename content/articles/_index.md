@@ -108,7 +108,7 @@ disable_comments: true
 - 2019-11-28 [心灵鸡汤](https://www.yuque.com/shenweiyan/mind/chicken-soup)
 - 2019-11-18 [CentOS 7 下编译安装 Nginx](https://www.yuque.com/shenweiyan/cookbook/centos-install-nginx)
 - 2019-11-13 [OBS 录屏的一些配置与使用](https://www.yuque.com/shenweiyan/cookbook/obs)
-- 2019-11-06 [写作](https://www.yuque.com/shenweiyan/mind/writing)
+- 2019-11-06 [写作与初衷](https://www.yuque.com/shenweiyan/mind/writing)
 - 2019-10-31 [深夜十点，400万人在微博泪崩：如果人生太难，就去医院看看](https://www.yuque.com/shenweiyan/webdocs/qqa9er)
 - 2019-10-31 [你转到朋友圈的文章，可能是15块买的（这篇不是）](https://www.yuque.com/shenweiyan/webdocs/ny150b)
 - 2019-10-19 [R 语言中的高级图像处理包](https://www.yuque.com/shenweiyan/cookbook/uoepud)
