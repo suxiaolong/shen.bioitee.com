@@ -1,7 +1,7 @@
 
 ---
 title: "博客文章"
-date: "2021-03-04"
+date: "2021-05-06"
 disable_comments: true
 ---
 
@@ -15,6 +15,10 @@ disable_comments: true
 
 ## 2021
 
+- 2021-05-06 [五一小记](https://www.yuque.com/shenweiyan/mind/bbnxbn)
+- 2021-04-23 [电子产品魔怔](https://www.yuque.com/shenweiyan/mind/wl2kww)
+- 2021-04-21 [又爱又恨的 Microsoft Edge！](https://www.yuque.com/shenweiyan/cookbook/microsoft-edge)
+- 2021-03-16 [使用码云同步谷歌 Chrome 浏览器书签](https://www.yuque.com/shenweiyan/cookbook/chrome-bookmark-sync)
 - 2021-02-26 [Windows/Linux 下功能强大的桌面截图软件](https://www.yuque.com/shenweiyan/cookbook/flameshot)
 - 2021-02-20 [R 语言 download.file 的几点知识](https://www.yuque.com/shenweiyan/cookbook/r-download-file)
 - 2021-02-20 [服务器关于 OpenSSL/SSL 的异常处理备忘](https://www.yuque.com/shenweiyan/cookbook/ssl-issues)
@@ -31,7 +35,6 @@ disable_comments: true
 - 2020-12-15 [测序数据学习笔记：bcl2fastq 安装](https://www.yuque.com/shenweiyan/cookbook/bcl2fastq-install)
 - 2020-12-03 [Linux fuser 命令详解](https://www.yuque.com/shenweiyan/cookbook/xvwc74)
 - 2020-12-03 [NFS 挂载与异常处理知识整理](https://www.yuque.com/shenweiyan/cookbook/wek7vb)
-- 2020-11-05 [R 语言主成分分析(PCA)实战教程](https://www.yuque.com/shenweiyan/tech/pca-analysis)
 - 2020-10-21 [腾讯云 cloudbase 云开发使用笔记](https://www.yuque.com/shenweiyan/cookbook/cloudbase-note)
 - 2020-09-24 [CentOS 7 下 Jekyll 环境搭建与应用](https://www.yuque.com/shenweiyan/cookbook/qm3vml)
 - 2020-09-10 [Enembl VEP 安装备忘](https://www.yuque.com/shenweiyan/cookbook/yu6mtk)
@@ -40,19 +43,14 @@ disable_comments: true
 - 2020-08-27 [RepeatModeler 安装及使用](https://www.yuque.com/shenweiyan/cookbook/mb7tcg)
 - 2020-08-25 [一次 HPC 病毒感染与解决经历](https://www.yuque.com/shenweiyan/cookbook/hpc-autoru)
 - 2020-08-21 [一个小清新的知识管理和问题讨论平台](https://www.yuque.com/shenweiyan/cookbook/install-confluence-on-centos)
-- 2020-08-20 [博客](https://www.yuque.com/shenweiyan/mind/qqmvht)
-- 2020-08-18 [Conda solving environment 一晚上还不能完成有解吗?](https://www.yuque.com/shenweiyan/tech/yddg0c)
-- 2020-08-18 [推荐一部青春搞笑悬疑电竞网络剧](https://www.yuque.com/shenweiyan/mind/cf-2020)
+- 2020-08-20 [逛博客](https://www.yuque.com/shenweiyan/mind/qqmvht)
+- 2020-08-18 [一部青春搞笑悬疑电竞网络剧](https://www.yuque.com/shenweiyan/mind/cf-2020)
 - 2020-08-17 [在 RedHat 使用 gdc-client 下载 TCGA 数据](https://www.yuque.com/shenweiyan/cookbook/gdc-client-for-redhat-centos)
 - 2020-08-04 [一个小团队使用的知识管理方案与工具](https://www.yuque.com/shenweiyan/cookbook/zwtn5w)
 - 2020-07-15 [CentOS 6/7 安装 codon-optimizer 笔记](https://www.yuque.com/shenweiyan/cookbook/tm90c2)
 - 2020-07-14 [吐槽一下公众号的那些事](https://www.yuque.com/shenweiyan/mind/vyymes)
-- 2020-07-10 [斗鱼关注人数爬取 | 字体反爬的攻与防](https://www.yuque.com/shenweiyan/tech/khh55z)
 - 2020-07-07 [ImageMagick 图像处理学习笔记](https://www.yuque.com/shenweiyan/cookbook/learn-imagemagick)
-- 2020-07-07 [服务器端的图像处理 | 请召唤ImageMagick助你解忧](https://www.yuque.com/shenweiyan/tech/zc9dng)
 - 2020-07-03 [SCI 投稿中像素、DPI、图片分辨率的一些知识](https://www.yuque.com/shenweiyan/cookbook/xo4ieg)
-- 2020-06-29 [git clone 仓库的一个子目录](https://www.yuque.com/shenweiyan/tech/vq6bhv)
-- 2020-06-24 [线性代数知识汇总](https://www.yuque.com/shenweiyan/tech/hw0qdg)
 - 2020-06-23 [生物信息学的一些开源学习资源](https://www.yuque.com/shenweiyan/cookbook/baatnb)
 - 2020-06-19 [R 语言 download.file 的 SSL connect error](https://www.yuque.com/shenweiyan/cookbook/r-download-file-ssl-error)
 - 2020-06-19 [各个平台下 Perl 模块安装总结](https://www.yuque.com/shenweiyan/cookbook/how-to-install-perl-modules)
@@ -60,7 +58,6 @@ disable_comments: true
 - 2020-06-17 [三十岁以后的男人为什么喜欢钓鱼](https://www.yuque.com/shenweiyan/webdocs/qq8qo4)
 - 2020-06-16 [腾讯的背水一战](https://www.yuque.com/shenweiyan/webdocs/zuq0ws)
 - 2020-06-11 [R 语言关于 SSL 证书异常处理笔记](https://www.yuque.com/shenweiyan/cookbook/r-ssl-certificate)
-- 2020-06-09 [尤雨溪创立 vue.js 的心路历程纪录片](https://www.yuque.com/shenweiyan/tech/mhkyoo)
 - 2020-06-05 [科学上网之部署使用详解](https://www.yuque.com/shenweiyan/cookbook/pizow4)
 - 2020-06-04 [RStudio Linux Server 安装配置说明](https://www.yuque.com/shenweiyan/cookbook/xxli8d)
 - 2020-06-03 [生信服务器入门级基本设置](https://www.yuque.com/shenweiyan/cookbook/bio-server-basic)
@@ -69,7 +66,6 @@ disable_comments: true
 - 2020-05-25 [使用镜像加速 Rtools 下载与安装](https://www.yuque.com/shenweiyan/cookbook/rtools-install-mirrors)
 - 2020-05-25 [如何在 5 分钟内建立一个数据驱动的新型冠状病毒肺炎应用程序](https://www.yuque.com/shenweiyan/cookbook/covid-19-shiny-apps)
 - 2020-05-20 [ggplot2 调整绘图区域大小](https://www.yuque.com/shenweiyan/cookbook/ggplot_plot_margin)
-- 2020-05-20 [ggplot2 隐藏图例](https://www.yuque.com/shenweiyan/tech/vr7asg)
 - 2020-05-18 [远程挂载 NFS 共享目录引发死机问题](https://www.yuque.com/shenweiyan/cookbook/nfs-umount)
 - 2020-05-09 [如何卸载 python setup.py install 安装的包？](https://www.yuque.com/shenweiyan/cookbook/uninstall-setup-py)
 - 2020-04-28 [美国空军发现了平均数的缺陷](https://www.yuque.com/shenweiyan/readings/bbn0zx)
@@ -83,7 +79,6 @@ disable_comments: true
 - 2020-03-16 [大牛](https://www.yuque.com/shenweiyan/mind/rz7c3n)
 - 2020-03-13 [语雀知识库文档分类的纠结](https://www.yuque.com/shenweiyan/mind/whnegc)
 - 2020-03-05 [UpSetR 关联的 venneuler 包安装笔记](https://www.yuque.com/shenweiyan/cookbook/venneuler-installation)
-- 2020-03-03 [Linux 系统下 CPU 使用梳理](https://www.yuque.com/shenweiyan/tech/pt4yaz)
 - 2020-02-27 [R 语言画图中英文字体解决方案](https://www.yuque.com/shenweiyan/cookbook/csm98o)
 - 2020-02-21 [tar 打包的一些注意问题](https://www.yuque.com/shenweiyan/cookbook/tar-issues-note)
 - 2020-02-18 [Python Excel 操作 | xlrd+xlwt 模块笔记](https://www.yuque.com/shenweiyan/cookbook/vygicp)
@@ -186,13 +181,11 @@ disable_comments: true
 - 2019-07-01 [兆碱基中关于Kb、KB、Bps、bps的区别](https://www.yuque.com/shenweiyan/cookbook/different-on-bytes)
 - 2019-07-01 [R 包初学者指南](https://www.yuque.com/shenweiyan/cookbook/r-packages-guide)
 - 2019-07-01 [推荐一个由 AI 生成 LOGO 的网站](https://www.yuque.com/shenweiyan/cookbook/ai-logo-desig)
-- 2019-07-01 [基于 Linux 集群环境上 GPFS 的问题诊断](https://www.yuque.com/shenweiyan/tech/lsf-gpfs)
 - 2019-07-01 [只要能坚持下来就是好博客](https://www.yuque.com/shenweiyan/mind/focus-on-writing)
 - 2019-06-28 [Firefox Quantum 向左，Google Chrome 向右](https://www.yuque.com/shenweiyan/cookbook/firefox-quantum)
 - 2019-06-26 [windows 常用软件合集](https://www.yuque.com/shenweiyan/cookbook/phmze3)
 - 2019-06-21 [VS Code 常见配置与使用技巧总结](https://www.yuque.com/shenweiyan/cookbook/vscode-usage)
 - 2019-06-17 [Html 垂直多级菜单栏模板](https://www.yuque.com/shenweiyan/cookbook/qrtsf1)
-- 2019-06-12 [Spectrum LSF：高效的集群管理系统](https://www.yuque.com/shenweiyan/tech/spectrum-lsf)
 - 2019-06-11 [Python 读取大文件](https://www.yuque.com/shenweiyan/cookbook/iddn10)
 - 2019-06-03 [Jekyll 网站添加访问量统计分析](https://www.yuque.com/shenweiyan/cookbook/jekyll-add-page-view)
 - 2019-06-01 [基于 pypiserver 的 PyPI 私有仓库搭建实践](https://www.yuque.com/shenweiyan/cookbook/pypiserver-trial)
@@ -203,7 +196,7 @@ disable_comments: true
 - 2019-05-24 [R 软件的 "CXX11 is not defined" 解决](https://www.yuque.com/shenweiyan/cookbook/dadyai)
 - 2019-05-24 [R 软件 openssl 包与 libssl.so.1.0.0 的一个坑](https://www.yuque.com/shenweiyan/cookbook/nt820f)
 - 2019-05-21 [Python 执行 shell 命令](https://www.yuque.com/shenweiyan/cookbook/kzicg7)
-- 2019-05-18 [利用 python 的 sorted 函数对字典按 key 排序和按 value 排序](https://www.yuque.com/shenweiyan/cookbook/python-sorted)
+- 2019-05-18 [Python 列表、字典、元组的一些小技巧](https://www.yuque.com/shenweiyan/cookbook/python-list-dict-tuple-skills)
 - 2019-05-18 [Python 正则匹配总结](https://www.yuque.com/shenweiyan/cookbook/python-match)
 - 2019-05-18 [vim 使用的一些小技巧](https://www.yuque.com/shenweiyan/cookbook/how-to-use-vim)
 - 2019-05-18 [python3 中 os.path 模块常用用法总结](https://www.yuque.com/shenweiyan/cookbook/python-os-path)
