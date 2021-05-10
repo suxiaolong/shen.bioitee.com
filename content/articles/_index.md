@@ -15,7 +15,7 @@ disable_comments: true
 
 ## 2021
 
-- 2021-05-06 [五一小记](https://www.yuque.com/shenweiyan/mind/bbnxbn)
+- 2021-05-06 [五一喜与乐](https://www.yuque.com/shenweiyan/mind/bbnxbn)
 - 2021-04-23 [电子产品魔怔](https://www.yuque.com/shenweiyan/mind/wl2kww)
 - 2021-04-21 [又爱又恨的 Microsoft Edge！](https://www.yuque.com/shenweiyan/cookbook/microsoft-edge)
 - 2021-03-16 [使用码云同步谷歌 Chrome 浏览器书签](https://www.yuque.com/shenweiyan/cookbook/chrome-bookmark-sync)
