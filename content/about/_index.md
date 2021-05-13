@@ -29,7 +29,7 @@ disable_comments: true
 
 - 参与 "[国家标准|GB/T 34798-2017 核酸数据库序列格式规范](http://std.samr.gov.cn/gb/search/gbDetailed?id=71F772D821E0D3A7E05397BE0A0AB82A)" 起草。
 - 参与《[生物信息数据库建设使用与管理指南](https://book.sciencereading.cn/shop/book/Booksimple/show.do?id=BEE9317419FA94D37BBF7172536470FBC000)》一书编写。
-
+- 参与 [Galaxy Project](https://galaxyproject.org/) 开源项目，为中文汉化和一些小 bug 贡献过[一点代码](https://github.com/galaxyproject/galaxy/pulls?q=is%3Apr+author%3Ashenweiyan+is%3Aclosed)。
 
 ### 交流学习
 
