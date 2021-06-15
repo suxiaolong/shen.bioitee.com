@@ -1,7 +1,7 @@
 
 ---
 title: "博客文章"
-date: "2021-05-11"
+date: "2021-06-15"
 disable_comments: true
 ---
 
@@ -15,6 +15,10 @@ disable_comments: true
 
 ## 2021
 
+- 2021-06-10 [使用 Docker 分析高通量测序数据](https://www.yuque.com/shenweiyan/cookbook/docker-ngs)
+- 2021-06-03 [终于把 7 年前的 Docker Hub 账号恢复了](https://www.yuque.com/shenweiyan/cookbook/recover-hub-account)
+- 2021-05-27 [更改 CentOS/RHEL 6/7 中的时区](https://www.yuque.com/shenweiyan/cookbook/centos-rhel-6-7-timezone)
+- 2021-05-21 [docker 与生物信息学技术学习](https://www.yuque.com/shenweiyan/cookbook/syncun)
 - 2021-05-06 [五一喜与乐](https://www.yuque.com/shenweiyan/mind/bbnxbn)
 - 2021-04-23 [电子产品魔怔](https://www.yuque.com/shenweiyan/mind/wl2kww)
 - 2021-04-21 [又爱又恨的 Microsoft Edge！](https://www.yuque.com/shenweiyan/cookbook/microsoft-edge)
