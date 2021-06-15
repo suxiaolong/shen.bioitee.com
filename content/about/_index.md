@@ -7,7 +7,7 @@ disable_comments: true
 
 ### 关于作者
 
-沈维燕(Steven Shen)，一个 90 后的广东人，熟悉粤语、国语，略懂英语。本人 2013 年毕业于南方医科大学（原中国人民解放军第一军医大学）基础医学学院生物信息学专业。现工作生活于广州，主要从事 Bio IT 的一些相关工作。平时喜欢逛逛技术论坛，玩玩羽毛球，看看电影，瞎折腾一下技术，不务正业之余喜欢记录一些生活工作学习中的一些想法。喜欢分享，喜欢把事情简单化，程序化。
+沈维燕(Steven Shen)，一个 90 后的广东人，熟悉粤语、国语，略懂英语。2013 年毕业于南方医科大学（原中国人民解放军第一军医大学）基础医学学院生物信息学专业。现工作生活于广州，主要从事 Bio IT 的一些相关工作。平时喜欢逛逛技术论坛，玩玩羽毛球，看看电影，瞎折腾一下技术，不务正业之余喜欢记录一些生活工作学习中的一些想法。喜欢分享，喜欢把事情简单化，程序化。
 
 
 ### 专业技能
@@ -29,7 +29,7 @@ disable_comments: true
 
 - 参与 "[国家标准|GB/T 34798-2017 核酸数据库序列格式规范](http://std.samr.gov.cn/gb/search/gbDetailed?id=71F772D821E0D3A7E05397BE0A0AB82A)" 起草。
 - 参与《[生物信息数据库建设使用与管理指南](https://book.sciencereading.cn/shop/book/Booksimple/show.do?id=BEE9317419FA94D37BBF7172536470FBC000)》一书编写。
-- 参与 [Galaxy Project](https://galaxyproject.org/) 开源项目，为中文汉化和一些小 bug 贡献过[一点代码](https://github.com/galaxyproject/galaxy/pulls?q=is%3Apr+author%3Ashenweiyan+is%3Aclosed)。
+- 参与 [Galaxy Project](https://galaxyproject.org/) 开源项目，为中文汉化和一些小 bug 贡献过[一点代码](https://github.com/galaxyproject/galaxy/pulls?q=is%3Apr+author%3Ashenweiyan+is%3Aclosed)，写过[几篇文章](https://www.yuque.com/usegalaxy)。
 
 ### 交流学习
 
@@ -40,7 +40,7 @@ disable_comments: true
 
 ***
 
-本个人网站是参考 [ics-hugo-theme](https://shenweiyan.github.io/ics-hugo-theme/) 构建的，如果读者想搭建一样主题的网站，请移步[GitHub](https://github.com/shenweiyan/ics-hugo-theme)下载并参考 Hugo 与 Blogdown 的使用方法，然后删改关于我的信息。
+本个人网站是参考 [ICS-Hugo-Theme](https://shenweiyan.github.io/ICS-Hugo-Theme/) 构建的，如果读者想搭建一样主题的网站，请移步[GitHub](https://github.com/shenweiyan/ICS-Hugo-Theme)下载并参考 Hugo 与 Blogdown 的使用方法，然后删改关于我的信息。
 
 
 <br/>
@@ -48,7 +48,7 @@ disable_comments: true
 **本博客更新历史：**
 
 - **2021.03.29：**
-    1. 更新 footer 样式，Copyright 自动获取当前年份。
+    1. 更新 footer 样式，实现 Copyright 日期自动更新。
     2. 页脚的 footer 可直接通过 config.toml 进行更新。
 
 - **2020.03.13：**
